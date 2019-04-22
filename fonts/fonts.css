@@ -1,0 +1,13 @@
+/* FONTS */
+
+@font-face {
+    font-family: 'Lato';
+    src: url("Lato/Lato-Regular.woff") format("woff"), url("Lato/Lato-Regular.ttf") format("opentype");
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Lato-MediumItalic';
+    src: url("Lato/Lato-Italic.ttf") format("opentype");
+    font-display: block;
+}

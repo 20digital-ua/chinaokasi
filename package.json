@@ -1,0 +1,21 @@
+{
+  "name": "twnty",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get your application up and running.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://MonTony@bitbucket.org/MonTony/twnty-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/MonTony/twnty-frontend#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-sass": "^4.0.2"
+  }
+}

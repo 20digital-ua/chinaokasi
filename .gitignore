@@ -1,0 +1,9 @@
+*.sublime-*
+.idea
+
+node_modules
+deploye-updater.php
+
+
+.htpasswd
+.htaccess
