@@ -1,0 +1,13 @@
+// Small devices
+@mixin font($size,$family){
+  font:$size $family;
+}
+
+
+
+
+//@mixin between($min,$max){
+//  @media (min-width:$min) and (max-width:$max) {
+//    @content;
+//  }
+//}
