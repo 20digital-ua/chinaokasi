@@ -46,11 +46,18 @@ header{
   }
   padding-bottom: 30px;
 }
+
+.subscribe-section{
+  .container{
+    padding-top: 0;
+  }
+}
 .subscribe-block{
   padding-top: 2em;
+
 }
 .subscribe-form{
-  padding: 0 1em;
+  //padding: 0 1em;
   &__input{
     width: 100%;
     height: 40px;

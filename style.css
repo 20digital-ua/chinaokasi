@@ -234,12 +234,12 @@ header .container {
   margin-bottom: 10px;
 }
 
-.subscribe-block {
-  padding-top: 2em;
+.subscribe-section .container {
+  padding-top: 0;
 }
 
-.subscribe-form {
-  padding: 0 1em;
+.subscribe-block {
+  padding-top: 2em;
 }
 
 .subscribe-form__input {
