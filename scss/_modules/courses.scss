@@ -80,7 +80,6 @@
       position: absolute;
       bottom: 0;
       z-index: -1;
-
     }
   }
   &__readlink {
@@ -95,14 +94,14 @@
     display: block;
     margin-top: 16px;
     width: 100%;
-    max-width: 288px;
+    max-width: 350px;
     height: 64px;
     line-height: 64px;
     text-align: center;
     border-radius: 25px 0;
     font-family: $PoppinsSemiBold;
     background: url("#{$image_dir}courses/Rectangle.svg") left center no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
 
     .link-inner{
       background: linear-gradient(90deg,$redColor 0%, $violetColor 100%);

@@ -413,14 +413,14 @@ header .container {
   display: block;
   margin-top: 16px;
   width: 100%;
-  max-width: 288px;
+  max-width: 350px;
   height: 64px;
   line-height: 64px;
   text-align: center;
   border-radius: 25px 0;
   font-family: "Poppins-SemiBold";
   background: url("img/courses/Rectangle.svg") left center no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
 }
 
 .course__takelink .link-inner {
