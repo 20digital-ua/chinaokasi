@@ -6,11 +6,11 @@
  * https://gist.github.com/riodw/71f6e2244534deae652962b32b7454e2
  * How To Use:
  * https://medium.com/riow/deploy-to-production-server-with-git-using-php-ab69b13f78ad
- */
+ ......*/
 // The commands
 
 set_time_limit(0);
-$dir = '/data/web/e104797/html/dev/chinaokasi';				// local dir of dev baranche
+$dir = '/data/web/e104797/html/dev/chinaokasi';				// local dir of dev baranche444
 define('SSH_FILE','/data/web/e104797/.ssh/git_rsa');
 define('WORKING_BRANCHE','develop');
 
