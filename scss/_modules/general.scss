@@ -5,6 +5,7 @@ body{
   font-size: 1em;
   font-family: 'Poppins-Regular',sans-serif;
   color: $primaryTextColor;
+  line-height: normal;
 }
 
 .container{
@@ -25,6 +26,8 @@ body{
   &--red{
     font-family: $PoppinsMedium;
     color: $redColor;
-
   }
+}
+.text{
+
 }
