@@ -9,7 +9,8 @@
 
 /* GENERAL */
 @import "_modules/general";
-
+/* BUTTONS */
+@import "_modules/link_buttons";
 
 /* HEADER */
 @import "_modules/header";
@@ -21,3 +22,6 @@
 
 /* #1 - Courses Section */
 @import "_modules/courses";
+
+/* #1 - About Me Section */
+@import "_modules/about-me";

@@ -157,16 +157,24 @@ body {
 }
 
 .container {
-  padding: 3.875em 1em 0 1em;
+  padding: 3em 1em 0 1em;
   position: relative;
   max-width: 1100px;
   margin: 0 auto;
+}
+
+.container--nopadding {
+  padding: 0;
 }
 
 .title {
   font: 1.5em "Poppins-SemiBold";
   text-align: center;
   margin-bottom: 1rem;
+}
+
+.title--left {
+  text-align: left;
 }
 
 .sub-title {
@@ -176,6 +184,33 @@ body {
 .sub-title--red {
   font-family: "Poppins-Medium";
   color: #FF3E5C;
+}
+
+/* BUTTONS */
+
+.submit-btn {
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  height: 64px;
+  background-color: #5D5CC3;
+  border-radius: 25px  0;
+  color: #fff;
+  font-family: "Poppins-SemiBold";
+}
+
+.link {
+  cursor: pointer;
+  border: none;
+  display: block;
+  width: 100%;
+  height: 64px;
+  background-color: #FF3E5C;
+  border-radius: 25px  0;
+  color: #fff;
+  font-family: "Poppins-SemiBold";
+  line-height: 64px;
+  text-align: center;
 }
 
 /* HEADER */
@@ -289,22 +324,15 @@ header .container {
   color: rgba(58, 59, 63, 0.2);
 }
 
-.subscribe-form__submit {
-  cursor: pointer;
-  border: none;
-  width: 100%;
-  height: 64px;
-  background-color: #5D5CC3;
-  border-radius: 25px 0 25px 0;
-  color: #fff;
-  font-family: "Poppins-SemiBold";
-}
-
 /*  CONTENT */
 
 /*  SECTIONS */
 
 /* #1 - Courses Section */
+
+.courses-section {
+  padding-bottom: 4em;
+}
 
 .courses {
   max-width: 600px;
@@ -427,4 +455,34 @@ header .container {
   background: linear-gradient(90deg, #FF3E5C 0%, #5D5CC3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* #1 - About Me Section */
+
+.about-me-section {
+  background-color: rgba(243, 243, 243, 0.71);
+  padding-bottom: 4em;
+}
+
+.china-photo {
+  max-width: 375px;
+  height: 352px;
+  background-color: #5D5CC3;
+  border-radius: 25px 0;
+  margin: 0 auto;
+}
+
+.china-photo__img {
+  border-radius: 0 0 25px 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.about-content p {
+  margin-bottom: 1em;
+}
+
+.about-content p:last-child {
+  margin-bottom: 1.5em;
 }

@@ -13,12 +13,18 @@ body{
   position: relative;
   max-width: 1100px;
   margin: 0 auto;
+  &--nopadding{
+    padding:0;
+  }
 }
 
 .title{
   @include font(1.5em,$PoppinsSemiBold);
   text-align: center;
   margin-bottom: 1rem;
+  &--left{
+    text-align: left;
+  }
 }
 
 .sub-title{
