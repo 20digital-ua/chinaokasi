@@ -1,0 +1,24 @@
+.submit-btn{
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  height: 64px;
+  background-color: $violetColor;
+  border-radius: 25px  0;
+  color: #fff;
+  font-family: $PoppinsSemiBold;
+}
+
+.link{
+  cursor: pointer;
+  border: none;
+  display: block;
+  width: 100%;
+  height: 64px;
+  background-color: $redColor;
+  border-radius: 25px  0;
+  color: #fff;
+  font-family: $PoppinsSemiBold;
+  line-height: 64px;
+  text-align: center;
+}

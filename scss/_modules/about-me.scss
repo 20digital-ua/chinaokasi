@@ -1,0 +1,24 @@
+.about-me-section{
+  background-color: $lightGreyBG;
+  padding-bottom: 4em;
+}
+
+.china-photo{
+  max-width: 375px;
+  height: 352px;
+  background-color: $violetColor;
+  border-radius: 25px 0;
+  margin: 0 auto;
+  &__img{
+    border-radius:0 0 25px 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+.about-content p{
+  margin-bottom: 1em;
+  &:last-child{
+    margin-bottom: 1.5em;
+  }
+}
