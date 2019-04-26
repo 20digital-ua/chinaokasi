@@ -1,0 +1,46 @@
+.container--podcast-player{
+  padding-top: 24px;
+}
+
+.podcast-introduce{
+  max-width: 375px;
+  height: 225px;
+  background: linear-gradient(270deg, #5D5CA7 0%, #F35C6E 100%);
+  border-radius: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    width: 69px;
+    height: 85px;
+    background: url("#{$image_dir}icons/Microphone.svg") left no-repeat;
+    left: 0;
+    bottom: -20px;
+  }
+  &__text{
+    color: #FFF;
+    text-align: center;
+  }
+  &__title{
+    @include font(32px, $PermanentMarker);
+  }
+  &__subtext{
+    font-family: $PoppinsMedium;
+    text-transform: uppercase;
+    margin-top: 16px;
+  }
+  &__img{
+    border-radius: 0 0 25px 0;
+    object-fit: cover;
+    width: 50%;
+    margin-right: -5px;
+    height: 97%;
+    align-self: flex-end;
+  }
+}
+

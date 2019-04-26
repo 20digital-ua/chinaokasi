@@ -34,7 +34,7 @@
     &--live:after{
       width: 33px;
       height: 41px;
-      background: url("#{$image_dir}courses/icons/Diamond_pink.png") center no-repeat;
+      background: url("#{$image_dir}courses/icons/Diamond.svg") center no-repeat;
       position: absolute;
       top: -20px;
       right: -30px;
@@ -42,7 +42,7 @@
     &--work:after{
       width: 33px;
       height: 41px;
-      background: url("#{$image_dir}courses/icons/Dollar_pink.png") center no-repeat;
+      background: url("#{$image_dir}courses/icons/Dollar.svg") center no-repeat;
       position: absolute;
       top: -20px;
       right: -20px;
@@ -50,7 +50,7 @@
     &--love:after{
       width: 33px;
       height: 41px;
-      background: url("#{$image_dir}courses/icons/Heart_pink.png") center no-repeat;
+      background: url("#{$image_dir}courses/icons/Heart.svg") center no-repeat;
       position: absolute;
       top: -20px;
       right: -20px;
