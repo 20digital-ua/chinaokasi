@@ -159,7 +159,7 @@ body {
 .container {
   padding: 3em 1em 0 1em;
   position: relative;
-  max-width: 1100px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
@@ -211,6 +211,81 @@ body {
   font-family: "Poppins-SemiBold";
   line-height: 64px;
   text-align: center;
+}
+
+/* BUTTONS */
+
+.podcast-player {
+  padding-bottom: 64px;
+}
+
+.podcast-player__title .inner-bold {
+  font-family: "Poppins-SemiBold";
+}
+
+.podcast-player .podcast-controls {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.podcast-player #podcast-playBtn {
+  min-width: 54px;
+  min-height: 54px;
+  border-radius: 50%;
+  border: 1px solid #3A3B3F;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.podcast-player #podcast-playBtn:before {
+  content: '';
+  width: 23px;
+  height: 23px;
+  background: url("img/icons/Polygon_play.svg") center no-repeat;
+}
+
+.podcast-player #podcast-playBtn.playing:before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background: url("img/icons/pause-solid.svg") center no-repeat;
+}
+
+#progress-bar {
+  width: 100%;
+  height: 2px;
+  margin-left: 24px;
+  background: rgba(58, 59, 63, 0.1);
+}
+
+#progress-bar__fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #605FC7 0%, #F35C6E 98.44%);
+  position: relative;
+  transition: width .2s linear;
+}
+
+#progress-bar__fill .progress-bar__pin {
+  background: #FF3E5C;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  position: absolute;
+  right: -7px;
+  top: -6px;
+  cursor: pointer;
+  transition: transform .1s ease-in-out;
+}
+
+#progress-bar__fill .progress-bar__pin:hover {
+  transform: scale(1.1);
 }
 
 /* HEADER */
@@ -375,7 +450,7 @@ header .container {
 .course__title--live:after {
   width: 33px;
   height: 41px;
-  background: url("img/courses/icons/Diamond_pink.png") center no-repeat;
+  background: url("img/courses/icons/Diamond.svg") center no-repeat;
   position: absolute;
   top: -20px;
   right: -30px;
@@ -384,7 +459,7 @@ header .container {
 .course__title--work:after {
   width: 33px;
   height: 41px;
-  background: url("img/courses/icons/Dollar_pink.png") center no-repeat;
+  background: url("img/courses/icons/Dollar.svg") center no-repeat;
   position: absolute;
   top: -20px;
   right: -20px;
@@ -393,7 +468,7 @@ header .container {
 .course__title--love:after {
   width: 33px;
   height: 41px;
-  background: url("img/courses/icons/Heart_pink.png") center no-repeat;
+  background: url("img/courses/icons/Heart.svg") center no-repeat;
   position: absolute;
   top: -20px;
   right: -20px;
@@ -457,7 +532,7 @@ header .container {
   -webkit-text-fill-color: transparent;
 }
 
-/* #1 - About Me Section */
+/* #2 - About Me Section */
 
 .about-me-section {
   background-color: rgba(243, 243, 243, 0.71);
@@ -485,4 +560,57 @@ header .container {
 
 .about-content p:last-child {
   margin-bottom: 1.5em;
+}
+
+/* #3 - About Me Section */
+
+.container--podcast-player {
+  padding-top: 24px;
+}
+
+.podcast-introduce {
+  max-width: 375px;
+  height: 225px;
+  background: linear-gradient(270deg, #5D5CA7 0%, #F35C6E 100%);
+  border-radius: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+}
+
+.podcast-introduce:after {
+  content: '';
+  position: absolute;
+  width: 69px;
+  height: 85px;
+  background: url("img/icons/Microphone.svg") left no-repeat;
+  left: 0;
+  bottom: -20px;
+}
+
+.podcast-introduce__text {
+  color: #FFF;
+  text-align: center;
+}
+
+.podcast-introduce__title {
+  font: 32px "PermanentMarker";
+}
+
+.podcast-introduce__subtext {
+  font-family: "Poppins-Medium";
+  text-transform: uppercase;
+  margin-top: 16px;
+}
+
+.podcast-introduce__img {
+  border-radius: 0 0 25px 0;
+  object-fit: cover;
+  width: 50%;
+  margin-right: -5px;
+  height: 97%;
+  align-self: flex-end;
 }
