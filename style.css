@@ -196,7 +196,7 @@ body {
   background-color: #5D5CC3;
   border-radius: 25px  0;
   color: #fff;
-  font-family: "Poppins-SemiBold";
+  font: 1em "Poppins-SemiBold";
 }
 
 .link {
@@ -245,6 +245,8 @@ body {
 
 .podcast-player #podcast-playBtn:before {
   content: '';
+  position: relative;
+  left: 3px;
   width: 23px;
   height: 23px;
   background: url("img/icons/Polygon_play.svg") center no-repeat;
@@ -252,8 +254,9 @@ body {
 
 .podcast-player #podcast-playBtn.playing:before {
   content: '';
-  width: 16px;
-  height: 16px;
+  left: unset;
+  width: 19px;
+  height: 19px;
   background: url("img/icons/pause-solid.svg") center no-repeat;
 }
 

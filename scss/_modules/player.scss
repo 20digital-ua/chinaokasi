@@ -16,14 +16,16 @@
     min-height: 54px;
     border-radius: 50%;
     border: 1px solid #3A3B3F;
-    background-color: transparent;
+    background-color: transparent; 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     outline: none;
     cursor: pointer;
     &:before{
       content: '';
+      position: relative;
+      left: 3px;
       width: 23px;
       height: 23px;
       background: url("#{$image_dir}icons/Polygon_play.svg") center no-repeat;
@@ -32,8 +34,9 @@
     &.playing {
       &:before {
         content: '';
-        width: 16px;
-        height: 16px;
+        left: unset;
+        width: 19px;
+        height: 19px;
         background: url("#{$image_dir}icons/pause-solid.svg") center no-repeat;
       }
     }

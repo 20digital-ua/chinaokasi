@@ -9,7 +9,6 @@ playBtn.click(togglePlay);
 player.addEventListener("timeupdate", updateProgress);
 
 
-
 // Methods
 function togglePlay(){
     if (player.paused) {
@@ -18,7 +17,7 @@ function togglePlay(){
     } else {
         player.pause();
         playBtn.removeClass('playing');
-    }
+    }   
 }
 function updateProgress(){
     var currentTime = player.currentTime;

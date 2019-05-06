@@ -7,7 +7,7 @@ body{
   color: $primaryTextColor;
   line-height: normal;
 }
-
+ 
 .container{
   padding: $mobPadding;
   position: relative;
@@ -25,7 +25,7 @@ body{
   &--left{
     text-align: left;
   }
-}
+} 
 
 .sub-title{
   text-align: center;
