@@ -6,7 +6,7 @@
   background-color: $violetColor;
   border-radius: 25px  0;
   color: #fff;
-  font-family: $PoppinsSemiBold;
+  @include font(1em,$PoppinsSemiBold);
 }
 
 .link{

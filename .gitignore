@@ -1,5 +1,6 @@
 *.sublime-*
 .idea
+.vscode
 
 node_modules
 #deploye-updater.php
