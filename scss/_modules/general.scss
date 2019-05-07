@@ -1,7 +1,7 @@
 *{
   box-sizing: border-box;
 }
-body{
+body{ 
   font-size: 1em;
   font-family: 'Poppins-Regular',sans-serif;
   color: $primaryTextColor;
@@ -16,12 +16,15 @@ body{
   &--nopadding{
     padding:0;
   }
+  &--notoppadding{
+    padding: 0 1em 0 1em;
+  }
 }
 
 .title{
   @include font(1.5em,$PoppinsSemiBold);
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   &--left{
     text-align: left;
   }

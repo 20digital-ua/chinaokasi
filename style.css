@@ -167,10 +167,14 @@ body {
   padding: 0;
 }
 
+.container--notoppadding {
+  padding: 0 1em 0 1em;
+}
+
 .title {
   font: 1.5em "Poppins-SemiBold";
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .title--left {
@@ -204,7 +208,7 @@ body {
   margin-top: 2em;
 }
 
-.link {
+.link-btn {
   cursor: pointer;
   border: none;
   display: block;
@@ -574,6 +578,7 @@ header .container {
 
 .container--podcast-player {
   padding-top: 24px;
+  padding-bottom: 3em;
 }
 
 .podcast-introduce {
@@ -750,4 +755,63 @@ header .container {
   margin-top: 14px;
   font-size: 12px;
   line-height: 22px;
+}
+
+/* #4 - My Blog Section */
+
+.blog-section {
+  background-color: rgba(243, 243, 243, 0.71);
+  padding-bottom: 4em;
+}
+
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 25px 0 25px 0;
+  overflow: hidden;
+  max-width: 375px;
+  padding-bottom: 50px;
+  position: relative;
+  margin-bottom: 32px;
+  box-shadow: 0px 4px 25px rgba(115, 115, 115, 0.1);
+}
+
+.post__img {
+  width: 100%;
+  border-radius: 25px 0 25px 0;
+}
+
+.post-content {
+  margin-top: 10px;
+  line-height: 24px;
+  padding: 0 31px;
+}
+
+.post-content__title {
+  font: 16px "Poppins-Medium";
+  margin-bottom: 1em;
+}
+
+.post-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  padding: 0 31px;
+}
+
+.post-info__date {
+  color: rgba(58, 59, 63, 0.5);
+}
+
+.post-info__heart {
+  display: flex;
+  align-items: center;
 }
