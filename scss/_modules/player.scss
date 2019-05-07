@@ -1,5 +1,4 @@
 .podcast-player{
-  padding-bottom: 64px;
   &__title{
     .inner-bold{
       font-family: $PoppinsSemiBold;
@@ -11,6 +10,7 @@
     justify-content: space-between;
     align-items: center;
   }
+ 
   #podcast-playBtn{
     min-width: 54px;
     min-height: 54px;
@@ -69,3 +69,5 @@
     }
   }
 }
+
+

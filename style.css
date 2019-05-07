@@ -186,6 +186,10 @@ body {
   color: #FF3E5C;
 }
 
+.text {
+  line-height: normal;
+}
+
 /* BUTTONS */
 
 .submit-btn {
@@ -197,6 +201,7 @@ body {
   border-radius: 25px  0;
   color: #fff;
   font: 1em "Poppins-SemiBold";
+  margin-top: 2em;
 }
 
 .link {
@@ -214,10 +219,6 @@ body {
 }
 
 /* BUTTONS */
-
-.podcast-player {
-  padding-bottom: 64px;
-}
 
 .podcast-player__title .inner-bold {
   font-family: "Poppins-SemiBold";
@@ -396,6 +397,10 @@ header .container {
   outline: none;
   padding: 0.5em 1em;
   font-size: 0.875em;
+}
+
+.subscribe-form__input-last {
+  margin-bottom: 0;
 }
 
 .subscribe-form__input::placeholder {
@@ -616,4 +621,133 @@ header .container {
   margin-right: -5px;
   height: 97%;
   align-self: flex-end;
+}
+
+.sign-podcast {
+  margin-top: 25px;
+}
+
+.sign-podcast__title {
+  text-transform: uppercase;
+  line-height: 36px;
+  font: 20px "Poppins-Medium";
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  background: linear-gradient(90deg, #FF3E5C 0%, #5D5CC3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sign-podcast-form .form-row {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.sign-podcast-form__label {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.sign-podcast-form__input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(58, 59, 63, 0.15);
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  line-height: 21px;
+  padding-left: 1em;
+  font-family: inherit;
+}
+
+.sign-podcast-form__input::placeholder {
+  color: rgba(58, 59, 63, 0.2);
+}
+
+.follow {
+  margin-top: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.follow__img {
+  position: relative;
+}
+
+.follow-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.follow-item {
+  width: 300px;
+  margin-bottom: 36px;
+}
+
+.follow-item:last-child {
+  margin-bottom: 0;
+}
+
+.follow-img .bg-circe {
+  width: 114px;
+  height: 114px;
+  background-color: #5D5CC3;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0px 4px 25px rgba(115, 115, 115, 0.2);
+}
+
+.follow-img img {
+  position: absolute;
+  bottom: 5px;
+  border-radius: 0 0 47% 50%;
+}
+
+.follow-link {
+  width: 100%;
+  font: 16px "Poppins-Medium";
+  margin-left: 32px;
+}
+
+.follow-link__login {
+  line-height: 29px;
+}
+
+.follow-link__follow {
+  color: #5D5CC3;
+  align-items: center;
+  display: inline-flex;
+  text-transform: uppercase;
+}
+
+.follow-link__follow .link-text {
+  color: inherit;
+}
+
+.follow-link__icon {
+  fill: #5D5CC3;
+  width: 19px;
+  height: 20px;
+  margin-right: 9px;
+}
+
+.follow-item-red .bg-circe {
+  background-color: #FF3E5C;
+}
+
+.follow-item-red .follow-link__follow {
+  color: #FF3E5C;
+}
+
+.follow-item-red .follow-link__icon {
+  fill: #FF3E5C;
+}
+
+.follow-additional {
+  margin-top: 14px;
+  font-size: 12px;
+  line-height: 22px;
 }

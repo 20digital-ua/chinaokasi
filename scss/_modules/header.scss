@@ -102,8 +102,11 @@ header{
     outline: none;
     padding: 0.5em 1em;
     font-size: 0.875em;
+    &-last{
+      margin-bottom: 0;
+    }
     &::placeholder{
-      color:rgba(58, 59, 63, 0.2)
+      color:rgba(58, 59, 63, 0.2);
     }
   }
 }
