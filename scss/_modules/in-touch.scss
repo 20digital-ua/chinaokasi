@@ -1,0 +1,22 @@
+.in-touch-section{
+  padding-bottom: 4em; 
+  .text{
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 14px;
+  }
+}
+
+.with-me{
+  text-align: center;
+  &__gradient{
+    @include font(2em, $PermanentMarker);
+    background: linear-gradient(90deg,$redColor 0%, $violetColor 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__simple{
+    margin: 6px 0;
+    text-transform: uppercase;
+  }
+}

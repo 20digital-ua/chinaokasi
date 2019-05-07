@@ -60,30 +60,6 @@
   }
 }
 
-.sign-podcast-form{
-  .form-row{
-    width: 100%;  
-    margin-top: 1em;
-  }
-  &__label{
-    font-size: 14px;
-    line-height: 21px;
-  }
-  &__input{
-    width: 100%;
-    height: 40px;
-    border: 1px solid rgba(58, 59, 63, 0.15);
-    border-radius: 5px;
-    outline: none;
-    font-size: 14px;
-    line-height: 21px;
-    padding-left: 1em;
-    font-family: inherit;
-    &::placeholder{
-      color: rgba(58, 59, 63, 0.2);
-    }
-  }
-}
 
 .follow{
   margin-top: 3em;
