@@ -406,7 +406,7 @@ header .container {
 }
 
 .header-content {
-  max-width: 55%;
+  max-width: 50%;
   position: relative;
   padding-bottom: 30px;
 }
@@ -564,6 +564,10 @@ header .container {
   background: linear-gradient(90deg, #FF3E5C 0%, #5D5CC3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.course__takelink .link-inner-sm {
+  font-family: "Poppins-Bold";
 }
 
 /* #2 - About Me Section */
@@ -763,6 +767,7 @@ header .container {
 .blog-posts {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .post {

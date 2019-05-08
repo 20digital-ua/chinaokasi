@@ -107,6 +107,10 @@
       background: linear-gradient(90deg,$redColor 0%, $violetColor 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      
+      &-sm{ 
+        font-family: $PoppinsBold;
+      }
     }
   }
 } 
