@@ -91,6 +91,9 @@
     border-radius: 50%;
     border:5px solid #fff;
     box-shadow: 0px 4px 25px rgba(115, 115, 115, 0.2);
+    &-red{
+      background-color: $redColor;
+    }
   }
   img{
     position: absolute;
@@ -110,31 +113,25 @@
     align-items: center;
     display: inline-flex;
     text-transform: uppercase;
+    &-red{
+      color: $redColor;
+    }
     .link-text{
       color: inherit;
+      margin-left: 9px;
     }
   }
   &__icon{
     fill: $violetColor;
     width: 19px;
     height: 20px;
-    margin-right: 9px;
-  }
-  
-}
-.follow-item-red{
-  .bg-circe{
-    background-color: $redColor;
-  }
-  .follow-link{
-    &__follow{
-      color: $redColor;
-    }
-    &__icon{
+    &-red{
       fill: $redColor;
     }
   }
 }
+
+
 
 .follow-additional{
   margin-top: 14px;
