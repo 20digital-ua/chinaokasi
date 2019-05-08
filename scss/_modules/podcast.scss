@@ -1,5 +1,6 @@
 .container--podcast-player{
   padding-top: 24px;
+  padding-bottom: 3em;
 }
 
 .podcast-introduce{
@@ -44,3 +45,96 @@
   }
 }
 
+.sign-podcast{
+  margin-top: 25px;
+  &__title{
+    text-transform: uppercase;
+    line-height: 36px;
+    @include font(20px,$PoppinsMedium);
+    font-weight: 500;
+    margin-bottom: 0.5em;
+
+    background: linear-gradient(90deg,$redColor 0%, $violetColor 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+
+.follow{
+  margin-top: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  &__img{
+    position: relative;
+  }
+}
+.follow-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.follow-item{
+  width: 300px;
+  margin-bottom: 36px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.follow-img{
+  .bg-circe{
+    width: 114px;
+    height: 114px;
+    background-color: $violetColor;
+    border-radius: 50%;
+    border:5px solid #fff;
+    box-shadow: 0px 4px 25px rgba(115, 115, 115, 0.2);
+    &-red{
+      background-color: $redColor;
+    }
+  }
+  img{
+    position: absolute;
+    bottom: 5px;
+    border-radius: 0 0 47% 50%;
+  }
+}
+.follow-link{
+  width: 100%;
+  @include font(16px,$PoppinsMedium);
+  margin-left: 32px;
+  &__login{
+    line-height: 29px;
+  }
+  &__follow{
+    color: $violetColor;
+    align-items: center;
+    display: inline-flex;
+    text-transform: uppercase;
+    &-red{
+      color: $redColor;
+    }
+    .link-text{
+      color: inherit;
+      margin-left: 9px;
+    }
+  }
+  &__icon{
+    fill: $violetColor;
+    width: 19px;
+    height: 20px;
+    &-red{
+      fill: $redColor;
+    }
+  }
+}
+
+
+
+.follow-additional{
+  margin-top: 14px;
+  font-size: 12px;
+  line-height: 22px;
+}

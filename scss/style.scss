@@ -11,13 +11,16 @@
 @import "_modules/general";
 /* BUTTONS */
 @import "_modules/link_buttons";
-/* BUTTONS */
+/* FORMS */
+@import "_modules/forms";
+/* PLAYER */
 @import "_modules/player";
+
+
+
 
 /* HEADER */
 @import "_modules/header";
-
-
 
 /*  CONTENT */
 /*  SECTIONS */
@@ -28,3 +31,11 @@
 @import "_modules/about-me";
 /* #3 - About Me Section */
 @import "_modules/podcast";
+/* #4 - My Blog Section */
+@import "_modules/my-blog";
+/* #5 - In Touch Section */
+@import "_modules/in-touch";
+
+
+/*  FOOTER */
+@import "_modules/footer";

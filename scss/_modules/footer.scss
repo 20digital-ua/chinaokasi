@@ -1,0 +1,54 @@
+footer{
+  .container{
+    padding: 4em 1em 3em 1em;
+  }
+} 
+.footer-container{
+  font-size: 0.75em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.social{
+  margin: 0 auto;
+  margin-top: 39px;
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+  &__twitter .icon{
+    width: 23px;
+    height: 24px;
+  }
+  &__instagram .icon{
+    width: 21px;
+    height: 24px;
+  }
+}
+.contact-info{
+  margin-top: 36px;
+  &__title{
+    @include font(1rem, $PoppinsSemiBold);
+    text-transform: uppercase;
+  }
+  &__subtitle{
+    margin-top: 12px;
+    @include font(1em, $PoppinsMedium);
+  }
+  &__phone{
+    margin-top: 22px;
+  }
+}
+.address{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 36px;
+  &__city{
+    @include font(1em, $PoppinsSemiBold);
+  }
+  &__detailed{
+    margin-top: 12px;
+    width: 65%;
+  }
+}

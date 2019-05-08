@@ -7,9 +7,10 @@
   border-radius: 25px  0;
   color: #fff;
   @include font(1em,$PoppinsSemiBold);
+  margin-top: 2em;
 }
 
-.link{
+.link-btn{
   cursor: pointer;
   border: none;
   display: block;

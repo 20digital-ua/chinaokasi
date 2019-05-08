@@ -154,6 +154,7 @@ body {
   font-family: 'Poppins-Regular',sans-serif;
   color: #3A3B3F;
   line-height: normal;
+  background-color: #FFF;
 }
 
 .container {
@@ -167,10 +168,14 @@ body {
   padding: 0;
 }
 
+.container--notoppadding {
+  padding: 0 1em 0 1em;
+}
+
 .title {
   font: 1.5em "Poppins-SemiBold";
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .title--left {
@@ -186,6 +191,14 @@ body {
   color: #FF3E5C;
 }
 
+.text {
+  line-height: normal;
+}
+
+.text-center {
+  text-align: center;
+}
+
 /* BUTTONS */
 
 .submit-btn {
@@ -197,9 +210,10 @@ body {
   border-radius: 25px  0;
   color: #fff;
   font: 1em "Poppins-SemiBold";
+  margin-top: 2em;
 }
 
-.link {
+.link-btn {
   cursor: pointer;
   border: none;
   display: block;
@@ -213,11 +227,43 @@ body {
   text-align: center;
 }
 
-/* BUTTONS */
+/* FORMS */
 
-.podcast-player {
-  padding-bottom: 64px;
+.primary-form .form-row {
+  width: 100%;
+  margin-top: 1em;
 }
+
+.primary-form__label {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.primary-form__input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(58, 59, 63, 0.15);
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  line-height: 21px;
+  padding-left: 1em;
+  font-family: inherit;
+}
+
+.primary-form__input::placeholder {
+  color: rgba(58, 59, 63, 0.2);
+}
+
+.primary-form__textarea {
+  padding-top: 8px;
+  height: unset;
+  min-height: 96px;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+/* PLAYER */
 
 .podcast-player__title .inner-bold {
   font-family: "Poppins-SemiBold";
@@ -387,21 +433,6 @@ header .container {
   padding-top: 2em;
 }
 
-.subscribe-form__input {
-  width: 100%;
-  height: 40px;
-  border: 1px solid rgba(58, 59, 63, 0.15);
-  border-radius: 5px;
-  margin-bottom: 1em;
-  outline: none;
-  padding: 0.5em 1em;
-  font-size: 0.875em;
-}
-
-.subscribe-form__input::placeholder {
-  color: rgba(58, 59, 63, 0.2);
-}
-
 /*  CONTENT */
 
 /*  SECTIONS */
@@ -569,6 +600,7 @@ header .container {
 
 .container--podcast-player {
   padding-top: 24px;
+  padding-bottom: 3em;
 }
 
 .podcast-introduce {
@@ -616,4 +648,256 @@ header .container {
   margin-right: -5px;
   height: 97%;
   align-self: flex-end;
+}
+
+.sign-podcast {
+  margin-top: 25px;
+}
+
+.sign-podcast__title {
+  text-transform: uppercase;
+  line-height: 36px;
+  font: 20px "Poppins-Medium";
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  background: linear-gradient(90deg, #FF3E5C 0%, #5D5CC3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.follow {
+  margin-top: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.follow__img {
+  position: relative;
+}
+
+.follow-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.follow-item {
+  width: 300px;
+  margin-bottom: 36px;
+}
+
+.follow-item:last-child {
+  margin-bottom: 0;
+}
+
+.follow-img .bg-circe {
+  width: 114px;
+  height: 114px;
+  background-color: #5D5CC3;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0px 4px 25px rgba(115, 115, 115, 0.2);
+}
+
+.follow-img .bg-circe-red {
+  background-color: #FF3E5C;
+}
+
+.follow-img img {
+  position: absolute;
+  bottom: 5px;
+  border-radius: 0 0 47% 50%;
+}
+
+.follow-link {
+  width: 100%;
+  font: 16px "Poppins-Medium";
+  margin-left: 32px;
+}
+
+.follow-link__login {
+  line-height: 29px;
+}
+
+.follow-link__follow {
+  color: #5D5CC3;
+  align-items: center;
+  display: inline-flex;
+  text-transform: uppercase;
+}
+
+.follow-link__follow-red {
+  color: #FF3E5C;
+}
+
+.follow-link__follow .link-text {
+  color: inherit;
+  margin-left: 9px;
+}
+
+.follow-link__icon {
+  fill: #5D5CC3;
+  width: 19px;
+  height: 20px;
+}
+
+.follow-link__icon-red {
+  fill: #FF3E5C;
+}
+
+.follow-additional {
+  margin-top: 14px;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+/* #4 - My Blog Section */
+
+.blog-section {
+  background-color: rgba(243, 243, 243, 0.71);
+  padding-bottom: 4em;
+}
+
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 25px 0 25px 0;
+  overflow: hidden;
+  max-width: 375px;
+  padding-bottom: 50px;
+  position: relative;
+  margin-bottom: 32px;
+  box-shadow: 0px 4px 25px rgba(115, 115, 115, 0.1);
+}
+
+.post__img {
+  width: 100%;
+  border-radius: 25px 0 25px 0;
+}
+
+.post-content {
+  margin-top: 10px;
+  line-height: 24px;
+  padding: 0 31px;
+}
+
+.post-content__title {
+  font: 16px "Poppins-Medium";
+  margin-bottom: 1em;
+}
+
+.post-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  padding: 0 31px;
+}
+
+.post-info__date {
+  color: rgba(58, 59, 63, 0.5);
+}
+
+.post-info__heart {
+  display: flex;
+  align-items: center;
+}
+
+/* #5 - In Touch Section */
+
+.in-touch-section .text {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 14px;
+}
+
+.with-me {
+  text-align: center;
+}
+
+.with-me__gradient {
+  font: 2em "PermanentMarker";
+  background: linear-gradient(90deg, #FF3E5C 0%, #5D5CC3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.with-me__simple {
+  margin: 6px 0;
+  text-transform: uppercase;
+}
+
+/*  FOOTER */
+
+footer .container {
+  padding: 4em 1em 3em 1em;
+}
+
+.footer-container {
+  font-size: 0.75em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.social {
+  margin: 0 auto;
+  margin-top: 39px;
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social__twitter .icon {
+  width: 23px;
+  height: 24px;
+}
+
+.social__instagram .icon {
+  width: 21px;
+  height: 24px;
+}
+
+.contact-info {
+  margin-top: 36px;
+}
+
+.contact-info__title {
+  font: 1rem "Poppins-SemiBold";
+  text-transform: uppercase;
+}
+
+.contact-info__subtitle {
+  margin-top: 12px;
+  font: 1em "Poppins-Medium";
+}
+
+.contact-info__phone {
+  margin-top: 22px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 36px;
+}
+
+.address__city {
+  font: 1em "Poppins-SemiBold";
+}
+
+.address__detailed {
+  margin-top: 12px;
+  width: 65%;
 }
