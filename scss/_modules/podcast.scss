@@ -4,8 +4,11 @@
 }
 
 .podcast-introduce{
-  max-width: 375px;
-  height: 225px;
+
+  width: 100%;
+  min-height: 224px;
+  max-height: 400px;
+
   background: linear-gradient(270deg, #5D5CA7 0%, #F35C6E 100%);
   border-radius: 25px 0;
   display: flex;
@@ -26,6 +29,7 @@
   &__text{
     color: #FFF;
     text-align: center;
+    width: 100%;
   }
   &__title{
     @include font(32px, $PermanentMarker);

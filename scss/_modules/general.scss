@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body{ 
-  font-size: 1em;
+  font-size: 16px;
   font-family: 'Poppins-Regular',sans-serif;
   color: $primaryTextColor;
   line-height: normal;
@@ -12,7 +12,7 @@ body{
 .container{
   padding: $mobPadding;
   position: relative;
-  max-width: 720px;
+  max-width: 1056px;
   margin: 0 auto;
   &--nopadding{
     padding:0;
@@ -22,12 +22,19 @@ body{
   }
 }
 
+
 .title{
   @include font(1.5em,$PoppinsSemiBold);
   text-align: center;
   margin-bottom: 1.25rem;
   &--left{
     text-align: left;
+  }
+  @include screen-tb{
+    font-size: 2em;
+  }
+  @include screen-lg{
+    font-size: 2.5em;
   }
 } 
 
@@ -37,9 +44,16 @@ body{
     font-family: $PoppinsMedium;
     color: $redColor;
   }
+  @include screen-tb{
+    font-size: 1em;
+  }
+  @include screen-lg{
+    font-size: 1.25em;
+  }
 }
 //FIXME
 .text{
+  font-size: 1rem;
   line-height: normal;
   &-center{
     text-align: center;

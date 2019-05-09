@@ -150,7 +150,7 @@ a {
 }
 
 body {
-  font-size: 1em;
+  font-size: 16px;
   font-family: 'Poppins-Regular',sans-serif;
   color: #3A3B3F;
   line-height: normal;
@@ -160,7 +160,7 @@ body {
 .container {
   padding: 3em 1em 0 1em;
   position: relative;
-  max-width: 720px;
+  max-width: 1056px;
   margin: 0 auto;
 }
 
@@ -192,6 +192,7 @@ body {
 }
 
 .text {
+  font-size: 1rem;
   line-height: normal;
 }
 
@@ -209,7 +210,7 @@ body {
   background-color: #5D5CC3;
   border-radius: 25px  0;
   color: #fff;
-  font: 1em "Poppins-SemiBold";
+  font: 1rem "Poppins-SemiBold";
   margin-top: 2em;
 }
 
@@ -261,6 +262,22 @@ body {
   min-height: 96px;
   max-width: 100%;
   min-width: 100%;
+}
+
+.header-form .form-row {
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+.header-form .form-row-two-col {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 464px;
+}
+
+.header-form .form-row-two-col .input {
+  width: 95%;
 }
 
 /* PLAYER */
@@ -345,34 +362,39 @@ header {
 }
 
 header .container {
-  padding: 0;
+  padding-top: 0;
 }
 
-.gradient-block {
+.header-main-bg {
   position: absolute;
-  width: 52%;
+  width: 40%;
   height: 100%;
   right: 0;
   top: 0;
 }
 
-.gradient-block .china {
-  background: url("img/header/ChinaMainHeaderImage.png") left bottom no-repeat;
+.header-main-bg .header-bg-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.header-main-bg .china {
+  background: url("img/header/ChinaMainHeaderImage.png") center bottom no-repeat;
   background-size: contain;
   position: absolute;
   bottom: 0;
   z-index: 1;
   height: calc(100% - 70px);
-  width: 20%;
+  width: 45%;
   min-width: 120px;
+  transform: translateX(-50%);
 }
 
-.gradient-block:after {
+.header-main-bg .gradient-block {
   position: absolute;
-  right: 100%;
-  left: 54px;
-  content: '';
-  width: calc(100% - 54px);
+  right: 0;
+  width: 100%;
   height: 100%;
   z-index: -1;
   background: linear-gradient(180deg, #FF3E5C 0%, #5D5CC3 100%);
@@ -385,11 +407,10 @@ header .container {
   height: 80px;
   width: 100%;
   top: 0;
-  margin-bottom: 40px;
 }
 
 .logo-container {
-  padding: 0.5em 0 0 0.5em;
+  padding: 0.5em 0 0 0;
 }
 
 .logo-container__logo {
@@ -406,13 +427,15 @@ header .container {
 }
 
 .header-content {
-  max-width: 50%;
+  margin-top: 40px;
+  max-width: 55%;
   position: relative;
   padding-bottom: 30px;
 }
 
 .header-content .header-text {
-  padding-left: 2em;
+  padding-left: 1em;
+  transition: all .25s linear;
 }
 
 .header-content__medium {
@@ -423,6 +446,20 @@ header .container {
 .header-content__title {
   font: 2em "Poppins-Bold";
   margin-bottom: 10px;
+}
+
+.header-content .greeting {
+  margin-top: 44px;
+  display: none;
+  font: 0.5em "Poppins-Regular";
+}
+
+.header-content .greeting__text-md {
+  font-family: "Poppins-Bold";
+}
+
+.subscribe-block--header {
+  display: none;
 }
 
 .subscribe-section .container {
@@ -444,16 +481,19 @@ header .container {
 }
 
 .courses {
-  max-width: 600px;
   margin: 0 auto;
+  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .course {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 320px;
   margin-bottom: 2em;
-}
-
-.course:last-child {
-  margin-bottom: 0;
 }
 
 .course .course-top-container {
@@ -479,11 +519,11 @@ header .container {
 .course__title:after {
   content: '';
   display: block;
+  width: 33px;
+  height: 41px;
 }
 
 .course__title--live:after {
-  width: 33px;
-  height: 41px;
   background: url("img/courses/icons/Diamond.svg") center no-repeat;
   position: absolute;
   top: -20px;
@@ -491,18 +531,16 @@ header .container {
 }
 
 .course__title--work:after {
-  width: 33px;
-  height: 41px;
   background: url("img/courses/icons/Dollar.svg") center no-repeat;
+  background-size: contain;
   position: absolute;
   top: -20px;
   right: -20px;
 }
 
 .course__title--love:after {
-  width: 33px;
-  height: 41px;
   background: url("img/courses/icons/Heart.svg") center no-repeat;
+  background-size: contain;
   position: absolute;
   top: -20px;
   right: -20px;
@@ -541,7 +579,7 @@ header .container {
   color: #FF3E5C;
   font: 0.875em "Poppins-SemiBold";
   display: inline-block;
-  padding-right: 15px;
+  max-width: 86px;
   background: url("img/icons/chevron-right-solid.svg") right center no-repeat;
   background-size: 6px 14px;
 }
@@ -558,9 +596,23 @@ header .container {
   font-family: "Poppins-SemiBold";
   background: url("img/courses/Rectangle.svg") left center no-repeat;
   background-size: 100% 100%;
+  transition: all .25s linear;
+}
+
+.course__takelink:hover {
+  background: unset;
+  background-color: #5D5CC3;
+  color: #fff;
+}
+
+.course__takelink:hover .link-inner {
+  background: linear-gradient(90deg, #FFF 0%, #FFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .course__takelink .link-inner {
+  transition: all .25s linear;
   background: linear-gradient(90deg, #FF3E5C 0%, #5D5CC3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -608,8 +660,9 @@ header .container {
 }
 
 .podcast-introduce {
-  max-width: 375px;
-  height: 225px;
+  width: 100%;
+  min-height: 224px;
+  max-height: 400px;
   background: linear-gradient(270deg, #5D5CA7 0%, #F35C6E 100%);
   border-radius: 25px 0;
   display: flex;
@@ -633,6 +686,7 @@ header .container {
 .podcast-introduce__text {
   color: #FFF;
   text-align: center;
+  width: 100%;
 }
 
 .podcast-introduce__title {
@@ -905,4 +959,129 @@ footer .container {
 .address__detailed {
   margin-top: 12px;
   width: 65%;
+}
+
+@media only screen and (min-width: 720px) {
+  .title {
+    font-size: 2em;
+  }
+
+  .sub-title {
+    font-size: 1em;
+  }
+
+  .submit-btn,
+  .link-btn {
+    max-width: 224px;
+  }
+
+  .logo-container {
+    font-size: 1.5em;
+  }
+
+  .logo-container__logo {
+    width: 37px;
+    height: 30px;
+  }
+
+  .header-content {
+    margin-top: 80px;
+    font-size: 1.5em;
+  }
+
+  .header-content .header-text {
+    padding-left: 0;
+  }
+
+  .header-content .greeting {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .subscribe-block--header {
+    display: block;
+  }
+
+  .subscribe-section {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .title {
+    font-size: 2.5em;
+  }
+
+  .sub-title {
+    font-size: 1.25em;
+  }
+
+  .logo-container {
+    font-size: 2em;
+  }
+
+  .logo-container__logo {
+    width: 45px;
+    height: 35px;
+  }
+
+  .header-content {
+    margin-top: 180px;
+    padding-bottom: 130px;
+    font-size: 2em;
+  }
+
+  .courses {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .course .course-top-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .course__title {
+    align-self: flex-start;
+    position: relative;
+    bottom: -40px;
+  }
+
+  .course__title--live:after {
+    background-size: contain;
+    width: 75px;
+    height: 90px;
+    top: -53px;
+    right: -50px;
+  }
+
+  .course__title--work:after {
+    width: 61px;
+    height: 63px;
+    top: -33px;
+    right: -49px;
+  }
+
+  .course__title--love:after {
+    width: 61px;
+    height: 63px;
+    top: -31px;
+    right: -52px;
+  }
+
+  .course__img {
+    width: 100%;
+    height: 360px;
+  }
+
+  .course__img:after {
+    height: 256px;
+  }
+
+  .course__takelink {
+    background: url("img/courses/Rectangle_small.svg") left center no-repeat;
+    max-width: 224px;
+  }
 }

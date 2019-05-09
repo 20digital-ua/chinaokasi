@@ -29,3 +29,19 @@
     min-width: 100%;
   }
 }
+
+.header-form{
+  .form-row{
+    font-size: 1rem;
+    margin-top: 0;
+    &-two-col{
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      max-width: 464px;
+      .input{
+        width: 95%;
+      }
+    }
+  }
+}
