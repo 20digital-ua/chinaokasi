@@ -3,6 +3,9 @@
   font:$size $family;
 }
 
+@mixin transition{
+  transition: all .25s linear;
+}
 
 
 

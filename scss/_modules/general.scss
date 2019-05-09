@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body{ 
-  font-size: 1em;
+  font-size: 16px;
   font-family: 'Poppins-Regular',sans-serif;
   color: $primaryTextColor;
   line-height: normal;
@@ -12,7 +12,7 @@ body{
 .container{
   padding: $mobPadding;
   position: relative;
-  max-width: 720px;
+  max-width: 1056px;
   margin: 0 auto;
   &--nopadding{
     padding:0;

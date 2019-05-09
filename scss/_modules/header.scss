@@ -2,34 +2,39 @@ header{
   min-height: 305px;
   position: relative;
   .container{
-    padding: 0;
+    padding-top: 0;
     //outline: 1px solid green;
   }
 }
-.gradient-block{
+
+.header-main-bg{
   position: absolute;
-  width: 52%;
+  width: 40%;
   height: 100%;
   right: 0;
   top: 0;
   //outline: 1px solid black;
-
+  .header-bg-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
   .china{
-    background:url("#{$image_dir}header/ChinaMainHeaderImage.png") left bottom no-repeat;
+    background:url("#{$image_dir}header/ChinaMainHeaderImage.png") center bottom no-repeat;
     background-size: contain;
     position: absolute;
     bottom: 0;
     z-index: 1;
     height: calc(100% - 70px);
-    width: 20%;
+    width: 45%;
     min-width: 120px;
+    transform: translateX(-50%);
   }
-  &:after{
+  .gradient-block{
     position: absolute;
-    right: 100%;
-    left: 54px;
-    content: '';
-    width: calc(100% - 54px);
+    right: 0;
+    // width: calc(100% - 54px);
+    width:100%;
     height: 100%;
     z-index: -1;
     background: linear-gradient(180deg, #FF3E5C 0%, #5D5CC3 100%);
@@ -47,14 +52,27 @@ header{
   height: 80px;
   width: 100%;
   top: 0;
-  margin-bottom: 40px;
 }
 .logo-container{
-  padding: 0.5em 0 0 0.5em;
+  padding: 0.5em 0 0 0;
+  @include screen-tb{
+    font-size: 1.5em;
+  }
+  @include screen-lg{
+    font-size: 2em;
+  }
   &__logo{
     width: 30px;
     height: 26px;
     display: block;
+    @include screen-tb{
+      width: 37px;
+      height: 30px;
+    }
+    @include screen-lg{
+      width: 45px;
+      height: 35px;
+    }
   }
   &__name{
     margin: 5px 0 0 7px;
@@ -64,10 +82,27 @@ header{
   }
 }
 .header-content{
-  max-width: 50%;
+  margin-top: 40px;
+  max-width: 55%;
   position: relative;
+  padding-bottom: 30px;
+  @include screen-tb{
+    margin-top: 80px;
+    font-size: 1.5em;
+  }
+  @include screen-lg{
+    margin-top: 180px;
+    padding-bottom: 130px;
+    font-size: 2em;
+  }
+
+
   .header-text{
-    padding-left:2em;
+    padding-left:1em;
+    @include transition;
+    @include screen-tb{
+      padding-left:0;
+    }
   }
   &__medium{
     text-transform: uppercase;
@@ -76,17 +111,36 @@ header{
   &__title{
     @include font(2em,$PoppinsBold);
     margin-bottom: 10px;
-    //line-height: 2.5em;
   }
-  padding-bottom: 30px;
+  .greeting{
+    margin-top: 44px;
+    display: none;
+    @include font(0.5em,$Poppins);
+    &__text-md{
+      font-family: $PoppinsBold;
+    }
+    @include screen-tb{
+      display: block;
+    }
+  }
+  
 }
 
+.subscribe-block--header{
+  display: none;
+  @include screen-md{
+    display: block;
+  }
+}
 
 
 
 .subscribe-section{
   .container{
     padding-top: 0;
+  }
+  @include screen-md{
+    display: none;
   }
 }
 .subscribe-block{
