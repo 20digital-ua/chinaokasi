@@ -192,6 +192,7 @@ body {
 }
 
 .text {
+  font-size: 1rem;
   line-height: normal;
 }
 
@@ -480,16 +481,19 @@ header .container {
 }
 
 .courses {
-  max-width: 600px;
   margin: 0 auto;
+  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .course {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 320px;
   margin-bottom: 2em;
-}
-
-.course:last-child {
-  margin-bottom: 0;
 }
 
 .course .course-top-container {
@@ -515,11 +519,11 @@ header .container {
 .course__title:after {
   content: '';
   display: block;
+  width: 33px;
+  height: 41px;
 }
 
 .course__title--live:after {
-  width: 33px;
-  height: 41px;
   background: url("img/courses/icons/Diamond.svg") center no-repeat;
   position: absolute;
   top: -20px;
@@ -527,18 +531,16 @@ header .container {
 }
 
 .course__title--work:after {
-  width: 33px;
-  height: 41px;
   background: url("img/courses/icons/Dollar.svg") center no-repeat;
+  background-size: contain;
   position: absolute;
   top: -20px;
   right: -20px;
 }
 
 .course__title--love:after {
-  width: 33px;
-  height: 41px;
   background: url("img/courses/icons/Heart.svg") center no-repeat;
+  background-size: contain;
   position: absolute;
   top: -20px;
   right: -20px;
@@ -577,7 +579,7 @@ header .container {
   color: #FF3E5C;
   font: 0.875em "Poppins-SemiBold";
   display: inline-block;
-  padding-right: 15px;
+  max-width: 86px;
   background: url("img/icons/chevron-right-solid.svg") right center no-repeat;
   background-size: 6px 14px;
 }
@@ -594,9 +596,23 @@ header .container {
   font-family: "Poppins-SemiBold";
   background: url("img/courses/Rectangle.svg") left center no-repeat;
   background-size: 100% 100%;
+  transition: all .25s linear;
+}
+
+.course__takelink:hover {
+  background: unset;
+  background-color: #5D5CC3;
+  color: #fff;
+}
+
+.course__takelink:hover .link-inner {
+  background: linear-gradient(90deg, #FFF 0%, #FFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .course__takelink .link-inner {
+  transition: all .25s linear;
   background: linear-gradient(90deg, #FF3E5C 0%, #5D5CC3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -946,6 +962,14 @@ footer .container {
 }
 
 @media only screen and (min-width: 720px) {
+  .title {
+    font-size: 2em;
+  }
+
+  .sub-title {
+    font-size: 1em;
+  }
+
   .submit-btn,
   .link-btn {
     max-width: 224px;
@@ -985,6 +1009,14 @@ footer .container {
 }
 
 @media only screen and (min-width: 1400px) {
+  .title {
+    font-size: 2.5em;
+  }
+
+  .sub-title {
+    font-size: 1.25em;
+  }
+
   .logo-container {
     font-size: 2em;
   }
@@ -998,5 +1030,58 @@ footer .container {
     margin-top: 180px;
     padding-bottom: 130px;
     font-size: 2em;
+  }
+
+  .courses {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .course .course-top-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .course__title {
+    align-self: flex-start;
+    position: relative;
+    bottom: -40px;
+  }
+
+  .course__title--live:after {
+    background-size: contain;
+    width: 75px;
+    height: 90px;
+    top: -53px;
+    right: -50px;
+  }
+
+  .course__title--work:after {
+    width: 61px;
+    height: 63px;
+    top: -33px;
+    right: -49px;
+  }
+
+  .course__title--love:after {
+    width: 61px;
+    height: 63px;
+    top: -31px;
+    right: -52px;
+  }
+
+  .course__img {
+    width: 100%;
+    height: 360px;
+  }
+
+  .course__img:after {
+    height: 256px;
+  }
+
+  .course__takelink {
+    background: url("img/courses/Rectangle_small.svg") left center no-repeat;
+    max-width: 224px;
   }
 }
