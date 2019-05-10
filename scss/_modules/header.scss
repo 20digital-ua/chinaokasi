@@ -128,6 +128,7 @@ header{
 
 .subscribe-block--header{
   display: none;
+  margin-top: 32px;
   @include screen-md{
     display: block;
   }
@@ -136,6 +137,7 @@ header{
 
 
 .subscribe-section{
+  padding-bottom: 0;
   .container{
     padding-top: 0;
   }
@@ -143,8 +145,4 @@ header{
     display: none;
   }
 }
-.subscribe-block{
-  padding-top: 2em;
-}
-
 

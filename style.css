@@ -147,6 +147,7 @@ a {
 
 * {
   box-sizing: border-box;
+  text-overflow: ellipsis;
 }
 
 body {
@@ -157,8 +158,12 @@ body {
   background-color: #FFF;
 }
 
+.section {
+  padding: 36px 0;
+}
+
 .container {
-  padding: 3em 1em 0 1em;
+  padding: 0 16px;
   position: relative;
   max-width: 1056px;
   margin: 0 auto;
@@ -168,14 +173,10 @@ body {
   padding: 0;
 }
 
-.container--notoppadding {
-  padding: 0 1em 0 1em;
-}
-
 .title {
-  font: 1.5em "Poppins-SemiBold";
+  font: 24px "Poppins-SemiBold";
   text-align: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 24px;
 }
 
 .title--left {
@@ -192,7 +193,6 @@ body {
 }
 
 .text {
-  font-size: 1rem;
   line-height: normal;
 }
 
@@ -210,8 +210,8 @@ body {
   background-color: #5D5CC3;
   border-radius: 25px  0;
   color: #fff;
-  font: 1rem "Poppins-SemiBold";
-  margin-top: 2em;
+  font: 16px "Poppins-SemiBold";
+  margin-top: 32px;
 }
 
 .link-btn {
@@ -223,7 +223,7 @@ body {
   background-color: #FF3E5C;
   border-radius: 25px  0;
   color: #fff;
-  font-family: "Poppins-SemiBold";
+  font: 16px "Poppins-SemiBold";
   line-height: 64px;
   text-align: center;
 }
@@ -460,14 +460,15 @@ header .container {
 
 .subscribe-block--header {
   display: none;
+  margin-top: 32px;
+}
+
+.subscribe-section {
+  padding-bottom: 0;
 }
 
 .subscribe-section .container {
   padding-top: 0;
-}
-
-.subscribe-block {
-  padding-top: 2em;
 }
 
 /*  CONTENT */
@@ -477,12 +478,11 @@ header .container {
 /* #1 - Courses Section */
 
 .courses-section {
-  padding-bottom: 4em;
+  padding: 64px 0 64px 0;
 }
 
 .courses {
   margin: 0 auto;
-  margin-top: 4em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -493,7 +493,11 @@ header .container {
   flex-direction: column;
   justify-content: space-between;
   max-width: 320px;
-  margin-bottom: 2em;
+  margin-bottom: 32px;
+}
+
+.course:last-child {
+  margin-bottom: 0;
 }
 
 .course .course-top-container {
@@ -626,7 +630,17 @@ header .container {
 
 .about-me-section {
   background-color: rgba(243, 243, 243, 0.71);
-  padding-bottom: 4em;
+  padding: 48px 0 64px 0;
+  position: relative;
+}
+
+.about-me-section .title--china-bio {
+  display: none;
+}
+
+.about-china {
+  display: flex;
+  flex-direction: column;
 }
 
 .china-photo {
@@ -635,6 +649,8 @@ header .container {
   background-color: #5D5CC3;
   border-radius: 25px 0;
   margin: 0 auto;
+  margin-bottom: 24px;
+  position: relative;
 }
 
 .china-photo__img {
@@ -644,19 +660,63 @@ header .container {
   height: 100%;
 }
 
+.china-photo .quote-block {
+  display: none;
+  max-width: 336px;
+  min-height: 160px;
+  background: #FFFFFF;
+  border-radius: 40px 0px;
+  position: absolute;
+  bottom: -100px;
+  right: -70px;
+  padding: 60px 60px 49px 73px;
+  font: 14px "Poppins-MediumItalic";
+}
+
+.china-photo .quote-block__text {
+  position: relative;
+}
+
+.china-photo .quote-block__text:before,
+.china-photo .quote-block__text:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url(img/icons/quotes.svg) center no-repeat;
+}
+
+.china-photo .quote-block__text:before {
+  left: -35px;
+  top: -25px;
+}
+
+.china-photo .quote-block__text:after {
+  right: -25px;
+  bottom: -25px;
+}
+
+.china-bio {
+  padding: 0 16px;
+}
+
+.china-bio .link-btn {
+  margin-top: 25px;
+}
+
 .about-content p {
-  margin-bottom: 1em;
+  margin-bottom: 16px;
 }
 
 .about-content p:last-child {
-  margin-bottom: 1.5em;
+  margin-bottom: 0;
 }
 
 /* #3 - About Me Section */
 
 .container--podcast-player {
   padding-top: 24px;
-  padding-bottom: 3em;
 }
 
 .podcast-introduce {
@@ -815,7 +875,6 @@ header .container {
 
 .blog-section {
   background-color: rgba(243, 243, 243, 0.71);
-  padding-bottom: 4em;
 }
 
 .blog-posts {
@@ -872,6 +931,10 @@ header .container {
 }
 
 /* #5 - In Touch Section */
+
+.in-touch-section {
+  padding-bottom: 0;
+}
 
 .in-touch-section .text {
   max-width: 80%;
@@ -963,11 +1026,11 @@ footer .container {
 
 @media only screen and (min-width: 720px) {
   .title {
-    font-size: 2em;
+    font-size: 32px;
   }
 
   .sub-title {
-    font-size: 1em;
+    font-size: 18px;
   }
 
   .submit-btn,
@@ -996,6 +1059,33 @@ footer .container {
   .header-content .greeting {
     display: block;
   }
+
+  .courses-section {
+    padding: 100px 0 120px 0;
+  }
+
+  .courses {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-top: 48px;
+  }
+
+  .course {
+    margin-bottom: 0;
+  }
+
+  .about-me-section {
+    padding: 64px 0 120px 0;
+  }
+
+  .china-photo {
+    max-width: 400px;
+    min-width: 400px;
+    max-height: 460px;
+    min-height: 460px;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1006,15 +1096,56 @@ footer .container {
   .subscribe-section {
     display: none;
   }
+
+  .about-me-section:before {
+    content: '#GURU';
+    font-family: Permanent Marker;
+    font: 300px "PermanentMarker";
+    line-height: 437px;
+    color: rgba(93, 92, 195, 0.04);
+    position: absolute;
+    right: 10%;
+    top: 150px;
+  }
+
+  .about-me-section .title--about-me {
+    display: none;
+  }
+
+  .about-me-section .title--china-bio {
+    margin-top: 16px;
+    display: block;
+  }
+
+  .about-china {
+    flex-direction: row;
+    font-size: 20px;
+  }
+
+  .china-photo .quote-block {
+    display: block;
+  }
+
+  .china-bio {
+    margin-left: 100px;
+  }
+
+  .china-bio .link-btn {
+    margin-top: 50px;
+  }
+
+  .about-content p {
+    margin-bottom: 32px;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
   .title {
-    font-size: 2.5em;
+    font-size: 40px;
   }
 
   .sub-title {
-    font-size: 1.25em;
+    font-size: 20px;
   }
 
   .logo-container {
@@ -1032,10 +1163,8 @@ footer .container {
     font-size: 2em;
   }
 
-  .courses {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
+  .courses-section {
+    padding: 150px 0 192px 0;
   }
 
   .course .course-top-container {
@@ -1083,5 +1212,9 @@ footer .container {
   .course__takelink {
     background: url("img/courses/Rectangle_small.svg") left center no-repeat;
     max-width: 224px;
+  }
+
+  .about-me-section {
+    padding: 82px 0 160px 0;
   }
 }

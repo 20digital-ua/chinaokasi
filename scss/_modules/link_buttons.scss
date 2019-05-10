@@ -6,8 +6,8 @@
   background-color: $violetColor;
   border-radius: 25px  0;
   color: #fff;
-  @include font(1rem,$PoppinsSemiBold);
-  margin-top: 2em;
+  @include font(16px,$PoppinsSemiBold);
+  margin-top: 32px;
 }
 
 .link-btn{
@@ -19,7 +19,7 @@
   background-color: $redColor;
   border-radius: 25px  0;
   color: #fff;
-  font-family: $PoppinsSemiBold;
+  @include font(16px, $PoppinsSemiBold);
   line-height: 64px;
   text-align: center;
 }
