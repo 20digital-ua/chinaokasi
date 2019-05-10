@@ -242,6 +242,7 @@ body {
 
 .primary-form__input {
   width: 100%;
+  max-width: 300px;
   height: 40px;
   border: 1px solid rgba(58, 59, 63, 0.15);
   border-radius: 5px;
@@ -281,6 +282,11 @@ body {
 }
 
 /* PLAYER */
+
+.podcast-player {
+  display: flex;
+  flex-direction: column;
+}
 
 .podcast-player__title .inner-bold {
   font-family: "Poppins-SemiBold";
@@ -715,6 +721,10 @@ header .container {
 
 /* #3 - About Me Section */
 
+.podcast-section {
+  padding: 48px 0 64px 0;
+}
+
 .container--podcast-player {
   padding-top: 24px;
 }
@@ -738,9 +748,10 @@ header .container {
   position: absolute;
   width: 69px;
   height: 85px;
-  background: url("img/icons/Microphone.svg") left no-repeat;
+  background: url("img/icons/Microphone.svg") center no-repeat;
   left: 0;
   bottom: -20px;
+  z-index: 1;
 }
 
 .podcast-introduce__text {
@@ -760,6 +771,8 @@ header .container {
 }
 
 .podcast-introduce__img {
+  position: relative;
+  z-index: 999;
   border-radius: 0 0 25px 0;
   object-fit: cover;
   width: 50%;
@@ -784,10 +797,10 @@ header .container {
 }
 
 .follow {
-  margin-top: 3em;
+  margin-top: 48px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .follow__img {
@@ -1038,6 +1051,18 @@ footer .container {
     max-width: 224px;
   }
 
+  .podcast-player {
+    margin-top: 24px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .podcast-player .podcast-controls {
+    margin-top: 0;
+    width: 70%;
+  }
+
   .logo-container {
     font-size: 1.5em;
   }
@@ -1085,6 +1110,31 @@ footer .container {
     min-width: 400px;
     max-height: 460px;
     min-height: 460px;
+  }
+
+  .podcast-section {
+    padding: 100px 0 82px 0;
+  }
+
+  .podcast-introduce:after {
+    width: 269px;
+    height: 285px;
+    background-size: contain;
+    left: 57%;
+    top: 58%;
+    transform: translate(-50%, -50%);
+  }
+
+  .podcast-introduce__title {
+    font-size: 40px;
+  }
+
+  .podcast-introduce__subtext {
+    font-size: 20px;
+  }
+
+  .follow {
+    margin-top: 86px;
   }
 }
 
@@ -1137,9 +1187,44 @@ footer .container {
   .about-content p {
     margin-bottom: 32px;
   }
+
+  .sign-podcast {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sign-podcast * {
+    margin: 0;
+  }
+
+  .sign-podcast .primary-form {
+    width: 70%;
+    display: flex;
+    align-items: center;
+  }
+
+  .sign-podcast .primary-form * {
+    margin: 0;
+  }
+
+  .sign-podcast .primary-form__input {
+    max-width: 224px;
+  }
+
+  .sign-podcast .primary-form__submit {
+    margin-top: 16px;
+    margin-left: 16px;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .title {
     font-size: 40px;
   }
@@ -1216,5 +1301,13 @@ footer .container {
 
   .about-me-section {
     padding: 82px 0 160px 0;
+  }
+
+  .podcast-section {
+    padding: 150px 0 97px 0;
+  }
+
+  .follow {
+    margin-top: 150px;
   }
 }

@@ -20,6 +20,10 @@ body{
   &--nopadding{
     padding:0;
   }
+  @include screen-lg{
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .title{
