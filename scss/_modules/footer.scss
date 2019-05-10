@@ -1,14 +1,29 @@
 footer{
-  .container{
-    padding: 4em 1em 3em 1em;
+  padding: 68px 0 0 0;
+  @include screen-tb{
+    padding: 116px 0 0 0;
+  }
+  @include screen-lg{
+    padding: 175px 0 0 0;
   }
 } 
 .footer-container{
-  font-size: 0.75em;
+  font-size: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  @include screen-tb{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 14px;
+  }
+}
+
+.copyright{
+  max-width: 150px;
 }
 .social{
   margin: 0 auto;
@@ -16,6 +31,7 @@ footer{
   width: 70px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 36px;
   &__twitter .icon{
     width: 23px;
     height: 24px;
@@ -24,11 +40,16 @@ footer{
     width: 21px;
     height: 24px;
   }
+  @include screen-tb{
+    margin: unset;
+    margin-top: 39px;
+  }
 }
 .contact-info{
-  margin-top: 36px;
+  max-width: 210px;
+  margin-bottom: 36px;
   &__title{
-    @include font(1rem, $PoppinsSemiBold);
+    @include font(16px, $PoppinsSemiBold);
     text-transform: uppercase;
   }
   &__subtitle{
@@ -40,15 +61,23 @@ footer{
   }
 }
 .address{
+  margin-bottom: 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 36px;
+  &-item-1{
+    max-width: 245px;
+  }
+  &-item-2{
+    max-width: 175px;
+  }
   &__city{
     @include font(1em, $PoppinsSemiBold);
   }
   &__detailed{
     margin-top: 12px;
-    width: 65%;
+  }
+  @include screen-tb{
+    align-items: flex-start;
   }
 }

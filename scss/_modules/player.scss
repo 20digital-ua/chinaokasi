@@ -1,4 +1,12 @@
 .podcast-player{
+  display: flex;
+  flex-direction: column;
+  @include screen-tb{
+    margin-top: 24px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
   &__title{
     .inner-bold{
       font-family: $PoppinsSemiBold;
@@ -9,6 +17,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include screen-tb{
+      margin-top: 0;
+      width: 70%;
+    }
   }
  
   #podcast-playBtn{

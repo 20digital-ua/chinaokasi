@@ -147,6 +147,7 @@ a {
 
 * {
   box-sizing: border-box;
+  text-overflow: ellipsis;
 }
 
 body {
@@ -157,8 +158,12 @@ body {
   background-color: #FFF;
 }
 
+.section {
+  padding: 36px 0;
+}
+
 .container {
-  padding: 3em 1em 0 1em;
+  padding: 0 16px;
   position: relative;
   max-width: 1056px;
   margin: 0 auto;
@@ -168,14 +173,10 @@ body {
   padding: 0;
 }
 
-.container--notoppadding {
-  padding: 0 1em 0 1em;
-}
-
 .title {
-  font: 1.5em "Poppins-SemiBold";
+  font: 24px "Poppins-SemiBold";
   text-align: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 24px;
 }
 
 .title--left {
@@ -192,7 +193,6 @@ body {
 }
 
 .text {
-  font-size: 1rem;
   line-height: normal;
 }
 
@@ -210,8 +210,8 @@ body {
   background-color: #5D5CC3;
   border-radius: 25px  0;
   color: #fff;
-  font: 1rem "Poppins-SemiBold";
-  margin-top: 2em;
+  font: 16px "Poppins-SemiBold";
+  margin-top: 32px;
 }
 
 .link-btn {
@@ -223,9 +223,13 @@ body {
   background-color: #FF3E5C;
   border-radius: 25px  0;
   color: #fff;
-  font-family: "Poppins-SemiBold";
+  font: 16px "Poppins-SemiBold";
   line-height: 64px;
   text-align: center;
+}
+
+.link-btn-center {
+  margin: 0 auto;
 }
 
 /* FORMS */
@@ -242,6 +246,7 @@ body {
 
 .primary-form__input {
   width: 100%;
+  max-width: 100%;
   height: 40px;
   border: 1px solid rgba(58, 59, 63, 0.15);
   border-radius: 5px;
@@ -260,8 +265,7 @@ body {
   padding-top: 8px;
   height: unset;
   min-height: 96px;
-  max-width: 100%;
-  min-width: 100%;
+  min-width: 220px;
 }
 
 .header-form .form-row {
@@ -281,6 +285,11 @@ body {
 }
 
 /* PLAYER */
+
+.podcast-player {
+  display: flex;
+  flex-direction: column;
+}
 
 .podcast-player__title .inner-bold {
   font-family: "Poppins-SemiBold";
@@ -460,14 +469,23 @@ header .container {
 
 .subscribe-block--header {
   display: none;
+  margin-top: 32px;
+}
+
+.subscribe-section {
+  padding-bottom: 0;
+}
+
+.subscribe-section .primary-form {
+  margin: 0 auto;
+  max-width: 343px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .subscribe-section .container {
   padding-top: 0;
-}
-
-.subscribe-block {
-  padding-top: 2em;
 }
 
 /*  CONTENT */
@@ -477,12 +495,11 @@ header .container {
 /* #1 - Courses Section */
 
 .courses-section {
-  padding-bottom: 4em;
+  padding: 64px 0 64px 0;
 }
 
 .courses {
   margin: 0 auto;
-  margin-top: 4em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -493,7 +510,11 @@ header .container {
   flex-direction: column;
   justify-content: space-between;
   max-width: 320px;
-  margin-bottom: 2em;
+  margin-bottom: 32px;
+}
+
+.course:last-child {
+  margin-bottom: 0;
 }
 
 .course .course-top-container {
@@ -626,7 +647,17 @@ header .container {
 
 .about-me-section {
   background-color: rgba(243, 243, 243, 0.71);
-  padding-bottom: 4em;
+  padding: 48px 0 64px 0;
+  position: relative;
+}
+
+.about-me-section .title--china-bio {
+  display: none;
+}
+
+.about-china {
+  display: flex;
+  flex-direction: column;
 }
 
 .china-photo {
@@ -635,6 +666,8 @@ header .container {
   background-color: #5D5CC3;
   border-radius: 25px 0;
   margin: 0 auto;
+  margin-bottom: 24px;
+  position: relative;
 }
 
 .china-photo__img {
@@ -644,19 +677,67 @@ header .container {
   height: 100%;
 }
 
+.china-photo .quote-block {
+  display: none;
+  max-width: 336px;
+  min-height: 160px;
+  background: #FFFFFF;
+  border-radius: 40px 0px;
+  position: absolute;
+  bottom: -100px;
+  right: -70px;
+  padding: 60px 60px 49px 73px;
+  font: 14px "Poppins-MediumItalic";
+}
+
+.china-photo .quote-block__text {
+  position: relative;
+}
+
+.china-photo .quote-block__text:before,
+.china-photo .quote-block__text:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url(img/icons/quotes.svg) center no-repeat;
+}
+
+.china-photo .quote-block__text:before {
+  left: -35px;
+  top: -25px;
+}
+
+.china-photo .quote-block__text:after {
+  right: -25px;
+  bottom: -25px;
+}
+
+.china-bio {
+  padding: 0 16px;
+}
+
+.china-bio .link-btn {
+  margin-top: 25px;
+}
+
 .about-content p {
-  margin-bottom: 1em;
+  margin-bottom: 16px;
 }
 
 .about-content p:last-child {
-  margin-bottom: 1.5em;
+  margin-bottom: 0;
 }
 
 /* #3 - About Me Section */
 
+.podcast-section {
+  padding: 48px 0 64px 0;
+}
+
 .container--podcast-player {
   padding-top: 24px;
-  padding-bottom: 3em;
 }
 
 .podcast-introduce {
@@ -678,9 +759,10 @@ header .container {
   position: absolute;
   width: 69px;
   height: 85px;
-  background: url("img/icons/Microphone.svg") left no-repeat;
+  background: url("img/icons/Microphone.svg") center no-repeat;
   left: 0;
   bottom: -20px;
+  z-index: 1;
 }
 
 .podcast-introduce__text {
@@ -700,6 +782,8 @@ header .container {
 }
 
 .podcast-introduce__img {
+  position: relative;
+  z-index: 999;
   border-radius: 0 0 25px 0;
   object-fit: cover;
   width: 50%;
@@ -710,6 +794,10 @@ header .container {
 
 .sign-podcast {
   margin-top: 25px;
+}
+
+.sign-podcast .primary-form {
+  max-width: 343px;
 }
 
 .sign-podcast__title {
@@ -724,10 +812,10 @@ header .container {
 }
 
 .follow {
-  margin-top: 3em;
+  margin-top: 48px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .follow__img {
@@ -815,7 +903,7 @@ header .container {
 
 .blog-section {
   background-color: rgba(243, 243, 243, 0.71);
-  padding-bottom: 4em;
+  padding: 48px 0 48px 0;
 }
 
 .blog-posts {
@@ -824,21 +912,54 @@ header .container {
   align-items: center;
 }
 
+.blog-posts-row2 {
+  display: none;
+}
+
 .post {
   width: 100%;
   background-color: #fff;
   border-radius: 25px 0 25px 0;
   overflow: hidden;
   max-width: 375px;
+  transition: all .25s linear;
   padding-bottom: 50px;
   position: relative;
   margin-bottom: 32px;
   box-shadow: 0px 4px 25px rgba(115, 115, 115, 0.1);
 }
 
+.post .post-img {
+  width: 100%;
+  height: 256px;
+  position: relative;
+}
+
+.post .post-img__status {
+  position: absolute;
+  font: 12px "Poppins-Bold";
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 32px;
+  bottom: 0;
+  left: 0;
+  border-radius: 15px 0px;
+  background: linear-gradient(180deg, rgba(255, 62, 92, 0.8) 0%, rgba(96, 95, 199, 0.8) 100%);
+  width: 80px;
+  height: 32px;
+}
+
 .post__img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 25px 0 25px 0;
+}
+
+.post:hover {
+  background-color: #fff;
+  box-shadow: 0px 4px 25px rgba(115, 115, 115, 0.1);
 }
 
 .post-content {
@@ -873,18 +994,37 @@ header .container {
 
 /* #5 - In Touch Section */
 
+.in-touch-section {
+  padding: 48px 0 0 0;
+}
+
 .in-touch-section .text {
-  max-width: 80%;
+  width: 80%;
+  max-width: 475px;
   margin: 0 auto;
   margin-top: 14px;
 }
 
+.in-touch-section .primary-form {
+  margin: 0 auto;
+  max-width: 343px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.in-touch-section .primary-form .row-single {
+  width: 100%;
+}
+
 .with-me {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .with-me__gradient {
-  font: 2em "PermanentMarker";
+  font: 32px "PermanentMarker";
   background: linear-gradient(90deg, #FF3E5C 0%, #5D5CC3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -897,16 +1037,20 @@ header .container {
 
 /*  FOOTER */
 
-footer .container {
-  padding: 4em 1em 3em 1em;
+footer {
+  padding: 68px 0 0 0;
 }
 
 .footer-container {
-  font-size: 0.75em;
+  font-size: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.copyright {
+  max-width: 150px;
 }
 
 .social {
@@ -915,6 +1059,7 @@ footer .container {
   width: 70px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 36px;
 }
 
 .social__twitter .icon {
@@ -928,11 +1073,12 @@ footer .container {
 }
 
 .contact-info {
-  margin-top: 36px;
+  max-width: 210px;
+  margin-bottom: 36px;
 }
 
 .contact-info__title {
-  font: 1rem "Poppins-SemiBold";
+  font: 16px "Poppins-SemiBold";
   text-transform: uppercase;
 }
 
@@ -946,10 +1092,18 @@ footer .container {
 }
 
 .address {
+  margin-bottom: 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 36px;
+}
+
+.address-item-1 {
+  max-width: 245px;
+}
+
+.address-item-2 {
+  max-width: 175px;
 }
 
 .address__city {
@@ -958,21 +1112,27 @@ footer .container {
 
 .address__detailed {
   margin-top: 12px;
-  width: 65%;
 }
 
 @media only screen and (min-width: 720px) {
   .title {
-    font-size: 2em;
+    font-size: 32px;
   }
 
   .sub-title {
-    font-size: 1em;
+    font-size: 18px;
   }
 
-  .submit-btn,
-  .link-btn {
-    max-width: 224px;
+  .podcast-player {
+    margin-top: 24px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .podcast-player .podcast-controls {
+    margin-top: 0;
+    width: 70%;
   }
 
   .logo-container {
@@ -996,9 +1156,99 @@ footer .container {
   .header-content .greeting {
     display: block;
   }
+
+  .courses-section {
+    padding: 100px 0 120px 0;
+  }
+
+  .courses {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-top: 48px;
+  }
+
+  .course {
+    margin-bottom: 0;
+  }
+
+  .about-me-section {
+    padding: 64px 0 120px 0;
+  }
+
+  .china-photo {
+    max-width: 400px;
+    min-width: 400px;
+    max-height: 460px;
+    min-height: 460px;
+  }
+
+  .podcast-section {
+    padding: 100px 0 82px 0;
+  }
+
+  .podcast-introduce:after {
+    width: 269px;
+    height: 285px;
+    background-size: contain;
+    left: 57%;
+    top: 58%;
+    transform: translate(-50%, -50%);
+  }
+
+  .podcast-introduce__title {
+    font-size: 40px;
+  }
+
+  .podcast-introduce__subtext {
+    font-size: 20px;
+  }
+
+  .follow {
+    margin-top: 86px;
+  }
+
+  .blog-section {
+    padding: 64px 0 96px 0;
+  }
+
+  .in-touch-section {
+    padding: 64px 0 0 0;
+  }
+
+  .with-me__gradient {
+    font-size: 42px;
+  }
+
+  footer {
+    padding: 116px 0 0 0;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .social {
+    margin: unset;
+    margin-top: 39px;
+  }
+
+  .address {
+    align-items: flex-start;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
+  .submit-btn,
+  .link-btn {
+    max-width: 224px;
+  }
+
   .subscribe-block--header {
     display: block;
   }
@@ -1006,15 +1256,142 @@ footer .container {
   .subscribe-section {
     display: none;
   }
+
+  .about-me-section:before {
+    content: '#GURU';
+    font-family: Permanent Marker;
+    font: 300px "PermanentMarker";
+    line-height: 437px;
+    color: rgba(93, 92, 195, 0.04);
+    position: absolute;
+    right: 10%;
+    top: 150px;
+  }
+
+  .about-me-section .title--about-me {
+    display: none;
+  }
+
+  .about-me-section .title--china-bio {
+    margin-top: 16px;
+    display: block;
+  }
+
+  .about-china {
+    flex-direction: row;
+    font-size: 20px;
+  }
+
+  .china-photo .quote-block {
+    display: block;
+  }
+
+  .china-bio {
+    margin-left: 100px;
+  }
+
+  .china-bio .link-btn {
+    margin-top: 50px;
+  }
+
+  .about-content p {
+    margin-bottom: 32px;
+  }
+
+  .sign-podcast {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sign-podcast * {
+    margin: 0;
+  }
+
+  .sign-podcast .primary-form {
+    width: 70%;
+    max-width: 70%;
+    display: flex;
+    align-items: center;
+  }
+
+  .sign-podcast .primary-form * {
+    margin: 0;
+  }
+
+  .sign-podcast .primary-form__input {
+    max-width: 224px;
+  }
+
+  .sign-podcast .primary-form__submit {
+    margin-top: 16px;
+    margin-left: 16px;
+  }
+
+  .blog-posts {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .blog-posts-row2 {
+    display: flex;
+  }
+
+  .post {
+    max-width: 320px;
+    margin-bottom: 40px;
+    background-color: unset;
+    box-shadow: unset;
+  }
+
+  .in-touch-section .text {
+    margin-top: 44px;
+    margin-bottom: 64px;
+  }
+
+  .in-touch-section .primary-form {
+    max-width: 464px;
+  }
+
+  .in-touch-section .primary-form .row-single {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .in-touch-section .primary-form .row-single .form-row {
+    width: 47%;
+  }
+
+  .with-me__gradient {
+    font-size: 54px;
+  }
+
+  .with-me__simple {
+    margin: 12px 0 0 28px;
+  }
+
+  .with-me {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .title {
-    font-size: 2.5em;
+    font-size: 40px;
   }
 
   .sub-title {
-    font-size: 1.25em;
+    font-size: 20px;
   }
 
   .logo-container {
@@ -1032,10 +1409,8 @@ footer .container {
     font-size: 2em;
   }
 
-  .courses {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
+  .courses-section {
+    padding: 150px 0 192px 0;
   }
 
   .course .course-top-container {
@@ -1083,5 +1458,33 @@ footer .container {
   .course__takelink {
     background: url("img/courses/Rectangle_small.svg") left center no-repeat;
     max-width: 224px;
+  }
+
+  .about-me-section {
+    padding: 82px 0 160px 0;
+  }
+
+  .podcast-section {
+    padding: 150px 0 97px 0;
+  }
+
+  .follow {
+    margin-top: 150px;
+  }
+
+  .blog-section {
+    padding: 120px 0 154px 0;
+  }
+
+  .in-touch-section {
+    padding: 120px 0 0 0;
+  }
+
+  .with-me__gradient {
+    font-size: 66px;
+  }
+
+  footer {
+    padding: 175px 0 0 0;
   }
 }

@@ -1,24 +1,122 @@
 .about-me-section{
   background-color: $lightGreyBG;
-  padding-bottom: 4em;
+  padding: 48px 0 64px 0;
+  position: relative;
+  @include screen-tb{
+    padding: 64px 0 120px 0;
+  }
+  @include screen-lg{
+    padding: 82px 0 160px 0;
+  }
+  @include screen-md{
+    &:before{
+      content: '#GURU';
+      font-family: Permanent Marker;
+      @include font(300px, $PermanentMarker);
+      line-height: 437px;
+      color: rgba(93, 92, 195, 0.04);
+      position: absolute;
+      right: 10%;
+      top: 150px;
+    }
+
+    .title--about-me{
+      display: none;
+    }
+    .title--china-bio{
+      margin-top: 16px;
+      display: block;
+    }
+  }
+  .title--china-bio{
+    display: none;
+  }
 }
 
+.about-china{
+  display: flex;
+  flex-direction: column;
+  @include screen-md{
+    flex-direction: row;
+    font-size: 20px;
+  }
+}
 .china-photo{
   max-width: 375px;
   height: 352px;
-  background-color: $violetColor;
+  background-color: #5D5CC3;
   border-radius: 25px 0;
   margin: 0 auto;
+  margin-bottom: 24px;
+  position: relative;
+  @include screen-tb{
+    max-width: 400px;
+    min-width: 400px;
+    max-height: 460px;
+    min-height: 460px;
+  }
   &__img{
-    border-radius:0 0 25px 0;
+    border-radius: 0 0 25px 0;
     object-fit: cover;
     width: 100%;
     height: 100%;
   }
+  .quote-block{
+    display: none;
+    max-width: 336px;
+    min-height: 160px;
+    background: #FFFFFF;
+    border-radius: 40px 0px;
+    position: absolute;
+    bottom: -100px;
+    right: -70px;
+    padding: 60px 60px 49px 73px;
+    @include font(14px, $PoppinsMediumItalic);
+    @include screen-md{
+      display: block;
+    }
+    &__text{
+      position: relative;
+      &:before,
+      &:after{
+        content:'';
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: url(#{$image_dir}icons/quotes.svg) center no-repeat;
+      }
+      &:before{
+        left: -35px;
+        top: -25px;
+      }
+      &:after{
+        right: -25px;
+        bottom: -25px;
+      }
+    }
+
+  }
+}
+
+.china-bio{
+  padding: $mobSidePadding; 
+  @include screen-md{
+    margin-left: 100px;
+  }
+  .link-btn{
+    margin-top: 25px;
+    @include screen-md{
+      margin-top: 50px;
+    }
+  }
 }
 .about-content p{
-  margin-bottom: 1em;
+  margin-bottom: 16px;
+  @include screen-md{
+    margin-bottom: 32px;
+  }
   &:last-child{
-    margin-bottom: 1.5em;
+    margin-bottom: 0;
   }
 }

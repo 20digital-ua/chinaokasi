@@ -1,16 +1,23 @@
 .courses-section{
-  padding-bottom: 4em;
-}
+    padding: 64px 0 64px 0;
+    @include screen-tb{
+      padding: 100px 0 120px 0;
+    }
+    @include screen-lg{
+      padding: 150px 0 192px 0;
+    }
+} 
 .courses{
   margin: 0 auto;
-  margin-top: 4em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include screen-lg{
+  @include screen-tb{
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
+    flex-wrap: wrap;
+    margin-top: 48px;
   }
 }
 .course {
@@ -18,10 +25,14 @@
   flex-direction: column;
   justify-content: space-between;
   max-width: 320px;
-  margin-bottom: 2em;
+  margin-bottom: 32px;
   &:last-child{
-    // margin-bottom: 0;
+    margin-bottom: 0;
   }
+  @include screen-tb{
+    margin-bottom: 0;
+  }
+ 
   .course-top-container {
     display: flex;
     justify-content: space-between;

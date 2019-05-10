@@ -1,12 +1,20 @@
+.podcast-section{
+  padding: 48px 0 64px 0;
+  @include screen-tb{
+    padding: 100px 0 82px 0;
+  }
+  @include screen-lg{
+    padding: 150px 0 97px 0;
+  }
+}
+
 .container--podcast-player{
   padding-top: 24px;
-  padding-bottom: 3em;
 }
 
 .podcast-introduce{
-
   width: 100%;
-  min-height: 224px;
+  min-height: 224px; 
   max-height: 400px;
 
   background: linear-gradient(270deg, #5D5CA7 0%, #F35C6E 100%);
@@ -22,9 +30,18 @@
     position: absolute;
     width: 69px;
     height: 85px;
-    background: url("#{$image_dir}icons/Microphone.svg") left no-repeat;
+    background: url("#{$image_dir}icons/Microphone.svg") center no-repeat;
     left: 0;
     bottom: -20px;
+    z-index: 1;
+    @include screen-tb{
+      width: 269px;
+      height: 285px;
+      background-size: contain;
+      left: 57%;
+      top: 58%;
+      transform: translate(-50%,-50%);
+    }
   }
   &__text{
     color: #FFF;
@@ -33,13 +50,21 @@
   }
   &__title{
     @include font(32px, $PermanentMarker);
+    @include screen-tb{
+      font-size: 40px;
+    }
   }
   &__subtext{
     font-family: $PoppinsMedium;
     text-transform: uppercase;
     margin-top: 16px;
+    @include screen-tb{
+      font-size: 20px;
+    }
   }
   &__img{
+    position: relative;
+    z-index: 999;
     border-radius: 0 0 25px 0;
     object-fit: cover;
     width: 50%;
@@ -51,6 +76,37 @@
 
 .sign-podcast{
   margin-top: 25px;
+  .primary-form{
+    max-width: 343px;
+  }
+  @include screen-md{
+    *{
+      margin: 0;
+    }
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .primary-form{
+      *{
+        margin: 0;
+      }
+      width: 70%;
+      max-width: 70%;
+      display: flex;
+      align-items: center;
+      &__input{
+        max-width: 224px;
+      }
+      &__submit{
+        margin-top: 16px;
+        margin-left: 16px;
+      }
+      
+    }
+    
+  }
   &__title{
     text-transform: uppercase;
     line-height: 36px;
@@ -66,10 +122,16 @@
 
 
 .follow{
-  margin-top: 3em;
+  margin-top: 48px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; 
+  justify-content: space-evenly; 
+  @include screen-tb{
+    margin-top: 86px;
+  }
+  @include screen-lg{
+    margin-top: 150px;
+  }
   &__img{
     position: relative;
   }

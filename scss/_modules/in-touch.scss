@@ -1,21 +1,74 @@
 .in-touch-section{
+  padding: 48px 0 0 0;
+  @include screen-tb{
+    padding: 64px 0 0 0;
+  }
+  @include screen-lg{
+    padding: 120px 0 0 0;
+  }
   .text{
-    max-width: 80%;
+    width: 80%;
+    max-width: 475px;
     margin: 0 auto;
     margin-top: 14px;
+    @include screen-md{
+      margin-top: 44px;
+      margin-bottom: 64px;
+    }
+  }
+  .primary-form{
+    margin: 0 auto;
+    max-width: 343px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .row-single{
+      width: 100%;
+    }
+    @include screen-md{
+      max-width: 464px;
+      .row-single{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .form-row{
+          width: 47%;
+        }
+      }
+    }
   }
 }
 
 .with-me{
   text-align: center;
+  display: flex;
+  flex-direction: column;
   &__gradient{
-    @include font(2em, $PermanentMarker);
+    @include font(32px, $PermanentMarker);
     background: linear-gradient(90deg,$redColor 0%, $violetColor 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @include screen-tb{
+      font-size: 42px;
+    }
+    @include screen-md{
+      font-size: 54px;
+    }
+    @include screen-lg{
+      font-size: 66px;
+    }
   }
   &__simple{
     margin: 6px 0;
     text-transform: uppercase;
+    @include screen-md{
+      margin: 12px 0 0 28px;
+    }
   }
+  @include screen-md{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
 }

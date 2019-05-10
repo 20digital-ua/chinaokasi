@@ -47,8 +47,6 @@
 										<label for="input-email-header" class="primary-form__label">Email</label>
 										<input id="input-email-header" class="input primary-form__input primary-form__input-last" type="text" placeholder="Your Email">
 								</div>
-								
-								
 							</div>
 							<button class="primary-form__submit submit-btn">Join my movement</button>
 						</form>
@@ -61,7 +59,7 @@
 		</div>
 	</header>
 	<main>
-		<section class="subscribe-section">
+		<section class="subscribe-section section">
 			<div class="container">
 				<div class="subscribe-block">
 					<form action="" class="primary-form">
@@ -76,7 +74,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="courses-section">
+		<section class="courses-section section">
 			<div class="container">
 				<h2 class="title">Take Any 5-Minute Mini-Course From Me</h2>
 				<p  class="sub-title">It's A <span class="sub-title--red">Free Gift</span>, Just For You</p>
@@ -117,29 +115,37 @@
 				</div>
 			</div>
 		</section>
-		<section class="about-me-section">
+		<section class="about-me-section section">
 			<div class="container">
-				<h2 class="title title--left">Learn About Me</h2>
+				<h2 class="title title--left title--about-me">Learn About Me</h2>
 			</div>
 			<div class="container container--nopadding">
-				<div class="china-photo">
-					<img src="img/about-me/ChinaRedHat.png"  class="china-photo__img" alt="">
+				<div class="about-china">
+						<div class="china-photo">
+							<img src="img/about-me/ChinaRedHat.png"  class="china-photo__img" alt="">
+							<div class="quote-block">
+								<p class="quote-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							</div>
+						</div>
+						<div class="china-bio">
+							<h2 class="title title--left title--china-bio">Learn About Me</h2>
+							<div class="about-content">
+								<p>I’ve lived across four continents,
+									for periods ranging from months to decades.</p>
+								<p>I have more than a singular place I’m from;</p>
+								<p>I live with angularity: I like busy African metropolises and the patter of Wall Street feet.</p>
+								<p>I like quiet Saturday mornings with herb tea and honey. I like Los Angeles and London, Beijing and Berlin, fufu and udon.</p>
+							</div>
+							<a href="#" class="link-btn"><span class="link-inner">Read more</span></a>
+						</div>
 				</div>
+				
 			</div>
-			<div class="container">
-				<div class="about-content">
-					<p>I’ve lived across four continents,
-						for periods ranging from months to decades.</p>
-					<p>I have more than a singular place I’m from;</p>
-					<p>I live with angularity: I like busy African metropolises and the patter of Wall Street feet.</p>
-					<p>I like quiet Saturday mornings with herb tea and honey. I like Los Angeles and London, Beijing and Berlin, fufu and udon.</p>
-				</div>
-				<a href="#" class="link-btn"><span class="link-inner">Read more</span></a>
-			</div>
+			
 		</section>
-		<section class="podcast-section">
+		<section class="podcast-section section">
 			<div class="container">
-				<h2 class="title title--left">Heard My Hot Podcast?</h2>
+				<h2 class="title title">Heard My Hot Podcast?</h2>
 			</div>
 			<div class="container container--nopadding">
 				<div class="podcast-introduce">
@@ -152,8 +158,10 @@
 			</div>
 			<div class="container container--podcast-player">
 				<div class="podcast-player">
-					<p class="podcast-player__title"><span class="inner-bold">China and Friends</span> Podcast</p>
-					<p class="podcast-player__episode">Episode #1</p>
+					<div class="podcast-info">
+							<p class="podcast-player__title"><span class="inner-bold">China and Friends</span> Podcast</p>
+							<p class="podcast-player__episode">Episode #1</p>
+					</div>
 					<div class="podcast-controls">
 						<button id="podcast-playBtn"></button>
 						<div id="progress-bar">
@@ -221,14 +229,17 @@
 				</div>
 			</div>
 		</section>
-		<section class="blog-section">
+		<section class="blog-section section">
 			<div class="container">
 					<h2 class="title">Check out my blog</h2>
 			</div>
 			<div class="container container--nopadding">
 				<div class="blog-posts">
 					<div class="post">
-						<img class="post__img" src="img/blog/blog_post_1.jpg" alt="" >
+						<div class="post-img">
+								<img class="post__img" src="img/blog/blog_post_1.jpg" alt="" >
+								<div class="post-img__status">LIVE</div>
+						</div>
 						<div class="post-content">
 							<h3 class="post-content__title">Lorem ipsum</h3>
 							<div class="post-content__text">lorem Proin ultrices massa id erat varius vel ipsum dolor sit amet, consectetur adipiscing elit.</div>
@@ -242,41 +253,102 @@
 						</div>
 					</div>
 					<div class="post">
-							<img class="post__img" src="img/blog/blog_post_2.jpg" alt="" >
-							<div class="post-content">
-								<h3 class="post-content__title">Lorem ipsum</h3>
-								<div class="post-content__text">lorem Proin ultrices massa id erat varius vel ipsum dolor sit amet, consectetur adipiscing elit.</div>
-							</div>
-							<div class="post-info">
-								<div class="post-info__date">25 March 2019</div>
-								<div class="post-info__heart"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M8 14.1429C8.14286 14.1429 8.28572 14.0893 8.39286 13.9821L13.9554 8.625C14.0357 8.54464 16 6.75 16 4.60714C16 1.99107 14.4018 0.428571 11.7321 0.428571C10.1696 0.428571 8.70536 1.66071 8 2.35714C7.29464 1.66071 5.83036 0.428571 4.26786 0.428571C1.59821 0.428571 0 1.99107 0 4.60714C0 6.75 1.96429 8.54464 2.03571 8.60714L7.60714 13.9821C7.71429 14.0893 7.85714 14.1429 8 14.1429Z" fill="#FF3E5C"/>
-									</svg>
-									</div>
-							</div>
+						<div class="post-img">
+								<img class="post__img" src="img/blog/blog_post_2.jpg" alt="" >
+								<div class="post-img__status">Work</div>
+						</div>
+						<div class="post-content">
+							<h3 class="post-content__title">Lorem ipsum</h3>
+							<div class="post-content__text">lorem Proin ultrices massa id erat varius vel ipsum dolor sit amet, consectetur adipiscing elit.</div>
+						</div>
+						<div class="post-info">
+							<div class="post-info__date">25 March 2019</div>
+							<div class="post-info__heart"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8 14.1429C8.14286 14.1429 8.28572 14.0893 8.39286 13.9821L13.9554 8.625C14.0357 8.54464 16 6.75 16 4.60714C16 1.99107 14.4018 0.428571 11.7321 0.428571C10.1696 0.428571 8.70536 1.66071 8 2.35714C7.29464 1.66071 5.83036 0.428571 4.26786 0.428571C1.59821 0.428571 0 1.99107 0 4.60714C0 6.75 1.96429 8.54464 2.03571 8.60714L7.60714 13.9821C7.71429 14.0893 7.85714 14.1429 8 14.1429Z" fill="#FF3E5C"/>
+								</svg>
+								</div>
+						</div>
 					</div>
 					<div class="post">
-							<img class="post__img" src="img/blog/blog_post_3.jpg" alt="" >
-							<div class="post-content">
-								<h3 class="post-content__title">Lorem ipsum</h3>
-								<div class="post-content__text">lorem Proin ultrices massa id erat varius vel ipsum dolor sit amet, consectetur adipiscing elit.</div>
-							</div>
-							<div class="post-info">
-								<div class="post-info__date">25 March 2019</div>
-								<div class="post-info__heart"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M8 14.1429C8.14286 14.1429 8.28572 14.0893 8.39286 13.9821L13.9554 8.625C14.0357 8.54464 16 6.75 16 4.60714C16 1.99107 14.4018 0.428571 11.7321 0.428571C10.1696 0.428571 8.70536 1.66071 8 2.35714C7.29464 1.66071 5.83036 0.428571 4.26786 0.428571C1.59821 0.428571 0 1.99107 0 4.60714C0 6.75 1.96429 8.54464 2.03571 8.60714L7.60714 13.9821C7.71429 14.0893 7.85714 14.1429 8 14.1429Z" fill="#FF3E5C"/>
-									</svg>
-									</div>
-							</div>
+						<div class="post-img">
+								<img class="post__img" src="img/blog/blog_post_3.jpg" alt="" >
+								<div class="post-img__status">LOVE</div>
+						</div>
+						<div class="post-content">
+							<h3 class="post-content__title">Lorem ipsum</h3>
+							<div class="post-content__text">lorem Proin ultrices massa id erat varius vel ipsum dolor sit amet, consectetur adipiscing elit.</div>
+						</div>
+						<div class="post-info">
+							<div class="post-info__date">25 March 2019</div>
+							<div class="post-info__heart"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8 14.1429C8.14286 14.1429 8.28572 14.0893 8.39286 13.9821L13.9554 8.625C14.0357 8.54464 16 6.75 16 4.60714C16 1.99107 14.4018 0.428571 11.7321 0.428571C10.1696 0.428571 8.70536 1.66071 8 2.35714C7.29464 1.66071 5.83036 0.428571 4.26786 0.428571C1.59821 0.428571 0 1.99107 0 4.60714C0 6.75 1.96429 8.54464 2.03571 8.60714L7.60714 13.9821C7.71429 14.0893 7.85714 14.1429 8 14.1429Z" fill="#FF3E5C"/>
+								</svg>
+								</div>
+						</div>
 					</div>
+					
 				</div>
-				<div class="container container--notoppadding">
-					<a href="#" class="link-btn"><span class="link-inner">Read more</span></a>
+				<div class="blog-posts blog-posts-row2">
+					<div class="post">
+						<div class="post-img">
+								<img class="post__img" src="img/blog/blog_post_2.jpg" alt="" >
+								<div class="post-img__status">LIVE</div>
+						</div>
+						<div class="post-content">
+							<h3 class="post-content__title">Lorem ipsum</h3>
+							<div class="post-content__text">lorem Proin ultrices massa id erat varius vel ipsum dolor sit amet, consectetur adipiscing elit. lorem</div>
+						</div>
+						<div class="post-info">
+							<div class="post-info__date">25 March 2019</div>
+							<div class="post-info__heart"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8 14.1429C8.14286 14.1429 8.28572 14.0893 8.39286 13.9821L13.9554 8.625C14.0357 8.54464 16 6.75 16 4.60714C16 1.99107 14.4018 0.428571 11.7321 0.428571C10.1696 0.428571 8.70536 1.66071 8 2.35714C7.29464 1.66071 5.83036 0.428571 4.26786 0.428571C1.59821 0.428571 0 1.99107 0 4.60714C0 6.75 1.96429 8.54464 2.03571 8.60714L7.60714 13.9821C7.71429 14.0893 7.85714 14.1429 8 14.1429Z" fill="#FF3E5C"/>
+								</svg>
+								</div>
+						</div>
+					</div>
+					<div class="post">
+						<div class="post-img">
+								<img class="post__img" src="img/blog/blog_post_3.jpg" alt="" >
+								<div class="post-img__status">Work</div>
+						</div>
+						<div class="post-content">
+							<h3 class="post-content__title">Lorem ipsum</h3>
+							<div class="post-content__text">lorem Proin ultrices massa id erat varius vel ipsum dolor sit amet, consectetur adipiscing elit.</div>
+						</div>
+						<div class="post-info">
+							<div class="post-info__date">25 March 2019</div>
+							<div class="post-info__heart"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8 14.1429C8.14286 14.1429 8.28572 14.0893 8.39286 13.9821L13.9554 8.625C14.0357 8.54464 16 6.75 16 4.60714C16 1.99107 14.4018 0.428571 11.7321 0.428571C10.1696 0.428571 8.70536 1.66071 8 2.35714C7.29464 1.66071 5.83036 0.428571 4.26786 0.428571C1.59821 0.428571 0 1.99107 0 4.60714C0 6.75 1.96429 8.54464 2.03571 8.60714L7.60714 13.9821C7.71429 14.0893 7.85714 14.1429 8 14.1429Z" fill="#FF3E5C"/>
+								</svg>
+								</div>
+						</div>
+					</div>
+					<div class="post">
+						<div class="post-img">
+								<img class="post__img" src="img/blog/blog_post_1.jpg" alt="" >
+								<div class="post-img__status">LOVE</div>
+						</div>
+						<div class="post-content">
+							<h3 class="post-content__title">Lorem ipsum</h3>
+							<div class="post-content__text">lorem Proin ultrices massa id erat varius vel ipsum dolor sit amet, consectetur adipiscing elit.</div>
+						</div>
+						<div class="post-info">
+							<div class="post-info__date">25 March 2019</div>
+							<div class="post-info__heart"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8 14.1429C8.14286 14.1429 8.28572 14.0893 8.39286 13.9821L13.9554 8.625C14.0357 8.54464 16 6.75 16 4.60714C16 1.99107 14.4018 0.428571 11.7321 0.428571C10.1696 0.428571 8.70536 1.66071 8 2.35714C7.29464 1.66071 5.83036 0.428571 4.26786 0.428571C1.59821 0.428571 0 1.99107 0 4.60714C0 6.75 1.96429 8.54464 2.03571 8.60714L7.60714 13.9821C7.71429 14.0893 7.85714 14.1429 8 14.1429Z" fill="#FF3E5C"/>
+								</svg>
+								</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="container">
+					<a href="#" class="link-btn link-btn-center"><span class="link-inner">More posts</span></a>
 				</div>
 				
 			</div>
 		</section>
-		<section class="in-touch-section">
+		<section class="in-touch-section section">
 			<div class="container">
 				<h2 class="title">Let’s get in touch</h2>	
 				<div class="with-me">
@@ -288,13 +360,15 @@
 						Duis in nisl dictum, semper mauris in, interdum nisi.
 				</div>
 				<form action="" class="primary-form">
-						<div class="form-row">
-								<label for="input-name" class="primary-form__label">Name</label> <br>
-								<input type="text" id="input-name" class="primary-form__input" placeholder="Your Name">
-						</div>
-						<div class="form-row">
-								<label for="input-email" class="primary-form__label">Email</label> <br>
-								<input type="text" id="input-email" class="primary-form__input" placeholder="Your Email">
+						<div class="row-single">
+								<div class="form-row form-row-input">
+										<label for="input-name" class="primary-form__label">Name</label> <br>
+										<input type="text" id="input-name" class="primary-form__input" placeholder="Your Name">
+								</div>
+								<div class="form-row form-row-input">
+										<label for="input-email" class="primary-form__label">Email</label> <br>
+										<input type="text" id="input-email" class="primary-form__input" placeholder="Your Email">
+								</div>
 						</div>
 						<div class="form-row">
 								<label for="input-message" class="primary-form__label">Message</label> <br>
@@ -308,7 +382,7 @@
 	<footer>
 		<div class="container">
 			<div class="footer-container">
-				<div class="copyright">
+				<div class="copyright footer-item">
 					<p>&copy; China Okasi</p>
 					<p>All rights reserved </p>
 					<div class="social social-icons">
@@ -324,21 +398,21 @@
 							</a>
 					</div>
 				</div>
-				<div class="contact-info">
+				<div class="contact-info footer-item">
 					<h4 class="contact-info__title">CONTACT info</h4>
 					<p class="contact-info__subtitle">(Professional Inquiries Only)</p>
 					<p class="contact-info__phone">(212) 537-5794</p>
-					<div class="contact-info-address">
-						<div class="address">
-								<div class="address__city">New York, LA </div>
-								<div class="address__detailed">Wilshire Shipping Center, Box 1225, Los Angeles, CA 90010</div>
-						</div>	
-						<div class="address">
-								<div class="address__city">London</div>
-								<div class="address__detailed">Swiss Cottage</div>
-						</div>	
-					</div>
 				</div>
+				
+				<div class="address  address-item-1">
+						<div class="address__city">New York, LA </div>
+						<div class="address__detailed">Wilshire Shipping Center, Box 1225,<br> Los Angeles, CA 90010</div>
+				</div>	
+				<div class="address  address-item-2">
+						<div class="address__city">London</div>
+						<div class="address__detailed">Swiss Cottage</div>
+				</div>	
+				
 			</div>
 		</div>
 	</footer>

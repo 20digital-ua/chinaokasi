@@ -23,6 +23,12 @@
     src: url("Poppins/Poppins-SemiBold.ttf") format("opentype");
     font-display: block;
 }
+@font-face {
+    font-family: 'Poppins-MediumItalic';
+    src: url("Poppins/Poppins-MediumItalic.ttf") format("opentype");
+    font-display: block;
+}
+
 
 @font-face {
     font-family: 'PermanentMarker';
