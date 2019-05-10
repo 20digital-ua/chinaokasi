@@ -137,6 +137,14 @@ header{
 
 
 .subscribe-section{
+  .primary-form{
+    margin: 0 auto;
+    max-width: 343px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
   padding-bottom: 0;
   .container{
     padding-top: 0;

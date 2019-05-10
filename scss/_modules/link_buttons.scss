@@ -28,7 +28,7 @@
 }
 .submit-btn,
 .link-btn{
-  @include screen-tb{
+  @include screen-md{
     max-width: 224px;
   }
 }
