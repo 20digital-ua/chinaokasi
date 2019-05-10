@@ -1,6 +1,20 @@
 .blog-section{
   background-color: $lightGreyBG;
   padding: 48px 0 48px 0;
+  position: relative;
+  @include screen-md{
+    &:before{
+      content: '#Blog';
+      text-transform: uppercase;
+      font-family: Permanent Marker;
+      @include font(300px, $PermanentMarker);
+      line-height: 437px;
+      color: rgba(93, 92, 195, 0.04);
+      position: absolute;
+      right: 15%;
+      top: 270px;
+    }
+  }
   @include screen-tb{
     padding: 64px 0 96px 0;
   }
