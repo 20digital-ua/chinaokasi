@@ -1037,16 +1037,20 @@ header .container {
 
 /*  FOOTER */
 
-footer .container {
-  padding: 4em 1em 3em 1em;
+footer {
+  padding: 68px 0 0 0;
 }
 
 .footer-container {
-  font-size: 0.75em;
+  font-size: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.copyright {
+  max-width: 150px;
 }
 
 .social {
@@ -1055,6 +1059,7 @@ footer .container {
   width: 70px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 36px;
 }
 
 .social__twitter .icon {
@@ -1068,11 +1073,12 @@ footer .container {
 }
 
 .contact-info {
-  margin-top: 36px;
+  max-width: 210px;
+  margin-bottom: 36px;
 }
 
 .contact-info__title {
-  font: 1rem "Poppins-SemiBold";
+  font: 16px "Poppins-SemiBold";
   text-transform: uppercase;
 }
 
@@ -1086,10 +1092,18 @@ footer .container {
 }
 
 .address {
+  margin-bottom: 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 36px;
+}
+
+.address-item-1 {
+  max-width: 245px;
+}
+
+.address-item-2 {
+  max-width: 175px;
 }
 
 .address__city {
@@ -1098,7 +1112,6 @@ footer .container {
 
 .address__detailed {
   margin-top: 12px;
-  width: 65%;
 }
 
 @media only screen and (min-width: 720px) {
@@ -1206,6 +1219,27 @@ footer .container {
 
   .with-me__gradient {
     font-size: 42px;
+  }
+
+  footer {
+    padding: 116px 0 0 0;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .social {
+    margin: unset;
+    margin-top: 39px;
+  }
+
+  .address {
+    align-items: flex-start;
   }
 }
 
@@ -1443,10 +1477,14 @@ footer .container {
   }
 
   .in-touch-section {
-    padding: 120px 0 48px 0;
+    padding: 120px 0 0 0;
   }
 
   .with-me__gradient {
     font-size: 66px;
+  }
+
+  footer {
+    padding: 175px 0 0 0;
   }
 }
