@@ -1,28 +1,7 @@
-class Test {
-    constructor(){
-        this.printResult=jQuery('.result');
-        this.btn=jQuery('.doit');
-        // this.lap();
-        this.events();
-    }
-    // Events
-    events(){
-        //this.btn.hover(this.lap.bind(this));
+jQuery(document).ready(function(){
+    jQuery('.burger-btn').on('click',function(){
+        jQuery('.header-top').toggleClass('open');
+        jQuery('body').toggleClass('no-scroll');
 
-    }
-
-
-
-    // Methods
-    lap(){
-        //this.printResult.append('A ');
-    }
-
-
-
-}
-
-
-
-
-var item = new Test();
+    })
+});
