@@ -8,21 +8,33 @@ body{
   color: $primaryTextColor; 
   line-height: normal;
   background-color: $BodyBGColor;
+  &.no-scroll{
+    overflow: hidden;
+  }
 }
  .section{
-   padding: 36px 0;
- }
+  padding: 36px 0;
+    &-first{
+    padding-top: 65px;
+    @include screen-tb{
+      padding-top: 125px;
+    }
+    @include screen-md{
+      padding-top: 176px;
+    }
+  }
+}
 .container{
   padding: $mobSidePadding;
   position: relative;
   max-width: 1056px;
+  box-sizing: content-box;
   margin: 0 auto;
   &--nopadding{
     padding:0;
   }
-  @include screen-lg{
-    padding-left: 0;
-    padding-right: 0;
+  @include screen-sm{
+    padding: $mainSidePadding;
   }
 }
 

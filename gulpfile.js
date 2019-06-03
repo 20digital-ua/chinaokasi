@@ -16,7 +16,8 @@ gulp.task('sass', function() {
 gulp.task('watch', function() {
     gulp.watch([
         'scss/_base/*.scss',
-        'scss/_modules/*.scss'
+        'scss/_modules/*.scss',
+        'scss/_pages/*.scss'
     ],gulp.series('sass'))
 });
 

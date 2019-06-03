@@ -158,14 +158,23 @@ body {
   background-color: #FFF;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 .section {
   padding: 36px 0;
+}
+
+.section-first {
+  padding-top: 65px;
 }
 
 .container {
   padding: 0 16px;
   position: relative;
   max-width: 1056px;
+  box-sizing: content-box;
   margin: 0 auto;
 }
 
@@ -212,6 +221,12 @@ body {
   color: #fff;
   font: 16px "Poppins-SemiBold";
   margin-top: 32px;
+}
+
+.submit-btn-transparent {
+  background-color: transparent;
+  color: #5D5CC3;
+  border: 2px solid #5D5CC3;
 }
 
 .link-btn {
@@ -363,122 +378,133 @@ body {
   transform: scale(1.1);
 }
 
-/* HEADER */
+/* HEADER TOP */
 
-header {
-  min-height: 305px;
-  position: relative;
+.header {
+  height: 65px;
+  top: 0;
+  width: 100%;
+  position: absolute;
+  z-index: 999;
 }
 
-header .container {
+.header .container {
+  height: 100%;
   padding-top: 0;
 }
 
-.header-main-bg {
-  position: absolute;
-  width: 40%;
-  height: 100%;
-  right: 0;
-  top: 0;
+.header--white {
+  background-color: #fff;
 }
 
-.header-main-bg .header-bg-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.header-main-bg .china {
-  background: url("img/header/ChinaMainHeaderImage.png") center bottom no-repeat;
-  background-size: contain;
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
-  height: calc(100% - 70px);
-  width: 45%;
-  min-width: 120px;
-  transform: translateX(-50%);
-}
-
-.header-main-bg .gradient-block {
-  position: absolute;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: linear-gradient(180deg, #FF3E5C 0%, #5D5CC3 100%);
-  border-radius: 0 0 25px 0;
-}
-
-.header-main-bg .shapes {
-  opacity: 0;
-  background: url("img/header/BG/shape-1.svg") 97% 128% no-repeat, url("img/header/BG/shape-2.svg") 60% 400px no-repeat;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transition: all .25s linear;
+.header--white .main-menu a {
+  color: #000;
 }
 
 .header-top {
   display: flex;
   justify-content: space-between;
-  height: 80px;
   width: 100%;
+  height: 100%;
   top: 0;
 }
 
-.logo-container {
-  padding: 0.5em 0 0 0;
+.main-logo {
+  position: relative;
+  background-size: 30px 26px;
+  z-index: 9999;
+  display: block;
+  margin-top: 14px;
 }
 
-.logo-container__logo {
+.main-logo__logo {
+  background: url("img/header/CrownLogo.svg") left top no-repeat;
+  background-size: contain;
   width: 30px;
   height: 26px;
   display: block;
-}
-
-.logo-container__name {
-  margin: 5px 0 0 7px;
-  display: inline-block;
-  color: #3A3B3F;
-  font: 0.75em "Poppins-Medium";
-}
-
-.header-content {
-  margin-top: 40px;
-  max-width: 55%;
-  position: relative;
-  padding-bottom: 30px;
-}
-
-.header-content .header-text {
-  padding-left: 1em;
   transition: all .25s linear;
 }
 
-.header-content__medium {
+.main-logo__name {
+  margin: 0 0 0 7px;
+  display: inline-block;
+  color: #3A3B3F;
+  font: 0.75em "Poppins-Medium";
+  transition: all .25s linear;
+}
+
+.burger-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  right: -12px;
+  top: 10px;
+  z-index: 999;
+}
+
+.burger-btn__lines {
+  width: 16px;
+  height: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.burger-btn__lines span {
+  height: 1px;
+  width: 16px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.burger-btn__lines span.line2 {
+  width: 14px;
+}
+
+.burger-btn-dark span {
+  background-color: #3A3B3F;
+}
+
+/*  CONTENT */
+
+/*  SECTIONS */
+
+.head-main {
+  position: relative;
+  padding-top: 100px;
+  min-height: 342px;
+}
+
+.head-main .head-text {
+  padding-left: 1em;
+  width: 55%;
+  transition: all .25s linear;
+}
+
+.head-main__medium {
   text-transform: uppercase;
   font: 0.75em "Poppins-Medium";
 }
 
-.header-content__title {
+.head-main__title {
   font: 2em "Poppins-Bold";
   margin-bottom: 10px;
 }
 
-.header-content .greeting {
+.head-main .greeting {
   margin-top: 44px;
   display: none;
   font: 0.5em "Poppins-Regular";
 }
 
-.header-content .greeting__text-md {
+.head-main .greeting__text-md {
   font-family: "Poppins-Bold";
-}
-
-.subscribe-block--header {
-  display: none;
-  margin-top: 32px;
 }
 
 .subscribe-section {
@@ -497,9 +523,55 @@ header .container {
   padding-top: 0;
 }
 
-/*  CONTENT */
+.subscribe-block--header {
+  display: none;
+  margin-top: 32px;
+}
 
-/*  SECTIONS */
+.head-main-bg {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.head-main-bg .header-bg-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.head-main-bg .china {
+  background: url("img/header/ChinaMainHeaderImage.png") center bottom no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  height: calc(100% - 70px);
+  width: 45%;
+  min-width: 120px;
+  transform: translateX(-50%);
+}
+
+.head-main-bg .gradient-block {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(180deg, #FF3E5C 0%, #5D5CC3 100%);
+  border-radius: 0 0 25px 0;
+}
+
+.head-main-bg .shapes {
+  opacity: 0;
+  background: url("img/header/BG/shape-1.svg") 97% 128% no-repeat, url("img/header/BG/shape-2.svg") 60% 400px no-repeat;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all .25s linear;
+}
 
 /* #1 - Courses Section */
 
@@ -1125,7 +1197,79 @@ footer {
   margin-top: 12px;
 }
 
+/* BIO PAGE */
+
+.bio-section .clear-padding {
+  padding: 0;
+}
+
+.title-block {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-block__name {
+  font: 32px "PermanentMarker";
+  background: linear-gradient(180deg, #FF3E5C 0%, #5D5CC3 100%);
+  text-align: center;
+  width: 50%;
+  padding: 0 20px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-img {
+  max-width: 375px;
+  width: 50%;
+  height: 192px;
+  background: linear-gradient(180deg, #FF3E5C 0%, #5D5CC3 100%);
+  border-radius: 25px 0;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.title-img__img {
+  border-radius: 0 0 25px 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.greeting {
+  margin-top: 16px;
+  font: 1em "Poppins-Regular";
+}
+
+.greeting__text-md {
+  font-family: "Poppins-Bold";
+}
+
+.bio-content {
+  margin-top: 60px;
+}
+
+.bio-content__title {
+  font: 24px "Poppins-SemiBold";
+  margin-bottom: 16px;
+}
+
+.bio-content p {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 400px) {
+  .container {
+    padding: 0 10%;
+  }
+}
+
 @media only screen and (min-width: 720px) {
+  .section-first {
+    padding-top: 125px;
+  }
+
   .title {
     font-size: 32px;
   }
@@ -1146,25 +1290,28 @@ footer {
     width: 70%;
   }
 
-  .logo-container {
-    font-size: 1.5em;
+  .header {
+    height: 125px;
   }
 
-  .logo-container__logo {
+  .main-logo {
+    background-size: 37px 30px;
+  }
+
+  .main-logo__logo {
     width: 37px;
     height: 30px;
   }
 
-  .header-content {
-    margin-top: 80px;
+  .head-main {
     font-size: 1.5em;
   }
 
-  .header-content .header-text {
+  .head-main .head-text {
     padding-left: 0;
   }
 
-  .header-content .greeting {
+  .head-main .greeting {
     display: block;
   }
 
@@ -1252,19 +1399,122 @@ footer {
   .address {
     align-items: flex-start;
   }
+
+  .title-img {
+    max-width: 400px;
+    min-width: 400px;
+    max-height: 460px;
+    min-height: 460px;
+  }
+
+  .greeting {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
+  .main-logo {
+    font-size: 1.5em;
+  }
+
+  .burger-btn {
+    display: none;
+  }
+
+  .menu-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 75%;
+  }
+
+  .main-menu {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    transition: all .25s linear;
+  }
+
+  .pages-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 30px;
+  }
+
+  .pages-menu li {
+    margin-right: 24px;
+  }
+
+  .pages-menu a {
+    font-size: 18px;
+    color: #3A3B3F;
+  }
+
+  .courses-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .courses-menu li {
+    margin-left: 24px;
+  }
+
+  .courses-menu a {
+    font: 18px "Poppins-SemiBold";
+    color: #fff;
+  }
+
+  .subscribe-section {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (min-width: 1024px) {
+  .menu-container {
+    justify-content: space-between;
+  }
+
+  .main-menu {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .section-first {
+    padding-top: 176px;
+  }
+
   .submit-btn,
   .link-btn {
     max-width: 224px;
   }
 
-  .header-main-bg .shapes {
+  .header {
+    height: 176px;
+  }
+
+  .main-logo {
+    margin-top: 27px;
+    font-size: 2em;
+  }
+
+  .main-logo__logo {
+    width: 45px;
+    height: 35px;
+  }
+
+  .subscribe-block--header {
+    display: block;
+  }
+
+  .head-main-bg .shapes {
     opacity: 1;
   }
 
-  .header-main-bg .shapes:before {
+  .head-main-bg .shapes:before {
     content: '#Guru';
     text-transform: uppercase;
     font-family: Permanent Marker;
@@ -1275,14 +1525,6 @@ footer {
     left: 120px;
     bottom: 110px;
     transform: rotate(-20deg);
-  }
-
-  .subscribe-block--header {
-    display: block;
-  }
-
-  .subscribe-section {
-    display: none;
   }
 
   .about-me-section:before {
@@ -1420,12 +1662,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1400px) {
-  .container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
+@media only screen and (min-width: 1600px) {
   .title {
     font-size: 40px;
   }
@@ -1434,18 +1671,7 @@ footer {
     font-size: 20px;
   }
 
-  .logo-container {
-    font-size: 2em;
-  }
-
-  .logo-container__logo {
-    width: 45px;
-    height: 35px;
-  }
-
-  .header-content {
-    margin-top: 180px;
-    padding-bottom: 130px;
+  .head-main {
     font-size: 2em;
   }
 
@@ -1526,5 +1752,76 @@ footer {
 
   footer {
     padding: 175px 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .menu-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+  }
+
+  .menu-container .main-menu {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .25s linear;
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+    padding: 0 16px;
+    padding-top: 80px;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, #FF3E5C 0%, #5D5CC3 100%);
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .menu-container .main-menu .courses-menu {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+  }
+
+  .menu-container .main-menu .courses-menu li {
+    margin-right: 56px;
+  }
+
+  .menu-container .main-menu .courses-menu a {
+    font: 18px "Poppins-SemiBold";
+    color: #fff;
+  }
+
+  .menu-container .main-menu .pages-menu li {
+    margin: 20px 0;
+  }
+
+  .menu-container .main-menu .pages-menu a {
+    font: 18px "Poppins-Regular";
+    color: #fff;
+  }
+
+  .header-top.open .main-menu {
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+  }
+
+  .header-top.open .main-logo__name {
+    color: #fff;
+  }
+
+  .header-top.open .main-logo__logo {
+    background-image: url("img/header/CrownLogo-white.svg");
+  }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 1024px) {
+  .menu-container {
+    justify-content: space-between;
   }
 }

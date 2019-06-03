@@ -8,6 +8,11 @@
   color: #fff;
   @include font(16px,$PoppinsSemiBold);
   margin-top: 32px;
+  &-transparent{
+    background-color: transparent;
+    color: $violetColor;
+    border: 2px solid #5D5CC3;
+  }
 }
 
 .link-btn{

@@ -1,0 +1,134 @@
+.head-main{
+  position: relative;
+  padding-top: 100px;
+  min-height: 342px;
+  @include screen-tb{
+    font-size: 1.5em;
+  }
+  @include screen-lg{
+    font-size: 2em;
+  }
+
+
+  .head-text{
+    padding-left:1em;
+    width: 55%;
+    @include transition;
+    @include screen-tb{
+      padding-left:0;
+    }
+  }
+  &__medium{
+    text-transform: uppercase;
+    @include font(0.75em,$PoppinsMedium);
+  }
+  &__title{
+    @include font(2em,$PoppinsBold);
+    margin-bottom: 10px;
+  }
+  .greeting{
+    margin-top: 44px;
+    display: none;
+    @include font(0.5em,$Poppins);
+    &__text-md{
+      font-family: $PoppinsBold;
+    }
+    @include screen-tb{
+      display: block;
+    }
+  }
+  
+}
+
+
+
+
+.subscribe-section{
+  .primary-form{
+    margin: 0 auto;
+    max-width: 343px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  padding-bottom: 0;
+  .container{
+    padding-top: 0;
+  }
+  @include screen-lp{
+    display: none;
+  }
+}
+
+.subscribe-block--header{
+  display: none;
+  margin-top: 32px;
+  @include screen-md{
+    display: block;
+  }
+}
+
+
+
+.head-main-bg{
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  //outline: 1px solid black;
+  .header-bg-wrapper{
+    position: relative; 
+    width: 100%;
+    height: 100%;
+  }
+  .china{
+    background:url("#{$image_dir}header/ChinaMainHeaderImage.png") center bottom no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    height: calc(100% - 70px);
+    width: 45%;
+    min-width: 120px;
+    transform: translateX(-50%); 
+  }
+  .gradient-block{
+    position: absolute;
+    right: 0;
+    // width: calc(100% - 54px);
+    width:100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(180deg, $redColor 0%, $violetColor 100%);
+    border-radius: 0 0 25px 0;
+
+    //background:  red url("#{$image_dir}header/ChinaMainHeaderImage.png") center bottom no-repeat;
+  }
+  .shapes{
+    opacity: 0;
+    background: url("#{$image_dir}header/BG/shape-1.svg") 97% 128% no-repeat,
+    url("#{$image_dir}header/BG/shape-2.svg") 60% 400px no-repeat;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    @include transition;
+    @include screen-md{
+      opacity: 1;
+      &:before{
+        content: '#Guru';
+        text-transform: uppercase;
+        font-family: Permanent Marker;
+        font: 80px "PermanentMarker";
+        /* line-height: 437px; */
+        color: rgba(255, 255, 255, 0.07);
+        position: absolute;
+        left: 120px;
+        bottom: 110px;
+        transform: rotate(-20deg);
+      }
+    }
+  }
+
+}
