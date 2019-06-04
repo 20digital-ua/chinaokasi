@@ -28,12 +28,12 @@
   line-height: 64px;
   text-align: center;
   &-center{
-    margin: 0 auto;
+    margin: 0 auto; 
   }
 }
 .submit-btn,
 .link-btn{
-  @include screen-md{
+  @include screen-tb{
     max-width: 224px;
   }
 }
