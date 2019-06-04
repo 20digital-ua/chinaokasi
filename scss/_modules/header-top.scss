@@ -2,13 +2,15 @@
   height: 65px;
   top: 0;
   width: 100%;  
-  position: absolute;
   z-index: 999;
   @include screen-tb{
     height: 125px;
   }
   @include screen-md{
     height: 176px;
+  }
+  &-home{
+    position: absolute;
   }
   .container{
     height: 100%;
@@ -38,6 +40,7 @@
   z-index: 9999;
   display: block;
   margin-top: 14px;
+  line-height: 10px;
   @include screen-tb{
     background-size: 37px 30px;
   }
@@ -49,13 +52,18 @@
     font-size: 2em;
   }
 
+
+  
+
   &__logo{
-    background: url("#{$image_dir}header/CrownLogo.svg") left top no-repeat;
-    background-size: contain;
     width: 30px;
     height: 26px;
     display: block; 
-    @include transition();
+    .logosvg{
+      width: 100%;
+      height: 100%;
+    }
+    
     @include screen-tb{
       width: 37px;
       height: 30px;
@@ -225,7 +233,11 @@
     color: #fff;
   }
   .header-top.open .main-logo__logo{
-    background-image: url("#{$image_dir}header/CrownLogo-white.svg");
+    .logosvg{
+      path{
+        fill:white;
+      }
+    }
   }
 
 }

@@ -1,0 +1,65 @@
+.courses-head-main{
+  min-height: 240px;
+  max-height: 448px;
+  background: linear-gradient(180deg, $redColor 0%, $violetColor 100%);
+  border-radius: 0px 0px 25px 0px;
+  color:#fff;
+  display: flex;
+  align-items: flex-end;
+
+  .container{
+    display: flex;
+    align-self: stretch;
+    align-self: stretch;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &.section{
+    padding: 0;
+    padding-bottom: 0;
+  }
+  .head-text{
+    width: 70%;
+  }
+  
+  .head-main__title{
+    font-family: $PermanentMarker;
+    line-height: 124%;
+    .head-main__sm{
+      display: block;
+      @include font(16px,$Poppins);
+      @include screen-lp{
+        display: inline-block;
+      }
+      @include screen-md{
+        font-size: 24px;
+      }
+    }
+  }
+  .head-main__author{
+    text-transform: none;
+    font-size: 14px;
+    @include screen-md{
+      font-size: 20px;
+    }
+  }
+  .head-img{
+    padding-top: 36px;
+    width: 60%;
+    align-self: flex-end;
+    display: flex;
+    align-items: flex-end;
+    @include screen-sm{
+      width: 45%;
+    }
+    @include screen-tb{
+      width: auto;
+    }
+  }
+  .head-main-img{   
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

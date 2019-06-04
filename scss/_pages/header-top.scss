@@ -22,7 +22,7 @@
   }
   &__name span{ 
     @include font(32px, $PermanentMarker);
-    background: linear-gradient(180deg, $redColor 0%, $violetColor 100%);
+    background: linear-gradient(90deg, $redColor 0%, $violetColor 100%);
     text-align: center;
     padding: 0 20px;
     display: block;
@@ -34,15 +34,15 @@
     }
     @include screen-lp{
       font-size: 46px;
-      line-height: 200px;
+      margin: 80px 0;
     }
     @include screen-md{
       font-size: 56px;
-      line-height: 300px;
+      margin: 150px 0;
     }
     @include screen-lg{
       font-size: 66px;
-      line-height: 400px;
+      margin: 150px 0;
     }
   }
   &__name{
@@ -68,7 +68,7 @@
       }
       @include screen-md{
         top: 25%;
-        font-size: 200px;
+        font-size: 250px;
       }
       @include screen-lg{
         font-size: 300px;
