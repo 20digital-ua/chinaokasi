@@ -31,6 +31,8 @@
     @include screen-tb{
       text-align: left;
       padding: 0;
+      top: 0;
+      margin: 50px 0;
     }
     @include screen-lp{
       font-size: 46px;
@@ -56,10 +58,10 @@
       color: rgba(93, 92, 195, 0.04);
       position: absolute;
       left: 20px;
-      top: -25%;
+      top: -30px;
       @include screen-tb{
         font-size: 180px;
-        top: -60px;
+        top: 0;
         left: 0;
       }
       @include screen-lp{

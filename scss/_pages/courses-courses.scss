@@ -1,4 +1,7 @@
 .courses-page-courses{
+  .container{
+    overflow: hidden;
+  }
   .courses{
     flex-direction: column;
     align-items: center;
@@ -9,6 +12,32 @@
     margin-bottom: 60px;
     &__title{
       justify-self: start;
+      &:before{
+        text-transform: uppercase;
+        font-family: Permanent Marker;
+        @include font(200px, $PermanentMarker);
+        line-height: 146px;
+        color: rgba(93, 92, 195, 0.04);
+        position: absolute;
+        left: -20px;
+        top: -30px;
+        @include screen-md{
+          font-size: 300px;
+          left: -120px;
+        }
+        @include screen-lg{
+          font-size: 350px;
+        }
+      }
+      &--live:before{
+        content: 'Live';
+      }
+      &--work:before{
+        content: 'Work';
+      }
+      &--love:before{
+        content: 'Love';
+      }
     }
     .text{
       margin-top: 30px;
@@ -97,7 +126,5 @@
     @include screen-lg{ 
       grid-column-gap: 120px;
     }
-    
-    
   }
 }

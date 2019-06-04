@@ -182,6 +182,13 @@ body.no-scroll {
   padding: 0;
 }
 
+.container-inner {
+  position: relative;
+  max-width: 1056px;
+  box-sizing: content-box;
+  margin: 0 auto;
+}
+
 .title {
   font: 24px "Poppins-SemiBold";
   text-align: center;
@@ -1240,7 +1247,7 @@ footer {
   color: rgba(93, 92, 195, 0.04);
   position: absolute;
   left: 20px;
-  top: -25%;
+  top: -30px;
 }
 
 .subscribe-block {
@@ -1353,6 +1360,10 @@ footer {
   object-fit: contain;
 }
 
+.courses-page-courses .container {
+  overflow: hidden;
+}
+
 .courses-page-courses .courses {
   flex-direction: column;
   align-items: center;
@@ -1368,6 +1379,29 @@ footer {
   justify-self: start;
 }
 
+.courses-page-courses .course__title:before {
+  text-transform: uppercase;
+  font-family: Permanent Marker;
+  font: 200px "PermanentMarker";
+  line-height: 146px;
+  color: rgba(93, 92, 195, 0.04);
+  position: absolute;
+  left: -20px;
+  top: -30px;
+}
+
+.courses-page-courses .course__title--live:before {
+  content: 'Live';
+}
+
+.courses-page-courses .course__title--work:before {
+  content: 'Work';
+}
+
+.courses-page-courses .course__title--love:before {
+  content: 'Love';
+}
+
 .courses-page-courses .course .text {
   margin-top: 30px;
   grid-column: 1/3;
@@ -1379,6 +1413,165 @@ footer {
 
 .courses-page-courses .course .primary-form--course {
   grid-column: 1/3;
+}
+
+/* TV PAGE */
+
+.tv-head-main {
+  overflow: hidden;
+  padding-bottom: 48px;
+}
+
+.tv-head-main .title-subscribe__name {
+  grid-column: 1/3;
+}
+
+.tv-head-main .title-subscribe__name span {
+  padding: 0;
+  width: 80%;
+  text-align: left;
+}
+
+.tv-head-main .title-subscribe__name:before {
+  content: 'Gallery';
+  left: -10px;
+}
+
+.primary-form--tv .label {
+  display: none;
+}
+
+.clips-photos {
+  padding-top: 30px;
+}
+
+.tab-slider--nav {
+  margin: 0 auto;
+  margin-bottom: 53px;
+}
+
+.tab-slider--tabs {
+  display: flex;
+  justify-content: center;
+}
+
+.tab-slider--trigger {
+  margin: 0 20px;
+  cursor: pointer;
+  font: 24px "Poppins-Medium";
+  transition: all .25s linear;
+}
+
+.tab-slider--trigger.active {
+  font: 24px "Poppins-Bold";
+  color: #FF3E5C;
+}
+
+.tab__title {
+  font: 24px "Poppins-SemiBold";
+  margin-bottom: 12px;
+}
+
+.tab__text {
+  font-size: 20px;
+  line-height: 180%;
+  margin-bottom: 30px;
+}
+
+.tv-clips {
+  margin-bottom: 70px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 30px;
+  justify-items: center;
+}
+
+.tv-clips-row2 {
+  display: none;
+}
+
+.clip {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 25px 0 25px 0;
+  overflow: hidden;
+  max-width: 375px;
+  transition: all .25s linear;
+  padding-bottom: 50px;
+  position: relative;
+  box-shadow: 0px 4px 25px rgba(115, 115, 115, 0.1);
+}
+
+.clip .clip-img {
+  width: 100%;
+  height: 256px;
+  position: relative;
+}
+
+.clip__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px 0 25px 0;
+}
+
+.clip:hover {
+  background-color: #fff;
+  box-shadow: 0px 4px 25px rgba(115, 115, 115, 0.1);
+}
+
+.clip-content {
+  margin-top: 21px;
+  line-height: 24px;
+  padding: 0 31px;
+}
+
+.clip-content__title {
+  font: 16px "Poppins-Medium";
+  margin-bottom: 1em;
+}
+
+.clip-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  padding: 0 31px;
+}
+
+.clip-info__channel {
+  color: rgba(58, 59, 63, 0.5);
+}
+
+.channel-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 50%);
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  grid-row-gap: 20px;
+}
+
+.channel-logos__img {
+  max-width: 50%;
+}
+
+.photos-grid {
+  line-height: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  grid-gap: 40px;
+}
+
+.photos-grid__img:nth-child(1) {
+  grid-column: 1/1.5;
+}
+
+.photos-grid__img:nth-child(2) {
+  grid-column: 1.5/3;
 }
 
 @media only screen and (min-width: 400px) {
@@ -1394,6 +1587,10 @@ footer {
 @media only screen and (min-width: 720px) {
   .section-first {
     padding-top: 125px;
+  }
+
+  .container-inner {
+    padding: 0 10%;
   }
 
   .title {
@@ -1542,11 +1739,13 @@ footer {
   .title-subscribe__name span {
     text-align: left;
     padding: 0;
+    top: 0;
+    margin: 50px 0;
   }
 
   .title-subscribe__name:before {
     font-size: 180px;
-    top: -60px;
+    top: 0;
     left: 0;
   }
 
@@ -1590,6 +1789,43 @@ footer {
 
   .courses-head-main .head-img {
     width: auto;
+  }
+
+  .primary-form--tv {
+    display: flex;
+    align-items: center;
+  }
+
+  .primary-form--tv .form-row {
+    margin-right: 16px;
+  }
+
+  .primary-form--tv .input {
+    background-color: transparent;
+  }
+
+  .primary-form--tv .label {
+    display: inline;
+  }
+
+  .clips-photos {
+    padding: 50px 0;
+    background-color: rgba(243, 243, 243, 0.71);
+  }
+
+  .tv-clips {
+    justify-content: center;
+    grid-gap: 48px;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 320px));
+  }
+
+  .clip {
+    max-width: 320px;
+    box-shadow: unset;
+  }
+
+  .channel-logos {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 25%));
   }
 }
 
@@ -1775,6 +2011,10 @@ footer {
 
   .courses-page-courses .course:nth-child(odd) .primary-form--course .takeBtn {
     grid-row: 2;
+  }
+
+  .primary-form--tv {
+    grid-column: 1/3;
   }
 }
 
@@ -1981,6 +2221,11 @@ footer {
   .courses-head-main .head-main__author {
     font-size: 20px;
   }
+
+  .courses-page-courses .course__title:before {
+    font-size: 300px;
+    left: -120px;
+  }
 }
 
 @media only screen and (min-width: 1600px) {
@@ -2104,8 +2349,16 @@ footer {
     margin-bottom: 30px;
   }
 
+  .courses-page-courses .course__title:before {
+    font-size: 350px;
+  }
+
   .courses-page-courses .course {
     grid-column-gap: 120px;
+  }
+
+  .clips-photos {
+    padding: 134px 0;
   }
 }
 
