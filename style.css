@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* RESET */
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -199,6 +201,10 @@ body.no-scroll {
   text-align: left;
 }
 
+.title--red {
+  color: #FF3E5C;
+}
+
 .sub-title {
   text-align: center;
 }
@@ -252,6 +258,10 @@ body.no-scroll {
 
 .link-btn-center {
   margin: 0 auto;
+}
+
+.takeBtn {
+  border: none;
 }
 
 /* FORMS */
@@ -440,7 +450,7 @@ body.no-scroll {
 }
 
 .main-logo__name {
-  margin: 0 0 0 7px;
+  margin: 7px 0 0 7px;
   display: inline-block;
   color: #3A3B3F;
   font: 0.75em "Poppins-Medium";
@@ -491,6 +501,11 @@ body.no-scroll {
 .head-main {
   position: relative;
   min-height: 342px;
+  align-items: center;
+}
+
+.head-main.home-head-main .container {
+  padding-top: 30px;
 }
 
 .head-main .head-text {
@@ -700,7 +715,7 @@ body.no-scroll {
 
 .course__takelink {
   display: block;
-  margin-top: 16px;
+  margin-top: 32px;
   width: 100%;
   max-width: 350px;
   height: 64px;
@@ -932,23 +947,14 @@ body.no-scroll {
   margin-bottom: 0;
 }
 
-.follow-img .bg-circe {
+.follow-img {
   width: 114px;
   height: 114px;
-  background-color: #5D5CC3;
-  border-radius: 50%;
-  border: 5px solid #fff;
-  box-shadow: 0px 4px 25px rgba(115, 115, 115, 0.2);
-}
-
-.follow-img .bg-circe-red {
-  background-color: #FF3E5C;
 }
 
 .follow-img img {
-  position: absolute;
-  bottom: 5px;
-  border-radius: 0 0 47% 50%;
+  object-fit: contain;
+  height: 100%;
 }
 
 .follow-link {
@@ -1022,6 +1028,10 @@ body.no-scroll {
   position: relative;
   margin-bottom: 32px;
   box-shadow: 0px 4px 25px rgba(115, 115, 115, 0.1);
+}
+
+.post__link {
+  color: inherit;
 }
 
 .post .post-img {
@@ -1144,6 +1154,14 @@ footer {
   text-align: center;
 }
 
+.footer-container div {
+  margin-right: 30px;
+}
+
+.footer-container div:last-child {
+  margin-right: 0;
+}
+
 .copyright {
   max-width: 150px;
 }
@@ -1211,12 +1229,15 @@ footer {
 
 /* BIO PAGE */
 
+.bio-section {
+  padding-top: 30px;
+}
+
 .bio-section .clear-padding {
   padding: 0;
 }
 
 .title-subscribe {
-  margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
@@ -1578,6 +1599,320 @@ footer {
   max-width: 504px;
 }
 
+/* SINGLE COURSE */
+
+.single-cours-head-main {
+  height: 192px;
+  min-height: unset;
+  max-height: 640px;
+  background: #5D5CC3;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+}
+
+.single-cours-head-main .container {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.single-cours-head-main .container:before {
+  content: '';
+  display: block;
+  width: 158px;
+  height: 159px;
+  background: url("img/header/BG/Diamond.svg") center no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: 99;
+}
+
+.single-cours-head-main .container:after {
+  content: 'Live';
+  font: 350px "PermanentMarker";
+  background-size: contain;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.05);
+  transform: rotate(-15deg);
+  right: 7%;
+  z-index: 10;
+  display: none;
+}
+
+.single-cours-head-main.section {
+  padding: 0;
+  padding-bottom: 0;
+}
+
+.single-cours-head-main .head-img-wrp {
+  padding-top: 36px;
+  width: 40%;
+  align-self: flex-end;
+  display: flex;
+  position: relative;
+  z-index: 99;
+  align-items: flex-end;
+}
+
+.single-cours-head-main .head-img-wrp__img {
+  width: 90%;
+  max-height: 235px;
+  object-fit: contain;
+}
+
+.single-cours-head-main .head-content {
+  width: 60%;
+}
+
+.single-cours-head-main .head-content__welcome {
+  font: 16px "Poppins-Medium";
+}
+
+.single-cours-head-main .head-content__title {
+  font: 32px "Poppins-Bold";
+}
+
+.single-cours-head-main .head-content__subtitle {
+  font: 16px "Poppins-SemiBold";
+}
+
+.single-cours-head-main .head-content__subtitle span {
+  font-family: "Poppins-Regular";
+}
+
+.course-info {
+  padding: 20px 0 48px 0;
+  position: relative;
+}
+
+.cinfo {
+  transition: all .25s linear;
+}
+
+.cinfo-content {
+  display: none;
+  margin-bottom: 38px;
+}
+
+.cinfo-content__welcome {
+  font: 24px "Poppins-Medium";
+}
+
+.cinfo-content__title {
+  font: 64px "Poppins-Bold";
+}
+
+.cinfo-content__subtitle {
+  font: 24px "Poppins-Bold";
+}
+
+.cinfo-content__subtitle span {
+  font-family: "Poppins-Regular";
+}
+
+.info-list li {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.info-list li:before {
+  content: '•';
+  display: block;
+  margin-right: 10px;
+  color: #5D5CC3;
+}
+
+.c-details {
+  background: rgba(243, 243, 243, 0.71);
+}
+
+.d-blocks {
+  display: flex;
+  min-height: 144px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.d-blocks .d-title {
+  color: rgba(58, 59, 63, 0.5);
+  font: 14px "Poppins-Medium";
+  margin-bottom: 12px;
+}
+
+.d-blocks .d-value {
+  font: 20px "Poppins-Medium";
+  text-transform: uppercase;
+}
+
+.about-course {
+  padding: 48px 0 64px 0;
+}
+
+.about-course .text {
+  margin: 0 auto;
+  max-width: 736px;
+}
+
+.primary-form--about-course {
+  max-width: 736px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+/* SINGLE POST */
+
+.main-single-post {
+  padding-bottom: 84px;
+}
+
+.post-back-link {
+  font-size: 16px;
+  color: #3A3B3F;
+  padding-left: 16px;
+  background: url("img/icons/Arrow-right.svg") left center no-repeat;
+  margin-top: 26px;
+  display: block;
+  margin-left: 16px;
+}
+
+.post-back-link span {
+  font-family: "Poppins-SemiBold";
+}
+
+.post-grid {
+  display: grid;
+  grid-column-gap: 95px;
+}
+
+.post-grid .grid-padding {
+  padding: 0 16px;
+}
+
+.post__title {
+  margin-top: 50px;
+  font: 24px "Poppins-SemiBold";
+}
+
+.author {
+  margin: 22px 0;
+  display: flex;
+  align-items: center;
+}
+
+.author__img {
+  margin-left: -10px;
+  max-width: 94px;
+  object-fit: contain;
+  margin-right: 12px;
+}
+
+.author__name {
+  margin-bottom: 8px;
+}
+
+.author .post-date {
+  color: rgba(58, 59, 63, 0.5);
+}
+
+.single-post-content {
+  margin-top: 58px;
+}
+
+.single-post-content__img {
+  width: 100%;
+  max-width: 608px;
+  border-radius: 25px 0px;
+}
+
+.single-post-content__text {
+  margin-top: 38px;
+}
+
+.single-post-content__text p {
+  margin-bottom: 20px;
+}
+
+.single-post-content__social {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.single-post-content__social a {
+  width: 23px;
+  height: 27px;
+  display: block;
+  margin-right: 20px;
+}
+
+.single-post-content__icon {
+  width: 100%;
+  height: 100%;
+}
+
+.single-subscribe {
+  grid-column: unset;
+}
+
+.single-subscribe .greeting__join {
+  display: none;
+  font: 20px "Poppins-Medium";
+  margin-bottom: 38px;
+}
+
+.podcast.single-post {
+  margin-top: 84px;
+}
+
+.podcast.single-post .title {
+  font-size: 20px;
+}
+
+.podcast.single-post .podcast-intro-text {
+  font: 32px "PermanentMarker";
+  background: linear-gradient(90deg, #FF3E5C 0%, #5D5CC3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.podcast.single-post .podcast-player {
+  flex-direction: column;
+  align-items: unset;
+}
+
+.podcast.single-post .podcast-controls {
+  margin-top: 16px;
+  width: 100%;
+}
+
+.podcast.single-post .sign-podcast {
+  margin-top: 30px;
+  display: block;
+}
+
+.podcast.single-post .primary-form {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+.podcast.single-post .primary-form .form-row {
+  margin-bottom: 16px;
+}
+
+.podcast.single-post .primary-form__input {
+  max-width: 100%;
+}
+
+.podcast.single-post .primary-form__submit {
+  margin: 0;
+  margin-top: 16px;
+}
+
 @media only screen and (min-width: 400px) {
   .container {
     padding: 0 10%;
@@ -1585,6 +1920,26 @@ footer {
 
   .courses-head-main .head-img {
     width: 45%;
+  }
+
+  .single-cours-head-main {
+    height: auto;
+  }
+
+  .single-cours-head-main .head-img-wrp {
+    width: 45%;
+  }
+
+  .single-cours-head-main .head-img-wrp__img {
+    max-height: 473px;
+  }
+
+  .post-back-link {
+    margin-left: 0;
+  }
+
+  .post-grid .grid-padding {
+    padding: 0;
   }
 }
 
@@ -1637,6 +1992,10 @@ footer {
 
   .head-main {
     font-size: 1.5em;
+  }
+
+  .head-main.home-head-main .container {
+    padding-top: 50px;
   }
 
   .head-main .head-text {
@@ -1836,6 +2195,43 @@ footer {
     max-width: 325px;
     margin-bottom: 48px;
   }
+
+  .single-cours-head-main .container:after {
+    display: block;
+    font-size: 200px;
+  }
+
+  .single-cours-head-main .head-img-wrp {
+    padding-top: 106px;
+    width: auto;
+  }
+
+  .single-cours-head-main .head-content {
+    visibility: hidden;
+  }
+
+  .course-info {
+    padding: 0;
+  }
+
+  .cinfo {
+    width: 428px;
+    padding: 30px;
+    border-radius: 40px 0px;
+    box-shadow: 0px 4px 25px rgba(115, 115, 115, 0.2);
+    background-color: #fff;
+    z-index: 99;
+    bottom: -96px;
+    position: absolute;
+  }
+
+  .cinfo-content {
+    display: block;
+  }
+
+  .d-blocks {
+    padding: 150px 0 100px 0;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1891,8 +2287,16 @@ footer {
     color: #fff;
   }
 
+  .head-main.home-head-main .container {
+    padding-top: 80px;
+  }
+
   .subscribe-section {
     display: none;
+  }
+
+  .subscribe-block--header {
+    display: block;
   }
 
   .title-subscribe {
@@ -2030,6 +2434,65 @@ footer {
   .photos-grid__img:nth-child(2) {
     width: 48%;
   }
+
+  .single-cours-head-main .container:after {
+    font-size: 275px;
+  }
+
+  .single-cours-head-main .head-img-wrp {
+    padding-top: 100%;
+  }
+
+  .cinfo {
+    width: 528px;
+    padding: 50px;
+  }
+
+  .primary-form--about-course {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .primary-form--about-course .form-row {
+    max-width: 208px;
+    margin-right: 16px;
+  }
+
+  .post-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .post-grid .post__title {
+    grid-row: 1/2;
+  }
+
+  .post-grid .author {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
+
+  .post-grid .single-post-content {
+    grid-column: 1/2;
+    grid-row: 3/6;
+  }
+
+  .post-grid .single-subscribe {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  .post-grid .podcast.single-post {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+
+  .single-post-content {
+    margin-top: 18px;
+  }
+
+  .single-subscribe .greeting__join {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1024px) and (min-width: 1024px) {
@@ -2063,8 +2526,8 @@ footer {
     height: 35px;
   }
 
-  .subscribe-block--header {
-    display: block;
+  .head-main.home-head-main .container {
+    padding-top: 110px;
   }
 
   .head-main-bg .shapes {
@@ -2244,6 +2707,26 @@ footer {
   .photos-grid {
     justify-content: space-between;
   }
+
+  .single-cours-head-main .container:after {
+    font-size: 300px;
+  }
+
+  .about-course {
+    padding: 90px 0 130px 0;
+  }
+
+  .about-course {
+    padding: 120px 0 170px 0;
+  }
+
+  .main-single-post {
+    padding-bottom: 140px;
+  }
+
+  .podcast.single-post {
+    margin-top: 120px;
+  }
 }
 
 @media only screen and (min-width: 1600px) {
@@ -2257,6 +2740,11 @@ footer {
 
   .head-main {
     font-size: 2em;
+  }
+
+  .head-main.home-head-main .container {
+    padding-top: 120px;
+    padding-bottom: 100px;
   }
 
   .courses-section {
@@ -2378,6 +2866,30 @@ footer {
   .clips-photos {
     padding: 134px 0;
   }
+
+  .single-cours-head-main .container:before {
+    left: 0;
+    width: 402px;
+    height: 444px;
+  }
+
+  .single-cours-head-main .container:after {
+    font-size: 350px;
+  }
+
+  .about-course {
+    padding: 150px 0 204px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-single-post {
+    padding-bottom: 100px;
+  }
+
+  .main-single-post {
+    padding-bottom: 180px;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -2392,10 +2904,11 @@ footer {
     visibility: hidden;
     transition: all .25s linear;
     position: absolute;
-    display: flex;
+    height: 0;
     top: 0;
     right: 0;
-    padding: 0 16px;
+    display: none;
+    padding: 80px 10% 0 10%;
     padding-top: 80px;
     width: 100%;
     height: 100vh;
@@ -2434,6 +2947,7 @@ footer {
     opacity: 1;
     visibility: visible;
     z-index: 999;
+    display: flex;
   }
 
   .header-top.open .main-logo__name {
@@ -2442,6 +2956,10 @@ footer {
 
   .header-top.open .main-logo__logo .logosvg path {
     fill: white;
+  }
+
+  .header-top.open .burger-btn span {
+    background-color: #fff;
   }
 }
 

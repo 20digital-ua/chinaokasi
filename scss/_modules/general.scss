@@ -53,6 +53,9 @@ body{
   &--left{
     text-align: left;
   }
+  &--red{
+    color:$redColor;
+  }
   @include screen-tb{
     font-size: 32px;
   }

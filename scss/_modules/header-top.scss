@@ -74,7 +74,7 @@
     }
   }
   &__name{
-    margin: 0 0 0 7px;
+    margin: 7px 0 0 7px;
     display: inline-block;
     color:$primaryTextColor;
     @include font(0.75em,$PoppinsMedium);
@@ -187,10 +187,11 @@
   visibility: hidden;
   @include transition();
   position: absolute;
-  display: flex;
+  height: 0;
   top: 0;
   right: 0;
-  padding: $mobSidePadding;
+  display: none;
+  padding: 80px $mainPadding 0 $mainPadding;
   padding-top: 80px;
   width: 100%;
   height: 100vh;
@@ -198,7 +199,6 @@
   flex-direction: column-reverse;
   justify-content: flex-end;
   align-items: flex-start;
-
 
   .courses-menu{
     width: 100%;
@@ -228,6 +228,7 @@
     opacity: 1;
     visibility: visible;
     z-index: 999;
+    display: flex;
   }
   .header-top.open .main-logo__name{
     color: #fff;
@@ -238,6 +239,9 @@
         fill:white;
       }
     }
+  }
+  .header-top.open .burger-btn span{
+    background-color: #fff;
   }
 
 }

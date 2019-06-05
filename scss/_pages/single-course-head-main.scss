@@ -1,0 +1,107 @@
+.single-cours-head-main{
+  height: 192px;
+  min-height: unset;
+  max-height: 640px;
+  background: $violetColor;
+  color:#fff;
+  display: flex;
+  align-items: flex-end;
+  @include screen-sm{
+    height: auto;
+  }
+  .container{
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+    position: relative;
+    &:before{
+      content: '';
+      display: block;
+      width: 158px;
+      height: 159px;
+      background: url("#{$image_dir}header/BG/Diamond.svg") center no-repeat;
+      background-size: contain;
+      position: absolute;
+      z-index: 99;
+      @include screen-lg{
+        left:0;
+        width: 402px;
+        height: 444px;
+      }
+    }
+    &:after{
+      content: 'Live';
+      @include font(350px, $PermanentMarker);
+      background-size: contain;
+      position: absolute;
+      color: rgba(255, 255, 255, 0.05);
+      transform: rotate(-15deg);
+      right: 7%;z-index: 10;
+      display: none;
+      @include screen-tb{
+        display: block;
+       font-size: 200px;
+      }
+      @include screen-lp{
+       font-size: 275px;
+      }
+      @include screen-md{
+       font-size: 300px;
+      }
+      @include screen-lg{
+        font-size: 350px;
+      }
+    }
+  }
+  &.section{
+    padding: 0;
+    padding-bottom: 0;
+  }
+  .head-img-wrp{
+    padding-top: 36px;
+    width: 40%;
+    align-self: flex-end;
+    display: flex;
+    position: relative;
+    z-index: 99;
+    align-items: flex-end;
+    @include screen-sm{
+      width: 45%;
+    }
+    @include screen-tb{
+      padding-top: 106px;
+      width: auto;
+    }
+    @include screen-lp{
+      padding-top:100%;
+    }
+    &__img{
+      width: 90%;
+      max-height: 235px;
+      object-fit: contain;
+      @include screen-sm{
+        max-height: 473px;
+      }
+    }
+  }
+  .head-content{
+    width: 60%;
+    @include screen-tb{
+      visibility: hidden;
+    }
+    &__welcome{
+      @include font(16px, $PoppinsMedium);
+    }
+    &__title{
+      @include font(32px, $PoppinsBold);
+    }
+    &__subtitle{
+      @include font(16px, $PoppinsSemiBold);
+      span{
+        font-family: $Poppins;
+      }
+    }
+  }
+}
