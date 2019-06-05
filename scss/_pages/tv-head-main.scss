@@ -1,0 +1,45 @@
+.tv-head-main{
+  overflow: hidden;
+  padding-bottom: 48px;
+  .title-subscribe__name{
+    grid-column: 1/3;
+    span{
+      padding: 0;
+      width: 80%;
+      text-align: left;
+    }
+    &:before{
+      content: 'Gallery';
+      left:-10px;
+      @include screen-tb{
+       
+      }
+    }
+  }
+}
+ 
+.primary-form--tv{
+  @include screen-tb{
+    display: flex;
+    align-items: center;
+  }
+  @include screen-lp{
+    grid-column: 1/3;
+  }
+  .form-row{
+    @include screen-tb{
+      margin-right: 16px;
+    }
+  }
+  .input{
+    @include screen-tb{
+      background-color: transparent;
+    }
+  }
+  .label{
+    display: none; 
+    @include screen-tb{
+      display: inline;
+    }
+  } 
+}

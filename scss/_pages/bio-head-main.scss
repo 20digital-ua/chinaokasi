@@ -1,0 +1,193 @@
+.bio-section{
+  padding-top: 30px;
+  .clear-padding{
+    padding: 0;
+    @include screen-tb{
+      padding:0 $mainPadding;
+    }
+  }
+  @include screen-tb{
+    background-color: $lightGreyBG;
+  }
+}    
+
+.title-subscribe{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  @include screen-lp{
+    grid-template-columns: 2fr 1fr;
+  }
+  &__name span{ 
+    @include font(32px, $PermanentMarker);
+    background: linear-gradient(90deg, $redColor 0%, $violetColor 100%);
+    text-align: center;
+    padding: 0 20px;
+    display: block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include screen-tb{
+      text-align: left;
+      padding: 0;
+      top: 0;
+      margin: 50px 0;
+    }
+    @include screen-lp{
+      font-size: 46px;
+      margin: 80px 0;
+    }
+    @include screen-md{
+      font-size: 56px;
+      margin: 150px 0;
+    }
+    @include screen-lg{
+      font-size: 66px;
+      margin: 150px 0;
+    }
+  }
+  &__name{
+    position: relative;
+    &:before{
+      content: 'Bio';
+      text-transform: uppercase;
+      font-family: Permanent Marker;
+      @include font(100px, $PermanentMarker);
+      line-height: 146px;
+      color: rgba(93, 92, 195, 0.04);
+      position: absolute;
+      left: 20px;
+      top: -30px;
+      @include screen-tb{
+        font-size: 180px;
+        top: 0;
+        left: 0;
+      }
+      @include screen-lp{
+        top: 15%;
+        font-size: 200px;
+      }
+      @include screen-md{
+        top: 25%;
+        font-size: 250px;
+      }
+      @include screen-lg{
+        font-size: 300px;
+        top: 30%;
+        left: -20px;
+      }
+    }
+  }
+}
+.subscribe-block{
+  grid-column: 1/3;
+  @include screen-lp{
+    grid-column: 1/2;
+  }
+  &.container{
+    margin: 0;
+    @include screen-tb{
+      padding: 0;
+    }
+  }
+}
+.primary-form--bio{
+  @include screen-tb{
+    display: flex;
+    align-items: center;
+  }
+  @include screen-lp{
+    grid-column: 1/3;
+  }
+  .form-row{
+    @include screen-tb{
+      margin-right: 16px;
+    }
+  }
+  .input{
+    @include screen-tb{
+      background-color: transparent;
+    }
+  }
+  .label{
+    display: none; 
+    @include screen-tb{
+      display: inline;
+    }
+  }
+}
+
+.title-img{
+  min-height: 192px;
+  background: linear-gradient(180deg, $redColor 0%, $violetColor 100%);
+  border-radius: 25px 0;
+  margin-bottom: 24px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  @include screen-tb{
+    max-width:  352px;
+    max-height: 432px;
+  }
+  @include screen-lp{
+    grid-row: 1/3;
+    grid-column: 2;
+    transform: translate(15%, 50%);
+    z-index: 99;
+  }
+  @include screen-lg{
+    transform: translate(15%, 70%);
+  }
+  
+  &__img{
+    border-radius: 0 0 25px 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+.greeting{
+  margin-top: 16px;
+  @include font(1em,$Poppins);
+  &__text-md{
+    font-family: $PoppinsBold;
+  }
+  @include screen-tb{
+    display: block;
+  }
+}
+
+.bio-content{
+  margin-top: 60px;
+  @include screen-tb{
+    box-shadow: 0px 4px 25px rgba(115, 115, 115, 0.1);
+    border-radius: 40px 0px;
+    background-color: #fff;
+    padding: 50px 30px;
+    border-radius: 30px 0 30px 0;
+  }
+  @include screen-lp{
+    padding: 110px 60px;
+  }
+  @include screen-lg{ 
+    font-size: 20px;
+    margin-bottom: 26px;
+  }
+  &__title{
+    @include font(24px, $PoppinsSemiBold);
+    margin-bottom: 16px;
+    @include screen-lg{ 
+      font-size: 40px;
+      margin-bottom: 26px;
+    }
+  }
+  p{
+    margin-bottom: 20px;
+    @include screen-lg{
+      margin-bottom: 30px;
+    }
+  }
+  
+}
+

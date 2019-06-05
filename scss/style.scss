@@ -46,5 +46,19 @@
 
 
 /* BIO PAGE */
+@import "_pages/bio-head-main";
 
-@import "_pages/header-top";
+/* COURSES PAGE */
+@import "_pages/courses-head-main";
+@import "_pages/courses-courses";
+/* TV PAGE */
+@import "_pages/tv-head-main";
+@import "_pages/tv-clips-photos";
+
+/* SINGLE COURSE */
+@import "_pages/single-course-head-main";
+@import "_pages/single-course-info";
+
+/* SINGLE POST */
+@import "_pages/single-post";
+

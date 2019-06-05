@@ -37,13 +37,24 @@ body{
     padding: $mainSidePadding;
   }
 }
-
+.container-inner{
+  position: relative;
+  max-width: 1056px;
+  box-sizing: content-box;
+  margin: 0 auto;
+  @include screen-tb{
+    padding: $mainSidePadding;
+  }
+}
 .title{
   @include font(24px,$PoppinsSemiBold);
   text-align: center;
   margin-bottom: 24px;
   &--left{
     text-align: left;
+  }
+  &--red{
+    color:$redColor;
   }
   @include screen-tb{
     font-size: 32px;

@@ -4,4 +4,12 @@ jQuery(document).ready(function(){
         jQuery('body').toggleClass('no-scroll');
 
     })
+    jQuery(window).on('resize',function(){
+        if(jQuery(window).width()>1024){
+            jQuery('.header-top').removeClass('open');
+            jQuery('body').removeClass('no-scroll');
+        }
+        
+
+    })
 });

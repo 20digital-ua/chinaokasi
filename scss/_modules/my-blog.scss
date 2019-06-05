@@ -51,7 +51,9 @@
     background-color: unset;
     box-shadow: unset;
   }
-
+  &__link{
+    color: inherit;
+  }
   padding-bottom: 50px;
   position: relative;
   margin-bottom: 32px;
