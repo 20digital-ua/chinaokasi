@@ -129,16 +129,28 @@
 //////////////////////////////////////////////////////////////
 .photos-grid{
   line-height: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr ;
-  justify-content: space-between;
-  grid-gap: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap:wrap; 
+  @include transition();
+  @include screen-md{
+    justify-content: space-between;
+  }
   &__img{
-    &:nth-child(1){
-      grid-column: 1/1.5;
+    width: 100%;
+    max-width: 375px;
+    height: auto;
+    object-fit: cover;
+    @include screen-tb{
+      max-width: 325px;
+      margin-bottom: 48px;
     }
-    &:nth-child(2){
-      grid-column: 1.5/3;
+    &:nth-child(1),&:nth-child(2){
+      max-width: 504px;
+      @include screen-lp{
+        
+        width: 48%;
+      }
     }
   }
 }
