@@ -9,6 +9,9 @@
   @include screen-sm{
     height: auto;
   }
+  @include screen-md{
+    height: 640px;
+  }
   .container{
     display: flex;
     align-self: stretch;
@@ -16,13 +19,23 @@
     justify-content: space-between;
     width: 100%; 
     position: relative;
+    &.live:before{
+      background: url("#{$image_dir}header/BG/Diamond.svg") center no-repeat;
+      background-size: contain;
+    }
+    &.work:before{
+      background: url("#{$image_dir}header/BG/Dollar.svg") center no-repeat;
+      background-size: contain;
+    }
+    &.love:before{
+      background: url("#{$image_dir}header/BG/Heart.svg") center no-repeat;
+      background-size: contain;
+    }
     &:before{
       content: '';
       display: block;
       width: 158px;
       height: 159px;
-      background: url("#{$image_dir}header/BG/Diamond.svg") center no-repeat;
-      background-size: contain;
       position: absolute;
       z-index: 99;
       @include screen-lg{
@@ -31,8 +44,22 @@
         height: 444px;
       }
     }
-    &:after{
+    &.live:after{
       content: 'Live';
+    }
+    &.work:after{
+      content: 'Work';
+      @include screen-md{
+        right: -5%;
+      }
+    }
+    &.love:after{
+      content: 'Love';
+      @include screen-md{
+        right: 0;
+      }
+    }
+    &:after{
       @include font(350px, $PermanentMarker);
       background-size: contain;
       position: absolute;
@@ -53,6 +80,7 @@
       @include screen-lg{
         font-size: 350px;
       }
+
     }
   }
   &.section{
@@ -75,7 +103,7 @@
       width: auto;
     }
     @include screen-lp{
-      padding-top:100%;
+      padding-top: 167px;
     }
     &__img{
       width: 90%;

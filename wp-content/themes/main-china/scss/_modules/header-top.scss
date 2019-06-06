@@ -9,20 +9,27 @@
   @include screen-md{
     height: 176px;
   }
-  &-home{
-    position: absolute;
-  }
   .container{
     height: 100%;
     padding-top: 0;
     //outline: 1px solid green;
   }
-  &--white{
-    background-color: #fff; 
-    .main-menu a{
+
+}
+body.home .header{
+  position: absolute;
+}
+body.logged-in .header{
+  top: 32px;
+}
+body.page .header, body.single .header{
+  background-color: #fff; 
+  .main-menu a{
+    @include screen-lp{
       color: #000;
-    } 
-  }
+    }
+    
+  } 
 }
 
 .header-top{
@@ -110,13 +117,14 @@
       }
     }
   }
-  &-dark{
-    span{
-      background-color: #3A3B3F;
-    }
-  }
+
   @include screen-lp{
     display: none;
+  }
+}
+body.page .burger-btn{
+  span{
+    background-color: #3A3B3F;
   }
 }
 
@@ -192,7 +200,7 @@
   right: 0;
   display: none;
   padding: 80px $mainPadding 0 $mainPadding;
-  padding-top: 80px;
+  padding-top: 120px;
   width: 100%;
   height: 100vh;
   background: linear-gradient(180deg, $redColor 0%, $violetColor 100%);
