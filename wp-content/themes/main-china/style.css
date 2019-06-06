@@ -1758,6 +1758,10 @@ footer {
   font-family: "Poppins-Regular";
 }
 
+.info-list {
+  margin-bottom: 40px;
+}
+
 .info-list li {
   display: flex;
   margin-bottom: 16px;
@@ -1868,6 +1872,7 @@ footer {
 
 .single-post-content__img {
   width: 100%;
+  height: auto;
   max-width: 608px;
   border-radius: 25px 0px;
 }
