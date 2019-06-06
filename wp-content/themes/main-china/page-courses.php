@@ -1,77 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="Cache-Control" content="no-cache">
-	<meta name="robots" content="noindex">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="stylesheet" href="fonts/fonts.css">
-	<link rel="stylesheet" href="style.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<title>China Okasi</title>
-</head>
-<body>
-	<header class="header header--white">
-		<div class="container">
-			<div class="header-top">
-				<div class="logo-container">
-					<a class="main-logo" href="../">
-						<div class="main-logo__logo">
-								<svg width="29" height="23" class="logosvg" style="fill: #FAFAFA;" viewBox="0 0 29 23" fill="" xmlns="http://www.w3.org/2000/svg">
-									<path d="M22.7671 8.79133C20.5281 10.284 18.8598 12.4792 16.7963 14.1475C16.3573 12.567 15.8744 10.9865 15.4354 9.36206C15.2597 8.70352 14.2939 8.3523 13.7671 8.92304C12.2305 10.767 11.2207 12.7865 10.3426 14.9816C9.02555 13.1377 7.53286 11.4255 5.60114 10.1523C4.9865 9.75719 4.06454 10.284 4.10845 10.9865C4.45967 14.5865 5.07431 18.0987 6.12797 21.567C6.12797 21.6109 6.12797 21.6109 6.17188 21.6548C5.99626 22.2695 6.5231 23.1475 7.35725 22.9719C12.0987 22.0939 16.8841 21.6548 21.7134 21.6109C21.8452 21.6109 21.9769 21.567 22.1086 21.5231C22.5476 21.4353 22.8988 21.128 22.9427 20.6012C23.0305 16.9133 23.8208 13.2694 24.2598 9.62548C24.3476 8.87913 23.3379 8.3962 22.7671 8.79133ZM9.728 17.5719C10.2109 18.3182 11.2207 18.1426 11.528 17.3524C12.2305 15.4206 12.9768 13.5767 14.0305 11.8645C14.4256 13.2694 14.8646 14.6743 15.2158 16.0792C15.3915 16.6499 16.1378 17.045 16.6646 16.6499C18.6403 15.3328 20.133 13.4889 21.8891 11.9084C21.4939 14.4987 21.0549 17.045 20.9232 19.6792C16.5329 19.7231 12.2305 20.1182 7.88408 20.8646C7.18164 18.3621 6.6109 15.8597 6.25968 13.2694C7.66457 14.5426 8.71824 16.0353 9.728 17.5719Z" fill="url(#paint0_linear)"/>
-									<path d="M26.806 0.756911C26.1913 0.493494 25.5767 0.537397 25.006 0.756911C24.6548 0.669106 24.2596 0.800814 23.9962 1.19594C23.8645 1.37155 23.7767 1.59106 23.7328 1.81058C23.6011 1.98619 23.5133 2.2057 23.4255 2.42522C23.2499 2.90815 23.4255 3.25937 23.7328 3.43498C23.9084 4.09352 24.2596 4.70816 24.7426 5.10329C25.9279 5.98134 27.6401 5.45451 28.2109 4.13743C28.8694 2.82034 28.167 1.28374 26.806 0.756911ZM26.4987 3.30327C26.4109 3.56669 26.1474 3.6545 25.9279 3.47888C25.7962 3.34718 25.6645 2.95205 25.6645 2.60083C26.0596 2.42522 26.6743 2.77644 26.4987 3.30327Z" fill="url(#paint1_linear)"/>
-									<path d="M12.1864 5.58653C13.3279 6.6841 15.2157 6.77191 16.2255 5.45483C17.2352 4.13774 16.4011 2.38163 14.9962 1.767C14.2937 1.45968 13.4157 1.32797 12.6693 1.54748C11.8352 1.767 11.4401 2.51334 11.2205 3.30359C11.1327 3.69872 11.2205 4.00604 11.4401 4.22555C11.5718 4.70848 11.7913 5.23531 12.1864 5.58653ZM14.6889 4.18165C14.645 4.48897 14.2498 4.48897 14.0303 4.44506C13.8547 4.40116 13.723 4.31335 13.5913 4.18165C13.5035 4.13774 13.4596 4.04994 13.4157 4.00604C13.6352 3.87433 13.7669 3.69872 13.8986 3.5231H13.9425C14.2059 3.56701 14.7767 3.78652 14.6889 4.18165Z" fill="url(#paint2_linear)"/>
-									<path d="M4.02058 3.17164C2.7913 2.33749 0.37665 2.20578 0.069331 4.0936C0.0254283 4.26921 0.069331 4.40092 0.069331 4.53263C0.069331 4.57653 0.0254281 4.66434 0.0254281 4.75214C-0.10628 5.54239 0.288844 6.37655 0.85958 6.94728C1.95715 8.04485 3.93277 8.30827 5.07424 7.07899C6.25962 5.80581 5.24986 4.0058 4.02058 3.17164ZM3.62545 5.718C3.53765 5.93752 3.14252 5.93752 2.92301 5.93752C2.39618 5.80581 2.17666 5.23507 1.73764 5.23507C2.17666 5.23507 2.44008 4.97166 2.61569 4.66434C3.14252 4.88385 3.75716 5.32288 3.62545 5.718Z" fill="url(#paint3_linear)"/>
-									<defs>
-									<linearGradient id="paint0_linear" x1="4.11521" y1="15.805" x2="24.2435" y2="15.805" gradientUnits="userSpaceOnUse">
-									<stop stop-color="#FF3E5C"/>
-									<stop offset="1" stop-color="#5D5CC3"/>
-									</linearGradient>
-									<linearGradient id="paint1_linear" x1="23.3864" y1="3.0727" x2="28.4712" y2="3.0727" gradientUnits="userSpaceOnUse">
-									<stop stop-color="#FF3E5C"/>
-									<stop offset="1" stop-color="#5D5CC3"/>
-									</linearGradient>
-									<linearGradient id="paint2_linear" x1="11.205" y1="3.95765" x2="16.6608" y2="3.95765" gradientUnits="userSpaceOnUse">
-									<stop stop-color="#FF3E5C"/>
-									<stop offset="1" stop-color="#5D5CC3"/>
-									</linearGradient>
-									<linearGradient id="paint3_linear" x1="-0.00587455" y1="5.23415" x2="5.58703" y2="5.23415" gradientUnits="userSpaceOnUse">
-									<stop stop-color="#FF3E5C"/>
-									<stop offset="1" stop-color="#5D5CC3"/>
-									</linearGradient>
-									</defs>
-									</svg>
-						</div>
-						
-						<span class="main-logo__name">CHINA OKASI</span>
-					</a>
-				</div>
-				<div class="menu-container">
-					<nav class="main-menu">
-						<ul class="pages-menu">
-							<li><a href="/bio.html">Bio</a></li>
-							<li><a href="#">Courses</a></li>
-							<li><a href="/clips.html">TV Clips & Photos</a></li>
-						</ul>
-						<ul class="courses-menu">
-							<li><a href="#">Live</a></li>
-							<li><a href="#">Work</a></li>
-							<li><a href="#">Love</a></li>
-						</ul>
-					</nav>
-					<div class="burger-btn burger-btn-dark">
-						<div class="burger-btn__lines">
-							<span class="line1"></span>
-							<span class="line2"></span>
-							<span class="line3"></span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+<?php get_header(); ?>
 	<main>
 		<section class="head-main courses-head-main section">
 			<div class="container">
@@ -80,7 +7,7 @@
 					<span class="head-main__author">by China Okasi</span>
 				</div>
 				<div class="head-img">
-						<img class="head-main-img"src="img/pages/courses/China White Short 3.png" alt="">
+						<img class="head-main-img"src="<?php echo get_template_directory_uri(); ?>/img/pages/courses/China White Short 3.png" alt="">
 				</div>
 				
 			</div>
@@ -93,7 +20,7 @@
 					<div class="course">
 						<div class="course__title course__title--live">Live</div>
 						<div class="course__img">
-							<img src="img/courses/Girl_1.png" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/courses/Girl_1.png" alt="">
 						</div>
 						<p class="text">Quisque auctor dui odio, non venenatis orci pulvinar vel. Etiam convallis metus lectus orci pulvinar metus convallis tonte doro orci pulvina onto vergo. Maecenas gravida nulla in bibendum dapibus.  Aliquam euismod vestibulum sem sit amet rutrum.
 								Fusce non porttitor nulla. Cras tempor facilisis, a accumsan arcu.</p>
@@ -114,7 +41,7 @@
 					<div class="course">
 						<div class="course__title course__title--work">Work</div>
 						<div class="course__img">
-							<img src="img/courses/Girl_2.png" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/courses/Girl_2.png" alt="">
 						</div>
 						<p class="text">Quisque auctor dui odio, non venenatis orci pulvinar vel. Etiam convallis metus lectus orci pulvinar metus convallis tonte doro orci pulvina onto vergo. Maecenas gravida nulla in bibendum dapibus.  Aliquam euismod vestibulum sem sit amet rutrum.
 								Fusce non porttitor nulla. Cras tempor facilisis, a accumsan arcu.</p>
@@ -135,7 +62,7 @@
 					<div class="course">
 						<div class="course__title  course__title--love">Love</div>
 						<div class="course__img">
-							<img src="img/courses/Girl_3.png" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/courses/Girl_3.png" alt="">
 						</div>
 						<p class="text">Quisque auctor dui odio, non venenatis orci pulvinar vel. Etiam convallis metus lectus orci pulvinar metus convallis tonte doro orci pulvina onto vergo. Maecenas gravida nulla in bibendum dapibus.  Aliquam euismod vestibulum sem sit amet rutrum.
 								Fusce non porttitor nulla. Cras tempor facilisis, a accumsan arcu.</p>
@@ -164,7 +91,7 @@
 				<div class="blog-posts">
 					<div class="post">
 						<div class="post-img">
-								<img class="post__img" src="img/blog/blog_post_1.jpg" alt="" >
+								<img class="post__img" src="<?php echo get_template_directory_uri(); ?>/img/blog/blog_post_1.jpg" alt="" >
 								<div class="post-img__status">LIVE</div>
 						</div>
 						<div class="post-content">
@@ -181,7 +108,7 @@
 					</div>
 					<div class="post">
 						<div class="post-img">
-								<img class="post__img" src="img/blog/blog_post_2.jpg" alt="" >
+								<img class="post__img" src="<?php echo get_template_directory_uri(); ?>/img/blog/blog_post_2.jpg" alt="" >
 								<div class="post-img__status">Work</div>
 						</div>
 						<div class="post-content">
@@ -198,7 +125,7 @@
 					</div>
 					<div class="post">
 						<div class="post-img">
-								<img class="post__img" src="img/blog/blog_post_3.jpg" alt="" >
+								<img class="post__img" src="<?php echo get_template_directory_uri(); ?>/img/blog/blog_post_3.jpg" alt="" >
 								<div class="post-img__status">LOVE</div>
 						</div>
 						<div class="post-content">
@@ -218,7 +145,7 @@
 				<div class="blog-posts blog-posts-row2">
 					<div class="post">
 						<div class="post-img">
-								<img class="post__img" src="img/blog/blog_post_2.jpg" alt="" >
+								<img class="post__img" src="<?php echo get_template_directory_uri(); ?>/img/blog/blog_post_2.jpg" alt="" >
 								<div class="post-img__status">LIVE</div>
 						</div>
 						<div class="post-content">
@@ -235,7 +162,7 @@
 					</div>
 					<div class="post">
 						<div class="post-img">
-								<img class="post__img" src="img/blog/blog_post_3.jpg" alt="" >
+								<img class="post__img" src="<?php echo get_template_directory_uri(); ?>/img/blog/blog_post_3.jpg" alt="" >
 								<div class="post-img__status">Work</div>
 						</div>
 						<div class="post-content">
@@ -252,7 +179,7 @@
 					</div>
 					<div class="post">
 						<div class="post-img">
-								<img class="post__img" src="img/blog/blog_post_1.jpg" alt="" >
+								<img class="post__img" src="<?php echo get_template_directory_uri(); ?>/img/blog/blog_post_1.jpg" alt="" >
 								<div class="post-img__status">LOVE</div>
 						</div>
 						<div class="post-content">
@@ -306,45 +233,5 @@
 			</div>
 		</section>
 	</main>
-	<footer>
-		<div class="container">
-			<div class="footer-container">
-				<div class="copyright footer-item">
-					<p>&copy; China Okasi</p>
-					<p>All rights reserved </p>
-					<div class="social social-icons">
-							<a class="follow-link__follow social__twitter" href="#">
-									<svg width="19" height="15" viewBox="0 0 19 15" class="follow-link__icon icon" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M18.0804 2.41071C17.433 2.68973 16.7299 2.89062 16.0045 2.96875C16.7522 2.52232 17.3214 1.8192 17.5893 0.982143C16.8973 1.39509 16.1161 1.69643 15.3013 1.85268C14.6429 1.14955 13.7054 0.714285 12.6674 0.714285C10.6696 0.714285 9.0625 2.33259 9.0625 4.3192C9.0625 4.59821 9.09598 4.87723 9.15179 5.14509C6.16071 4.98884 3.4933 3.56027 1.71875 1.37277C1.40625 1.90848 1.22768 2.52232 1.22768 3.19196C1.22768 4.44196 1.86384 5.54687 2.83482 6.1942C2.2433 6.17187 1.68527 6.00446 1.20536 5.73661C1.20536 5.74777 1.20536 5.77009 1.20536 5.78125C1.20536 7.53348 2.4442 8.98438 4.09598 9.3192C3.79464 9.39732 3.47098 9.44196 3.14732 9.44196C2.91295 9.44196 2.68973 9.41964 2.46652 9.38616C2.92411 10.8147 4.25223 11.8527 5.83705 11.8862C4.59821 12.8571 3.04688 13.4263 1.36161 13.4263C1.06027 13.4263 0.78125 13.4152 0.491071 13.3817C2.08705 14.4085 3.98438 15 6.02679 15C12.6562 15 16.2835 9.50893 16.2835 4.7433C16.2835 4.58705 16.2835 4.4308 16.2723 4.27455C16.9754 3.76116 17.5893 3.125 18.0804 2.41071Z"/>
-										</svg>
-							</a>
-							<a class="follow-link__follow social__instagram" href="#">
-									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="follow-link__icon icon follow-link__icon-red">
-										<path d="M11.4286 8.85714C11.4286 10.4308 10.1451 11.7143 8.57143 11.7143C6.99777 11.7143 5.71429 10.4308 5.71429 8.85714C5.71429 7.28348 6.99777 6 8.57143 6C10.1451 6 11.4286 7.28348 11.4286 8.85714ZM12.9688 8.85714C12.9688 6.42411 11.0045 4.45982 8.57143 4.45982C6.13839 4.45982 4.17411 6.42411 4.17411 8.85714C4.17411 11.2902 6.13839 13.2545 8.57143 13.2545C11.0045 13.2545 12.9688 11.2902 12.9688 8.85714ZM14.1741 4.28125C14.1741 3.71205 13.7165 3.25446 13.1473 3.25446C12.5781 3.25446 12.1205 3.71205 12.1205 4.28125C12.1205 4.85045 12.5781 5.30804 13.1473 5.30804C13.7165 5.30804 14.1741 4.85045 14.1741 4.28125ZM8.57143 1.82589C9.82143 1.82589 12.5 1.72545 13.6272 2.17187C14.0179 2.32812 14.308 2.51786 14.6094 2.8192C14.9107 3.12054 15.1004 3.41071 15.2567 3.80134C15.7031 4.92857 15.6027 7.60714 15.6027 8.85714C15.6027 10.1071 15.7031 12.7857 15.2567 13.9129C15.1004 14.3036 14.9107 14.5938 14.6094 14.8951C14.308 15.1964 14.0179 15.3862 13.6272 15.5424C12.5 15.9888 9.82143 15.8884 8.57143 15.8884C7.32143 15.8884 4.64286 15.9888 3.51563 15.5424C3.125 15.3862 2.83482 15.1964 2.53348 14.8951C2.23214 14.5938 2.04241 14.3036 1.88616 13.9129C1.43973 12.7857 1.54018 10.1071 1.54018 8.85714C1.54018 7.60714 1.43973 4.92857 1.88616 3.80134C2.04241 3.41071 2.23214 3.12054 2.53348 2.8192C2.83482 2.51786 3.125 2.32812 3.51563 2.17187C4.64286 1.72545 7.32143 1.82589 8.57143 1.82589ZM17.1429 8.85714C17.1429 7.67411 17.154 6.50223 17.0871 5.3192C17.0201 3.94643 16.7076 2.72991 15.7031 1.72545C14.6987 0.720981 13.4821 0.408481 12.1094 0.341518C10.9263 0.274553 9.75446 0.285713 8.57143 0.285713C7.38839 0.285713 6.21652 0.274553 5.03348 0.341518C3.66071 0.408481 2.4442 0.720981 1.43973 1.72545C0.435268 2.72991 0.122768 3.94643 0.0558036 5.3192C-0.0111607 6.50223 0 7.67411 0 8.85714C0 10.0402 -0.0111607 11.2121 0.0558036 12.3951C0.122768 13.7679 0.435268 14.9844 1.43973 15.9888C2.4442 16.9933 3.66071 17.3058 5.03348 17.3728C6.21652 17.4397 7.38839 17.4286 8.57143 17.4286C9.75446 17.4286 10.9263 17.4397 12.1094 17.3728C13.4821 17.3058 14.6987 16.9933 15.7031 15.9888C16.7076 14.9844 17.0201 13.7679 17.0871 12.3951C17.154 11.2121 17.1429 10.0402 17.1429 8.85714Z"/>
-										</svg>
-							</a>
-					</div>
-				</div>
-				<div class="contact-info footer-item">
-					<h4 class="contact-info__title">CONTACT info</h4>
-					<p class="contact-info__subtitle">(Professional Inquiries Only)</p>
-					<p class="contact-info__phone">(212) 537-5794</p>
-				</div>
-				
-				<div class="address  address-item-1">
-						<div class="address__city">New York, LA </div>
-						<div class="address__detailed">Wilshire Shipping Center, Box 1225,<br> Los Angeles, CA 90010</div>
-				</div>	
-				<div class="address  address-item-2">
-						<div class="address__city">London</div>
-						<div class="address__detailed">Swiss Cottage</div>
-				</div>	
-				
-			</div>
-		</div>
-	</footer>
-	<script src="js/main.js"></script>
-	<script src="js/player.js"></script>
-</body>
-</html>
+<?php get_footer(); ?>
 

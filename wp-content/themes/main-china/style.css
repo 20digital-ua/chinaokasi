@@ -422,21 +422,22 @@ body.no-scroll {
   z-index: 999;
 }
 
-.header-home {
-  position: absolute;
-}
-
 .header .container {
   height: 100%;
   padding-top: 0;
 }
 
-.header--white {
-  background-color: #fff;
+body.home .header {
+  position: absolute;
 }
 
-.header--white .main-menu a {
-  color: #000;
+body.logged-in .header {
+  top: 32px;
+}
+
+body.page .header,
+body.single .header {
+  background-color: #fff;
 }
 
 .header-top {
@@ -508,7 +509,7 @@ body.no-scroll {
   width: 14px;
 }
 
-.burger-btn-dark span {
+body.page .burger-btn span {
   background-color: #3A3B3F;
 }
 
@@ -1419,6 +1420,7 @@ footer {
 }
 
 .courses-page-courses .course__title:before {
+  z-index: -1;
   text-transform: uppercase;
   font-family: Permanent Marker;
   font: 200px "PermanentMarker";
@@ -1638,19 +1640,43 @@ footer {
   position: relative;
 }
 
+.single-cours-head-main .container.live:before {
+  background: url("img/header/BG/Diamond.svg") center no-repeat;
+  background-size: contain;
+}
+
+.single-cours-head-main .container.work:before {
+  background: url("img/header/BG/Dollar.svg") center no-repeat;
+  background-size: contain;
+}
+
+.single-cours-head-main .container.love:before {
+  background: url("img/header/BG/Heart.svg") center no-repeat;
+  background-size: contain;
+}
+
 .single-cours-head-main .container:before {
   content: '';
   display: block;
   width: 158px;
   height: 159px;
-  background: url("img/header/BG/Diamond.svg") center no-repeat;
-  background-size: contain;
   position: absolute;
   z-index: 99;
 }
 
-.single-cours-head-main .container:after {
+.single-cours-head-main .container.live:after {
   content: 'Live';
+}
+
+.single-cours-head-main .container.work:after {
+  content: 'Work';
+}
+
+.single-cours-head-main .container.love:after {
+  content: 'Love';
+}
+
+.single-cours-head-main .container:after {
   font: 350px "PermanentMarker";
   background-size: contain;
   position: absolute;
@@ -2253,6 +2279,11 @@ footer {
 }
 
 @media only screen and (min-width: 1024px) {
+  body.page .header .main-menu a,
+  body.single .header .main-menu a {
+    color: #000;
+  }
+
   .main-logo {
     font-size: 1.5em;
   }
@@ -2458,7 +2489,7 @@ footer {
   }
 
   .single-cours-head-main .head-img-wrp {
-    padding-top: 100%;
+    padding-top: 167px;
   }
 
   .cinfo {
@@ -2726,6 +2757,18 @@ footer {
     justify-content: space-between;
   }
 
+  .single-cours-head-main {
+    height: 640px;
+  }
+
+  .single-cours-head-main .container.work:after {
+    right: -5%;
+  }
+
+  .single-cours-head-main .container.love:after {
+    right: 0;
+  }
+
   .single-cours-head-main .container:after {
     font-size: 300px;
   }
@@ -2927,7 +2970,7 @@ footer {
     right: 0;
     display: none;
     padding: 80px 10% 0 10%;
-    padding-top: 80px;
+    padding-top: 120px;
     width: 100%;
     height: 100vh;
     background: linear-gradient(180deg, #FF3E5C 0%, #5D5CC3 100%);
