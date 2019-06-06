@@ -1,17 +1,22 @@
-<?php get_header(); ?>
+<?php get_header(); 
+
+while(have_posts()){
+	the_post();
+
+?>
 	<main>
 		<section class="main-single-post">
 			<div class="container container--nopadding">
 				<a href="#" class="post-back-link grid-padding">Back to <span>LIVE</span> Blog Posts</a>
 				<div class="post-grid">
 					<div class="post__title grid-padding">
-							Lorem ipsum dolor sit amet, consectetur.
+						<?php the_title(); ?>
 					</div>
 					<div class="author grid-padding">
-						<img class="author__img" src="img/follow-me/Avatar3.png" alt="">
+						<img class="author__img" src="<?php echo get_template_directory_uri(); ?>/img/follow-me/Avatar3.png" alt="">
 						<div class="author__post-det">
 							<div class="author__name">Written by China Okasi</div>
-							<div class="post-date">25 March 2019</div>
+							<div class="post-date"><?php the_date(); ?></div>
 						</div>
 					</div>	
 					<div class="subscribe-block single-subscribe grid-padding">
@@ -32,25 +37,19 @@
 							</form>
 					</div>
 					<div class="single-post-content">
-						<img class="single-post-content__img" src="img/blog/blog_post_1.jpg">
+						<?php the_post_thumbnail( 'full',['class' => 'single-post-content__img']); ?>
 						<div class="single-post-content__text grid-padding">
-								<p>Ut nec neque a odio porta sagittis eget ut eros. Ut eleifend orci sapien, et facilisis neque semper nec. In malesuada condimentum tempus. Quisque ultricies nibh id nisl imperdiet suscipit. Suspendisse suscipit nisi at neque posuere imperdiet. Fusce a molestie magna. Nullam condimentum, quam suscipit tincidunt facilisis, orci tellus fringilla enim, in vulputate erat elit iaculis dolor. Etiam a posuere tortor. Vivamus egestas, arcu et vulputate ultrices, justo mi molestie tellus, quis hendrerit diam metus et tortor.</p>
-
-								<p>In porta posuere efficitur. Aliquam erat volutpat. Quisque id lacinia ipsum, eu volutpat nisi. Morbi eleifend placerat massa, sit amet consectetur diam sagittis sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi cursus rutrum massa eu mollis. Nam nec eros porttitor, consectetur ipsum vel, mollis sapien. Quisque bibendum risus vel rutrum sagittis. Nam fermentum quis ex non efficitur. Etiam blandit vel libero non vehicula.</p>
-
-								<p>Cras at euismod leo. Aliquam pretium malesuada tortor sed euismod. Nulla facilisi. Etiam sed tincidunt massa. Pellentesque mattis semper sem. In ullamcorper mattis egestas. Suspendisse vel mauris a augue accumsan aliquam. Suspendisse sit amet volutpat neque, in pharetra diam. Aenean eget gravida turpis, ut venenatis urna. Praesent eu ipsum dapibus, convallis mauris quis, iaculis nunc. Suspendisse at metus consequat, aliquet eros ac, placerat leo. Donec blandit mi turpis, a sodales arcu pretium sed. Vivamus a viverra neque.</p>
-								
-								<p>Sed venenatis, ipsum at vulputate interdum, ligula turpis commodo neque, nec varius risus nisl non neque. In hac habitasse platea dictumst. Vestibulum orci tortor, vulputate et condimentum in, rutrum sed sem. Sed dapibus ultricies nunc, vitae condimentum ante tincidunt in. Vestibulum pretium nunc porttitor felis suscipit, in venenatis sapien tristique. Nunc quis augue in tortor bibendum vestibulum. Nulla ac maximus metus. Sed posuere gravida blandit. Nam condimentum risus a leo efficitur, et aliquam diam scelerisque. Nunc eu augue eget lorem pulvinar semper a id tortor. Praesent dictum efficitur dolor, eu molestie felis eleifend ut. Praesent vitae gravida velit. Praesent imperdiet velit ut odio congue pharetra eget sed odio. Vivamus in tristique nulla. Maecenas congue id ex et mattis.</p>
+							<?php the_content(); ?>
 						</div>
 						<div class="single-post-content__social grid-padding">
 							<a href="#">
-								<img class="single-post-content__icon" src="img/icons/twitter-blue.svg" alt="">
+								<img class="single-post-content__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/twitter-blue.svg" alt="">
 							</a>
 							<a href="#">
-								<img class="single-post-content__icon" src="img/icons/facebook-blue.svg" alt="">
+								<img class="single-post-content__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/facebook-blue.svg" alt="">
 							</a>
 							<a href="#">
-								<img class="single-post-content__icon" src="img/icons/pinterest-p-brands.svg" alt="">
+								<img class="single-post-content__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/pinterest-p-brands.svg" alt="">
 							</a>
 						</div>
 					</div>
@@ -71,7 +70,7 @@
 										</div>
 									</div>
 								</div>
-								<audio id="podcast-player-tag" src="source/audio/kazka-plakala-rington_(muztron.com).mp3"></audio>
+								<audio id="podcast-player-tag" src="<?php echo get_template_directory_uri(); ?>/source/audio/kazka-plakala-rington_(muztron.com).mp3"></audio>
 								<!--<audio id="podcast-player-tag" src="source/audio/Ariana Grande - 7 rings-320.mp3"></audio>-->
 							</div>
 							<div class="sign-podcast">
@@ -246,4 +245,4 @@
 			</div>
 		</section>
 	</main>
-	<?php get_footer(); ?>
+<?php } get_footer(); ?>

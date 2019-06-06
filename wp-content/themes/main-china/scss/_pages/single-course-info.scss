@@ -42,6 +42,7 @@
   }
 }
 .info-list{
+  margin-bottom: 40px;
   li{
     display: flex;
     margin-bottom: 16px;
@@ -51,12 +52,11 @@
       margin-right: 10px;
       color: $violetColor;
     }
-  }
+  } 
 }
 
 .c-details{
   background: $lightGreyBG;
-  
 }
 .d-blocks{
   display: flex;
