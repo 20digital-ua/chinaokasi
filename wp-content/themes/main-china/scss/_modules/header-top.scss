@@ -16,10 +16,10 @@
   }
 
 }
-body.home .header{
-  position: absolute;
+body.front-page .header{
+  position: absolute; 
 }
-body.logged-in .header{
+body.logged-in .header{ 
   top: 32px;
 }
 body.page .header, body.single .header{
