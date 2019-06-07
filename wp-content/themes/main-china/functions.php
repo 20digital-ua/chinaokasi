@@ -35,14 +35,22 @@ add_action( 'admin_menu' , 'remove_post_custom_fields' );
 function getposts() {
   $page = $_POST['page'];
   $total = $_POST['total'];
+  $category = $_POST['category'];
+
+  if($category == -1){
+    unset($category);
+  }
 
   $blogPosts = new WP_Query(array(
     'posts_per_page' =>$total,
     'post_type'=>'post',
-    'paged' => $page
+    'paged' => $page,
+    'category_name'=> $category
+
   ));
   $postsArr = array(
-    'posts'=>array()
+    'posts'=>array(),
+    'page'=>array()
   );
   while($blogPosts->have_posts()){
     $blogPosts->the_post();
@@ -56,14 +64,17 @@ function getposts() {
       'category'=>$category[0]->name
     ));
   }
-  // echo $posts = json_encode($response);
+  array_push($postsArr['page'],array(
+    'max'=>$blogPosts->max_num_pages,
+    'current'=>$blogPosts->query['paged']
+  ));
+  // echo $posts = json_encode($blogPosts);
   echo $posts = json_encode($postsArr);
 
   wp_die();
 
 }
 add_action('wp_ajax_getposts', 'getposts' );
-add_action('wp_ajax_getposts', 'getposts');
 
 
 

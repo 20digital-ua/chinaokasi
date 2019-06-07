@@ -55,6 +55,7 @@ body{
   }
   &--red{
     color:$redColor;
+    text-transform: uppercase;
   }
   @include screen-tb{
     font-size: 32px;

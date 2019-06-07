@@ -221,6 +221,7 @@ body.no-scroll {
 
 .title--red {
   color: #FF3E5C;
+  text-transform: uppercase;
 }
 
 .sub-title {
@@ -1030,6 +1031,12 @@ body.page .burger-btn span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  transition: all .25s linear;
+}
+
+.blog-posts.show {
+  opacity: 1;
 }
 
 .blog-posts-row2 {
@@ -1122,6 +1129,26 @@ body.page .burger-btn span {
 .post-info__heart {
   display: flex;
   align-items: center;
+}
+
+#pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#pagination .pagination__btn {
+  outline: none;
+  cursor: pointer;
+  font: 17px "Poppins-Regular";
+  border: none;
+  background-color: transparent;
+  transition: all .25s linear;
+}
+
+#pagination .pagination__btn-active {
+  font-family: "Poppins-Bold";
+  color: #5D5CC3;
 }
 
 /* #5 - In Touch Section */
