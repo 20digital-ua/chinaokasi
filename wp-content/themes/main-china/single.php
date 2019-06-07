@@ -37,7 +37,14 @@ while(have_posts()){
 							</form>
 					</div>
 					<div class="single-post-content">
-						<?php the_post_thumbnail( 'full',['class' => 'single-post-content__img']); ?>
+						<?php 
+							$img='https://cdn-ds.com/noimage/w_640/h_480/noimage.jpg';
+							if(get_the_post_thumbnail()!=''){
+								the_post_thumbnail( 'full',['class' => 'single-post-content__img']);
+							}else{
+								echo '<img src="https://cdn-ds.com/noimage/w_640/h_480/noimage.jpg" class="single-post-content__img" alt="">';
+							}
+						 ?>
 						<div class="single-post-content__text grid-padding">
 							<?php the_content(); ?>
 						</div>

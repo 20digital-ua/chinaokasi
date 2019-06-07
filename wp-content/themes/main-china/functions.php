@@ -55,10 +55,14 @@ function getposts() {
   while($blogPosts->have_posts()){
     $blogPosts->the_post();
     $category = get_the_category();
+    $img='https://cdn-ds.com/noimage/w_640/h_480/noimage.jpg';
+    if(get_the_post_thumbnail_url()!=''){
+      $img=get_the_post_thumbnail_url();
+    }
     array_push($postsArr['posts'],array(
       'title'=>get_the_title(),
       'link'=>get_the_permalink(),
-      'img'=>get_the_post_thumbnail_url(),
+      'img'=>$img,
       'date'=>get_the_date(),
       'content'=>wp_trim_words(get_the_content(),15),
       'category'=>$category[0]->name
@@ -75,6 +79,7 @@ function getposts() {
 
 }
 add_action('wp_ajax_getposts', 'getposts' );
+add_action('wp_ajax_nopriv_getposts', 'getposts');
 
 
 
