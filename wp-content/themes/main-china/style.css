@@ -1208,14 +1208,6 @@ footer {
   text-align: center;
 }
 
-.footer-container div {
-  margin-right: 30px;
-}
-
-.footer-container div:last-child {
-  margin-right: 0;
-}
-
 .copyright {
   max-width: 150px;
 }
@@ -2164,6 +2156,14 @@ footer {
     align-items: flex-start;
     text-align: left;
     font-size: 14px;
+  }
+
+  .footer-container div {
+    margin-right: 30px;
+  }
+
+  .footer-container div:last-child {
+    margin-right: 0;
   }
 
   .social {
