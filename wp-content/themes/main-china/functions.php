@@ -25,16 +25,10 @@ function head_files(){
 function theme_support(){
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
+  add_theme_support('widgets' );
 }
 add_action('after_setup_theme','theme_support');
-
-function remove_post_custom_fields() {
-  remove_meta_box( 'categorydiv' , 'post' , 'side' );
-  remove_meta_box( 'postexcerpt' , 'post' , 'normal' );
-}
-add_action( 'admin_menu' , 'remove_post_custom_fields' );
-
-
+echo apply_filters( 'the_content', get_post_field('post_content', $postid) );
 
 function getposts() {
   $page = $_POST['page'];

@@ -46,7 +46,7 @@ while(have_posts()){
 							}
 						 ?>
 						<div class="single-post-content__text grid-padding">
-							<?php the_content(); ?>
+							<?php the_content(); ?>						
 						</div>
 						<div class="single-post-content__social grid-padding">
 							<a href="#">
