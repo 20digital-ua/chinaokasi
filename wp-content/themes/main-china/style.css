@@ -437,7 +437,8 @@ body.logged-in .header {
 }
 
 body.page .header,
-body.single .header {
+body.single .header,
+body.blog .header {
   background-color: #fff;
 }
 
@@ -1039,10 +1040,6 @@ body.page .burger-btn span {
   opacity: 1;
 }
 
-.blog-posts-row2 {
-  display: none;
-}
-
 .post {
   width: 100%;
   background-color: #fff;
@@ -1054,6 +1051,10 @@ body.page .burger-btn span {
   position: relative;
   margin-bottom: 32px;
   box-shadow: 0px 4px 25px rgba(115, 115, 115, 0.1);
+}
+
+.post:nth-child(3) ~ .post {
+  display: none;
 }
 
 .post__link {
@@ -2320,7 +2321,8 @@ footer {
 
 @media only screen and (min-width: 1024px) {
   body.page .header .main-menu a,
-  body.single .header .main-menu a {
+  body.single .header .main-menu a,
+  body.blog .header .main-menu a {
     color: #000;
   }
 
@@ -2727,16 +2729,16 @@ footer {
     justify-content: flex-start;
   }
 
-  .blog-posts-row2 {
-    display: flex;
-  }
-
   .post {
     max-width: 320px;
     margin-bottom: 40px;
     background-color: unset;
     box-shadow: unset;
     margin-right: 48px;
+  }
+
+  .post:nth-child(3) ~ .post {
+    display: block;
   }
 
   .post:nth-child(3n) {

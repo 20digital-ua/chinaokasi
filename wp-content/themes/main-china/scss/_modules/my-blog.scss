@@ -27,21 +27,18 @@
   flex-direction: column;
   align-items: center;
   opacity: 0;
+  
   &.show{
     opacity: 1;
   }
   @include transition();
-  &-row2{
-    display: none;
-  }
+
   @include screen-md{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: flex-start;
-    &-row2{
-      display: flex;
-    }
+
   }
 }
 .post{
@@ -50,14 +47,20 @@
   border-radius: 25px 0 25px 0; 
   overflow: hidden;
   max-width: 375px;
-  
+  &:nth-child(3) ~ .post {
+    display: none; 
+  }
   @include transition;
   @include screen-md{
     max-width: 320px;
+    // display: block !important; 
     margin-bottom: 40px;
     background-color: unset;
     box-shadow: unset;
     margin-right: 48px;
+    &:nth-child(3) ~ .post {
+      display: block; 
+    }
     &:nth-child(3n){
       margin-right: 0;
     }
