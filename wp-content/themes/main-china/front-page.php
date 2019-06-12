@@ -64,7 +64,7 @@
 							</div>
 						</div>
 						<p class="text">Quisque auctor dui odio, non venenatis orci pulvinar vel. Etiam convallis metus lectus orci pulvinar metus convallis tonte doro orci pulvina onto vergo.</p>
-						<a href="#" class="course__readlink">Read More</a>
+						<a href="<?php echo site_url('/courses/live'); ?>" class="course__readlink">Read More</a>
 						<a href="#" class="course__takelink"><span class="link-inner">Take <span class="link-inner-sm">LIVE</span> Course</span></a>
 					</div>
 					<div class="course">
@@ -75,7 +75,7 @@
 							</div>
 						</div>
 						<p class="text">Aenean rhoncus pretium purus, et aliquam urna placerat a. Curabitur vitae ultricies metus, vel accumsan sem. Etiam convallis metus  convallis tonte doro</p>
-						<a href="#" class="course__readlink">Read More</a>
+						<a href="<?php echo site_url('/courses/work'); ?>" class="course__readlink">Read More</a>
 						<a href="#" class="course__takelink"><span class="link-inner">Take <span class="link-inner-sm">WORK</span> Course</span></a>
 					</div>
 					<div class="course">
@@ -86,7 +86,7 @@
 							</div>
 						</div>
 						<p class="text">Integer finibus consequat tellus ut vulputate. Mauris fringilla, nunc vitae molestie rhoncus, erat nulla sagittis diam, vitae varius turpis mauris.</p>
-						<a href="#" class="course__readlink">Read More</a>
+						<a href="<?php echo site_url('/courses/love'); ?>" class="course__readlink">Read More</a>
 						<a href="#" class="course__takelink"><span class="link-inner">Take <span class="link-inner-sm">LOVE</span> Course</span></a>
 					</div>
 				</div>

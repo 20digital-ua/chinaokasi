@@ -15,11 +15,11 @@ function head_files(){
       wp_enqueue_script('player-js',get_theme_file_uri('/js/player.js'),null,'1.1',true);
     }
    
-    
-    wp_enqueue_script('ajax-posts',get_theme_file_uri('/js/ajax-posts.js'),null,'1.1',true);
-    wp_localize_script( 'ajax-posts', 'my_ajax_object',
-            array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
-
+    if(is_home() && !is_front_page()){    
+      wp_enqueue_script('ajax-posts',get_theme_file_uri('/js/ajax-posts.js'),null,'1.1',true);
+      wp_localize_script( 'ajax-posts', 'my_ajax_object',
+              array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+    }
 }
 
 function theme_support(){
@@ -28,7 +28,30 @@ function theme_support(){
   add_theme_support('widgets' );
 }
 add_action('after_setup_theme','theme_support');
-echo apply_filters( 'the_content', get_post_field('post_content', $postid) );
+// echo apply_filters( 'the_content', get_post_field('post_content', $postid) );
+
+
+function add_share_links($content){
+
+  $social ='
+		<div class="single-post-content__social grid-padding">
+      <a href="#">
+        <img class="single-post-content__icon" src="'.get_template_directory_uri().'/img/icons/twitter-blue.svg" alt="">
+      </a>
+      <a href="http://www.facebook.com/sharer.php?u='.get_the_permalink().'" target="blank">
+        <img class="single-post-content__icon" src="'.get_template_directory_uri().'/img/icons/facebook-blue.svg" alt="">
+      </a>
+      <a href="#">
+        <img class="single-post-content__icon" src="'.get_template_directory_uri().'/img/icons/pinterest-p-brands.svg" alt="">
+      </a>
+    </div> ';
+
+  return $content.$social;
+}
+// add_filter( 'the_content', 'add_share_links' );
+
+
+
 
 function getposts() {
   $page = $_POST['page'];

@@ -46,19 +46,10 @@ while(have_posts()){
 							}
 						 ?>
 						<div class="single-post-content__text grid-padding">
-							<?php the_content(); ?>						
+							<?php the_content(); ?>	
+										
 						</div>
-						<div class="single-post-content__social grid-padding">
-							<a href="#">
-								<img class="single-post-content__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/twitter-blue.svg" alt="">
-							</a>
-							<a href="#">
-								<img class="single-post-content__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/facebook-blue.svg" alt="">
-							</a>
-							<a href="#">
-								<img class="single-post-content__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/pinterest-p-brands.svg" alt="">
-							</a>
-						</div>
+						
 					</div>
 					<div class="podcast single-post  grid-padding">
 						<h2 class="title title--left">Heard My Hot Podcast?</h2>

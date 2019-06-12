@@ -50,11 +50,12 @@
 							<li><a href="<?php echo site_url('/bio'); ?>">Bio</a></li>
 							<li><a href="<?php echo site_url('/courses'); ?>">Courses</a></li>
 							<li><a href="<?php echo site_url('/clips-photos')?>">TV Clips & Photos</a></li>
+							<li><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>
 						</ul>
 						<ul class="courses-menu">
 							<li><a href="<?php echo site_url('/courses/live'); ?>">Live</a></li>
 							<li><a href="<?php echo site_url('/courses/work'); ?>">Work</a></li>
-							<li><a href="<?php echo site_url('/courses/love'); ?>">Love</a></li>
+							<li><a href="<?php echo site_url('/courses/love');?>">Love</a></li>
 						</ul>
 					</nav>
 					<div class="burger-btn">

@@ -22,13 +22,14 @@ body.front-page .header{
 body.logged-in .header{ 
   top: 32px;
 }
-body.page .header, body.single .header{
+body.page .header, 
+body.single .header, 
+body.blog .header{
   background-color: #fff; 
   .main-menu a{
     @include screen-lp{
       color: #000;
     }
-    
   } 
 }
 
