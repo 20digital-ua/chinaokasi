@@ -6,18 +6,12 @@
 		$pages=array('love','work','live');
 
 		$category_slug='-1';
-		$output='';
-		if(in_array($slug, $pages)){
-			$output='<h2 class="title">Blog Posts on my <span class="title--red">'.$slug.' </span> channel</h2>';
-			$category_slug=$slug;
-		}else{
-			$output='<h2 class="title">Check out my blog</h2>';
-		}
+
 ?>
 
 <section class="blog-section section">
 	<div class="container">
-			<?=$output?>
+		<h2 class="title">Check out my blog</h2>
 	</div>
 	<div class="container container--nopadding">
 		<div class="blog-posts" id="blog-posts">

@@ -7,15 +7,16 @@
  */
 
 function costom_post_types(){
-    register_post_type('cours',array(
+    register_post_type('course',array(
         'has_archive'=> true,
         'supports'=>array(
           'title',
           'editor',
-          'excerpt'
+          'excerpt',
+          'thumbnail'
         ),
         'rewrite'=>array(
-          'slug'=>'courses'
+          'slug'=>'course'
         ),
         'public'=>true,
         'menu_icon' => 'dashicons-star-filled',

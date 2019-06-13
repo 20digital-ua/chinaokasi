@@ -91,7 +91,7 @@ function change_page(){
     $pageNumber = jQuery('#'+$btn).data('page');
     get_posts($pageNumber,$post_per_page);
     jQuery('html,body').animate({
-      scrollTop: jQuery(".title").offset().top},
+      scrollTop: jQuery(".title").offset().top-40},
       'slow');
   });
 }

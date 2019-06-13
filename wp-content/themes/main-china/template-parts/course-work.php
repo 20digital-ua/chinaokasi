@@ -25,7 +25,7 @@
 						<li>Lorem Ipsum has been the industry's standard</li>
 						<li>Lorem Ipsum has been the industry's standard</li>
 					</ul>
-					<a href="#" class="link-btn"><span class="link-inner">Take WORK Course</span></a>
+					<a href="<?php echo get_post_type_archive_link('course')."work";?>" class="link-btn"><span class="link-inner">Take WORK Course</span></a>
 				</div>
 			</div>
 		</section>
