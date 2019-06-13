@@ -22,9 +22,7 @@ body.front-page .header{
 body.logged-in .header{ 
   top: 32px;
 }
-body.page .header, 
-body.single .header, 
-body.blog .header{
+body:not(.front-page){
   background-color: #fff; 
   .main-menu a{
     @include screen-lp{
@@ -159,10 +157,36 @@ body.page .burger-btn{
   padding-right: 30px;
   li{
     margin-right: 24px;
+    position: relative;
   }
-  a{
+  a,&__title{
     font-size: 18px;
     color: #3A3B3F;
+  }
+  &__title{
+    cursor: pointer;
+  }
+  &__sub{
+    visibility: hidden;
+    opacity: 0;
+    @include transition;
+    position: absolute;
+    top: 20px;
+    left:-20px;
+    background-color: rgba(255,255,255,1);
+    border-radius:0 0 25px 0;
+    padding: 20px;
+    li{
+      margin-bottom: 10px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__title:hover .pages-menu__sub{
+    visibility: visible;
+    opacity: 1;
+    z-index: 99;
   }
 }
 .courses-menu{
@@ -229,7 +253,9 @@ body.page .burger-btn{
     a{
       @include font(18px, $Poppins);
       color:#fff;
-     
+    }
+    &__title span{
+      display: none;
     }
   }
 }

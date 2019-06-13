@@ -436,9 +436,7 @@ body.logged-in .header {
   top: 32px;
 }
 
-body.page .header,
-body.single .header,
-body.blog .header {
+body:not(.front-page) {
   background-color: #fff;
 }
 
@@ -1990,6 +1988,14 @@ footer {
   margin-top: 16px;
 }
 
+/* ALL PODCASTS */
+
+.all-podcasts-section {
+  background-color: rgba(243, 243, 243, 0.71);
+  padding: 48px 0 48px 0;
+  position: relative;
+}
+
 @media only screen and (min-width: 400px) {
   .container {
     padding: 0 10%;
@@ -2317,12 +2323,14 @@ footer {
   .d-blocks {
     padding: 150px 0 100px 0;
   }
+
+  .all-podcasts-section {
+    padding: 64px 0 96px 0;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-  body.page .header .main-menu a,
-  body.single .header .main-menu a,
-  body.blog .header .main-menu a {
+  body:not(.front-page) .main-menu a {
     color: #000;
   }
 
@@ -2356,11 +2364,43 @@ footer {
 
   .pages-menu li {
     margin-right: 24px;
+    position: relative;
   }
 
-  .pages-menu a {
+  .pages-menu a,
+  .pages-menu__title {
     font-size: 18px;
     color: #3A3B3F;
+  }
+
+  .pages-menu__title {
+    cursor: pointer;
+  }
+
+  .pages-menu__sub {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .25s linear;
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    background-color: white;
+    border-radius: 0 0 25px 0;
+    padding: 20px;
+  }
+
+  .pages-menu__sub li {
+    margin-bottom: 10px;
+  }
+
+  .pages-menu__sub li:last-child {
+    margin-bottom: 0;
+  }
+
+  .pages-menu__title:hover .pages-menu__sub {
+    visibility: visible;
+    opacity: 1;
+    z-index: 99;
   }
 
   .courses-menu {
@@ -2999,6 +3039,10 @@ footer {
   .main-single-post {
     padding-bottom: 180px;
   }
+
+  .all-podcasts-section {
+    padding: 120px 0 154px 0;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -3050,6 +3094,10 @@ footer {
   .menu-container .main-menu .pages-menu a {
     font: 18px "Poppins-Regular";
     color: #fff;
+  }
+
+  .menu-container .main-menu .pages-menu__title span {
+    display: none;
   }
 
   .header-top.open .main-menu {

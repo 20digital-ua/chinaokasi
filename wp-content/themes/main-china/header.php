@@ -48,9 +48,15 @@
 					<nav class="main-menu">
 						<ul class="pages-menu">
 							<li><a href="<?php echo site_url('/bio'); ?>">Bio</a></li>
-							<li><a href="<?php echo site_url('/courses'); ?>">Courses</a></li>
 							<li><a href="<?php echo site_url('/clips-photos')?>">TV Clips & Photos</a></li>
-							<li><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>
+							
+							<li class="pages-menu__title"><span>Content</span>	
+								<ul class="pages-menu__sub">
+									<li><a href="<?php echo site_url('/courses'); ?>">Courses</a></li>
+									<li><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>
+									<li><a href="<?php echo site_url('/podcasts'); ?>">Podcasts</a></li>
+								</ul>
+							</li>
 						</ul>
 						<ul class="courses-menu">
 							<li><a href="<?php echo site_url('/courses/live'); ?>">Live</a></li>

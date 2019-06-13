@@ -26,10 +26,21 @@ function theme_support(){
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
   add_theme_support('widgets' );
+  add_theme_support('featured-audio');
+  add_theme_support('audio');
 }
 add_action('after_setup_theme','theme_support');
 // echo apply_filters( 'the_content', get_post_field('post_content', $postid) );
+add_filter( 'featured_audio_post_types', 'prefix_featured_audio_post_types' );
+function prefix_featured_audio_post_types( $post_types ) {
+    // Add support to the sheet_music post type.
+    $post_types[] = 'podcast';
 
+    // Overwrite the entire list to remove support on pages.
+    $post_types = array( 'post' );
+
+    return $post_types;
+}
 
 function add_share_links($content){
 
