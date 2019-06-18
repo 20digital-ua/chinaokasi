@@ -3,17 +3,25 @@
     $pages=array('love','work','live');
 
 		$category_slug='-1';
-		$output='';
+    $output='';
+    $args=array();
 		if(in_array($slug, $pages)){
-			$output='<h2 class="title">Blog Posts on my <span class="title--red">'.$slug.' </span> channel</h2>';
-			$category_slug=$slug;
+      $output='<h2 class="title">Blog Posts on my <span class="title--red">'.$slug.' </span> channel</h2>';
+      $category_slug=$slug;
+      $args=array(
+        'posts_per_page' =>6,
+        'post_type'=>'post',
+        'category_name'=> $category_slug
+      );
+			
 		}else{
-			$output='<h2 class="title">Check out my blog</h2>';
+      $output='<h2 class="title">Check out my blog</h2>';
+      $args=array(
+        'posts_per_page' =>6,
+        'post_type'=>'post'
+      );
     }
-    $blogPosts = new WP_Query(array(
-      'posts_per_page' =>6,
-      'post_type'=>'post'
-    ));
+    $blogPosts = new WP_Query($args);
 ?>
 
 <section class="blog-section section">

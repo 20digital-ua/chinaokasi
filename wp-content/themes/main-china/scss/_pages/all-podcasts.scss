@@ -1,0 +1,11 @@
+.all-podcasts-section{
+  background-color: $lightGreyBG;
+  padding: 48px 0 48px 0;
+  position: relative;
+  @include screen-tb{
+    padding: 64px 0 96px 0;
+  }
+  @include screen-lg{
+    padding: 120px 0 154px 0;
+  }
+}
