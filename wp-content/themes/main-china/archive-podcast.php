@@ -37,8 +37,7 @@
 								</div>
 							</div>
 						</div>
-						<!-- <audio id="podcast-player-tag" src="<?=$podcasMedia?>"></audio> -->
-						<audio id="podcast-player-tag" src="<?php echo get_template_directory_uri(); ?>/source/audio/Ariana Grande - 7 rings-320.mp3"></audio>
+						<audio id="podcast-player-tag" src="<?=$podcasMedia?>"></audio>
 					</div>
 				</div>
 				
