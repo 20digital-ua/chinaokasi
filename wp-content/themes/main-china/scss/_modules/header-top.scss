@@ -121,7 +121,7 @@ body:not(.front-page){
     display: none;
   }
 }
-body.page .burger-btn{
+body:not(.front-page) .burger-btn{
   span{
     background-color: #3A3B3F;
   }

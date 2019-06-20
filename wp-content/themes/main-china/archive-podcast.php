@@ -1,49 +1,13 @@
-<?php
-	$podcast=new WP_Query(array(
-		'post_type'=>'podcast',
-		'posts_per_page'=>-1
-	));
-	// var_dump($podcast);
-?>
 <?php get_header(); ?>
 <main>
 <section class="podcast-section all-podcasts-section section">
 	<div class="container container--nopadding">
 		<h2 class="title">My Podcasts</h2>
-		<?php
-		while($podcast->have_posts()){
-			$podcast->the_post(); 
-			$podcasMedia=get_field('podcast_data')['media'];
+		<div id="podcasts-wrapper">
 
-			?>
-				<div class="podcast-single">
-					<div class="podcast-introduce">
-						<div class="podcast-introduce__text">
-							<h2 class="podcast-introduce__title">China & Friends</h2>
-							<p class="podcast-introduce__subtext">podcast</p>
-						</div>
-						<img src="<?php echo get_template_directory_uri(); ?>/img/podcast/ChinaPodcastPhoto.png"  class="podcast-introduce__img" alt="">
-					</div>
-					<div class="podcast-player">
-						<div class="podcast-info">
-								<p class="podcast-player__title"><span class="inner-bold">China and Friends</span> Podcast</p>
-								<p class="podcast-player__episode"><?=the_title()?></p>
-						</div>
-						<div class="podcast-controls">
-							<button id="podcast-playBtn"></button>
-							<div id="progress-bar">
-								<div id="progress-bar__fill">
-									<div class="progress-bar__pin">	</div>
-								</div>
-							</div>
-						</div>
-						<audio id="podcast-player-tag" src="<?=$podcasMedia?>"></audio>
-					</div>
-				</div>
-				
-				
-
-		<?php }	?>
+		</div>
+		<div id="pagination">
+	
 		</div>
 	</div>
 </section>
