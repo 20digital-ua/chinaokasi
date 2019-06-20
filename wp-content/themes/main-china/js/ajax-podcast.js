@@ -18,8 +18,9 @@ function get_podcasts($pageID){
       // obj = response;
       obj = JSON.parse(response);
       console.log(obj);
-      
+
       change_page();
+      
   });
 
 }
