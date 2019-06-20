@@ -4,10 +4,28 @@ var playBtn=jQuery('#podcast-playBtn');
 var progress=jQuery('#progress-bar');
 var progressFill=jQuery('#progress-bar__fill');
 
-// Events
-playBtn.click(togglePlay);
-player.addEventListener("timeupdate", updateProgress);
 
+
+    // playBtn.click(togglePlay);
+    // player.addEventListener("timeupdate", updateProgress);
+
+// Events
+// playBtn.click(togglePlay);
+// player.addEventListener("timeupdate", updateProgress);
+// document.addEventListener('click',(e)=>{
+//     if(e.target && e.target.id=='podcast-playBtn'){
+        
+//         player.addEventListener("timeupdate", updateProgress);
+//     }
+// });
+//
+// player.ontimeupdate=function(){updateProgress()};
+jQuery(".podcast-wrapper").on("click", '#podcast-playBtn', function(event) { 
+    playBtn.click(togglePlay);
+    player.addEventListener("timeupdate", updateProgress);
+});
+    
+// player.addEventListener("timeupdate", updateProgress);
 
 // Methods
 function togglePlay(){
