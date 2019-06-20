@@ -6,6 +6,8 @@
  * Time: 17:17
  */
 
+
+
 function costom_post_types(){
     register_post_type('course',array(
         'has_archive'=> true,
@@ -34,7 +36,8 @@ function costom_post_types(){
         'supports'=>array(
           'title',
           'editor',
-          'excerpt'
+          'excerpt',
+          'thumbnail'
         ),
         'rewrite'=>array(
           'slug'=>'podcasts'
