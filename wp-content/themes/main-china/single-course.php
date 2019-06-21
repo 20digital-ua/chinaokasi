@@ -77,7 +77,7 @@ while(have_posts()){
 					<div class="podcast single-post  grid-padding">
 						<h2 class="title title--left">Heard My Hot Podcast?</h2>
 						<h2 class="podcast-intro-text">China & Friends</h2>
-						<div class="container container--podcast-player">
+						<div class="container--podcast-player">
 							<div class="podcast-player">
 								<div class="podcast-info">
 										<p class="podcast-player__title"><?=$titleText?></p>

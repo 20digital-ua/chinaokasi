@@ -626,7 +626,6 @@ body:not(.front-page) .burger-btn span {
 }
 
 .courses {
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2130,14 +2129,6 @@ footer {
     padding: 100px 0 120px 0;
   }
 
-  .courses {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    flex-wrap: wrap;
-    margin-top: 48px;
-  }
-
   .course {
     margin-bottom: 0;
   }
@@ -2465,6 +2456,14 @@ footer {
 
   .subscribe-block--header {
     display: block;
+  }
+
+  .courses {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-top: 48px;
   }
 
   .title-subscribe {
