@@ -89,7 +89,7 @@ function getpodcasts() {
   );
 
   
-  
+  //general_podcast
   
 
   while($podcasts->have_posts()){
