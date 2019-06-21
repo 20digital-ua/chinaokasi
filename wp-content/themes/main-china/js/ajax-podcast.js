@@ -27,37 +27,7 @@ function get_podcasts($pageID){
 function print_podcasts($obj){
   
   jQuery('#podcasts-wrapper').removeClass('show');
-//   setTimeout(function(){
-//   for(var $i=0;$i<$obj['podcasts'].length;$i++){
-//     console.log($obj['podcasts'][$i].data);
-//     jQuery('#podcasts-wrapper').append(`
-//     <div class="podcast-single">
-//       <div class="podcast-introduce ">
-        
-//       </div>
-//       <div class="container container--podcast-player">
-//         <div class="podcast-player">
-//           <div class="podcast-info">
-//               <p class="podcast-player__title"></p>
-//           </div>
-//           <div class="podcast-controls">
-//             <button class="podcast-playBtn"></button>
-//             <div id="progress-bar">
-//               <div id="progress-bar__fill">
-//                 <div class="progress-bar__pin">	</div>
-//               </div>
-//             </div>
-//           </div>
-//           <audio id="podcast-player-tag__${$i}" src=""></audio>
-//         </div>
-//       </div>
-//     </div>	
-    
-//     `);
-
-//   }
-// },600);
-var i = 1;
+  var i = 1;
   setTimeout(function(){
   jQuery('#podcasts-wrapper').addClass('show');
   jQuery('#podcasts-wrapper').html($obj['podcasts'].map(item=>`
@@ -69,7 +39,7 @@ var i = 1;
     <div class="container container--podcast-player">
       <div class="podcast-player">
         <div class="podcast-info">
-            <p class="podcast-player__title">${item.data.name}</p>
+            <p class="podcast-player__title">${item.titleText}</p>
         </div>
         <div class="podcast-controls">
           <button  id="podcast-${i}" class="podcast-playBtn"></button>
@@ -79,7 +49,7 @@ var i = 1;
             </div>
           </div>
         </div>
-        <audio id="podcast-${i}__audio" ontimeupdate="updateProgress(this)" class="podcast-player-tag" src="${item.data.media}"></audio>
+        <audio id="podcast-${i}__audio" ontimeupdate="updateProgress(this)" class="podcast-player-tag" src="${item.media}"></audio>
         
       </div>
     </div>

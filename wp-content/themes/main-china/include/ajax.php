@@ -101,7 +101,8 @@ function getpodcasts() {
     }
     
     array_push($padcastArr['podcasts'],array(
-      'data'=>get_field('podcast_data'),
+      'media'=>get_field('media-data'),
+      'titleText'=>get_the_content(),
       'img'=>array(
         'link'=>$podcastImg,
         'addClass'=>$addClass
