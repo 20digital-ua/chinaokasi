@@ -9,7 +9,7 @@
     padding: 120px 0 154px 0;
   }
   #podcasts-wrapper{
-    opacity: 1;
+    opacity: 0;
     @include transition();
     &.show{
       opacity: 1;
@@ -17,6 +17,9 @@
   }
   .podcast-single{
     margin-bottom: 20px;
+    .padcast-id{
+      display: none;
+    }
     @include screen-lp{
       margin-bottom: 80px;
     }

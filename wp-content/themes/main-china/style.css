@@ -1997,7 +1997,7 @@ footer {
 }
 
 .all-podcasts-section #podcasts-wrapper {
-  opacity: 1;
+  opacity: 0;
   transition: all .25s linear;
 }
 
@@ -2007,6 +2007,10 @@ footer {
 
 .all-podcasts-section .podcast-single {
   margin-bottom: 20px;
+}
+
+.all-podcasts-section .podcast-single .padcast-id {
+  display: none;
 }
 
 .all-podcasts-section .podcast-single:last-child {

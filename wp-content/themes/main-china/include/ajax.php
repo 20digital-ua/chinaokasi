@@ -78,7 +78,7 @@ function getpodcasts() {
   // $category = $_POST['category'];
 
   $podcasts= new WP_Query(array(
-    'posts_per_page' =>5,
+    'posts_per_page' =>1,
     'post_type'=>'podcast',
     'paged' => $page
 
