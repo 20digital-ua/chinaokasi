@@ -61,8 +61,8 @@ var i = 1;
   setTimeout(function(){
   jQuery('#podcasts-wrapper').addClass('show');
   jQuery('#podcasts-wrapper').html($obj['podcasts'].map(item=>`
-  ${i++}
   <div class="podcast-single">
+    <div class="padcast-id">ID=${i++}</div>
     <div class="podcast-introduce ${item.img.addClass}">
       ${item.img.link}
     </div>
