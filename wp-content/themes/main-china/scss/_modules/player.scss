@@ -21,9 +21,9 @@
       margin-top: 0;
       width: 70%;
     }
-  }
+  } 
  
-  #podcast-playBtn{
+  .podcast-playBtn{
     min-width: 54px;
     min-height: 54px;
     border-radius: 50%;
@@ -54,7 +54,7 @@
     }
   }
 }
-#progress-bar{
+.progress-bar{
   width:100%;
   height: 2px;
   margin-left: 24px;

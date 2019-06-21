@@ -1,47 +1,38 @@
 
-var player=jQuery('#podcast-player-tag')[0];
-var playBtn=jQuery('#podcast-playBtn');
+let player=jQuery('.podcast-player-tag');
+let playBtn=jQuery('.podcast-playBtn');
 var progress=jQuery('#progress-bar');
 var progressFill=jQuery('#progress-bar__fill');
 
 
 
-    // playBtn.click(togglePlay);
-    // player.addEventListener("timeupdate", updateProgress);
 
-// Events
-// playBtn.click(togglePlay);
-// player.addEventListener("timeupdate", updateProgress);
-// document.addEventListener('click',(e)=>{
-//     if(e.target && e.target.id=='podcast-playBtn'){
-        
-//         player.addEventListener("timeupdate", updateProgress);
-//     }
-// });
-//
-// player.ontimeupdate=function(){updateProgress()};
-jQuery(".podcast-wrapper").on("click", '#podcast-playBtn', function(event) { 
-    playBtn.click(togglePlay);
-    player.addEventListener("timeupdate", updateProgress);
-});
-    
-// player.addEventListener("timeupdate", updateProgress);
+jQuery(document).on('click','.podcast-playBtn',function(){
+    togglePlay(this.id);
+})
+
+
 
 // Methods
-function togglePlay(){
-    if (player.paused) {
-        player.play();
-        playBtn.addClass('playing');
+function togglePlay(p){
+    
+    var playAudio=jQuery('#'+p+'__audio')[0];
+    var playButton=jQuery('#'+p);
+    
+    if (playAudio.paused) {
+        playAudio.play();
+        playButton.addClass('playing');
+        
     } else {
-        player.pause();
-        playBtn.removeClass('playing');
+        playAudio.pause();
+        playButton.removeClass('playing');
     }   
 }
-function updateProgress(){
-    var currentTime = player.currentTime;
-    var percent = (100/player.duration)*currentTime;
+function updateProgress(playAudio){
+    var currentTime = playAudio.currentTime;
+    var percent = (100/playAudio.duration)*currentTime;
 
-    progressFill.css({
+    jQuery('#'+playAudio.id+'__bar-fill').css({
         'width':percent+'%'
     });
 }
