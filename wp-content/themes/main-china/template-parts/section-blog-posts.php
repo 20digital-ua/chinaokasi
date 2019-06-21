@@ -1,7 +1,7 @@
 <?php 
 		$slug = get_post_field( 'post_name', get_post() );
     $pages=array('love','work','live');
-
+    // echo $slug;
 		$category_slug='-1';
     $output='';
     $args=array();

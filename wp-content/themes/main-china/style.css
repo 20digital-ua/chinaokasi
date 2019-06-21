@@ -1025,6 +1025,30 @@ body:not(.front-page) .burger-btn span {
   position: relative;
 }
 
+.filter-category {
+  margin: 0 auto;
+  display: flex;
+  max-width: 80%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+.filter-category__btn {
+  border-radius: 3px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 6px 16px;
+  outline: none;
+}
+
+.filter-category__btn-active {
+  border: 1px dashed black;
+}
+
 .blog-posts {
   display: flex;
   flex-direction: column;

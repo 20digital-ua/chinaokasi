@@ -8,8 +8,11 @@
 function getposts() {
   $page = $_POST['page'];
   $total = $_POST['total'];
-  $category = $_POST['category'];
-
+  $categoryGet= $_POST['category'];
+  $categoryString='';
+  foreach($categoryGet as $item){
+    $categoryString.='asdadasd';
+  }
   if($category == -1){
     unset($category);
   }
@@ -18,7 +21,7 @@ function getposts() {
     'posts_per_page' =>$total,
     'post_type'=>'post',
     'paged' => $page,
-    'category_name'=> $category
+    'category_name'=> $categoryString
 
   ));
   $postsArr = array(
@@ -43,9 +46,11 @@ function getposts() {
   }
   array_push($postsArr['page'],array(
     'max'=>$blogPosts->max_num_pages,
-    'current'=>$blogPosts->query['paged']
+    'current'=>$blogPosts->query['paged'],
+    'cat'=> $categoryString
   ));
-  // echo $posts = json_encode($blogPosts);
+
+  // echo $posts = json_encode($category);
   echo $posts = json_encode($postsArr);
 
   wp_die();
@@ -113,7 +118,7 @@ function getpodcasts() {
     'max'=>$podcasts->max_num_pages,
     'current'=>$podcasts->query['paged']
   ));
-  // echo $posts = json_encode($blogPosts);
+
   echo $posts = json_encode($padcastArr);
 
   wp_die();
