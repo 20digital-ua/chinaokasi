@@ -55,22 +55,7 @@ while(have_posts()){
 						<h2 class="title title--left">Heard My Hot Podcast?</h2>
 						<h2 class="podcast-intro-text">China & Friends</h2>
 						<div class="container container--podcast-player"></div>
-							<div class="podcast-player">
-								<div class="podcast-info">
-										<p class="podcast-player__title"><span class="inner-bold">China and Friends</span> Podcast</p>
-										<p class="podcast-player__episode">Episode #1</p>
-								</div>
-								<div class="podcast-controls">
-									<button id="podcast-playBtn"></button>
-									<div id="progress-bar">
-										<div id="progress-bar__fill">
-											<div class="progress-bar__pin">	</div>
-										</div>
-									</div>
-								</div>
-								<audio id="podcast-player-tag" src="<?php echo get_template_directory_uri(); ?>/source/audio/kazka-plakala-rington_(muztron.com).mp3"></audio>
-								<!--<audio id="podcast-player-tag" src="source/audio/Ariana Grande - 7 rings-320.mp3"></audio>-->
-							</div>
+							<?php get_template_part('template-parts/podcast','player') ?>
 							<div class="sign-podcast">
 								<h3 class="sign-podcast__title">Sign up to get <br>
 										new episodes first</h3>

@@ -158,21 +158,7 @@
 			}
 			?>
 			<div class="container container--podcast-player">
-				<div class="podcast-player">
-					<div class="podcast-info">
-							<p class="podcast-player__title"><?=$titleText?></p>
-					</div>
-					<div class="podcast-controls">
-						<button  id="podcast-1" class="podcast-playBtn"></button>
-						<div class="progress-bar" id="podcast-1__bar">
-							<div class="progress-bar__fill" id="podcast-1__audio__bar-fill">
-								<div class="progress-bar__pin">	</div>
-							</div>
-						</div>
-					</div>
-					<audio id="podcast-1__audio" class="podcast-player-tag" ontimeupdate="updateProgress(this)" src="<?=$podcastSrc?>"></audio>
-					<!--<audio id="podcast-player-tag" src="source/audio/Ariana Grande - 7 rings-320.mp3"></audio>-->
-				</div>
+				<?php get_template_part('template-parts/podcast','player') ?>
 				<div class="sign-podcast">
 					<h3 class="sign-podcast__title">Sign up to get <br>
 							new episodes first</h3>
