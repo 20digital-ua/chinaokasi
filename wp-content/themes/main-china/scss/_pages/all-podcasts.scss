@@ -9,7 +9,7 @@
     padding: 120px 0 154px 0;
   }
   #podcasts-wrapper{
-    opacity: 0;
+    opacity: 1;
     @include transition();
     &.show{
       opacity: 1;

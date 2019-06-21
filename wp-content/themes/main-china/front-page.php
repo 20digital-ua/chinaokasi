@@ -140,14 +140,14 @@
 							<p class="podcast-player__episode">Episode #1</p>
 					</div>
 					<div class="podcast-controls">
-						<button id="podcast-playBtn"></button>
-						<div id="progress-bar">
-							<div id="progress-bar__fill">
+						<button  id="podcast-1" class="podcast-playBtn"></button>
+						<div class="progress-bar" id="podcast-1__bar">
+							<div class="progress-bar__fill" id="podcast-1__audio__bar-fill">
 								<div class="progress-bar__pin">	</div>
 							</div>
 						</div>
 					</div>
-					<audio id="podcast-player-tag" src="<?php echo get_template_directory_uri(); ?>/source/audio/kazka-plakala-rington_(muztron.com).mp3"></audio>
+					<audio id="podcast-1__audio" class="podcast-player-tag" ontimeupdate="updateProgress(this)" src="<?php echo get_template_directory_uri(); ?>/source/audio/kazka-plakala-rington_(muztron.com).mp3"></audio>
 					<!--<audio id="podcast-player-tag" src="source/audio/Ariana Grande - 7 rings-320.mp3"></audio>-->
 				</div>
 				<div class="sign-podcast">
