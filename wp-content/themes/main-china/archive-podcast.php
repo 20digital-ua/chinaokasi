@@ -4,53 +4,8 @@
 	<div class="container container--nopadding">
 		<h2 class="title">My Podcasts</h2>
 		<div id="podcasts-wrapper">
-			<!-- <div class="podcast-single">
-				<div class="podcast-introduce ">
-					
-				</div>
-				<div class="container container--podcast-player">
-					<div class="podcast-player">
-						<div class="podcast-info">
-								<p class="podcast-player__title"></p>
-						</div>
-						<div class="podcast-controls">
-							<button  id="podcast-1" class="podcast-playBtn"></button>
-							<div class="progress-bar" id="podcast-1__bar">
-								<div class="progress-bar__fill" id="podcast-1__audio__bar-fill">
-									<div class="progress-bar__pin">	</div>
-								</div>
-							</div>
-						</div>
-						<audio id="podcast-1__audio" ontimeupdate="updateProgress(this)" class="podcast-player-tag" src="<?php echo get_template_directory_uri(); ?>/source/audio/kazka-plakala-rington_(muztron.com).mp3"></audio>
-						
-					</div>
-				</div>
-			</div>
-			<div class="podcast-single">
-				<div class="podcast-introduce ">
-					
-				</div>
-				<div class="container container--podcast-player">
-					<div class="podcast-player">
-						<div class="podcast-info">
-								<p class="podcast-player__title"></p>
-						</div>
-						<div class="podcast-controls">
-							<button class="podcast-playBtn" id="podcast-2"></button>
-							<div class="progress-bar" id="podcast-1__bar">
-								<div class="progress-bar__fill" id="podcast-2__audio__bar-fill">
-									<div class="progress-bar__pin">	</div>
-								</div>
-							</div>
-						</div>
-						<audio ontimeupdate="updateProgress(this)" id="podcast-2__audio" class="podcast-player-tag" src="<?php echo get_template_directory_uri(); ?>/source/audio/Ariana Grande - 7 rings-320.mp3"></audio>
-						
-					</div>
-				</div>
-			</div> -->
 		</div>
 		<div id="pagination">
-	
 		</div>
 	</div>
 </section>
