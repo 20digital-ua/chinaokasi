@@ -73,3 +73,18 @@ $social ='
 
 return $content.$social;
 }
+
+
+
+add_filter( 'body_class','my_class_names' );
+function my_class_names( $classes ) {
+
+	// добавим класс 'class-name' в массив классов $classes
+	if( is_front_page() ){
+    $classes[] = 'front-page';
+    if (in_array('page', $classes)) {
+      unset( $classes[array_search('page', $classes)] );
+    }
+  }
+	return $classes;
+}

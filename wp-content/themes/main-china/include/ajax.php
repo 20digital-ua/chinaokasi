@@ -9,10 +9,13 @@ function getposts() {
   $page = $_POST['page'];
   $total = $_POST['total'];
   $categoryGet= $_POST['category'];
-  $categoryString='';
-  foreach($categoryGet as $item){
-    $categoryString.='asdadasd';
+  $categoryString;
+  if($categoryGet[0]!=''){
+    foreach($categoryGet as $item){
+      $categoryString.=$item.',';
+    }
   }
+  
   if($category == -1){
     unset($category);
   }
@@ -44,10 +47,12 @@ function getposts() {
       'category'=>$category[0]->name
     ));
   }
+
   array_push($postsArr['page'],array(
     'max'=>$blogPosts->max_num_pages,
     'current'=>$blogPosts->query['paged'],
-    'cat'=> $categoryString
+    'cat'=> $categoryGet,
+    'string'=>$categoryString
   ));
 
   // echo $posts = json_encode($category);
@@ -61,18 +66,7 @@ add_action('wp_ajax_nopriv_getposts', 'getposts');
 
 
 
-add_filter( 'body_class','my_class_names' );
-function my_class_names( $classes ) {
 
-	// добавим класс 'class-name' в массив классов $classes
-	if( is_front_page() ){
-    $classes[] = 'front-page';
-    if (in_array('page', $classes)) {
-      unset( $classes[array_search('page', $classes)] );
-    }
-  }
-	return $classes;
-}
 
 ////////////////////////////
 

@@ -64,6 +64,3 @@
 		
 	</div>
 </section>
-
-<script>
-</script>

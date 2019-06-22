@@ -3,13 +3,14 @@ var BP = 1400;
 var $post_per_page;
 jQuery(window).on('load resize',function(){
   vp_size = jQuery(window).width();
-  var $returnCat=jQuery('.blog-section').data('category');
+  var $returnCat=[];
+  $returnCat.push(jQuery('.blog-section').data('category'));
   console.log($returnCat);
   if(vp_size>=BP){
     var status = 1;
     if (status != CURRENT_STATUS) {
       $post_per_page=6;
-      get_posts(1,$post_per_page,$returnCat);
+      get_posts(1,$post_per_page);
     }
     CURRENT_STATUS = status;
   }
@@ -17,7 +18,7 @@ jQuery(window).on('load resize',function(){
     var status = 0;
     if (status != CURRENT_STATUS) {
       $post_per_page=3;
-      get_posts(1,$post_per_page,$returnCat);
+      get_posts(1,$post_per_page);
     }
     CURRENT_STATUS = status;
   }
