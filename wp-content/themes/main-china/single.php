@@ -2,15 +2,15 @@
 
 while(have_posts()){
 	the_post();
-
+	$category=get_the_category();
 ?>
 	<main>
 		<section class="main-single-post">
 			<div class="container container--nopadding">
-				<a href="#" class="post-back-link grid-padding">Back to <span>LIVE</span> Blog Posts</a>
+				<a href="<?php echo get_permalink(get_option('page_for_posts'));?>?category=<?=strtolower($category[0]->name);?>" class="post-back-link grid-padding">Back to <span><?=$category[0]->name?></span> Blog Posts</a>
 				<div class="post-grid">
 					<div class="post__title grid-padding">
-						<?php the_title(); ?>
+						<?php the_title();?>
 					</div>
 					<div class="author grid-padding">
 						<img class="author__img" src="<?php echo get_template_directory_uri(); ?>/img/follow-me/Avatar3.png" alt="">

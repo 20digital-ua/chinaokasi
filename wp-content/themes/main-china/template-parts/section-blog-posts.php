@@ -2,7 +2,7 @@
 		$slug = get_post_field( 'post_name', get_post() );
     $pages=array('love','work','live');
 
-		$category_slug='-1';
+    $category_slug='-1';
     $output='';
     $args=array();
 		if(in_array($slug, $pages)){
@@ -64,6 +64,3 @@
 		
 	</div>
 </section>
-
-<script>
-</script>
