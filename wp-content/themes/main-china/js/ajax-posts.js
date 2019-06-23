@@ -4,13 +4,14 @@ var $post_per_page;
 jQuery(window).on('load resize',function(){
   vp_size = jQuery(window).width();
   var $returnCat=[];
-  $returnCat.push(jQuery('.blog-section').data('category'));
+  $returnCat.push(jQuery('.blog-section').attr('data-category'));
+  
   console.log($returnCat);
   if(vp_size>=BP){
     var status = 1;
     if (status != CURRENT_STATUS) {
       $post_per_page=6;
-      get_posts(1,$post_per_page);
+      get_posts(1,$post_per_page,$returnCat);
     }
     CURRENT_STATUS = status;
   }
@@ -18,7 +19,7 @@ jQuery(window).on('load resize',function(){
     var status = 0;
     if (status != CURRENT_STATUS) {
       $post_per_page=3;
-      get_posts(1,$post_per_page);
+      get_posts(1,$post_per_page,$returnCat);
     }
     CURRENT_STATUS = status;
   }
@@ -93,10 +94,12 @@ function print_pagination($obj){
 function change_page(){
   print_posts(obj);
   print_pagination(obj);
+  var $returnCat=[];
+  $returnCat.push(jQuery('.blog-section').attr('data-category'));
   jQuery('#pagination button').on('click',(e)=>{
     var $btn = e.target.id;
     $pageNumber = jQuery('#'+$btn).data('page');
-    get_posts($pageNumber,$post_per_page);
+    get_posts($pageNumber,$post_per_page,$returnCat);
     jQuery('html,body').animate({
       scrollTop: jQuery(".title").offset().top-40},
       'slow');
@@ -110,6 +113,7 @@ jQuery('.filter-category .filter-category__btn').on('click',function(){
   jQuery('.filter-category .filter-category__btn-active').each(function(e,i){
     $catObj.push(jQuery(this).data('categoryname'));
   });
+  jQuery('.blog-section').attr('data-category',$catObj);
   console.log($catObj);
   get_posts(1,$post_per_page,$catObj);
 });
