@@ -46,3 +46,35 @@
   }
 
 }
+#wpmem_login,
+#wpmem_reg{
+  font-family: $Poppins !important;
+  legend{
+    margin-bottom: 18px;
+  }
+  .div_text{
+    input{
+      width: 100%;
+      max-width: 100%;
+      height: 40px;
+      border: 1px solid rgba(58, 59, 63, 0.15);
+      border-radius: 5px;
+      outline: none;
+      font-size: 14px;
+      line-height: 21px;
+      padding-left: 1em;
+      font-family: inherit;
+
+    }
+  }
+  .buttons{
+    font-family: $Poppins !important;
+    color: #fff;
+    background-color: $violetColor;
+    border:none;
+    border-radius: 15px 0 15px 0;
+    padding: 6px 16px;
+    cursor: pointer;
+    margin-top: 16px;
+  }
+}

@@ -13,21 +13,8 @@
 					</div>
 				</div>
 				<div class="subscribe-block subscribe-block--header">
-					<form action="" class="primary-form header-form">
-						<div class="form-row form-row-two-col">
-							<div class="col-1">
-									<label for="input-name-header" class="primary-form__label">Name</label>
-									<input id="input-name-header" class="input primary-form__input" type="text" placeholder="Your Name">
-							</div>
-							<div class="col-2">
-									<label for="input-email-header" class="primary-form__label">Email</label>
-									<input id="input-email-header" class="input primary-form__input primary-form__input-last" type="text" placeholder="Your Email">
-							</div>
-						</div>
-						<button class="primary-form__submit submit-btn">Join my movement</button>
-					</form>
+					<?php require('template-parts/subscribe-forms/sub-all.php');?>
 				</div>
-				
 			</div>
 			<div class="head-main-bg">
 					<div class="gradient-block"></div>
@@ -247,3 +234,36 @@
 	</main>
 
 <?php get_footer(); ?>
+
+
+
+
+
+
+<!-- Begin Mailchimp Signup Form -->
+
+
+<form action="https://gmail.us20.list-manage.com/subscribe/post?u=ef335dd7b9dff42381a557625&amp;id=eb6dd1fe6d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group input-group">
+    <strong>Subs </strong>
+    <ul><li><input type="radio" value="1" name="group[3467]" id="mce-group[3467]-3467-0"><label for="mce-group[3467]-3467-0">Live</label></li>
+<li><input type="radio" value="2" name="group[3467]" id="mce-group[3467]-3467-1"><label for="mce-group[3467]-3467-1">Work</label></li>
+</ul>
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ef335dd7b9dff42381a557625_eb6dd1fe6d" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
