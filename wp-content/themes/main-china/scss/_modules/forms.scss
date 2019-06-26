@@ -78,3 +78,29 @@
     margin-top: 16px;
   }
 }
+/* IFRAMES CONTROL */
+.head-lap-iframe{
+  height: 200px;
+}
+.head-mob-iframe{
+  height: 245px;
+}
+.podcast-iframe{
+  height: 360px;
+  @include screen-lp{
+    height: 135px;
+  }
+}
+.single-post-podcast-iframe{
+  height: 400px;
+}
+.single-post-all-iframe{
+  margin-top: 25px;
+  height: 280px;
+}
+.corses-iframe{
+  height: 280px;
+  @include screen-lp{
+    height: 225px;
+  }
+}

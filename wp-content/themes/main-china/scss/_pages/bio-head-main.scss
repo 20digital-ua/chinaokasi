@@ -100,7 +100,17 @@
   @include screen-lp{
     grid-column: 1/3;
   }
-  .form-row{
+  .form-row-two-col{
+    @include screen-tb{
+      display: flex;
+    }
+  }
+  .submit-btn{
+    @include screen-tb{
+     margin-top: 8px;
+    }
+  }
+  .mc-field-group{
     @include screen-tb{
       margin-right: 16px;
     }

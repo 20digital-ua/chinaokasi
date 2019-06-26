@@ -24,19 +24,11 @@
 						</div>
 						<p class="text">Quisque auctor dui odio, non venenatis orci pulvinar vel. Etiam convallis metus lectus orci pulvinar metus convallis tonte doro orci pulvina onto vergo. Maecenas gravida nulla in bibendum dapibus.  Aliquam euismod vestibulum sem sit amet rutrum.
 								Fusce non porttitor nulla. Cras tempor facilisis, a accumsan arcu.</p>
-						<form action="" class="primary-form primary-form--course">
-							<div class="input-groupe">
-								<div class="form-row">
-									<label for="name-input" class="label">Name</label>
-									<input id="name-input" class="primary-form__input input" type="text" placeholder="Your Name">
-								</div>
-								<div class="form-row">
-									<label for="email-input" class="label">Email</label>
-									<input id="email-input" class="primary-form__input input primary-form__input-last" type="text" placeholder="Your Email">
-								</div>
-							</div>
-							<button class="course__takelink takeBtn"><span class="link-inner">Take <span class="link-inner-sm">LIVE</span> Course</span></button>
-						</form>
+						<div class="primary-form primary-form--course">
+						<iframe  class="corses-iframe live" src="<?php echo get_template_directory_uri(); ?>/template-parts/subscribe-forms/sub-live.php" width="100%">
+						Error!
+					</iframe>
+						</div>
 					</div>
 					<div class="course">
 						<div class="course__title course__title--work">Work</div>
@@ -45,19 +37,11 @@
 						</div>
 						<p class="text">Quisque auctor dui odio, non venenatis orci pulvinar vel. Etiam convallis metus lectus orci pulvinar metus convallis tonte doro orci pulvina onto vergo. Maecenas gravida nulla in bibendum dapibus.  Aliquam euismod vestibulum sem sit amet rutrum.
 								Fusce non porttitor nulla. Cras tempor facilisis, a accumsan arcu.</p>
-						<form action="" class="primary-form primary-form--course">
-							<div class="input-groupe">
-								<div class="form-row">
-									<label for="name-input" class="label">Name</label>
-									<input id="name-input" class="primary-form__input input" type="text" placeholder="Your Name">
-								</div>
-								<div class="form-row">
-									<label for="email-input" class="label">Email</label>
-									<input id="email-input" class="primary-form__input input primary-form__input-last" type="text" placeholder="Your Email">
-								</div>
+							<div class="primary-form primary-form--course">
+								<iframe  class="corses-iframe work" src="<?php echo get_template_directory_uri(); ?>/template-parts/subscribe-forms/sub-work.php" width="100%">
+								Error!
+							</iframe>
 							</div>
-							<button class="course__takelink takeBtn"><span class="link-inner">Take <span class="link-inner-sm">WORK</span> Course</span></button>
-						</form>
 					</div>
 					<div class="course">
 						<div class="course__title  course__title--love">Love</div>
@@ -66,19 +50,11 @@
 						</div>
 						<p class="text">Quisque auctor dui odio, non venenatis orci pulvinar vel. Etiam convallis metus lectus orci pulvinar metus convallis tonte doro orci pulvina onto vergo. Maecenas gravida nulla in bibendum dapibus.  Aliquam euismod vestibulum sem sit amet rutrum.
 								Fusce non porttitor nulla. Cras tempor facilisis, a accumsan arcu.</p>
-						<form action="" class="primary-form primary-form--course">
-							<div class="input-groupe">
-								<div class="form-row">
-									<label for="name-input" class="label">Name</label>
-									<input id="name-input" class="primary-form__input input" type="text" placeholder="Your Name">
-								</div>
-								<div class="form-row">
-									<label for="email-input" class="label">Email</label>
-									<input id="email-input" class="primary-form__input input primary-form__input-last" type="text" placeholder="Your Email">
-								</div>
+							<div class="primary-form primary-form--course">
+								<iframe  class="corses-iframe love" src="<?php echo get_template_directory_uri(); ?>/template-parts/subscribe-forms/sub-love.php" width="100%">
+								Error!
+							</iframe>
 							</div>
-							<button class="course__takelink takeBtn"><span class="link-inner">Take <span class="link-inner-sm">LOVE</span> Course</span></button>
-						</form>
 					</div>
 				</div>
 			</div>
