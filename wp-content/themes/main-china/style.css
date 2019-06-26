@@ -335,6 +335,69 @@ body.no-scroll {
   width: 95%;
 }
 
+#wpmem_login,
+#wpmem_reg {
+  font-family: "Poppins-Regular" !important;
+}
+
+#wpmem_login legend,
+#wpmem_reg legend {
+  margin-bottom: 18px;
+}
+
+#wpmem_login .div_text input,
+#wpmem_reg .div_text input {
+  width: 100%;
+  max-width: 100%;
+  height: 40px;
+  border: 1px solid rgba(58, 59, 63, 0.15);
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  line-height: 21px;
+  padding-left: 1em;
+  font-family: inherit;
+}
+
+#wpmem_login .buttons,
+#wpmem_reg .buttons {
+  font-family: "Poppins-Regular" !important;
+  color: #fff;
+  background-color: #5D5CC3;
+  border: none;
+  border-radius: 15px 0 15px 0;
+  padding: 6px 16px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+/* IFRAMES CONTROL */
+
+.head-lap-iframe {
+  height: 200px;
+}
+
+.head-mob-iframe {
+  height: 245px;
+}
+
+.podcast-iframe {
+  height: 360px;
+}
+
+.single-post-podcast-iframe {
+  height: 400px;
+}
+
+.single-post-all-iframe {
+  margin-top: 25px;
+  height: 280px;
+}
+
+.corses-iframe {
+  height: 280px;
+}
+
 /* PLAYER */
 
 .podcast-player {
@@ -2264,7 +2327,15 @@ footer {
     align-items: center;
   }
 
-  .primary-form--bio .form-row {
+  .primary-form--bio .form-row-two-col {
+    display: flex;
+  }
+
+  .primary-form--bio .submit-btn {
+    margin-top: 8px;
+  }
+
+  .primary-form--bio .mc-field-group {
     margin-right: 16px;
   }
 
@@ -2302,7 +2373,15 @@ footer {
     align-items: center;
   }
 
-  .primary-form--tv .form-row {
+  .primary-form--tv .form-row-two-col {
+    display: flex;
+  }
+
+  .primary-form--tv .submit-btn {
+    margin-top: 8px;
+  }
+
+  .primary-form--tv .mc-field-group {
     margin-right: 16px;
   }
 
@@ -2382,6 +2461,14 @@ footer {
 }
 
 @media only screen and (min-width: 1024px) {
+  .podcast-iframe {
+    height: 135px;
+  }
+
+  .corses-iframe {
+    height: 225px;
+  }
+
   body:not(.front-page) .main-menu a {
     color: #000;
   }
@@ -2471,7 +2558,7 @@ footer {
   }
 
   .head-main.home-head-main .container {
-    padding-top: 80px;
+    padding-top: 60px;
   }
 
   .subscribe-section {
@@ -2721,10 +2808,6 @@ footer {
     height: 35px;
   }
 
-  .head-main.home-head-main .container {
-    padding-top: 110px;
-  }
-
   .head-main-bg .shapes {
     opacity: 1;
   }
@@ -2938,7 +3021,7 @@ footer {
   }
 
   .podcast.single-post {
-    margin-top: 120px;
+    margin-top: 90px;
   }
 }
 
@@ -2956,8 +3039,8 @@ footer {
   }
 
   .head-main.home-head-main .container {
-    padding-top: 120px;
-    padding-bottom: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .courses-section {

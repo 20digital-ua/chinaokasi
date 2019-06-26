@@ -13,21 +13,11 @@
 					</div>
 				</div>
 				<div class="subscribe-block subscribe-block--header">
-					<form action="" class="primary-form header-form">
-						<div class="form-row form-row-two-col">
-							<div class="col-1">
-									<label for="input-name-header" class="primary-form__label">Name</label>
-									<input id="input-name-header" class="input primary-form__input" type="text" placeholder="Your Name">
-							</div>
-							<div class="col-2">
-									<label for="input-email-header" class="primary-form__label">Email</label>
-									<input id="input-email-header" class="input primary-form__input primary-form__input-last" type="text" placeholder="Your Email">
-							</div>
-						</div>
-						<button class="primary-form__submit submit-btn">Join my movement</button>
-					</form>
+					<?php //require('template-parts/subscribe-forms/sub-all.php');?>
+					<iframe  class="head-lap-iframe" src="<?php echo get_template_directory_uri(); ?>/template-parts/subscribe-forms/sub-all.php" width="100%">
+						Error!
+					</iframe>
 				</div>
-				
 			</div>
 			<div class="head-main-bg">
 					<div class="gradient-block"></div>
@@ -36,18 +26,13 @@
 					</div>
 				</div>
 		</section>
+
 		<section class="subscribe-section section">
 			<div class="container">
 				<div class="subscribe-block">
-					<form action="" class="primary-form">
-						<div class="form-row">
-							<input class="primary-form__input" type="text" placeholder="Your Name">
-						</div>
-						<div class="form-row">
-							<input class="primary-form__input primary-form__input-last" type="text" placeholder="Your Email">
-						</div>
-						<button class="primary-form__submit submit-btn">Join my movement</button>
-					</form>
+				<iframe class="head-mob-iframe" src="<?php echo get_template_directory_uri(); ?>/template-parts/subscribe-forms/sub-all.php" width="100%">
+							Error!
+					</iframe>
 				</div>
 			</div>
 		</section>
@@ -160,9 +145,8 @@
 			<div class="container container--podcast-player">
 				<?php get_template_part('template-parts/podcast','player') ?>
 				<div class="sign-podcast">
-					<h3 class="sign-podcast__title">Sign up to get <br>
-							new episodes first</h3>
-					<form action="" class="primary-form">
+					
+					<!-- <form action="" class="primary-form">
 						<div class="form-row">
 								<label for="input-name" class="primary-form__label">Name</label> <br>
 								<input type="text" id="input-name" class="primary-form__input" placeholder="Your Name">
@@ -172,7 +156,10 @@
 								<input type="text" id="input-email" class="primary-form__input" placeholder="Your Email">
 						</div>
 						<button class="primary-form__submit submit-btn">Be the first to hear!</button>
-					</form>
+					</form> -->
+					<iframe class="podcast-iframe" src="<?php echo get_template_directory_uri(); ?>/template-parts/subscribe-forms/sub-podcast.php" width="100%">
+							Error!
+					</iframe>
 				</div>
 				<div class="follow">
 					<div class="follow-item">
@@ -247,3 +234,7 @@
 	</main>
 
 <?php get_footer(); ?>
+
+
+
+

@@ -15,14 +15,11 @@
         padding-top: 50px;
       }
       @include screen-lp{
-        padding-top: 80px;
-      }
-      @include screen-md{
-        padding-top: 110px;
+        padding-top: 60px;
       }
       @include screen-lg{
-        padding-top: 120px;
-        padding-bottom: 100px;
+        padding-top: 80px;
+        padding-bottom: 80px;
       }
     }
   }
@@ -150,3 +147,5 @@
   }
 
 }
+
+

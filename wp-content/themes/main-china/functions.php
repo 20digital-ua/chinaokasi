@@ -7,8 +7,8 @@ add_action('wp_enqueue_scripts','head_files');
 
 function head_files(){
 
-    wp_enqueue_style('main-styles',get_theme_file_uri('fonts/fonts.css'));
-    wp_enqueue_style('main-fonts',get_stylesheet_uri());
+    wp_enqueue_style('main-fonts',get_theme_file_uri('fonts/fonts.css'));
+    wp_enqueue_style('main-styles',get_stylesheet_uri());
 
 
 

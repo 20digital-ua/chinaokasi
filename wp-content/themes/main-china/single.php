@@ -24,17 +24,9 @@ while(have_posts()){
 								<p class="greeting__join">Join My Movement!</p>
 								<p class="greeting__text">Sign up for my <span class="greeting__text-md">#LiveWorkLove</span> courses!</p>
 							</div>
-							<form action="" class="primary-form primary-form--single">
-								<div class="form-row">
-									<label for="name-input" class="label">Name</label>
-									<input id="name-input" class="primary-form__input input" type="text" placeholder="Your Name">
-								</div>
-								<div class="form-row">
-									<label for="email-input" class="label">Email</label>
-									<input id="email-input" class="primary-form__input input primary-form__input-last" type="text" placeholder="Your Email">
-								</div>
-								<button class="primary-form__submit submit-btn submit-btn-transparent">Subscribe</button>
-							</form>
+								<iframe  class="single-post-all-iframe" src="<?php echo get_template_directory_uri(); ?>/template-parts/subscribe-forms/sub-all.php" >
+							Error!
+							</iframe>
 					</div>
 					<div class="single-post-content">
 						<?php 
@@ -57,19 +49,9 @@ while(have_posts()){
 						<div class="container container--podcast-player"></div>
 							<?php get_template_part('template-parts/podcast','player') ?>
 							<div class="sign-podcast">
-								<h3 class="sign-podcast__title">Sign up to get <br>
-										new episodes first</h3>
-								<form action="" class="primary-form">
-									<div class="form-row">
-											<label for="input-name" class="primary-form__label">Name</label> <br>
-											<input type="text" id="input-name" class="primary-form__input" placeholder="Your Name">
-									</div>
-									<div class="form-row">
-											<label for="input-email" class="primary-form__label">Email</label> <br>
-											<input type="text" id="input-email" class="primary-form__input" placeholder="Your Email">
-									</div>
-									<button class="primary-form__submit  submit-btn submit-btn-transparent">Be the first to hear!</button>
-								</form>
+							<iframe class="single-post-podcast-iframe" src="<?php echo get_template_directory_uri(); ?>/template-parts/subscribe-forms/sub-podcast.php" width="100%">
+							Error!
+					</iframe>
 							</div>
 						</div>
 				</div>
@@ -108,4 +90,6 @@ while(have_posts()){
 			</div>
 		</section>
 	</main>
+
+
 <?php } get_footer(); ?>
