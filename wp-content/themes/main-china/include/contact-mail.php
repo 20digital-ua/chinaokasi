@@ -12,8 +12,8 @@ if (isset($_POST["name"]) && $_POST["name"] != '' &&
   );
 
 
-  $to = 'antonfedorishko17@gmail.com';
-  // $to = 'antonfedorishko17@gmail.com';
+  $to = setEmail();
+  
   $subject = 'Get In Touch - #LiveWorkLove';
   $message = '
       <h3 style="font-weight:400">Hi, You have a Message from <strong>'.$getData['name'].'</strong></h3><br>
@@ -35,4 +35,11 @@ if (isset($_POST["name"]) && $_POST["name"] != '' &&
 
 echo json_encode($result); 
 
-?>
+function setEmail($prodEmail = NULL){
+  $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+  if(strpos($actual_link,'localhost')!==false || $prodEmail==NULL){
+		return "antonfedorishko17@gmail.com";
+  }else{
+		return $prodEmail;
+	}
+}
