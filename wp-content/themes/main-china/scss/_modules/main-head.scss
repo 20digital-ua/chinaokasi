@@ -78,7 +78,8 @@
 
 .subscribe-block--header{
   display: none;
-  margin-top: 32px;
+  margin-top: 32px; 
+  width: 55%;
   @include screen-lp{
     display: block;
   }

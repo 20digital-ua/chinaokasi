@@ -374,11 +374,11 @@ body.no-scroll {
 /* IFRAMES CONTROL */
 
 .head-lap-iframe {
-  height: 200px;
+  height: 230px;
 }
 
 .head-mob-iframe {
-  height: 245px;
+  height: 325px;
 }
 
 .podcast-iframe {
@@ -635,6 +635,7 @@ body:not(.front-page) .burger-btn span {
 .subscribe-block--header {
   display: none;
   margin-top: 32px;
+  width: 55%;
 }
 
 .head-main-bg {
@@ -1106,10 +1107,13 @@ body:not(.front-page) .burger-btn span {
   font-size: 16px;
   padding: 6px 16px;
   outline: none;
+  transition: all .25s linear;
 }
 
 .filter-category__btn-active {
-  border: 1px dashed black;
+  background-color: #5D5CC3;
+  border-radius: 15px 0 15px 0;
+  color: #FFF;
 }
 
 .blog-posts {
@@ -2466,7 +2470,7 @@ footer {
   }
 
   .corses-iframe {
-    height: 225px;
+    height: 245px;
   }
 
   body:not(.front-page) .main-menu a {
