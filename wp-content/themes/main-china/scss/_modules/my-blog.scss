@@ -38,9 +38,11 @@
     font-size: 16px;
     padding:6px 16px;
     outline: none;
+    @include transition();
     &-active{
-      border:1px dashed black;
-      
+      background-color: $violetColor;
+      border-radius: 15px 0 15px 0; 
+      color:#FFF; 
     }
   }
 }

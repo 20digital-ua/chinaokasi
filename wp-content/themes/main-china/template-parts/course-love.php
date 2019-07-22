@@ -55,17 +55,9 @@
 				<div class="text text-center">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nunc dui, interdum a est nec, accumsan dignissim neque. Nunc nibh lorem, malesuada non elementum id, porta vel enim. Etiam sollicitudin egestas lectus, sit amet porttitor dui egestas ac. Integer sodales vel nisl vel fermentum. Donec nec leo vitae libero ullamcorper porta.
 				</div>
-				<form action="" class="primary-form primary-form--about-course">
-					<div class="form-row">
-						<label for="name-input" class="label">Name</label>
-						<input id="name-input" class="primary-form__input input" type="text" placeholder="Your Name">
-					</div>
-					<div class="form-row">
-						<label for="email-input" class="label">Email</label>
-						<input id="email-input" class="primary-form__input input primary-form__input-last" type="text" placeholder="Your Email">
-					</div>
-					<button class="course__takelink takeBtn"><span class="link-inner">Take <span class="link-inner-sm">LOVE</span> Course</span></button>
-				</form>
+				<iframe  class="corses-iframe love" src="<?php echo get_template_directory_uri(); ?>/template-parts/subscribe-forms/sub-love.php" width="100%">
+								Error!
+							</iframe>
 			</div>
 		</section>
 		<?php  get_template_part('template-parts/section', 'blog-posts'); ?>
