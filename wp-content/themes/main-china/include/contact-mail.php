@@ -12,7 +12,7 @@ if (isset($_POST["name"]) && $_POST["name"] != '' &&
   );
 
 
-  $to = setEmail();
+  $to = "antonfedorishko17@gmail.com";
   
   $subject = 'Get In Touch - #LiveWorkLove';
   $message = '
