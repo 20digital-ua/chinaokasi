@@ -12,7 +12,7 @@ if (isset($_POST["name"]) && $_POST["name"] != '' &&
   );
 
 
-  $to = "antonfedorishko17@gmail.com";
+  $to = setEmail();
   
   $subject = 'Get In Touch - #LiveWorkLove';
   $message = '
@@ -26,7 +26,7 @@ if (isset($_POST["name"]) && $_POST["name"] != '' &&
   ';
   $headers  = 'MIME-Version: 1.0' ."\r\n";
   $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-  $headers .= 'From: LiveWorkLove <liveworklove@.com>' . "\r\n";
+  $headers .= 'From: LiveWorkLove <liveworklove@Love.com>' . "\r\n";
 
   $result = mail($to, $subject, $message, $headers);
 }else{
