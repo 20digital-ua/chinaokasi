@@ -18,7 +18,7 @@
 					</div>
 					<div class="form-row form-row-input">
 							<label for="input-email" class="primary-form__label">Email</label> <br>
-							<input type="text" id="input-email" class="primary-form__input" name="email" placeholder="Your Email" required>
+							<input type="email" id="input-email" class="primary-form__input" name="email" placeholder="Your Email" required>
 					</div>
 				</div>
 				<div class="form-row">
