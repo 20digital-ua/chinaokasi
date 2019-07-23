@@ -6,7 +6,6 @@
 	<meta name="robots" content="noindex">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>China Okasi</title>
 	<script type="text/javascript">
 		var templateUrl = '<?= get_bloginfo("template_url"); ?>';
 	</script>

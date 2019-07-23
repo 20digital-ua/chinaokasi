@@ -18,7 +18,8 @@
       $output='<h2 class="title">Check out my blog</h2>';
       $args=array(
         'posts_per_page' =>6,
-        'post_type'=>'post'
+        'post_type'=>'post',
+        'category__not_in' => array('1')
       );
     }
     $blogPosts = new WP_Query($args);

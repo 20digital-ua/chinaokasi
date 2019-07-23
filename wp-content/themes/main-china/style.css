@@ -1135,7 +1135,6 @@ body:not(.front-page) .burger-btn span {
   overflow: hidden;
   max-width: 375px;
   transition: all .25s linear;
-  padding-bottom: 50px;
   position: relative;
   margin-bottom: 32px;
   box-shadow: 0px 4px 25px rgba(115, 115, 115, 0.1);
@@ -1147,6 +1146,10 @@ body:not(.front-page) .burger-btn span {
 
 .post__link {
   color: inherit;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding-bottom: 50px;
 }
 
 .post .post-img {
@@ -1253,15 +1256,26 @@ body:not(.front-page) .burger-btn span {
   margin-top: 14px;
 }
 
-.in-touch-section .primary-form {
+.in-touch-section #form-response-block {
   margin: 0 auto;
-  max-width: 343px;
+  max-width: 464px;
+  position: relative;
+}
+
+.in-touch-section #main-contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 1;
+  transition: all .25s linear;
 }
 
-.in-touch-section .primary-form .row-single {
+.in-touch-section #main-contact-form.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.in-touch-section #main-contact-form .row-single {
   width: 100%;
 }
 
@@ -1281,6 +1295,44 @@ body:not(.front-page) .burger-btn span {
 .with-me__simple {
   margin: 6px 0;
   text-transform: uppercase;
+}
+
+#response {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .25s linear;
+}
+
+#response.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+#response .response-res {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .25s linear;
+}
+
+#response .response-res.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+#to-form-btn {
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 26px;
+  background-color: #FF3E5C;
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 15px 0 15px 0;
 }
 
 /*  FOOTER */
@@ -2264,6 +2316,23 @@ footer {
     padding: 64px 0 96px 0;
   }
 
+  .blog-posts {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+  }
+
+  .post {
+    width: 30%;
+    min-width: 320px;
+    margin-right: 15px;
+  }
+
+  .post:nth-child(3n) {
+    margin-right: 0;
+  }
+
   .in-touch-section {
     padding: 64px 0 0 0;
   }
@@ -2913,14 +2982,8 @@ footer {
     top: 270px;
   }
 
-  .blog-posts {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: flex-start;
-  }
-
   .post {
+    width: 100%;
     max-width: 320px;
     margin-bottom: 40px;
     background-color: unset;
@@ -2932,26 +2995,18 @@ footer {
     display: block;
   }
 
-  .post:nth-child(3n) {
-    margin-right: 0;
-  }
-
   .in-touch-section .text {
     margin-top: 44px;
     margin-bottom: 64px;
   }
 
-  .in-touch-section .primary-form {
-    max-width: 464px;
-  }
-
-  .in-touch-section .primary-form .row-single {
+  .in-touch-section #main-contact-form .row-single {
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
 
-  .in-touch-section .primary-form .row-single .form-row {
+  .in-touch-section #main-contact-form .row-single .form-row {
     width: 47%;
   }
 
