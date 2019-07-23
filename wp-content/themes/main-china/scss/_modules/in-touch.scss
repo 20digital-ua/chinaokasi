@@ -16,17 +16,25 @@
       margin-bottom: 64px;
     }
   }
-  .primary-form{
+  #form-response-block{
     margin: 0 auto;
-    max-width: 343px;
+    max-width: 464px;
+    position: relative;
+  }
+  #main-contact-form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 1;
+    @include transition();
+    &.hide{
+      opacity: 0;
+      visibility: hidden;
+    }
     .row-single{
       width: 100%;
     }
-    @include screen-md{
-      max-width: 464px;
+    @include screen-md{ 
       .row-single{
         width: 100%;
         display: flex;
@@ -71,4 +79,39 @@
     justify-content: center;
   }
   
+}
+
+
+#response{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  @include transition();
+  &.show{
+    visibility: visible;
+    opacity: 1;
+  }
+  .response-res{
+    visibility: hidden;
+    opacity: 0;
+    @include transition();
+    &.show{
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+#to-form-btn{
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 26px;
+  background-color: $redColor;
+  outline: none;
+  border: none;
+  color:#fff;
+  padding: 10px 20px;
+  border-radius:15px 0 15px 0;
 }

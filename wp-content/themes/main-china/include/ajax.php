@@ -24,8 +24,8 @@ function getposts() {
     'posts_per_page' =>$total,
     'post_type'=>'post',
     'paged' => $page,
-    'category_name'=> $categoryString
-
+    'category_name'=> $categoryString,
+    'category__not_in' => array('1')
   ));
   $postsArr = array(
     'posts'=>array(),

@@ -58,6 +58,7 @@ min-width: 220px;
 }
 .submit-btn {
   cursor: pointer;
+  outline: none;
   border: none;
   height: 64px;
   background-color: #5D5CC3;
@@ -167,7 +168,9 @@ min-width: 220px;
 }
 
 /* COURSE FORM STYLES */
-
+.single-course-form{
+  margin-top: 30px;
+}
 .course__takelink {
   border:none;
   display: block;
@@ -182,6 +185,8 @@ min-width: 220px;
   background: url(../img/courses/Rectangle.svg) left center no-repeat;
   background-size: 100% 100%;
   transition: all .25s linear;
+  cursor: pointer;
+  outline: none;
 }
 
 .single-course-form .course__takelink:hover {
@@ -210,11 +215,15 @@ min-width: 220px;
     max-width: 224px;
     margin-right: 9px;
   }
+  .single-course-form .course__takelink{
+    margin: 0 auto;
+  }
  
   .single-course-form .form-row-two-col{
     display: flex;
     flex-direction: row;
-    
+    justify-content: center;
+    text-align: center;
   }
 }
 @media (min-width:540px){

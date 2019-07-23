@@ -12,12 +12,25 @@ jQuery(document).ready(function () {
       type:'POST',
       data:$data,
       dataType:"json",
-      success:function(res){
-        console.log(res);
+      success:function(res){        
+        jQuery('#main-contact-form').addClass('hide');
+        jQuery('#response').addClass('show');
+        if(res==true){
+          jQuery('#res-true').addClass('show');
+        }else{
+          jQuery('#res-false').addClass('show');
+        }
       },
       error: function(xhr, status, error) {
+        jQuery('#res-false').addClass('show');
       }
     });
+    $contactForm[0].reset();
+    jQuery('#to-form-btn').on('click',()=>{
+      jQuery('#main-contact-form').removeClass('hide');
+      jQuery('#response').removeClass('show');
+      jQuery('#contact-form-submit').removeAttr('disabled')
+    })
   });
   
 });
