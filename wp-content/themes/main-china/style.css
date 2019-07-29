@@ -435,7 +435,7 @@ body.no-scroll {
   left: 3px;
   width: 23px;
   height: 23px;
-  background: url("img/icons/Polygon_play.svg") center no-repeat;
+  background: url("assets/img/icons/Polygon_play.svg") center no-repeat;
 }
 
 .podcast-player .podcast-playBtn.playing:before {
@@ -443,7 +443,7 @@ body.no-scroll {
   left: unset;
   width: 19px;
   height: 19px;
-  background: url("img/icons/pause-solid.svg") center no-repeat;
+  background: url("assets/img/icons/pause-solid.svg") center no-repeat;
 }
 
 .progress-bar {
@@ -653,7 +653,7 @@ body:not(.front-page) .burger-btn span {
 }
 
 .head-main-bg .china {
-  background: url("img/header/ChinaMainHeaderImage.png") center bottom no-repeat;
+  background: url("assets/img/header/ChinaMainHeaderImage.png") center bottom no-repeat;
   background-size: contain;
   position: absolute;
   bottom: 0;
@@ -676,7 +676,7 @@ body:not(.front-page) .burger-btn span {
 
 .head-main-bg .shapes {
   opacity: 0;
-  background: url("img/header/BG/shape-1.svg") 97% 128% no-repeat, url("img/header/BG/shape-2.svg") 60% 400px no-repeat;
+  background: url("assets/img/header/BG/shape-1.svg") 97% 128% no-repeat, url("assets/img/header/BG/shape-2.svg") 60% 400px no-repeat;
   width: 100%;
   height: 100%;
   position: relative;
@@ -735,14 +735,14 @@ body:not(.front-page) .burger-btn span {
 }
 
 .course__title--live:after {
-  background: url("img/courses/icons/Diamond.svg") center no-repeat;
+  background: url("assets/img/courses/icons/Diamond.svg") center no-repeat;
   position: absolute;
   top: -20px;
   right: -30px;
 }
 
 .course__title--work:after {
-  background: url("img/courses/icons/Dollar.svg") center no-repeat;
+  background: url("assets/img/courses/icons/Dollar.svg") center no-repeat;
   background-size: contain;
   position: absolute;
   top: -20px;
@@ -750,7 +750,7 @@ body:not(.front-page) .burger-btn span {
 }
 
 .course__title--love:after {
-  background: url("img/courses/icons/Heart.svg") center no-repeat;
+  background: url("assets/img/courses/icons/Heart.svg") center no-repeat;
   background-size: contain;
   position: absolute;
   top: -20px;
@@ -791,7 +791,7 @@ body:not(.front-page) .burger-btn span {
   font: 0.875em "Poppins-SemiBold";
   display: inline-block;
   max-width: 86px;
-  background: url("img/icons/chevron-right-solid.svg") right center no-repeat;
+  background: url("assets/img/icons/chevron-right-solid.svg") right center no-repeat;
   background-size: 6px 14px;
 }
 
@@ -805,7 +805,7 @@ body:not(.front-page) .burger-btn span {
   text-align: center;
   border-radius: 25px 0;
   font-family: "Poppins-SemiBold";
-  background: url("img/courses/Rectangle.svg") left center no-repeat;
+  background: url("assets/img/courses/Rectangle.svg") left center no-repeat;
   background-size: 100% 100%;
   transition: all .25s linear;
 }
@@ -892,7 +892,7 @@ body:not(.front-page) .burger-btn span {
   position: absolute;
   width: 30px;
   height: 30px;
-  background: url(img/icons/quotes.svg) center no-repeat;
+  background: url(assets/img/icons/quotes.svg) center no-repeat;
 }
 
 .china-photo .quote-block__text:before {
@@ -950,7 +950,7 @@ body:not(.front-page) .burger-btn span {
   position: absolute;
   width: 69px;
   height: 85px;
-  background: url("img/icons/Microphone.svg") center no-repeat;
+  background: url("assets/img/icons/Microphone.svg") center no-repeat;
   left: 0;
   bottom: -20px;
   z-index: 1;
@@ -1809,17 +1809,17 @@ footer {
 }
 
 .single-cours-head-main .container.live:before {
-  background: url("img/header/BG/Diamond.svg") center no-repeat;
+  background: url("assets/img/header/BG/Diamond.svg") center no-repeat;
   background-size: contain;
 }
 
 .single-cours-head-main .container.work:before {
-  background: url("img/header/BG/Dollar.svg") center no-repeat;
+  background: url("assets/img/header/BG/Dollar.svg") center no-repeat;
   background-size: contain;
 }
 
 .single-cours-head-main .container.love:before {
-  background: url("img/header/BG/Heart.svg") center no-repeat;
+  background: url("assets/img/header/BG/Heart.svg") center no-repeat;
   background-size: contain;
 }
 
@@ -1989,7 +1989,7 @@ footer {
   font-size: 16px;
   color: #3A3B3F;
   padding-left: 16px;
-  background: url("img/icons/Arrow-right.svg") left center no-repeat;
+  background: url("assets/img/icons/Arrow-right.svg") left center no-repeat;
   margin-top: 26px;
   display: block;
   margin-left: 16px;
@@ -3149,7 +3149,7 @@ footer {
   }
 
   .course__takelink {
-    background: url("img/courses/Rectangle_small.svg") left center no-repeat;
+    background: url("assets/img/courses/Rectangle_small.svg") left center no-repeat;
     max-width: 224px;
   }
 

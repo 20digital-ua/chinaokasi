@@ -8,7 +8,7 @@ jQuery(document).ready(function () {
     console.log($data);
     jQuery('#contact-form-submit').attr('disabled','disabled');
     jQuery.ajax({
-      url:templateUrl+'/include/contact-mail.php',
+      url:templateUrl+'/assets/include/contact-mail.php',
       type:'POST',
       data:$data,
       dataType:"json",

@@ -6,8 +6,7 @@
 			<p class="with-me__simple">WITH ME</p>
 		</div>
 		<div class="text text-center">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Duis in nisl dictum, semper mauris in, interdum nisi.
+		This contact form is processed for serious & business-related inquiries. Please allow proper time for a response. 
 		</div>
 		<div id="form-response-block">
 			<form action="" id="main-contact-form" class="primary-form" validate>
@@ -37,9 +36,3 @@
 	</div>
 	
 </section>
-
-<?php
-
-
-
-?>

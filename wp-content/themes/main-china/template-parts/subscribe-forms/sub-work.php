@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" id="subscribe-css" href="../../style/subscribe-styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="subscribe-css" href="../../assets/style/subscribe-styles.css" type="text/css" media="all">
 
 <div id="mc_embed_signup">
   <form  action="https://gmail.us3.list-manage.com/subscribe/post?u=299144442459ae6cad07bdcff&amp;id=bbe289ae96" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate primary-form single-course-form" target="_blank" novalidate>
@@ -39,5 +39,5 @@
 
 
 
-<script type='text/javascript' src='../../source/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<script type='text/javascript' src='../../assets/source/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <!--End mc_embed_signup-->

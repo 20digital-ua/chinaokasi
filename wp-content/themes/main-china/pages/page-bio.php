@@ -1,4 +1,7 @@
-
+<?php /* 
+	Template Name: Bio Page
+	Template Post Type: page */ 
+?>
 <?php get_header(); ?>
 <main>
 		<section class="bio-section">
@@ -8,11 +11,11 @@
 						<span>China Okasi</span>	
 					</div>
 					<div class="title-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/about-me/ChinaRedHat.png" class="title-img__img" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-me/ChinaRedHat.png" class="title-img__img" alt="">
 					</div>
 					<div class="subscribe-block container">
 						<div class="greeting">
-							<p class="greeting__text">Sign up for my <span class="greeting__text-md">#LiveWorkLove</span> courses!</p>
+							<p class="greeting__text">Hey, it’s <span class="greeting__text-md">China</span> , Ivy League prodigy & queen of motivational podcasts!Read about me & my favorite top motivational speakers below & sign up to get 2-min. inspirational audio delivered to you daily for FREE.</p>
 						</div>
 						<!-- <form action="" class="primary-form primary-form--bio">
 							<div class="form-row">
@@ -60,7 +63,7 @@
 								</div>
 							</form>
 						</div>
-						<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/source/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+						<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/assets/source/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 					</div>
 				</div>
 			</div>
@@ -75,7 +78,7 @@
 						<div class="follow-item">
 							<div class="follow-content">
 								<div class="follow-img">
-									<img src="<?php echo get_template_directory_uri(); ?>/img/follow-me/Avatar-violet.png" alt="">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/follow-me/Avatar-violet.png" alt="">
 								</div>	
 								<div class="follow-link">
 									<p class="follow-link__login">@ChinaOkasi</p>
@@ -92,7 +95,7 @@
 						<div class="follow-item">
 								<div class="follow-content">
 									<div class="follow-img">
-										<img src="<?php echo get_template_directory_uri(); ?>/img/follow-me/Avatar3.png" alt="">
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/follow-me/Avatar3.png" alt="">
 									</div>	
 									<div class="follow-link">
 										<p class="follow-link__login ">china_okasi</p>

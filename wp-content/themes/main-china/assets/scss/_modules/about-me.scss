@@ -18,7 +18,7 @@
       position: absolute;
       right: 10%;
       top: 150px;
-    }
+    }    
 
     .title--about-me{
       display: none;
@@ -74,11 +74,11 @@
     padding: 60px 60px 49px 73px;
     @include font(14px, $PoppinsMediumItalic);
     @include screen-md{
-      display: block;
+      display: block; 
     }
     &__text{
       position: relative;
-      &:before,
+      &:before, 
       &:after{
         content:'';
         display: block;

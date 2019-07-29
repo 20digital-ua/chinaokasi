@@ -7,7 +7,7 @@ var gulp = require('gulp')
 
 
 gulp.task('sass', function() {
-    return gulp.src(['scss/style.scss'])
+    return gulp.src(['assets/scss/style.scss'])
         .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
         .pipe(mediaGroup())
         // .pipe(cleanCSS())
@@ -15,9 +15,9 @@ gulp.task('sass', function() {
 });
 gulp.task('watch', function() {
     gulp.watch([
-        'scss/_base/*.scss',
-        'scss/_modules/*.scss',
-        'scss/_pages/*.scss'
+        'assets/scss/_base/*.scss',
+        'assets/scss/_modules/*.scss',
+        'assets/scss/_pages/*.scss'
     ],gulp.series('sass'))
 });
 
