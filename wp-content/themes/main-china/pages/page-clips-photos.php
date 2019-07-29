@@ -1,3 +1,7 @@
+<?php /* 
+	Template Name: TVClips & Photos Page
+	Template Post Type: page */ 
+?>
 <?php get_header(); ?>
 <main>
 	<section class="tv-head-main">
@@ -8,7 +12,8 @@
 				</div>
 				<div class="subscribe-block">
 					<div class="greeting">
-						<p class="greeting__text">Sign up for my <span class="greeting__text-md">#LiveWorkLove</span> courses!</p>
+						<p class="greeting__text">Hey, it’s <span class="greeting__text-md">China</span>, Ivy League prodigy & a part of the sisterhood of inspirational women in media! <br>
+						<span class="greeting__text-md">Sign up to get my 2-min. motivational audio delivered to you daily for FREE.</span></p>
 					</div>
 					<!-- <form action="" class="primary-form primary-form--tv">
 						<div class="form-row">
@@ -57,7 +62,7 @@
 							</div>
 						</form>
 					</div>
-					<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/source/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+					<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/assets/source/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 				</div>
 			</div>
 		</div>
@@ -76,9 +81,7 @@
 						<div class="container">
 							<div class="tab__title">TV Clips</div>
 							<div class="tab__text">
-								China Okasi is a journalist, media personality & creative producer with award-winning experience in new
-								media enterprise. She has contributed to every major cable news network in the United States, including
-								CNN/HLN, MSNBC, FOX News, Current TV/Al Jazeera America, CW, PIX 11 News & FOX channels.
+							Being part of the sisterhood of inspirational women in media means speaking truth to life & planting seeds of grace, enlightenment, and awareness--whether via motivational audio, radio, television or web. In television, I graced every major cable network in the U.S. (and U.K.) - CNN/HLN, MSNBC, FOX News, FOX Business, Current, BBC, Sky News, Newsy...the list goes on!
 							</div>
 						</div>
 
@@ -87,7 +90,7 @@
 							<div class="tv-clips">
 								<div class="clip">
 									<div class="clip-img">
-										<img class="clip__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/clips/China Okasi (MSNBC).png" alt="">
+										<img class="clip__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/clips/China Okasi (MSNBC).png" alt="">
 									</div>
 									<div class="clip-content">
 										<h3 class="clip-content__title">Lorem ipsum</h3>
@@ -100,7 +103,7 @@
 								</div>
 								<div class="clip">
 									<div class="clip-img">
-										<img class="clip__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/clips/China Okasi, Current TV.png" alt="">
+										<img class="clip__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/clips/China Okasi, Current TV.png" alt="">
 									</div>
 									<div class="clip-content">
 										<h3 class="clip-content__title">Lorem ipsum</h3>
@@ -113,7 +116,7 @@
 								</div>
 								<div class="clip">
 									<div class="clip-img">
-										<img class="clip__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/clips/china-okasi-joy-behar.png" alt="">
+										<img class="clip__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/clips/china-okasi-joy-behar.png" alt="">
 									</div>
 									<div class="clip-content">
 										<h3 class="clip-content__title">Lorem ipsum</h3>
@@ -126,7 +129,7 @@
 								</div>
 								<div class="clip">
 									<div class="clip-img">
-										<img class="clip__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/clips/china-okasi-megyn-kelly.png" alt="">
+										<img class="clip__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/clips/china-okasi-megyn-kelly.png" alt="">
 									</div>
 									<div class="clip-content">
 										<h3 class="clip-content__title">Lorem ipsum</h3>
@@ -142,14 +145,14 @@
 						</div>
 						<div class="container">
 							<div class="channel-logos">
-								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/logos/China on MSNBC_.png" alt="">
-								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/logos/china-okasi-pix11.png" alt="">
-								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/logos/cnn-logo.png" alt="">
-								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/logos/current-tv-logo.png" alt="">
-								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/logos/fox-business-logo.png" alt="">
-								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/logos/fox-news-logo.png" alt="">
-								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/logos/hln-logo.png" alt="">
-								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/logos/the-cw-network-logo.png" alt="">
+								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/logos/China on MSNBC_.png" alt="">
+								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/logos/china-okasi-pix11.png" alt="">
+								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/logos/cnn-logo.png" alt="">
+								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/logos/current-tv-logo.png" alt="">
+								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/logos/fox-business-logo.png" alt="">
+								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/logos/fox-news-logo.png" alt="">
+								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/logos/hln-logo.png" alt="">
+								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/logos/the-cw-network-logo.png" alt="">
 							</div>
 						</div>
 					</div>
@@ -164,15 +167,15 @@
 						</div>
 						<div class="container-inner">
 							<div class="photos-grid">
-								<img class="photos-grid__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/photos/China Okasi, In Gold.png" alt="">
-								<img class="photos-grid__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/photos/China Okasi, Model (1).png" alt="">
-								<img class="photos-grid__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/photos/China Okasi (1).png" alt="">
-								<img class="photos-grid__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/photos/China Okasi, Bio Red.png" alt="">
-								<img class="photos-grid__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/photos/China Okasi, Stance.png" alt="">
-								<img class="photos-grid__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/photos/China Okasi, Model.png" alt="">
-								<img class="photos-grid__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/photos/China Okasi, In White - Formal.png"
+								<img class="photos-grid__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/photos/China Okasi, In Gold.png" alt="">
+								<img class="photos-grid__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/photos/China Okasi, Model (1).png" alt="">
+								<img class="photos-grid__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/photos/China Okasi (1).png" alt="">
+								<img class="photos-grid__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/photos/China Okasi, Bio Red.png" alt="">
+								<img class="photos-grid__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/photos/China Okasi, Stance.png" alt="">
+								<img class="photos-grid__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/photos/China Okasi, Model.png" alt="">
+								<img class="photos-grid__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/photos/China Okasi, In White - Formal.png"
 									alt="">
-								<img class="photos-grid__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/tv-photos/photos/China Okasi.png" alt="">
+								<img class="photos-grid__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/photos/China Okasi.png" alt="">
 							</div>
 						</div>
 					</div>

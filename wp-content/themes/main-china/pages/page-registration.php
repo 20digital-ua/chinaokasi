@@ -1,7 +1,11 @@
+<?php /* 
+	Template Name: Registration Page
+	Template Post Type: page */ 
+?>
 <?php 
 get_header(); 
  while ( have_posts() ) : the_post();
-   ?>
+	?>
 <main>
 		<section class="head-main single-cours-head-main section">
 			<div class="container work">

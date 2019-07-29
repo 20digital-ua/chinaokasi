@@ -61,12 +61,23 @@ function prefix_featured_audio_post_types( $post_types ) {
 
 add_filter( 'body_class','my_class_names' );
 function my_class_names( $classes ) {
-	// добавим класс 'class-name' в массив классов $classes
 	if( is_front_page() ){
     $classes[] = 'front-page';
-    if (in_array('page', $classes)) {
-      unset( $classes[array_search('page', $classes)] );
-    }
   }
 	return $classes;
+}
+
+function getPageName($id){
+  switch ($id){
+    case '17':  
+      $page='work';
+      break;
+    case '20':  
+      $page='love';
+      break;
+    case '15':  
+      $page='life';
+      break;
+  }
+  return $page;
 }

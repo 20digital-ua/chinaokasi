@@ -5,12 +5,12 @@ jQuery(window).on('load resize',function(){
   vp_size = jQuery(window).width();
   var $returnCat=[];
   $returnCat.push(jQuery('.blog-section').attr('data-category'));
-  
+  debugger
   console.log($returnCat);
   if(vp_size>=BP){
     var status = 1;
     if (status != CURRENT_STATUS) {
-      $post_per_page=6;
+      $post_per_page=9;
       get_posts(1,$post_per_page,$returnCat);
     }
     CURRENT_STATUS = status;
@@ -18,7 +18,7 @@ jQuery(window).on('load resize',function(){
   else{
     var status = 0;
     if (status != CURRENT_STATUS) {
-      $post_per_page=3;
+      $post_per_page=9;
       get_posts(1,$post_per_page,$returnCat);
     }
     CURRENT_STATUS = status;

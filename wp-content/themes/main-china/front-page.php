@@ -119,30 +119,6 @@
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/podcast/ChinaPodcastPhoto.png"  class="podcast-introduce__img" alt="">
 				</div>
 			</div>
-			<?php
-			
-			
-			$getPodcasts= new WP_Query(array(
-				'posts_per_page'=>-1,
-				'post_type'=>'podcast',
-				'orderby' => 'publish_date', 
-				'order' => 'DESC'
-
-			));
-			// var_dump($getPodcasts);
-			while($getPodcasts->have_posts()){
-				$getPodcasts->the_post();
-				$isGeneral=get_field('general_podcast');
-				if($isGeneral[0]=='true'){
-					$podcastSrc=get_field('media-data');
-					$titleText=get_the_content();
-					break;
-				}else{
-					$podcastSrc=get_field('media-data');
-					$titleText=get_the_content();
-				}
-			}
-			?>
 			<div class="container container--podcast-player">
 				<?php get_template_part('template-parts/podcast','player') ?>
 				<div class="sign-podcast">

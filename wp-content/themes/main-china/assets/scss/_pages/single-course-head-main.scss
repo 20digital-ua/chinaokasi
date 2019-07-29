@@ -19,7 +19,7 @@
     justify-content: space-between;
     width: 100%; 
     position: relative;
-    &.live:before{
+    &.life:before{
       background: url("#{$image_dir}header/BG/Diamond.svg") center no-repeat;
       background-size: contain;
     }
@@ -44,8 +44,8 @@
         height: 444px;
       }
     }
-    &.live:after{
-      content: 'Live';
+    &.life:after{
+      content: 'Life';
     }
     &.work:after{
       content: 'Work';

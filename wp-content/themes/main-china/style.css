@@ -1171,7 +1171,7 @@ body:not(.front-page) .burger-btn span {
   left: 0;
   border-radius: 15px 0px;
   background: linear-gradient(180deg, rgba(255, 62, 92, 0.8) 0%, rgba(96, 95, 199, 0.8) 100%);
-  width: 80px;
+  padding: 0 28px;
   height: 32px;
 }
 
@@ -1808,7 +1808,7 @@ footer {
   position: relative;
 }
 
-.single-cours-head-main .container.live:before {
+.single-cours-head-main .container.life:before {
   background: url("assets/img/header/BG/Diamond.svg") center no-repeat;
   background-size: contain;
 }
@@ -1832,8 +1832,8 @@ footer {
   z-index: 99;
 }
 
-.single-cours-head-main .container.live:after {
-  content: 'Live';
+.single-cours-head-main .container.life:after {
+  content: 'Life';
 }
 
 .single-cours-head-main .container.work:after {
