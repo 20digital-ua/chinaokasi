@@ -3,7 +3,7 @@
   top: 0;
   width: 100%;  
   z-index: 999;
-  @include screen-tb{
+  @include screen-lp{
     height: 125px;
   }
   @include screen-md{
@@ -52,9 +52,10 @@ body:not(.front-page){
   }
   @include screen-lp{
     font-size: 1.5em;
+    margin-top: 20px;
   }
   @include screen-md{
-    margin-top: 27px;
+    margin-top: 34px;
     font-size: 2em;
   }
 
@@ -80,7 +81,7 @@ body:not(.front-page){
     }
   }
   &__name{
-    margin: 7px 0 0 7px;
+    margin: 0 0 0 7px;
     display: inline-block;
     color:$primaryTextColor;
     @include font(0.75em,$PoppinsMedium);

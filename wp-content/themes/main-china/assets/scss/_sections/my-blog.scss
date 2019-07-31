@@ -79,7 +79,8 @@
     width: 30%;
     min-width: 320px;
     margin-right: 15px;
-    &:nth-child(3n){
+    &:nth-child(3n), 
+    &:last-child{
       margin-right: 0;
     }
   }

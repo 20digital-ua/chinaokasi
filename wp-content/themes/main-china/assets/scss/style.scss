@@ -10,38 +10,29 @@
 
 
 /* GENERAL */
-@import "_modules/general";
-/* BUTTONS */
-@import "_modules/link_buttons";
-/* FORMS */
-@import "_modules/forms";
-/* PLAYER */
-@import "_modules/player";
-
-
-
+@import "_sections/general";
 
 /* HEADER TOP */
-@import "_modules/header-top";
+@import "_sections/header-top";
 
 /*  CONTENT */
 /*  SECTIONS */
-@import "_modules/main-head";
+@import "_sections/main-head";
 
 /* #1 - Courses Section */
-@import "_modules/courses";
+@import "_sections/courses";
 /* #2 - About Me Section */
-@import "_modules/about-me";
+@import "_sections/about-me";
 /* #3 - About Me Section */
-@import "_modules/podcast";
+@import "_sections/podcast";
 /* #4 - My Blog Section */
-@import "_modules/my-blog";
+@import "_sections/my-blog";
 /* #5 - In Touch Section */
-@import "_modules/in-touch"; 
+@import "_sections/in-touch"; 
 
 
 /*  FOOTER */
-@import "_modules/footer";
+@import "_sections/footer";
 
 
 
@@ -66,3 +57,13 @@
 /* ALL PODCASTS */
 @import "_pages/all-podcasts";
 
+
+
+/* SIGN POPUP */
+@import "_modules/sign-popup";
+/* BUTTONS */
+@import "_modules/link_buttons";
+/* FORMS */
+@import "_modules/forms";
+/* PLAYER */
+@import "_modules/player";

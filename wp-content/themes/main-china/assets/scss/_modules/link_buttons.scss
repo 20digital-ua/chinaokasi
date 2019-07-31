@@ -7,13 +7,13 @@
   border-radius: 25px  0;
   color: #fff;
   @include font(16px,$PoppinsSemiBold);
-  margin-top: 32px;
+  margin-top: 32px; 
   &-transparent{
     background-color: transparent;
     color: $violetColor;
     border: 2px solid #5D5CC3;
   }
-}
+}   
 
 .link-btn{
   cursor: pointer;
@@ -27,6 +27,7 @@
   @include font(16px, $PoppinsSemiBold);
   line-height: 64px;
   text-align: center;
+  outline: none;
   &-center{
     margin: 0 auto; 
   }
@@ -39,4 +40,5 @@
 }
 .takeBtn{
   border:none;
+  cursor: pointer;
 }

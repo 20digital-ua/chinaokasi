@@ -3,17 +3,19 @@
 while(have_posts()){
 	the_post();
 	$category=get_the_category();
+	// echo $category[0]->name;
 ?>
 	<main>
 		<section class="main-single-post">
 			<div class="container container--nopadding">
-				<a href="<?php echo get_permalink(get_option('page_for_posts'));?>?category=<?=strtolower($category[0]->name);?>" class="post-back-link grid-padding">Back to <span><?=$category[0]->name?></span> Blog Posts</a>
+				<!-- <a href="<?php //echo get_permalink(get_option('page_for_posts'));?>?category=<?php //strtolower($category[0]->name);?>" class="post-back-link grid-padding">Back to <span><?php//$category[0]->name?></span> Blog Posts</a> -->
+				<a href="<?php echo the_permalink(getPageIdByCategory(strtolower($category[0]->name))) ?>" class="post-back-link grid-padding">Back to <span><?=$category[0]->name?></span> Blog Posts</a>
 				<div class="post-grid">
 					<div class="post__title grid-padding">
 						<?php the_title();?>
 					</div>
 					<div class="author grid-padding">
-						<img class="author__img" src="<?php echo get_template_directory_uri(); ?>/img/follow-me/Avatar3.png" alt="">
+						<img class="author__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/follow-me/Avatar3.png" alt="">
 						<div class="author__post-det">
 							<div class="author__name">Written by China Okasi</div>
 							<div class="post-date"><?php the_date(); ?></div>
@@ -58,7 +60,7 @@ while(have_posts()){
 				
 			</div>
 		</section>
-		<?php  get_template_part('template-parts/section', 'blog-posts'); ?>
+		<?php  get_template_part('template-parts/blog-posts', 'static'); ?>
 		<?php  get_template_part('template-parts/contact-form'); ?>
 	</main>
 

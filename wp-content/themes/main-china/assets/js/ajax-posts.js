@@ -5,8 +5,6 @@ jQuery(window).on('load resize',function(){
   vp_size = jQuery(window).width();
   var $returnCat=[];
   $returnCat.push(jQuery('.blog-section').attr('data-category'));
-  debugger
-  console.log($returnCat);
   if(vp_size>=BP){
     var status = 1;
     if (status != CURRENT_STATUS) {
@@ -40,8 +38,6 @@ function get_posts($pageID,$postsCount,$category){
   jQuery.post( my_ajax_object.ajaxurl, data, function(response) {
       // obj = response;
       obj = JSON.parse(response);
-      console.log(response);
-      
       change_page();
   });
 
@@ -114,6 +110,5 @@ jQuery('.filter-category .filter-category__btn').on('click',function(){
     $catObj.push(jQuery(this).data('categoryname'));
   });
   jQuery('.blog-section').attr('data-category',$catObj);
-  console.log($catObj);
   get_posts(1,$post_per_page,$catObj);
 });

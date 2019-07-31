@@ -14,17 +14,18 @@ function head_files(){
     wp_enqueue_script('main-js',get_theme_file_uri('/assets/js/main.js'),array('jquery'),'1.1',true);
     wp_enqueue_script('tabs-js',get_theme_file_uri('/assets/js/tabs.js'),null,'1.1',true);
     wp_enqueue_script('contact-form-js',get_theme_file_uri('/assets/js/contact-form.js'),null,'1.1',true);
+    wp_enqueue_script('sign-popup-js',get_theme_file_uri('/assets/js/sign-popup.js'),null,'1.1',true);
     
     if(is_single() || is_front_page() || is_post_type_archive('podcast')){
       wp_enqueue_script('player-js',get_theme_file_uri('/assets/js/player.js'),null,'1.1',true);
     }
-    if(is_post_type_archive('podcast')){
+    if(is_post_type_archive('podcast') ){
       wp_enqueue_script('ajax-podcast',get_theme_file_uri('/assets/js/ajax-podcast.js'),null,'1.1',true);
       wp_localize_script( 'ajax-podcast', 'my_ajax_object',
             array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
     }
    
-    if(is_home() && !is_front_page()){    
+    if((is_home() && !is_front_page()) || getPageName(get_the_ID())!=NULL){    
       wp_enqueue_script('ajax-posts',get_theme_file_uri('/assets/js/ajax-posts.js'),null,'1.1',true);
       wp_localize_script( 'ajax-posts', 'my_ajax_object',
               array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
@@ -78,6 +79,28 @@ function getPageName($id){
     case '15':  
       $page='life';
       break;
+    case '155':  
+      $page='news,china&friends';
+      break;
   }
   return $page;
+}
+function getPageIdByCategory($category){
+  if(strpos($category,array('news','china&friends'))===false){
+    switch ($category){
+      case 'work':  
+        $id='17';
+        break;
+      case 'love':  
+        $id='20';
+        break;
+      case 'life':  
+        $id='15';
+        break;
+    }
+  }else{
+    $id='112';
+  }
+  
+  return $id;
 }

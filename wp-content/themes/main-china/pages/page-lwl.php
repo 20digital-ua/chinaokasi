@@ -10,13 +10,12 @@
 			<div class="container <?=	getPageName(get_the_ID())?>">
 				<div class="head-content">
 					<span class="head-content__welcome">WELCOME to</span>
-					<h1 class="head-content__title">Live</h1>
-					<span class="head-content__subtitle"><span>my </span> Lifestyle — Guide Channel</span>
+					<h1 class="head-content__title"><?php the_title();?></h1>
+					<span class="head-content__subtitle"><span>my </span> <?php the_title();?>style — Guide Channel</span>
 				</div>
 				<div class="head-img-wrp">
-						<img class="head-img-wrp__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/header/ChinaMainHeaderImage.png" alt="">
+						<img class="head-img-wrp__img" src="<?php the_post_thumbnail_url() ?>" alt="">
 				</div>
-				
 			</div>
 		</section>
 		<section class="course-info">
@@ -25,17 +24,32 @@
 					<div class="cinfo-content">
 						<span class="cinfo-content__welcome">WELCOME to</span>
 						<h1 class="cinfo-content__title"><?php the_title();?></h1>
-						<span class="cinfo-content__subtitle"><span>my </span> Lifestyle — Guide Channel</span>
+						<span class="cinfo-content__subtitle"><span>my </span> <?php the_title();?>style — Guide Channel</span>
 					</div>
 					<ul class="info-list">
 						<li>Lorem Ipsum has been the industry's standard</li>
 						<li>Lorem Ipsum has been the industry's standard</li>
 						<li>Lorem Ipsum has been the industry's standard</li>
 					</ul>
-					<a href="#" class="link-btn"><span class="link-inner">Take <?php the_title();?> Course</span></a>
+					<button href="#" class="link-btn" id="popub-btn-open"><span class="link-inner">Take <?php the_title();?> Course</span></button>
 				</div>
 			</div>
 		</section>
+
+		<?php  get_template_part('template-parts/blog-posts','ajax'); ?>
+		<?php  get_template_part('template-parts/contact-form'); ?>
+	</main>
+
+
+<?php
+get_template_part('template-parts/sign-popup');
+get_footer(); 
+
+?>
+
+
+
+
 		<!-- <section class="c-details">
 			<div class="container">
 				<div class="d-blocks">
@@ -67,12 +81,3 @@
 							</iframe>
 			</div>
 		</section> -->
-		<?php  get_template_part('template-parts/section', 'blog-posts'); ?>
-		<?php  get_template_part('template-parts/contact-form'); ?>
-	</main>
-
-
-<?php
-
-get_footer(); 
-

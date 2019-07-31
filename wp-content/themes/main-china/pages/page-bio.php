@@ -2,7 +2,9 @@
 	Template Name: Bio Page
 	Template Post Type: page */ 
 ?>
-<?php get_header(); ?>
+<?php get_header();  ?>
+
+
 <main>
 		<section class="bio-section">
 			<div class="container clear-padding">
@@ -113,7 +115,7 @@
 					</div>
 			</div>
 		</section>
-		<?php  get_template_part('template-parts/section', 'blog-posts'); ?>
+		<?php  get_template_part('template-parts/blog-posts', 'static'); ?>
 		<?php  get_template_part('template-parts/contact-form'); ?>
 	</main>
 
