@@ -559,7 +559,9 @@ body:not(.front-page) .burger-btn span {
   background-size: 6px 14px;
 }
 
-.course__takelink {
+.course__take-btn {
+  border: none;
+  cursor: pointer;
   display: block;
   margin-top: 32px;
   width: 100%;
@@ -575,26 +577,26 @@ body:not(.front-page) .burger-btn span {
   outline: none;
 }
 
-.course__takelink:hover {
+.course__take-btn:hover {
   background: unset;
   background-color: #5D5CC3;
   color: #fff;
 }
 
-.course__takelink:hover .link-inner {
+.course__take-btn:hover .link-inner {
   background: linear-gradient(90deg, #FFF 0%, #FFF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.course__takelink .link-inner {
+.course__take-btn .link-inner {
   transition: all .25s linear;
   background: linear-gradient(90deg, #FF3E5C 0%, #5D5CC3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.course__takelink .link-inner-sm {
+.course__take-btn .link-inner-sm {
   font-family: "Poppins-Bold";
 }
 
@@ -3272,7 +3274,7 @@ footer {
     height: 256px;
   }
 
-  .course__takelink {
+  .course__take-btn {
     background: url("assets/img/courses/Rectangle_small.svg") left center no-repeat;
     max-width: 224px;
   }

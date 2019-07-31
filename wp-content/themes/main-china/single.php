@@ -3,13 +3,11 @@
 while(have_posts()){
 	the_post();
 	$category=get_the_category();
-	// echo $category[0]->name;
 ?>
 	<main>
 		<section class="main-single-post">
 			<div class="container container--nopadding">
-				<!-- <a href="<?php //echo get_permalink(get_option('page_for_posts'));?>?category=<?php //strtolower($category[0]->name);?>" class="post-back-link grid-padding">Back to <span><?php//$category[0]->name?></span> Blog Posts</a> -->
-				<a href="<?php echo the_permalink(getPageIdByCategory(strtolower($category[0]->name))) ?>" class="post-back-link grid-padding">Back to <span><?=$category[0]->name?></span> Blog Posts</a>
+				<a href="<?php echo get_permalink(get_option('page_for_posts'));?>" class="post-back-link grid-padding">Back to <span>News</span> Blog Posts</a>
 				<div class="post-grid">
 					<div class="post__title grid-padding">
 						<?php the_title();?>

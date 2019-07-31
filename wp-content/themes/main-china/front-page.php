@@ -19,11 +19,11 @@
 				</div>
 			</div>
 			<div class="head-main-bg">
-					<div class="gradient-block"></div>
-					<div class="china"></div>
-					<div class="shapes">
-					</div>
+				<div class="gradient-block"></div>
+				<div class="china"></div>
+				<div class="shapes">
 				</div>
+			</div>
 		</section>
 
 		<section class="subscribe-section section">
@@ -48,8 +48,8 @@
 							</div>
 						</div>
 						<p class="text">Need inspiration in life? Who doesn’t? Sign up for my 2-min. power-up podcasts about LIFE that will leave you inspired to tackle whatever life throws at you daily.</p>
-						<a href="<?php echo site_url('/course/live'); ?>" class="course__readlink">Read More</a>
-						<a href="<?php echo site_url('/courses/live'); ?>" class="course__takelink"><span class="link-inner">Take <span class="link-inner-sm">LIVE</span> Course</span></a>
+						<a href="<?= getPageLink('life'); ?>" class="course__readlink">Read More</a>
+						<button class="course__take-btn"><span class="link-inner">Subscribe <span class="link-inner-sm">FREE</span></span></button>
 					</div>
 					<div class="course">
 						<div class="course-top-container">
@@ -59,8 +59,8 @@
 							</div>
 						</div>
 						<p class="text">Want to stay motivated about your career? Sign up for my 2-min. WORK podcasts to boost your career mindset & feel better every day about your goals!</p>
-						<a href="<?php echo site_url('/course/work'); ?>" class="course__readlink">Read More</a>
-						<a href="<?php echo site_url('/courses/work'); ?>" class="course__takelink"><span class="link-inner">Take <span class="link-inner-sm">WORK</span> Course</span></a>
+						<a href="<?= getPageLink('work'); ?>" class="course__readlink">Read More</a>
+						<button class="course__take-btn"><span class="link-inner">Subscribe <span class="link-inner-sm">FREE</span></span></button>
 					</div>
 					<div class="course">
 						<div class="course-top-container">
@@ -70,8 +70,8 @@
 							</div>
 						</div>
 						<p class="text">How about love? Need self-love or relationship inspiration? Sign up for my 2-min. LOVE motivational podcasts to blast out negativity & feel good about your heart.</p>
-						<a href="<?php echo site_url('/course/love'); ?>" class="course__readlink">Read More</a>
-						<a href="<?php echo site_url('/courses/love'); ?>" class="course__takelink"><span class="link-inner">Take <span class="link-inner-sm">LOVE</span> Course</span></a>
+						<a href="<?= getPageLink('love'); ?>" class="course__readlink">Read More</a>
+						<button class="course__take-btn"><span class="link-inner">Subscribe <span class="link-inner-sm">FREE</span></span></button>
 					</div>
 				</div>
 			</div>
@@ -99,7 +99,7 @@
 									<p>I started temping on Wall Street at age 15--answering phones (not handling your investments, so don't be scared).</p>
 									<p>I’m built to motivate, inspire, heal + empower myself & others.</p>
 							</div>
-							<a href="<?php echo site_url('/bio'); ?>" class="link-btn"><span class="link-inner">Read more</span></a>
+							<a href="<?= getPageLink('bio'); ?>" class="link-btn"><span class="link-inner">Read more</span></a>
 						</div>
 				</div>
 				

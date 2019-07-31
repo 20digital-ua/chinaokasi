@@ -3,11 +3,13 @@
 $result;
 if (isset($_POST["name"]) && $_POST["name"] != '' &&
   isset($_POST["email"]) && $_POST["email"] != '' &&
+  isset($_POST["phone"]) && $_POST["phone"] != '' &&
   isset($_POST["message"]) && $_POST["message"] != ''){
 
   $getData = array(
     'name' => $_POST["name"],
     'email'=>$_POST["email"],
+    'phone'=>$_POST["phone"],
     'message'=>$_POST["message"]
   );
 
@@ -19,6 +21,7 @@ if (isset($_POST["name"]) && $_POST["name"] != '' &&
       <h3 style="font-weight:400">Hi, You have a Message from <strong>'.$getData['name'].'</strong></h3><br>
       <p>Detailes:</p>
       <p>Email: '.$getData['email'].'</p>
+      <p>Phone: '.$getData['phone'].'</p>
       <p>Message: '.$getData['message'].'</p>
       <br>
       <h4>Thank you!</h4>
