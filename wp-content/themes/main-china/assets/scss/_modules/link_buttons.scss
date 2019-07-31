@@ -1,0 +1,44 @@
+.submit-btn{
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  height: 64px;
+  background-color: $violetColor;
+  border-radius: 25px  0;
+  color: #fff;
+  @include font(16px,$PoppinsSemiBold);
+  margin-top: 32px; 
+  &-transparent{
+    background-color: transparent;
+    color: $violetColor;
+    border: 2px solid #5D5CC3;
+  }
+}   
+
+.link-btn{
+  cursor: pointer;
+  border: none;
+  display: block;
+  width: 100%;
+  height: 64px;
+  background-color: $redColor;
+  border-radius: 25px  0;
+  color: #fff;
+  @include font(16px, $PoppinsSemiBold);
+  line-height: 64px;
+  text-align: center;
+  outline: none;
+  &-center{
+    margin: 0 auto; 
+  }
+}
+.submit-btn,
+.link-btn{
+  @include screen-tb{
+    max-width: 224px;
+  }
+}
+.takeBtn{
+  border:none;
+  cursor: pointer;
+}

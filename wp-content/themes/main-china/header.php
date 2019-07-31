@@ -49,21 +49,22 @@
 				<div class="menu-container">
 					<nav class="main-menu">
 						<ul class="pages-menu">
-							<li><a href="<?php echo site_url('/bio'); ?>">Bio</a></li>
-							<li><a href="<?php echo site_url('/clips-photos')?>">TV Clips & Photos</a></li>
+							<li><a href="<?php echo site_url('/top-motivational-speakers'); ?>">Bio</a></li>
+							<li><a href="<?php echo site_url('/inspirational-women-in-media')?>">TV Clips & Photos</a></li>
+							<li><a href="<?php echo site_url('/what-in-the-world-happened')?>">News</a></li>
 							
-							<li class="pages-menu__title"><span>Content</span>	
+							<!-- <li class="pages-menu__title"><span>Content</span>	
 								<ul class="pages-menu__sub">
-									<li><a href="<?php echo site_url('/courses'); ?>">Courses</a></li>
-									<li><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>
-									<li><a href="<?php echo site_url('/podcasts'); ?>">Podcasts</a></li>
+									<li><a href="<?php //echo site_url('/courses'); ?>">Courses</a></li>
+									<li><a href="<?php //echo site_url('/blog'); ?>">Blog</a></li>
+									<li><a href="<?php //echo site_url('/podcasts'); ?>">Podcasts</a></li>
 								</ul>
-							</li>
+							</li> -->
 						</ul>
 						<ul class="courses-menu">
-							<li><a href="<?php echo site_url('/courses/live'); ?>">Live</a></li>
-							<li><a href="<?php echo site_url('/courses/work'); ?>">Work</a></li>
-							<li><a href="<?php echo site_url('/courses/love');?>">Love</a></li>
+							<li><a href="<?php echo site_url('/life-lessons-blog'); ?>">Life</a></li>
+							<li><a href="<?php echo site_url('/motivation-work-blog-posts-for-women-in-their-30s'); ?>">Work</a></li>
+							<li><a href="<?php echo site_url('/relationship-advice-free');?>">Love</a></li>
 						</ul>
 					</nav>
 					<div class="burger-btn">

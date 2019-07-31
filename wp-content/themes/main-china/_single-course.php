@@ -2,20 +2,17 @@
 
 while(have_posts()){
 	the_post();
-	$category=get_the_category();
-	// echo $category[0]->name;
+
 ?>
 	<main>
 		<section class="main-single-post">
-			<div class="container container--nopadding">
-				<!-- <a href="<?php //echo get_permalink(get_option('page_for_posts'));?>?category=<?php //strtolower($category[0]->name);?>" class="post-back-link grid-padding">Back to <span><?php//$category[0]->name?></span> Blog Posts</a> -->
-				<a href="<?php echo the_permalink(getPageIdByCategory(strtolower($category[0]->name))) ?>" class="post-back-link grid-padding">Back to <span><?=$category[0]->name?></span> Blog Posts</a>
+			<div class="container container--nopadding">	
 				<div class="post-grid">
 					<div class="post__title grid-padding">
-						<?php the_title();?>
+						<?php the_title(); ?>
 					</div>
 					<div class="author grid-padding">
-						<img class="author__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/follow-me/Avatar3.png" alt="">
+						<img class="author__img" src="<?php echo get_template_directory_uri(); ?>/img/follow-me/Avatar3.png" alt="">
 						<div class="author__post-det">
 							<div class="author__name">Written by China Okasi</div>
 							<div class="post-date"><?php the_date(); ?></div>
@@ -26,7 +23,7 @@ while(have_posts()){
 								<p class="greeting__join">Join My Movement!</p>
 								<p class="greeting__text">Sign up for my <span class="greeting__text-md">#LiveWorkLove</span> courses!</p>
 							</div>
-								<iframe  class="single-post-all-iframe" src="<?php echo get_template_directory_uri(); ?>/template-parts/subscribe-forms/sub-all.php" >
+							<iframe  class="single-post-all-iframe" src="<?php echo get_template_directory_uri(); ?>/template-parts/subscribe-forms/sub-all.php" >
 							Error!
 							</iframe>
 					</div>
@@ -40,15 +37,14 @@ while(have_posts()){
 							}
 						 ?>
 						<div class="single-post-content__text grid-padding">
-							<?php the_content(); ?>	
-										
+							<?php the_content(); ?>					
 						</div>
-						
 					</div>
+					
 					<div class="podcast single-post  grid-padding">
 						<h2 class="title title--left">Heard My Hot Podcast?</h2>
 						<h2 class="podcast-intro-text">China & Friends</h2>
-						<div class="container container--podcast-player"></div>
+						<div class="container--podcast-player">
 							<?php get_template_part('template-parts/podcast','player') ?>
 							<div class="sign-podcast">
 							<iframe class="single-post-podcast-iframe" src="<?php echo get_template_directory_uri(); ?>/template-parts/subscribe-forms/sub-podcast.php" width="100%">
@@ -63,6 +59,4 @@ while(have_posts()){
 		<?php  get_template_part('template-parts/blog-posts', 'static'); ?>
 		<?php  get_template_part('template-parts/contact-form'); ?>
 	</main>
-
-
 <?php } get_footer(); ?>
