@@ -19,15 +19,6 @@ while(have_posts()){
 							<div class="post-date"><?php the_date(); ?></div>
 						</div>
 					</div>	
-					<div class="subscribe-block single-subscribe grid-padding">
-							<div class="greeting">
-								<p class="greeting__join">Join My Movement!</p>
-								<p class="greeting__text">Sign up for my <span class="greeting__text-md">#LiveWorkLove</span> courses!</p>
-							</div>
-								<iframe  class="single-post-all-iframe" src="<?php echo get_template_directory_uri(); ?>/template-parts/subscribe-forms/sub-all.php" >
-							Error!
-							</iframe>
-					</div>
 					<div class="single-post-content">
 						<?php 
 							$img='https://cdn-ds.com/noimage/w_640/h_480/noimage.jpg';
@@ -49,9 +40,9 @@ while(have_posts()){
 						<div class="container container--podcast-player"></div>
 							<?php get_template_part('template-parts/podcast','player') ?>
 							<div class="sign-podcast">
-							<iframe class="single-post-podcast-iframe" src="<?php echo get_template_directory_uri(); ?>/template-parts/subscribe-forms/sub-podcast.php" width="100%">
-							Error!
-					</iframe>
+								<h3 class="sign-podcast__title">Sign up to get <br>
+										new episodes first</h3>
+								<button class="button submit-btn popub-btn-open" data-groupe="podcast">Be the first to hear!</button>
 							</div>
 						</div>
 				</div>
@@ -63,4 +54,7 @@ while(have_posts()){
 	</main>
 
 
-<?php } get_footer(); ?>
+<?php } 
+
+get_template_part('template-parts/sign-popup');
+get_footer(); ?>

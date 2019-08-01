@@ -33,6 +33,9 @@ body{
   &--nopadding{
     padding:0;
   }
+  &-content-center{
+    text-align: center;
+  }
   @include screen-sm{
     padding: $mainSidePadding;
   }

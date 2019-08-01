@@ -9,28 +9,28 @@
 
 
 function costom_post_types(){
-    register_post_type('course',array(
-        'has_archive'=> true,
-        'supports'=>array(
-          'title',
-          'editor',
-          'excerpt',
-          'thumbnail'
-        ),
-        'rewrite'=>array(
-          'slug'=>'course'
-        ),
-        'public'=>true,
-        'menu_icon' => 'dashicons-star-filled',
-        'labels' => array(
-          'name'=>'Courses',
-          'add_new_item'=>'Add new course',
-          'edit_item'=>'Edit cours',
-          'all_items'=>'All courses',
-          'singular_name'=>'Cours'
+    // register_post_type('course',array(
+    //     'has_archive'=> true,
+    //     'supports'=>array(
+    //       'title',
+    //       'editor',
+    //       'excerpt',
+    //       'thumbnail'
+    //     ),
+    //     'rewrite'=>array(
+    //       'slug'=>'course'
+    //     ),
+    //     'public'=>true,
+    //     'menu_icon' => 'dashicons-star-filled',
+    //     'labels' => array(
+    //       'name'=>'Courses',
+    //       'add_new_item'=>'Add new course',
+    //       'edit_item'=>'Edit cours',
+    //       'all_items'=>'All courses',
+    //       'singular_name'=>'Cours'
 
-        )
-    ));
+    //     )
+    // ));
     register_post_type('podcast',array(
         'has_archive'=> true,
         'supports'=>array(

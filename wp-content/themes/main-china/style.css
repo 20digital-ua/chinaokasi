@@ -202,6 +202,10 @@ body.no-scroll {
   padding: 0;
 }
 
+.container-content-center {
+  text-align: center;
+}
+
 .container-inner {
   position: relative;
   max-width: 1056px;
@@ -356,7 +360,7 @@ body:not(.front-page) .burger-btn span {
 
 .head-main .head-text {
   padding-left: 1em;
-  width: 55%;
+  width: 50%;
   transition: all .25s linear;
 }
 
@@ -373,6 +377,7 @@ body:not(.front-page) .burger-btn span {
 .head-main .greeting {
   margin-top: 44px;
   display: none;
+  max-width: 90%;
   font: 0.5em "Poppins-Regular";
 }
 
@@ -751,7 +756,11 @@ body:not(.front-page) .burger-btn span {
 }
 
 .sign-podcast {
-  margin-top: 25px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .sign-podcast__title {
@@ -759,7 +768,6 @@ body:not(.front-page) .burger-btn span {
   line-height: 36px;
   font: 20px "Poppins-Medium";
   font-weight: 500;
-  margin-right: 40px;
   display: inline-block;
   background: linear-gradient(90deg, #FF3E5C 0%, #5D5CC3 100%);
   -webkit-background-clip: text;
@@ -767,10 +775,13 @@ body:not(.front-page) .burger-btn span {
 }
 
 .follow {
+  margin: 0 auto;
   margin-top: 48px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
 }
 
 .follow__img {
@@ -1553,7 +1564,8 @@ footer {
 
 /* SINGLE COURSE */
 
-.single-cours-head-main {
+.single-cours-head-main,
+.news-head-main {
   height: 192px;
   min-height: unset;
   max-height: 640px;
@@ -1563,7 +1575,8 @@ footer {
   align-items: flex-end;
 }
 
-.single-cours-head-main .container {
+.single-cours-head-main .container,
+.news-head-main .container {
   display: flex;
   align-self: stretch;
   align-items: center;
@@ -1572,22 +1585,32 @@ footer {
   position: relative;
 }
 
-.single-cours-head-main .container.life:before {
+.single-cours-head-main .container.life:before,
+.news-head-main .container.life:before {
   background: url("assets/img/header/BG/Diamond.svg") center no-repeat;
   background-size: contain;
 }
 
-.single-cours-head-main .container.work:before {
+.single-cours-head-main .container.work:before,
+.news-head-main .container.work:before {
   background: url("assets/img/header/BG/Dollar.svg") center no-repeat;
   background-size: contain;
 }
 
-.single-cours-head-main .container.love:before {
+.single-cours-head-main .container.love:before,
+.news-head-main .container.love:before {
   background: url("assets/img/header/BG/Heart.svg") center no-repeat;
   background-size: contain;
 }
 
-.single-cours-head-main .container:before {
+.single-cours-head-main .container.news:before,
+.news-head-main .container.news:before {
+  background: url("assets/img/header/BG/CrownLogo-trans.svg") center no-repeat;
+  background-size: contain;
+}
+
+.single-cours-head-main .container:before,
+.news-head-main .container:before {
   content: '';
   display: block;
   width: 158px;
@@ -1596,19 +1619,28 @@ footer {
   z-index: 99;
 }
 
-.single-cours-head-main .container.life:after {
+.single-cours-head-main .container.life:after,
+.news-head-main .container.life:after {
   content: 'Life';
 }
 
-.single-cours-head-main .container.work:after {
+.single-cours-head-main .container.work:after,
+.news-head-main .container.work:after {
   content: 'Work';
 }
 
-.single-cours-head-main .container.love:after {
+.single-cours-head-main .container.love:after,
+.news-head-main .container.love:after {
   content: 'Love';
 }
 
-.single-cours-head-main .container:after {
+.single-cours-head-main .container.news:after,
+.news-head-main .container.news:after {
+  content: 'News';
+}
+
+.single-cours-head-main .container:after,
+.news-head-main .container:after {
   font: 350px "PermanentMarker";
   background-size: contain;
   position: absolute;
@@ -1619,12 +1651,14 @@ footer {
   display: none;
 }
 
-.single-cours-head-main.section {
+.single-cours-head-main.section,
+.news-head-main.section {
   padding: 0;
   padding-bottom: 0;
 }
 
-.single-cours-head-main .head-img-wrp {
+.single-cours-head-main .head-img-wrp,
+.news-head-main .head-img-wrp {
   padding-top: 36px;
   width: 40%;
   align-self: flex-end;
@@ -1634,29 +1668,35 @@ footer {
   align-items: flex-end;
 }
 
-.single-cours-head-main .head-img-wrp__img {
+.single-cours-head-main .head-img-wrp__img,
+.news-head-main .head-img-wrp__img {
   width: 90%;
   max-height: 235px;
   object-fit: contain;
 }
 
-.single-cours-head-main .head-content {
+.single-cours-head-main .head-content,
+.news-head-main .head-content {
   width: 60%;
 }
 
-.single-cours-head-main .head-content__welcome {
+.single-cours-head-main .head-content__welcome,
+.news-head-main .head-content__welcome {
   font: 16px "Poppins-Medium";
 }
 
-.single-cours-head-main .head-content__title {
+.single-cours-head-main .head-content__title,
+.news-head-main .head-content__title {
   font: 32px "Poppins-Bold";
 }
 
-.single-cours-head-main .head-content__subtitle {
+.single-cours-head-main .head-content__subtitle,
+.news-head-main .head-content__subtitle {
   font: 16px "Poppins-SemiBold";
 }
 
-.single-cours-head-main .head-content__subtitle span {
+.single-cours-head-main .head-content__subtitle span,
+.news-head-main .head-content__subtitle span {
   font-family: "Poppins-Regular";
 }
 
@@ -1671,7 +1711,6 @@ footer {
 
 .cinfo-content {
   display: none;
-  margin-bottom: 38px;
 }
 
 .cinfo-content__welcome {
@@ -1683,11 +1722,11 @@ footer {
 }
 
 .cinfo-content__subtitle {
-  font: 24px "Poppins-Bold";
+  font: 24px "Poppins-Regular";
 }
 
 .cinfo-content__subtitle span {
-  font-family: "Poppins-Regular";
+  font-family: "Poppins-Bold";
 }
 
 .info-list {
@@ -1737,7 +1776,8 @@ footer {
   max-width: 736px;
 }
 
-.page-template-page-lwl .blog-section {
+.page-template-page-lwl .blog-section,
+.blog .blog-section {
   padding: 80px 0;
 }
 
@@ -2039,10 +2079,13 @@ footer {
 /* BUTTONS */
 
 .submit-btn {
+  outline: none;
   cursor: pointer;
   border: none;
-  width: 100%;
+  padding: 0 30px;
   height: 64px;
+  min-width: 260px;
+  width: 100%;
   background-color: #5D5CC3;
   border-radius: 25px  0;
   color: #fff;
@@ -2059,9 +2102,11 @@ footer {
 .link-btn {
   cursor: pointer;
   border: none;
-  display: block;
-  width: 100%;
+  display: inline-block;
+  padding: 0 30px;
   height: 64px;
+  min-width: 260px;
+  width: 100%;
   background-color: #FF3E5C;
   border-radius: 25px  0;
   color: #fff;
@@ -2072,7 +2117,7 @@ footer {
 }
 
 .link-btn-center {
-  margin: 0 auto;
+  text-align: center;
 }
 
 .takeBtn {
@@ -2256,15 +2301,18 @@ footer {
     width: 45%;
   }
 
-  .single-cours-head-main {
+  .single-cours-head-main,
+  .news-head-main {
     height: auto;
   }
 
-  .single-cours-head-main .head-img-wrp {
+  .single-cours-head-main .head-img-wrp,
+  .news-head-main .head-img-wrp {
     width: 45%;
   }
 
-  .single-cours-head-main .head-img-wrp__img {
+  .single-cours-head-main .head-img-wrp__img,
+  .news-head-main .head-img-wrp__img {
     max-height: 473px;
   }
 
@@ -2359,19 +2407,10 @@ footer {
     font-size: 20px;
   }
 
-  .sign-podcast {
-    margin-top: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .sign-podcast .submit-btn {
-    margin: 0;
-  }
-
   .follow {
     margin-top: 86px;
+    justify-content: space-between;
+    flex-direction: row;
   }
 
   .blog-section {
@@ -2554,17 +2593,20 @@ footer {
     margin-bottom: 48px;
   }
 
-  .single-cours-head-main .container:after {
+  .single-cours-head-main .container:after,
+  .news-head-main .container:after {
     display: block;
     font-size: 200px;
   }
 
-  .single-cours-head-main .head-img-wrp {
+  .single-cours-head-main .head-img-wrp,
+  .news-head-main .head-img-wrp {
     padding-top: 106px;
     width: auto;
   }
 
-  .single-cours-head-main .head-content {
+  .single-cours-head-main .head-content,
+  .news-head-main .head-content {
     visibility: hidden;
   }
 
@@ -2591,7 +2633,8 @@ footer {
     padding: 150px 0 100px 0;
   }
 
-  .page-template-page-lwl .blog-section {
+  .page-template-page-lwl .blog-section,
+  .blog .blog-section {
     padding: 140px 0 100px 0;
   }
 
@@ -2625,7 +2668,8 @@ footer {
 
   .submit-btn,
   .link-btn {
-    max-width: 224px;
+    max-width: 350px;
+    width: unset;
   }
 
   .podcast-player {
@@ -2891,11 +2935,13 @@ footer {
     width: 48%;
   }
 
-  .single-cours-head-main .container:after {
+  .single-cours-head-main .container:after,
+  .news-head-main .container:after {
     font-size: 275px;
   }
 
-  .single-cours-head-main .head-img-wrp {
+  .single-cours-head-main .head-img-wrp,
+  .news-head-main .head-img-wrp {
     padding-top: 167px;
   }
 
@@ -2922,14 +2968,9 @@ footer {
     grid-row: 3/6;
   }
 
-  .post-grid .single-subscribe {
-    grid-column: 2/3;
-    grid-row: 3/4;
-  }
-
   .post-grid .podcast.single-post {
     grid-column: 2/3;
-    grid-row: 4/5;
+    grid-row: 3/5;
   }
 
   .single-post-content {
@@ -3115,19 +3156,23 @@ footer {
     justify-content: space-between;
   }
 
-  .single-cours-head-main {
+  .single-cours-head-main,
+  .news-head-main {
     height: 640px;
   }
 
-  .single-cours-head-main .container.work:after {
+  .single-cours-head-main .container.work:after,
+  .news-head-main .container.work:after {
     right: -5%;
   }
 
-  .single-cours-head-main .container.love:after {
+  .single-cours-head-main .container.love:after,
+  .news-head-main .container.love:after {
     right: 0;
   }
 
-  .single-cours-head-main .container:after {
+  .single-cours-head-main .container:after,
+  .news-head-main .container:after {
     font-size: 300px;
   }
 
@@ -3139,7 +3184,8 @@ footer {
     padding: 120px 0 170px 0;
   }
 
-  .page-template-page-lwl .blog-section {
+  .page-template-page-lwl .blog-section,
+  .blog .blog-section {
     padding: 170px 0 100px 0;
   }
 
@@ -3148,7 +3194,7 @@ footer {
   }
 
   .podcast.single-post {
-    margin-top: 90px;
+    margin-top: 0;
   }
 }
 
@@ -3290,13 +3336,15 @@ footer {
     padding: 134px 0;
   }
 
-  .single-cours-head-main .container:before {
+  .single-cours-head-main .container:before,
+  .news-head-main .container:before {
     left: 0;
     width: 402px;
     height: 444px;
   }
 
-  .single-cours-head-main .container:after {
+  .single-cours-head-main .container:after,
+  .news-head-main .container:after {
     font-size: 350px;
   }
 

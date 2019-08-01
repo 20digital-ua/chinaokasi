@@ -24,10 +24,8 @@
 		</section>
 
 		<section class="subscribe-section section">
-			<div class="container">
-				<div class="subscribe-block">
-					<button class="button submit-btn popub-btn-open" data-groupe="all">Join my movement</button>
-				</div>
+			<div class="container container-content-center">
+				<button class="button submit-btn popub-btn-open" data-groupe="all">Join my movement</button>
 			</div>
 		</section>
 		<section class="courses-section section">
@@ -116,7 +114,7 @@
 			<div class="container container--podcast-player">
 				<?php get_template_part('template-parts/podcast','player') ?>
 				<div class="sign-podcast">
-					<h3 class="sign-podcast__title">Sign up to get <br>
+					<h3 class="sign-podcast__title">Sign up to get 
 							new episodes first</h3>
 					<button class="button submit-btn popub-btn-open" data-groupe="podcast">Be the first to hear!</button>
 				</div>

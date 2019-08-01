@@ -26,26 +26,23 @@
             <div class="mc-field-group input-group" style="display:none;">
               <strong>Subs</strong>
               <ul class="groupe-list">
-              <li><input type="radio" value="1" name="group[23609]" data-groupe="all" id="mce-group[23609]-23609-0"><label for="mce-group[23609]-23609-0">All</label></li>
-              <li><input type="radio" value="2" name="group[23609]" data-groupe="life" id="mce-group[23609]-23609-1"><label for="mce-group[23609]-23609-1">Live</label></li>
-              <li><input type="radio" value="4" name="group[23609]" data-groupe="work" id="mce-group[23609]-23609-2"><label for="mce-group[23609]-23609-2">Work</label></li>
-              <li><input type="radio" value="8" name="group[23609]" data-groupe="love" id="mce-group[23609]-23609-3"><label for="mce-group[23609]-23609-3">Love</label></li>
-              <li><input type="radio" value="16" name="group[23609]" data-groupe="podcast" id="mce-group[23609]-23609-4"><label for="mce-group[23609]-23609-4">Podcasts</label></li>
-                </ul>
+                <li><input type="radio" value="1" name="group[23609]" data-groupe="all" id="mce-group[23609]-23609-0"><label for="mce-group[23609]-23609-0">All</label></li>
+                <li><input type="radio" value="2" name="group[23609]" data-groupe="life" id="mce-group[23609]-23609-1"><label for="mce-group[23609]-23609-1">Live</label></li>
+                <li><input type="radio" value="4" name="group[23609]" data-groupe="work" id="mce-group[23609]-23609-2"><label for="mce-group[23609]-23609-2">Work</label></li>
+                <li><input type="radio" value="8" name="group[23609]" data-groupe="love" id="mce-group[23609]-23609-3"><label for="mce-group[23609]-23609-3">Love</label></li>
+                <li><input type="radio" value="16" name="group[23609]" data-groupe="podcast" id="mce-group[23609]-23609-4"><label for="mce-group[23609]-23609-4">Podcasts</label></li>
+              </ul>
             </div>
             <div id="mce-responses" class="clear">
               <div class="response" id="mce-error-response" style="display:none"></div>
               <div class="response" id="mce-success-response" style="display:none"></div>
             </div>  
             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ef335dd7b9dff42381a557625_eb6dd1fe6d" tabindex="-1" value=""></div>
-            
           </div>
         </form>
       </div>
     </div>
-    
   </div>
-
 </div>
 
 

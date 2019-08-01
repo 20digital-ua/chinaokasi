@@ -17,8 +17,6 @@ function get_podcasts($pageID){
   jQuery.post( my_ajax_object.ajaxurl, data, function(response) {
       // obj = response;
       obj = JSON.parse(response);
-      console.log(obj);
-
       change_page();
 
   });

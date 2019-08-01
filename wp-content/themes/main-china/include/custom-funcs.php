@@ -19,22 +19,39 @@ function getPageLink($page){
 }
 
 //////////////////////////////////////////////
-function getPageName($id){
+function getPageData($id){
   switch ($id){
-    case '17':  
-      $page='work';
+    case '15':  // LIFE ---------
+      $data=array(
+        'slug'=>'life',
+        'blog-title'=>get_post_field('blogposts_title', get_the_ID())
+      );
       break;
-    case '20':  
-      $page='love';
+    case '17':   // WORK ---------
+      $data=array(
+        'slug'=>'work',
+        'blog-title'=>get_post_field('blogposts_title', get_the_ID())
+      );
       break;
-    case '15':  
-      $page='life';
+    case '20':   // LOVE ---------
+      $data=array(
+        'slug'=>'love',
+        'blog-title'=>get_post_field('blogposts_title', get_the_ID())
+      );
       break;
-    case '155':  
-      $page='news,china&friends';
+    
+    case '155':   // NEWS ---------
+      $data=array(
+        'slug'=>'news,china&friends',
+        'blog-title'=>get_post_field('blogposts_title', get_option('page_for_posts'))
+      );
       break;
   }
-  return $page;
+  if($data['blog-title']==''){
+    $data['blog-title']="Check out my blog";
+  }
+
+  return $data;
 }
 
 

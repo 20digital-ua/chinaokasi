@@ -1,4 +1,5 @@
-.single-cours-head-main{
+.single-cours-head-main,
+.news-head-main{
   height: 192px;
   min-height: unset;
   max-height: 640px;
@@ -31,6 +32,10 @@
       background: url("#{$image_dir}header/BG/Heart.svg") center no-repeat;
       background-size: contain;
     }
+    &.news:before{
+      background: url("#{$image_dir}header/BG/CrownLogo-trans.svg") center no-repeat;
+      background-size: contain;
+    }
     &:before{
       content: '';
       display: block;
@@ -58,6 +63,9 @@
       @include screen-md{
         right: 0;
       }
+    }
+    &.news:after{
+      content: 'News';
     }
     &:after{
       @include font(350px, $PermanentMarker);

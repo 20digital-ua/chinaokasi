@@ -33,8 +33,6 @@ function get_posts($pageID,$postsCount,$category){
       category:$category
 			// category:'<?=$category_slug ?>'
   };
-  console.log(data);
-  
   jQuery.post( my_ajax_object.ajaxurl, data, function(response) {
       // obj = response;
       obj = JSON.parse(response);

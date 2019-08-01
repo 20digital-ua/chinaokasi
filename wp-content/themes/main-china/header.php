@@ -51,7 +51,7 @@
 						<ul class="pages-menu">
 							<li><a href="<?= getPageLink('bio'); ?>">Bio</a></li>
 							<li><a href="<?php echo site_url('/inspirational-women-in-media')?>">TV Clips & Photos</a></li>
-							<li><a href="<?php echo get_option('posts_page')?>">News</a></li>
+							<li><a href="<?php echo get_permalink(get_option('page_for_posts'))?>">News</a></li>
 							
 							<!-- <li class="pages-menu__title"><span>Content</span>	
 								<ul class="pages-menu__sub">

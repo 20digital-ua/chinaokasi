@@ -3,11 +3,11 @@
 	Template Post Type: page */ 
 ?>
 <?php get_header(); 
-
+$pageData=getPageData(get_the_ID());
 ?>
 <main>
-		<section class="head-main single-cours-head-main section " data-page="<?=	getPageName(get_the_ID())?>">
-			<div class="container <?=	getPageName(get_the_ID())?>">
+		<section class="head-main single-cours-head-main section " data-page="<?=$pageData['slug']?>">
+			<div class="container <?=	getPageData(get_the_ID())?>">
 				<div class="head-content">
 					<span class="head-content__welcome">WELCOME to</span>
 					<h1 class="head-content__title"><?php the_title();?></h1>
@@ -24,14 +24,11 @@
 					<div class="cinfo-content">
 						<span class="cinfo-content__welcome">WELCOME to</span>
 						<h1 class="cinfo-content__title"><?php the_title();?></h1>
-						<span class="cinfo-content__subtitle"><span>my </span> <?php the_title();?>style — Guide Channel</span>
 					</div>
-					<ul class="info-list">
-						<li>Lorem Ipsum has been the industry's standard</li>
-						<li>Lorem Ipsum has been the industry's standard</li>
-						<li>Lorem Ipsum has been the industry's standard</li>
-					</ul>
-					<button href="#" class="link-btn" id="popub-btn-open"><span class="link-inner">Take <?php the_title();?> Course</span></button>
+					<div class="info-list">
+						<?php echo get_post_field('post_content', $post->ID); ?>
+					</div>
+					<button class="link-btn" id="popub-btn-open"><span class="link-inner">Take <?php the_title();?> Course</span></button>
 				</div>
 			</div>
 		</section>

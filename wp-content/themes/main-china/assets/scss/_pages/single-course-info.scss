@@ -24,7 +24,6 @@
 }
 .cinfo-content{
   display: none;
-  margin-bottom: 38px;
   @include screen-tb{
     display: block;
   }
@@ -35,9 +34,10 @@
     @include font(64px, $PoppinsBold);
   }
   &__subtitle{
-    @include font(24px, $PoppinsBold);
+    @include font(24px, $Poppins);
     span{
-      font-family: $Poppins;
+    font-family: $PoppinsBold;
+      
     }
   }
 }
@@ -98,7 +98,8 @@
 }
 
 
-.page-template-page-lwl .blog-section{
+.page-template-page-lwl .blog-section,
+.blog .blog-section{
   padding: 80px 0;
   @include screen-tb{
     padding: 140px 0 100px 0;
