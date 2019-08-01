@@ -2,42 +2,8 @@
 <link rel="stylesheet" id="subscribe-css" href="../../assets/style/subscribe-styles.css" type="text/css" media="all">
 
 <div id="mc_embed_signup" class="podcast">
-<h3 class="sign-podcast__title">Sign up to get <br>
-							new episodes first</h3>
 
-  <form  action="https://gmail.us3.list-manage.com/subscribe/post?u=299144442459ae6cad07bdcff&amp;id=bbe289ae96" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate primary-form podcast-form" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-      <div class="form-row form-row-two-col">
-        <div class="mc-field-group col-1">
-          <label for="mce-FNAME" class="primary-form__label">Name</label>
-          <input type="text" value="" placeholder="Your Name" name="FNAME" class="required input primary-form__input" id="mce-FNAME">
-        </div>
-        <div class="mc-field-group col-2">
-          <label for="mce-EMAIL" class="primary-form__label">Email</label>
-          <input type="email" value="" placeholder="Your Email" name="EMAIL" class="required email input primary-form__input primary-form__input-last" id="mce-EMAIL">
-        </div>
-        <input type="submit" value="Be the first to hear!" name="subscribe" id="mc-embedded-subscribe" class="button primary-form__submit submit-btn">
-      </div>
-      
-      
-      <div class="mc-field-group input-group" style="display:none;">
-        <strong>Subs </strong>
-        <ul>
-        <li><input type="radio" value="1" name="group[23609]" id="mce-group[23609]-23609-0"><label for="mce-group[23609]-23609-0">All</label></li>
-        <li><input type="radio" value="2" name="group[23609]" id="mce-group[23609]-23609-1"><label for="mce-group[23609]-23609-1">Live</label></li>
-        <li><input type="radio" value="4" name="group[23609]" id="mce-group[23609]-23609-2"><label for="mce-group[23609]-23609-2">Work</label></li>
-        <li><input type="radio" value="8" name="group[23609]" id="mce-group[23609]-23609-3"><label for="mce-group[23609]-23609-3">Love</label></li>
-        <li><input type="radio" value="16" name="group[23609]" id="mce-group[23609]-23609-4" checked><label for="mce-group[23609]-23609-4">Podcasts</label></li>
-          </ul>
-      </div>
-      <div id="mce-responses" class="clear">
-        <div class="response" id="mce-error-response" style="display:none"></div>
-        <div class="response" id="mce-success-response" style="display:none"></div>
-      </div>  
-      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ef335dd7b9dff42381a557625_eb6dd1fe6d" tabindex="-1" value=""></div>
-      
-    </div>
-  </form>
+
 </div>
 
 

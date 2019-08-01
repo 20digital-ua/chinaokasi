@@ -64,7 +64,7 @@
       line-height: 21px;
       padding-left: 1em;
       font-family: inherit;
-
+ 
     }
   }
   .buttons{
@@ -76,31 +76,5 @@
     padding: 6px 16px;
     cursor: pointer;
     margin-top: 16px;
-  }
-}
-/* IFRAMES CONTROL */
-.head-lap-iframe{
-  height: 230px;
-}
-.head-mob-iframe{
-  height: 325px;
-}
-.podcast-iframe{
-  height: 360px;
-  @include screen-lp{
-    height: 135px;
-  }
-}
-.single-post-podcast-iframe{
-  height: 400px;
-}
-.single-post-all-iframe{
-  margin-top: 25px;
-  height: 280px;
-}
-.corses-iframe{
-  height: 280px;
-  @include screen-lp{
-    height: 245px;
   }
 }

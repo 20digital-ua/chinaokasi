@@ -1,6 +1,6 @@
 <?php
-require_once('assets/include/ajax.php');
-
+require_once('include/ajax.php');
+require_once('include/custom-funcs.php');
 
 
 add_action('wp_enqueue_scripts','head_files');
@@ -8,8 +8,6 @@ function head_files(){
 
     wp_enqueue_style('main-fonts',get_theme_file_uri('/assets/fonts/fonts.css'));
     wp_enqueue_style('main-styles',get_stylesheet_uri());
-
-
 
     wp_enqueue_script('main-js',get_theme_file_uri('/assets/js/main.js'),array('jquery'),'1.1',true);
     wp_enqueue_script('tabs-js',get_theme_file_uri('/assets/js/tabs.js'),null,'1.1',true);
@@ -43,10 +41,6 @@ function theme_support(){
 }
 
 
-
-
-
-
 add_filter( 'featured_audio_post_types', 'prefix_featured_audio_post_types' );
 function prefix_featured_audio_post_types( $post_types ) {
   // Add support to the sheet_music post type.
@@ -68,39 +62,3 @@ function my_class_names( $classes ) {
 	return $classes;
 }
 
-function getPageName($id){
-  switch ($id){
-    case '17':  
-      $page='work';
-      break;
-    case '20':  
-      $page='love';
-      break;
-    case '15':  
-      $page='life';
-      break;
-    case '155':  
-      $page='news,china&friends';
-      break;
-  }
-  return $page;
-}
-function getPageIdByCategory($category){
-  if(strpos($category,array('news','china&friends'))===false){
-    switch ($category){
-      case 'work':  
-        $id='17';
-        break;
-      case 'love':  
-        $id='20';
-        break;
-      case 'life':  
-        $id='15';
-        break;
-    }
-  }else{
-    $id='112';
-  }
-  
-  return $id;
-}
