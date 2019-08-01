@@ -72,15 +72,17 @@ function print_posts($obj){
 function print_pagination($obj){
   jQuery('#pagination').html('');
   var $paginationBtns = '';
-  
-  for(var $i=1;$i<=$obj['page'][0]['max'];$i++){
-    $className='';
-    if($i==$obj['page'][0]['current']){ $className='pagination__btn-active';}
-    $paginationBtns+='<button id="post-page_'+$i+'"'+'class="pagination__btn '+ $className+'" data-page='+$i+'>'+$i+'</button>';
-    if($i==4){
-      break;
+  if(obj['page'][0]['max']>1){
+    for(var $i=1;$i<=$obj['page'][0]['max'];$i++){
+      $className='';
+      if($i==$obj['page'][0]['current']){ $className='pagination__btn-active';}
+      $paginationBtns+='<button id="post-page_'+$i+'"'+'class="pagination__btn '+ $className+'" data-page='+$i+'>'+$i+'</button>';
+      if($i==4){
+        break;
+      }
     }
   }
+  
   
   jQuery('#pagination').append($paginationBtns);
   $buttons = jQuery('#pagination button');
@@ -88,6 +90,7 @@ function print_pagination($obj){
 function change_page(){
   print_posts(obj);
   print_pagination(obj);
+
   var $returnCat=[];
   $returnCat.push(jQuery('.blog-section').attr('data-category'));
   jQuery('#pagination button').on('click',(e)=>{

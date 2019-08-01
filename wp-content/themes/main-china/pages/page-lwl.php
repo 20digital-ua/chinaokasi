@@ -7,7 +7,7 @@ $pageData=getPageData(get_the_ID());
 ?>
 <main>
 		<section class="head-main single-cours-head-main section " data-page="<?=$pageData['slug']?>">
-			<div class="container <?=	getPageData(get_the_ID())?>">
+			<div class="container <?=$pageData['slug']?>">
 				<div class="head-content">
 					<span class="head-content__welcome">WELCOME to</span>
 					<h1 class="head-content__title"><?php the_title();?></h1>

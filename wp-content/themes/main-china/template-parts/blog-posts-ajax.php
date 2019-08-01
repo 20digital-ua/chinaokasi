@@ -2,7 +2,7 @@
 <?php
     $pageData=getPageData(get_the_ID());
 ?>
-<section class="blog-section section" data-category="<?=$pageData['slug']?>">
+<section class="blog-section blog-section-ajax section" data-category="<?=$pageData['slug']?>">
   <div class="container">
     <h2 class="title"><?=$pageData['blog-title']?></h2>
   </div>

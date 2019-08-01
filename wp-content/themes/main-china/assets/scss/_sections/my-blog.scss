@@ -64,6 +64,14 @@
     justify-content: space-evenly;
   }
 } 
+.blog-section-static{
+  .post:nth-child(3) ~ .post {
+    display: none; 
+    @include screen-lp{
+      display: block;
+    }
+  }
+}
 .post{
   width: 100%;
   background-color: #fff;
@@ -71,9 +79,7 @@
   overflow: hidden;
   max-width: 375px;
   
-  &:nth-child(3) ~ .post {
-    display: none; 
-  }
+  
   @include transition;
   @include screen-tb{
     width: 30%;
@@ -92,9 +98,6 @@
     background-color: unset;
     box-shadow: unset;
     margin-right: 48px;
-    &:nth-child(3) ~ .post {
-      display: block; 
-    }
   }
   &__link{
     color: inherit;
