@@ -76,50 +76,30 @@
 
 .sign-podcast{
   margin-top: 25px;
-  .primary-form{
-    max-width: 343px;
-  }
-  @include screen-md{
-    *{
-      margin: 0;
-    }
+  @include screen-tb{
     margin-top: 80px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
-    .primary-form{
-      *{
-        margin: 0;
-      }
-      width: 70%;
-      max-width: 70%;
-      display: flex;
-      align-items: center;
-      &__input{
-        max-width: 224px;
-      }
-      &__submit{
-        margin-top: 16px;
-        margin-left: 16px;
-      }
-      
-    }
-    
+    justify-content: center;
   }
   &__title{
     text-transform: uppercase;
     line-height: 36px;
     @include font(20px,$PoppinsMedium);
     font-weight: 500;
-    margin-bottom: 0.5em;
-
+    margin-right: 40px;
+    display: inline-block;
     background: linear-gradient(90deg,$redColor 0%, $violetColor 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
+  }
+  .submit-btn{
+    @include screen-tb{
+      margin: 0;
+    }
   }
 }
-
 
 .follow{
   margin-top: 48px;

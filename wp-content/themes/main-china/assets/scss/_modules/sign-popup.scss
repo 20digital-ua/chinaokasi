@@ -15,7 +15,7 @@
     opacity: 1;
   }
   &--open &__container{
-    top: 50%;
+    top: 40%;
     opacity: 1;
   }
   &--open &__form-box{
@@ -39,7 +39,7 @@
     opacity: 0;
     position: absolute;
     @include box(100%,auto);
-    top: 40%;
+    top: 30%;
     background: linear-gradient(180deg, #FF3E5C 0%, #5D5CC3 100%);
     transform: translateY(-50%);
     display: flex;

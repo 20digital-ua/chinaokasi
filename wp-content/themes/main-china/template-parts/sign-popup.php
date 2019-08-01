@@ -21,16 +21,16 @@
               <!-- <input type="submit" value="Be the first to hear!" name="subscribe" id="mc-embedded-subscribe" class="course__takelink takeBtn"> -->
               
             </div>
-            <button name="subscribe" id="mc-embedded-subscribe" class="course__takelink takeBtn"><span class="link-inner">Take <span class="link-inner-sm"></span> Course</span></button>
+            <button name="subscribe" id="mc-embedded-subscribe" class="course__take-btn takeBtn"><span class="link-inner">Take <span class="link-inner-sm"></span> Course</span></button>
             
             <div class="mc-field-group input-group" style="display:none;">
               <strong>Subs</strong>
-              <ul>
-              <li><input type="radio" value="1" name="group[23609]" id="mce-group[23609]-23609-0"><label for="mce-group[23609]-23609-0">All</label></li>
-              <li><input type="radio" value="2" name="group[23609]" id="mce-group[23609]-23609-1" checked><label for="mce-group[23609]-23609-1">Live</label></li>
-              <li><input type="radio" value="4" name="group[23609]" id="mce-group[23609]-23609-2"><label for="mce-group[23609]-23609-2">Work</label></li>
-              <li><input type="radio" value="8" name="group[23609]" id="mce-group[23609]-23609-3"><label for="mce-group[23609]-23609-3">Love</label></li>
-              <li><input type="radio" value="16" name="group[23609]" id="mce-group[23609]-23609-4"><label for="mce-group[23609]-23609-4">Podcasts</label></li>
+              <ul class="groupe-list">
+              <li><input type="radio" value="1" name="group[23609]" data-groupe="all" id="mce-group[23609]-23609-0"><label for="mce-group[23609]-23609-0">All</label></li>
+              <li><input type="radio" value="2" name="group[23609]" data-groupe="life" id="mce-group[23609]-23609-1"><label for="mce-group[23609]-23609-1">Live</label></li>
+              <li><input type="radio" value="4" name="group[23609]" data-groupe="work" id="mce-group[23609]-23609-2"><label for="mce-group[23609]-23609-2">Work</label></li>
+              <li><input type="radio" value="8" name="group[23609]" data-groupe="love" id="mce-group[23609]-23609-3"><label for="mce-group[23609]-23609-3">Love</label></li>
+              <li><input type="radio" value="16" name="group[23609]" data-groupe="podcast" id="mce-group[23609]-23609-4"><label for="mce-group[23609]-23609-4">Podcasts</label></li>
                 </ul>
             </div>
             <div id="mce-responses" class="clear">

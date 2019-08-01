@@ -25,7 +25,9 @@
       ?>
 <div class="podcast-player">  
   <div class="podcast-info">
-      <p class="podcast-player__title"><?=$titleText?></p>
+      <!-- <p class="podcast-player__title"><?php// echo $titleText ?></p> -->
+      <p class="podcast-player__title">Click here to listen to an<br> 
+<strong>episode sample</strong>  of China & Friends! </p>
   </div>
   <div class="podcast-controls">
     <button  id="podcast-1" class="podcast-playBtn"></button>
