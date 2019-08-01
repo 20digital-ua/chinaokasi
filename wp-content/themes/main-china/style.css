@@ -903,6 +903,10 @@ body:not(.front-page) .burger-btn span {
   opacity: 1;
 }
 
+.blog-section-static .post:nth-child(3) ~ .post {
+  display: none;
+}
+
 .post {
   width: 100%;
   background-color: #fff;
@@ -913,10 +917,6 @@ body:not(.front-page) .burger-btn span {
   position: relative;
   margin-bottom: 32px;
   box-shadow: 0px 4px 25px rgba(115, 115, 115, 0.1);
-}
-
-.post:nth-child(3) ~ .post {
-  display: none;
 }
 
 .post__link {
@@ -2000,7 +2000,7 @@ footer {
 }
 
 .sign-popup--open .sign-popup__container {
-  top: 40%;
+  top: 0;
   opacity: 1;
 }
 
@@ -2013,7 +2013,7 @@ footer {
   max-width: 800px;
   height: 100%;
   position: relative;
-  top: 70px;
+  top: 40px;
 }
 
 .sign-popup__container {
@@ -2024,7 +2024,7 @@ footer {
   height: auto;
   top: 30%;
   background: linear-gradient(180deg, #FF3E5C 0%, #5D5CC3 100%);
-  transform: translateY(-50%);
+  transform: unset;
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -2642,6 +2642,10 @@ footer {
     padding: 64px 0 96px 0;
   }
 
+  .sign-popup--open .sign-popup__container {
+    top: 40%;
+  }
+
   .sign-popup--open .sign-popup__form-box {
     bottom: -100px;
   }
@@ -2654,6 +2658,8 @@ footer {
     bottom: -100px;
     height: auto;
     max-height: 400px;
+    transform: unset;
+    transform: translateY(-50%);
   }
 
   .sign-popup__form-box {
@@ -2797,6 +2803,10 @@ footer {
     align-items: stretch;
     flex-wrap: wrap;
     margin-top: 48px;
+  }
+
+  .blog-section-static .post:nth-child(3) ~ .post {
+    display: block;
   }
 
   .title-subscribe {
@@ -3094,10 +3104,6 @@ footer {
     background-color: unset;
     box-shadow: unset;
     margin-right: 48px;
-  }
-
-  .post:nth-child(3) ~ .post {
-    display: block;
   }
 
   .in-touch-section .text {

@@ -9,7 +9,7 @@
 ?>
 
 
-<section class="blog-section section">
+<section class="blog-section blog-section-static section">
 	<div class="container">
     <h2 class="title">Check out my blog</h2>
 	</div>

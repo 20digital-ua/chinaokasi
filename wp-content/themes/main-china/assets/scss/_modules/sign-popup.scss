@@ -15,8 +15,11 @@
     opacity: 1;
   }
   &--open &__container{
-    top: 40%;
+    top:0;
     opacity: 1;
+    @include screen-tb{
+      top: 40%;
+    }
   }
   &--open &__form-box{
     bottom: -50px;
@@ -29,7 +32,7 @@
     max-width: 800px;
     height: 100%;
     position: relative;
-    top: 70px;
+    top: 40px;
     @include screen-tb{
       top: 0;
     }
@@ -41,7 +44,7 @@
     @include box(100%,auto);
     top: 30%;
     background: linear-gradient(180deg, #FF3E5C 0%, #5D5CC3 100%);
-    transform: translateY(-50%);
+    transform: unset;
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -49,6 +52,8 @@
       bottom: -100px;
       height: auto;
       max-height: 400px;
+      transform: unset;
+      transform: translateY(-50%);
     }
   }
   &__form-box{
