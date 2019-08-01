@@ -75,39 +75,43 @@
 }
 
 .sign-podcast{
-  margin-top: 25px;
-  @include screen-tb{
-    margin-top: 80px;
+    margin-top: 40px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
+  @include screen-tb{
+    // margin-top: 40px;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center; 
   }
   &__title{
     text-transform: uppercase;
     line-height: 36px;
     @include font(20px,$PoppinsMedium);
     font-weight: 500;
-    margin-right: 40px;
     display: inline-block;
     background: linear-gradient(90deg,$redColor 0%, $violetColor 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
-  }
-  .submit-btn{
-    @include screen-tb{
-      margin: 0;
-    }
   }
 }
 
 .follow{
+  margin: 0 auto;
   margin-top: 48px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  max-width: 800px;
   @include screen-tb{
     margin-top: 86px;
+    justify-content: space-between; 
+    flex-direction: row;
+
   }
   @include screen-lg{
     margin-top: 150px;

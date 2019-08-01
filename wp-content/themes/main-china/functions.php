@@ -23,7 +23,7 @@ function head_files(){
             array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
     }
    
-    if((is_home() && !is_front_page()) || getPageName(get_the_ID())!=NULL){    
+    if((is_home() && !is_front_page()) || getPageData(get_the_ID())!=NULL){    
       wp_enqueue_script('ajax-posts',get_theme_file_uri('/assets/js/ajax-posts.js'),null,'1.1',true);
       wp_localize_script( 'ajax-posts', 'my_ajax_object',
               array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
@@ -52,6 +52,18 @@ function prefix_featured_audio_post_types( $post_types ) {
   return $post_types;
 }
 
+// REMOVE EDITOR
+// add_action("init","reset_editor");
+function reset_editor()
+{
+     global $_wp_post_type_features;
+
+     $post_type="page";
+     $feature = "editor";
+     if (isset($_wp_post_type_features[$post_type][$feature]) )
+     {unset($_wp_post_type_features[$post_type][$feature]);}
+     
+}
 
 
 add_filter( 'body_class','my_class_names' );

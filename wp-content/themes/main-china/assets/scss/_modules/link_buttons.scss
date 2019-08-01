@@ -1,8 +1,11 @@
 .submit-btn{
+  outline: none;
   cursor: pointer;
   border: none;
-  width: 100%;
+  padding: 0 30px;
   height: 64px;
+  min-width: 260px;
+  width: 100%;
   background-color: $violetColor;
   border-radius: 25px  0;
   color: #fff;
@@ -18,9 +21,11 @@
 .link-btn{
   cursor: pointer;
   border: none;
-  display: block;
-  width: 100%;
+  display: inline-block;
+  padding: 0 30px;
   height: 64px;
+  min-width: 260px;
+  width: 100%;
   background-color: $redColor;
   border-radius: 25px  0;
   color: #fff;
@@ -29,13 +34,14 @@
   text-align: center;
   outline: none;
   &-center{
-    margin: 0 auto; 
+    text-align: center;
   }
 }
 .submit-btn,
 .link-btn{
   @include screen-tb{
-    max-width: 224px;
+    max-width: 350px;
+    width: unset;
   }
 }
 .takeBtn{

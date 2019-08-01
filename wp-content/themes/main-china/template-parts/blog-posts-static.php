@@ -5,6 +5,7 @@
       'category__not_in' => array('1'),
     );
     $blogPosts = new WP_Query($args);
+
 ?>
 
 
@@ -42,7 +43,7 @@
             </div>
       <?php } ?>
     </div>		
-		<div class="container">
+		<div class="container container-content-center">
 			<a href="<?php echo get_permalink(get_option('page_for_posts'));?>" class="link-btn link-btn-center more-posts"><span class="link-inner">More posts</span></a>
 		</div> 
 		
