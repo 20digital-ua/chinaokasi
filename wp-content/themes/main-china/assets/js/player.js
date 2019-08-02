@@ -3,6 +3,7 @@ let player=jQuery('.podcast-player-tag');
 let playBtn=jQuery('.podcast-playBtn');
 var progress=jQuery('#progress-bar');
 var progressFill=jQuery('#progress-bar__fill');
+var progressPin=jQuery('.progress-bar__pin');
 
 
 
@@ -10,6 +11,7 @@ var progressFill=jQuery('#progress-bar__fill');
 jQuery(document).on('click','.podcast-playBtn',function(){
     togglePlay(this.id);
 })
+
 
 
 
@@ -38,7 +40,13 @@ function updateProgress(playAudio){
 }
 
 
-
+// function progressModify(){
+//     var p=jQuery('#podcast-1__audio');
+//     var m = true;
+//     p[0].pause();
+//     p[0].currentTime+=5;
+//     console.log(m);
+//  }
 
 
 

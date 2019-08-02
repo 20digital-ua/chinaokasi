@@ -33,10 +33,11 @@
     <button  id="podcast-1" class="podcast-playBtn"></button>
     <div class="progress-bar" id="podcast-1__bar">
       <div class="progress-bar__fill" id="podcast-1__audio__bar-fill">
-        <div class="progress-bar__pin">	</div>
+         <div class="progress-bar__pin"></div>
       </div>
     </div>
   </div>
-  <audio id="podcast-1__audio" class="podcast-player-tag" ontimeupdate="updateProgress(this)" src="<?=$podcastSrc?>"></audio>
+  <audio id="podcast-1__audio" class="podcast-player-tag" ontimeupdate="updateProgress(this)" src="<?php echo $podcastSrc?>"></audio>
+  <!-- <audio id="podcast-1__audio" class="podcast-player-tag" ontimeupdate="updateProgress(this)" src="<?php //echo get_template_directory_uri(); ?>/assets/source/audio/kazka-plakala-rington_(muztron.com).mp3"></audio>  -->
 </div>
 <?php wp_reset_postdata(); ?>
