@@ -2120,6 +2120,11 @@ footer {
   text-align: center;
 }
 
+.submit-btn .upp,
+.link-btn .upp {
+  text-transform: uppercase;
+}
+
 .takeBtn {
   border: none;
   cursor: pointer;
@@ -2427,12 +2432,6 @@ footer {
   .post {
     width: 30%;
     min-width: 320px;
-    margin-right: 15px;
-  }
-
-  .post:nth-child(3n),
-  .post:last-child {
-    margin-right: 0;
   }
 
   .in-touch-section {
@@ -3103,7 +3102,6 @@ footer {
     margin-bottom: 40px;
     background-color: unset;
     box-shadow: unset;
-    margin-right: 48px;
   }
 
   .in-touch-section .text {

@@ -4453,6 +4453,13 @@ function (a) {
 			if (resp.result == "success") {
 				$('#mce-' + resp.result + '-response').show();
 				$('#mce-' + resp.result + '-response').html(resp.msg);
+				
+				
+				
+				// $('#mc-embedded-subscribe-form').hide(); 
+
+
+
 				$('#mc-embedded-subscribe-form').each(function () {
 					this.reset();
 				});
@@ -4502,6 +4509,7 @@ function (a) {
 					if (index == -1) {
 						$('#mce-' + resp.result + '-response').show();
 						$('#mce-' + resp.result + '-response').html(msg);
+						
 
 					} else {
 						var fieldName = $("input[name*='" + fnames[index] + "']").attr('name'); // Make sure this exists (they haven't deleted the fnames array lookup)

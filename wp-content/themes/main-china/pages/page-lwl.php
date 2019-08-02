@@ -28,7 +28,8 @@ $pageData=getPageData(get_the_ID());
 					<div class="info-list">
 						<?php echo get_post_field('post_content', $post->ID); ?>
 					</div>
-					<button class="link-btn" id="popub-btn-open"><span class="link-inner">Take <?php the_title();?> Course</span></button>
+					<!-- <button class="link-btn" id="popub-btn-open"><span class="link-inner">Take <?php //the_title();?> Course</span></button> -->
+					<button class="link-btn" id="popub-btn-open" data-groupe="<?=$pageData['slug']?>">Subscribe to <span class="upp"><?=$pageData['slug']?></span> Podcast </button>
 				</div>
 			</div>
 		</section>
