@@ -73,4 +73,3 @@ function my_class_names( $classes ) {
   }
 	return $classes;
 }
-

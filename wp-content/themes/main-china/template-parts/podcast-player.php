@@ -40,3 +40,4 @@
   <audio id="podcast-1__audio" class="podcast-player-tag" ontimeupdate="updateProgress(this)" src="<?=$podcastSrc?>"></audio>
   <!--<audio id="podcast-player-tag" src="source/audio/Ariana Grande - 7 rings-320.mp3"></audio>-->
 </div>
+<?php wp_reset_postdata(); ?>

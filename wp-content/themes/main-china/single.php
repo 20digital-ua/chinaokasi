@@ -1,13 +1,17 @@
 <?php get_header(); 
-
+$backLinkData=array(get_permalink(get_option('page_for_posts')),'News');
 while(have_posts()){
 	the_post();
 	$category=get_the_category();
+
+	if(!in_array($category[0]->slug,array('chinafriends','news'))){
+		$backLinkData=array(getPageLink($category[0]->slug),$category[0]->cat_name);
+	}
 ?>
 	<main>
 		<section class="main-single-post">
 			<div class="container container--nopadding">
-				<a href="<?php echo get_permalink(get_option('page_for_posts'));?>" class="post-back-link grid-padding">Back to <span>News</span> Blog Posts</a>
+				<a href="<?=$backLinkData[0]?>" class="post-back-link grid-padding">Back to <span><?=$backLinkData[1]?></span> Blog Posts</a>
 				<div class="post-grid">
 					<div class="post__title grid-padding">
 						<?php the_title();?>
@@ -19,7 +23,9 @@ while(have_posts()){
 							<div class="post-date"><?php the_date(); ?></div>
 						</div>
 					</div>	
+				
 					<div class="single-post-content">
+					
 						<?php 
 							$img='https://cdn-ds.com/noimage/w_640/h_480/noimage.jpg';
 							if(get_the_post_thumbnail()!=''){
@@ -29,6 +35,22 @@ while(have_posts()){
 							}
 						 ?>
 						<div class="single-post-content__text grid-padding">
+							
+							<?php if(get_field('podcast-src')) :?>
+							<div class="podcast-player podcast-player--single-post">  
+								<div class="podcast-controls">
+									<button  id="podcast-0" class="podcast-playBtn"></button>
+									<div class="progress-bar" id="podcast-0__bar">
+										<div class="progress-bar__fill" id="podcast-0__audio__bar-fill">
+											<div class="progress-bar__pin">	</div>
+										</div>
+									</div>
+								</div>
+								<audio id="podcast-0__audio" class="podcast-player-tag" ontimeupdate="updateProgress(this)" src="<?=get_field('podcast-src')?>"></audio>
+								<!--<audio id="podcast-player-tag" src="source/audio/Ariana Grande - 7 rings-320.mp3"></audio>-->
+							</div>
+							<?php endif;?>
+
 							<?php the_content(); ?>	
 										
 						</div>
