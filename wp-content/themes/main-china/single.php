@@ -36,17 +36,17 @@ while(have_posts()){
 						 ?>
 						<div class="single-post-content__text grid-padding">
 							
-							<?php if(get_field('podcast-src')) :?>
+							<?php if(!get_field('podcast-src')) :?>
 							<div class="podcast-player podcast-player--single-post">  
 								<div class="podcast-controls">
 									<button  id="podcast-0" class="podcast-playBtn"></button>
-									<div class="progress-bar" id="podcast-0__bar">
+									<div class="progress-bar" id="podcast-0__bar"  data-id="podcast-0">
 										<div class="progress-bar__fill" id="podcast-0__audio__bar-fill">
 											<div class="progress-bar__pin">	</div>
 										</div>
 									</div>
 								</div>
-								<audio id="podcast-0__audio" class="podcast-player-tag" ontimeupdate="updateProgress(this)" src="<?=get_field('podcast-src')?>"></audio>
+								<audio id="podcast-0__audio" class="podcast-player-tag" ontimeupdate="updateProgress(this)" src="<?php echo get_field('podcast-src')?>"></audio>
 							</div>
 							<?php endif;?>
 
