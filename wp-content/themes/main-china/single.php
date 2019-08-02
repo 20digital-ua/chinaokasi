@@ -51,7 +51,11 @@ while(have_posts()){
 							<?php endif;?>
 
 							<?php the_content(); ?>	
-										
+							<div class="single-post-content__social">
+								<a href="http://www.twitter.com/share?url=<?php the_permalink()?>" target="_blank"><img class="single-post-content__icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/twitter-blue.svg" alt=""></a>
+								<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink()?>" target="_blank"><img class="single-post-content__icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/facebook-blue.svg" alt=""></a>
+								
+							</div>		
 						</div>
 						
 					</div>

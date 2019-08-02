@@ -74,9 +74,4 @@ function my_class_names( $classes ) {
 	return $classes;
 }
 
-add_filter('the_content','add_share_links');
-function add_share_links($content){
-  $links  = '<a  href="https://www.facebook.com/sharer/sharer.php?u='.get_the_permalink().'" target="_blank">Facebook</a>';
-  $content .= $links;
-  return $content;
-}
+
