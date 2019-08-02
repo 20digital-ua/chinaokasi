@@ -21,8 +21,7 @@
               <!-- <input type="submit" value="Be the first to hear!" name="subscribe" id="mc-embedded-subscribe" class="course__takelink takeBtn"> -->
               
             </div>
-            <button name="subscribe" id="mc-embedded-subscribe" class="course__take-btn takeBtn"><span class="link-inner">Take <span class="link-inner-sm"></span> Course</span></button>
-            
+            <button name="subscribe" id="mc-embedded-subscribe" class="course__take-btn takeBtn"><span class="link-inner">Subscribe</button>
             <div class="mc-field-group input-group" style="display:none;">
               <strong>Subs</strong>
               <ul class="groupe-list">
@@ -31,6 +30,7 @@
                 <li><input type="radio" value="4" name="group[23609]" data-groupe="work" id="mce-group[23609]-23609-2"><label for="mce-group[23609]-23609-2">Work</label></li>
                 <li><input type="radio" value="8" name="group[23609]" data-groupe="love" id="mce-group[23609]-23609-3"><label for="mce-group[23609]-23609-3">Love</label></li>
                 <li><input type="radio" value="16" name="group[23609]" data-groupe="podcast" id="mce-group[23609]-23609-4"><label for="mce-group[23609]-23609-4">Podcasts</label></li>
+                <li><input type="radio" value="32" name="group[23609]" data-groupe="news" id="mce-group[23609]-23609-5"><label for="mce-group[23609]-23609-5">News</label></li>
               </ul>
             </div>
             <div id="mce-responses" class="clear">

@@ -1,8 +1,8 @@
 <?php 
     $args=array(
       'posts_per_page' =>6,
-      'post_type'=>'post',
-      'category__not_in' => array('1'),
+      'post_type'=>'post'
+      // 'category__not_in' => array('1'),
     );
     $blogPosts = new WP_Query($args);
 
@@ -14,7 +14,7 @@
     <h2 class="title">Check out my blog</h2>
 	</div>
 	<div class="container container--nopadding">
-		<div class="blog-posts show" id="blog-posts">
+		<div class="blog-posts show" id="blog-posts-static">
 			<?php while($blogPosts->have_posts()){
             $blogPosts->the_post();
             $category = get_the_category();
@@ -24,7 +24,6 @@
             }else{
               $imgPlaceHolder='https://cdn-ds.com/noimage/w_640/h_480/noimage.jpg';
             }
-            
             ?>
             <div class="post">
               <a  class="post__link" href="<?=the_permalink();?>">
