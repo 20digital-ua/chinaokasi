@@ -47,7 +47,6 @@ while(have_posts()){
 									</div>
 								</div>
 								<audio id="podcast-0__audio" class="podcast-player-tag" ontimeupdate="updateProgress(this)" src="<?=get_field('podcast-src')?>"></audio>
-								<!--<audio id="podcast-player-tag" src="source/audio/Ariana Grande - 7 rings-320.mp3"></audio>-->
 							</div>
 							<?php endif;?>
 
