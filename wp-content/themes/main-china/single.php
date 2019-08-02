@@ -36,7 +36,7 @@ while(have_posts()){
 						 ?>
 						<div class="single-post-content__text grid-padding">
 							
-							<?php if(!get_field('podcast-src')) :?>
+							<?php if(get_field('podcast-src')) :?>
 							<div class="podcast-player podcast-player--single-post">  
 								<div class="podcast-controls">
 									<button  id="podcast-0" class="podcast-playBtn"></button>
