@@ -1,10 +1,15 @@
-<div id="sign-popup" class="sign-popup wrapper ">
+<div id="sign-popup" class="sign-popup wrapper">
   <div class="sign-popup__container">
     <div class="sign-popup__box">
       <button id="close-popup-btn" class="close-btn">
         <span class="close-btn__line close-btn__line-first"></span>
         <span class="close-btn__line close-btn__line-second"></span>
       </button>
+      <div class="success-msg" id="success-msg">
+        <div class="success-msg__title">Thank you!</div>
+        <div class="success-msg__body">Thanks for signing up, pal! 
+Please check your inbox or Spam folder for my email & whitelist the email address, so that you'll receive important messages from me.</div>
+      </div>
       <div id="mc_embed_signup" class="sign-popup__form-box">
         <h2>Please subscribe</h2>
         <form  action="https://gmail.us3.list-manage.com/subscribe/post?u=299144442459ae6cad07bdcff&amp;id=bbe289ae96" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate primary-form single-course-form" target="_blank" novalidate>
