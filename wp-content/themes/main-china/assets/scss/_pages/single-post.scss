@@ -82,14 +82,14 @@
 }
 
 .single-post-content{
-  margin-top: 58px;
+  margin-top: 58px;    
+  max-width: 608px;
   @include screen-lp{
     margin-top: 18px;
   }
   &__img{
     width: 100%;
     height: auto;
-    max-width: 608px;
     border-radius: 25px 0px;
   }
   &__text{
@@ -149,7 +149,7 @@
   }
   .podcast-controls{
     margin-top: 16px;
-    width: 100%;
+    width: 85%;
   }
   .sign-podcast{
     margin-top: 30px;
@@ -169,5 +169,12 @@
       margin: 0;
       margin-top: 16px;
     }
+  }
+}
+
+.podcast-player--single-post{
+  margin-bottom: 20px;
+  .podcast-controls{
+    width: 100% !important;
   }
 }

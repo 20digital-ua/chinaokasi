@@ -1838,12 +1838,12 @@ footer {
 
 .single-post-content {
   margin-top: 58px;
+  max-width: 608px;
 }
 
 .single-post-content__img {
   width: 100%;
   height: auto;
-  max-width: 608px;
   border-radius: 25px 0px;
 }
 
@@ -1905,7 +1905,7 @@ footer {
 
 .podcast.single-post .podcast-controls {
   margin-top: 16px;
-  width: 100%;
+  width: 85%;
 }
 
 .podcast.single-post .sign-podcast {
@@ -1930,6 +1930,14 @@ footer {
 .podcast.single-post .primary-form__submit {
   margin: 0;
   margin-top: 16px;
+}
+
+.podcast-player--single-post {
+  margin-bottom: 20px;
+}
+
+.podcast-player--single-post .podcast-controls {
+  width: 100% !important;
 }
 
 /* ALL PODCASTS */
