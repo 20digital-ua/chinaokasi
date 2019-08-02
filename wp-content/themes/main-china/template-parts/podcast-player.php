@@ -31,12 +31,13 @@
   </div>
   <div class="podcast-controls">
     <button  id="podcast-1" class="podcast-playBtn"></button>
-    <div class="progress-bar" id="podcast-1__bar">
-      <div class="progress-bar__fill" id="podcast-1__audio__bar-fill">
-        <div class="progress-bar__pin">	</div>
+    <div class="progress-bar" id="podcast-1__bar" data-id="podcast-1">
+      <div class="progress-bar__fill" id="podcast-1__audio__bar-fill" >
+        <div class="progress-bar__pin" >	</div>
       </div>
     </div>
   </div>
-  <audio id="podcast-1__audio" class="podcast-player-tag" ontimeupdate="updateProgress(this)" src="<?=$podcastSrc?>"></audio>
+  <audio id="podcast-1__audio" class="podcast-player-tag" ontimeupdate="updateProgress(this)" src="<?php echo $podcastSrc?>"></audio>
+
 </div>
 <?php wp_reset_postdata(); ?>
