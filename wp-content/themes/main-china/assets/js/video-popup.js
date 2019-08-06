@@ -3,7 +3,7 @@ var closeVideoPopup = jQuery('.video-popup-overlay');
 var VideoPopup = jQuery('.video-popup');
 var Video = videojs('my-video');
 
-Video.src(openVideoPopup.data('video'))
+// Video.src(openVideoPopup.data('video'))
 openVideoPopup.on('click',function(){
 
   VideoPopup.addClass('video-popup--open');

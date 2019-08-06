@@ -127,7 +127,7 @@ while(have_posts()) :
 	<div class="video-popup-overlay"></div> 
 
 	<video id='my-video' class='video-js control-vs' controls preload='auto' width='700' height='440'  data-setup='{}'>
-		<source src=''>
+		<source src='<?php echo get_template_directory_uri(); ?>/assets/source/1.mp4'>
 		<p class='vjs-no-js'>
 			To view this video please enable JavaScript, and consider upgrading to a web browser that
 			<a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
