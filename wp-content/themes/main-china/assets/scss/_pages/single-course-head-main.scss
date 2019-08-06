@@ -11,7 +11,7 @@
     height: auto;
   }
   @include screen-md{
-    height: 640px;
+    height: 520px;
   }
   .container{
     display: flex;
@@ -73,7 +73,8 @@
       position: absolute;
       color: rgba(255, 255, 255, 0.05);
       transform: rotate(-15deg);
-      right: 7%;z-index: 10;
+      right: 7%;
+      z-index: 10;
       display: none;
       @include screen-tb{
         display: block;
@@ -86,7 +87,7 @@
        font-size: 300px;
       }
       @include screen-lg{
-        font-size: 350px;
+        font-size: 320px;
       }
 
     }
@@ -107,12 +108,9 @@
       width: 45%;
     }
     @include screen-tb{
-      padding-top: 106px;
       width: auto;
     }
-    @include screen-lp{
-      padding-top: 167px;
-    }
+
     &__img{
       width: 90%;
       max-height: 235px;

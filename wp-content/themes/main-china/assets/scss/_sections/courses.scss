@@ -157,6 +157,7 @@
     text-align: center;
     border-radius: 25px 0;
     font-family: $PoppinsSemiBold;
+    font-size: 16px;
     background: url("#{$image_dir}courses/Rectangle.svg") left center no-repeat;
     background-size: 100% 100%;
     @include transition;

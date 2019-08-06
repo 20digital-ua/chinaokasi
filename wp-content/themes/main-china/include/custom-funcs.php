@@ -21,29 +21,46 @@ function getPageLink($page){
 //////////////////////////////////////////////
 function getPageData($id){
   switch ($id){
+    case '58':  // LIFE ---------
+      $data=array(
+        'slug'=>'home',
+        'blog-title'=>get_post_field('blogposts_title', get_the_ID()),
+        'cf-title'=>get_post_field('cf-title', get_the_ID())
+      );
+      break;
     case '15':  // LIFE ---------
       $data=array(
         'slug'=>'life',
-        'blog-title'=>get_post_field('blogposts_title', get_the_ID())
+        'blog-title'=>get_post_field('blogposts_title', get_the_ID()),
+        'cf-title'=>get_post_field('cf-title', get_the_ID())
+        
       );
       break;
     case '17':   // WORK ---------
       $data=array(
         'slug'=>'work',
-        'blog-title'=>get_post_field('blogposts_title', get_the_ID())
+        'blog-title'=>get_post_field('blogposts_title', get_the_ID()),
+        'cf-title'=>get_post_field('cf-title', get_the_ID())
       );
       break;
     case '20':   // LOVE ---------
       $data=array(
         'slug'=>'love',
-        'blog-title'=>get_post_field('blogposts_title', get_the_ID())
+        'blog-title'=>get_post_field('blogposts_title', get_the_ID()),
+        'cf-title'=>get_post_field('cf-title', get_the_ID())
       );
       break;
     
     case '155':   // NEWS ---------
       $data=array(
         'slug'=>'news,china&friends',
-        'blog-title'=>get_post_field('blogposts_title', get_option('page_for_posts'))
+        'blog-title'=>get_post_field('blogposts_title', get_option('page_for_posts')),
+        'cf-title'=>get_post_field('cf-title', get_option('page_for_posts'))
+      );
+      break;
+    case '155':   // CLIPS ---------
+      $data=array(
+        'slug'=>'hi'
       );
       break;
   }
