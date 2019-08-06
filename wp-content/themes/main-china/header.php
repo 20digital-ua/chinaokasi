@@ -5,7 +5,7 @@
 	<meta http-equiv="Cache-Control" content="no-cache">
 	<meta name="robots" content="noindex">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	
 	<script type="text/javascript">
 		var templateUrl = '<?= get_bloginfo("template_url"); ?>';
 	</script>
@@ -49,8 +49,8 @@
 				<div class="menu-container">
 					<nav class="main-menu">
 						<ul class="pages-menu">
-							<li><a href="<?= getPageLink('bio'); ?>">Bio</a></li>
-							<li><a href="<?php echo site_url('/inspirational-women-in-media')?>">TV Clips & Photos</a></li>
+							<li><a href="<?= getPageLink('bio'); ?>">Bio & Speaking</a></li>
+							<li><a href="<?php echo site_url('/inspirational-women-in-media')?>">TV & Inspiration</a></li>
 							<li><a href="<?php echo get_permalink(get_option('page_for_posts'))?>">News</a></li>
 							
 							<!-- <li class="pages-menu__title"><span>Content</span>	

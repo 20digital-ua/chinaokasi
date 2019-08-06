@@ -31,26 +31,45 @@ function costom_post_types(){
 
     //     )
     // ));
-    register_post_type('podcast',array(
-        'has_archive'=> true,
+    // register_post_type('podcast',array(
+    //     'has_archive'=> true,
+    //     'supports'=>array(
+    //       'title',
+    //       'editor',
+    //       'excerpt',
+    //       'thumbnail'
+    //     ),
+    //     'rewrite'=>array(
+    //       'slug'=>'podcasts'
+    //     ),
+    //     'public'=>true,
+    //     'menu_icon' => 'dashicons-playlist-audio',
+    //     'labels' => array(
+    //       'name'=>'Podcasts',
+    //       'add_new_item'=>'Add new podcast',
+    //       'edit_item'=>'Edit podcast',
+    //       'all_items'=>'All podcasts',
+    //       'singular_name'=>'Podcast'
+
+    //     )
+    // ));
+    register_post_type('video',array(
+        'has_archive'=> false,
         'supports'=>array(
           'title',
-          'editor',
-          'excerpt',
-          'thumbnail'
+          'editor'
         ),
         'rewrite'=>array(
-          'slug'=>'podcasts'
+          'slug'=>'videos'
         ),
         'public'=>true,
         'menu_icon' => 'dashicons-playlist-audio',
         'labels' => array(
-          'name'=>'Podcasts',
-          'add_new_item'=>'Add new podcast',
-          'edit_item'=>'Edit podcast',
-          'all_items'=>'All podcasts',
-          'singular_name'=>'Podcast'
-
+          'name'=>'Videos&Clips',
+          'add_new_item'=>'Add new video',
+          'edit_item'=>'Edit video',
+          'all_items'=>'All video',
+          'singular_name'=>'Video'
         )
     ));
 }

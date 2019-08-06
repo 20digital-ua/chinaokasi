@@ -217,6 +217,7 @@ body.no-scroll {
   font: 24px "Poppins-SemiBold";
   text-align: center;
   margin-bottom: 24px;
+  text-transform: capitalize;
 }
 
 .title--left {
@@ -576,6 +577,7 @@ body:not(.front-page) .burger-btn span {
   text-align: center;
   border-radius: 25px 0;
   font-family: "Poppins-SemiBold";
+  font-size: 16px;
   background: url("assets/img/courses/Rectangle.svg") left center no-repeat;
   background-size: 100% 100%;
   transition: all .25s linear;
@@ -1492,11 +1494,38 @@ footer {
   position: relative;
 }
 
+.clip.video-clip {
+  cursor: pointer;
+}
+
+.clip.video-clip .clip-img {
+  position: relative;
+}
+
+.clip.video-clip .clip-img:before {
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4) url("assets/img/icons/play-arrow_white.svg") center no-repeat;
+  background-size: 40px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all .1s ease-in-out;
+}
+
+.clip.video-clip:hover .clip-img:before {
+  background-size: 45px;
+}
+
+.clip-img {
+  border-radius: 25px 0 25px 0;
+  overflow: hidden;
+}
+
 .clip__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 25px 0 25px 0;
 }
 
 .clip:hover {
@@ -1560,6 +1589,27 @@ footer {
 .photos-grid__img:nth-child(1),
 .photos-grid__img:nth-child(2) {
   max-width: 504px;
+}
+
+.video-popup {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  transition: all .25s linear;
+}
+
+.video-popup--open {
+  z-index: 999;
+  visibility: visible;
+  opacity: 1;
 }
 
 /* SINGLE COURSE */
@@ -2638,7 +2688,6 @@ footer {
 
   .single-cours-head-main .head-img-wrp,
   .news-head-main .head-img-wrp {
-    padding-top: 106px;
     width: auto;
   }
 
@@ -2999,11 +3048,6 @@ footer {
     font-size: 275px;
   }
 
-  .single-cours-head-main .head-img-wrp,
-  .news-head-main .head-img-wrp {
-    padding-top: 167px;
-  }
-
   .cinfo {
     width: 528px;
     padding: 50px;
@@ -3212,7 +3256,7 @@ footer {
 
   .single-cours-head-main,
   .news-head-main {
-    height: 640px;
+    height: 520px;
   }
 
   .single-cours-head-main .container.work:after,
@@ -3399,7 +3443,7 @@ footer {
 
   .single-cours-head-main .container:after,
   .news-head-main .container:after {
-    font-size: 350px;
+    font-size: 320px;
   }
 
   .about-course {

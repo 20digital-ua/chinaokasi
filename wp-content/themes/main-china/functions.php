@@ -12,10 +12,15 @@ function head_files(){
     wp_enqueue_script('main-js',get_theme_file_uri('/assets/js/main.js'),array('jquery'),'1.1',true);
     wp_enqueue_script('tabs-js',get_theme_file_uri('/assets/js/tabs.js'),null,'1.1',true);
     wp_enqueue_script('contact-form-js',get_theme_file_uri('/assets/js/contact-form.js'),null,'1.1',true);
-    wp_enqueue_script('sign-popup-js',get_theme_file_uri('/assets/js/sign-popup.js'),null,'1.1',true);
     
+    wp_enqueue_script('video-popup-js',get_theme_file_uri('/assets/js/video-popup.js'),null,'1.1',true);
+
     if(is_single() || is_front_page() || is_post_type_archive('podcast')){
       wp_enqueue_script('player-js',get_theme_file_uri('/assets/js/player.js'),null,'1.1',true);
+    }
+    if(is_page() && get_the_ID()==13){
+      wp_enqueue_script('sign-popup-js',get_theme_file_uri('/assets/js/sign-popup.js'),null,'1.1',true);
+      wp_enqueue_style('player-video',get_theme_file_uri('/assets/source/video-js/video-js.css'));
     }
     if(is_post_type_archive('podcast') ){
       wp_enqueue_script('ajax-podcast',get_theme_file_uri('/assets/js/ajax-podcast.js'),null,'1.1',true);
@@ -75,3 +80,7 @@ function my_class_names( $classes ) {
 }
 
 
+  // function my_acf_add_local_field_groups() {
+  //   remove_filter('acf_the_content', 'wpautop' );
+  // }
+  // add_action('acf/init', 'my_acf_add_local_field_groups');

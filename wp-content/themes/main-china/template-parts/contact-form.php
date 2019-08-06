@@ -1,12 +1,22 @@
+<?php
+$inTouch = get_field('get-in-touch-section', get_option( 'page_on_front' ));
+$pageData=getPageData(get_the_ID());
+
+
+if($pageData['cf-title']!='')
+	$inTouch['form_text']=$pageData['cf-title'];
+
+?>
+
 <section class="in-touch-section section">
 	<div class="container">
-		<h2 class="title">Let’s get in touch</h2>	
+		<h2 class="title"><?=$inTouch['title']?></h2>	
 		<div class="with-me">
-			<p class="with-me__gradient">Live Work Love</p>
+			<p class="with-me__gradient"><?=$inTouch['gradient_text']?></p>
 			<p class="with-me__simple">WITH ME</p>
 		</div>
 		<div class="text text-center">
-		This contact form is processed for serious & business-related inquiries. Please allow proper time for a response. 
+			<?=strip_tags($inTouch['form_text'])?>
 		</div>
 		<div id="form-response-block">
 			<form action="" id="main-contact-form" class="primary-form" validate>
