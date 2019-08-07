@@ -27,6 +27,9 @@ while(have_posts()) :
 				<div class="title-subscribe__name">
 					<span><?php the_title(); ?></span>
 				</div>
+				<div class="title-img">
+					<img src="<?php the_post_thumbnail_url()?>" class="title-img__img" alt="">
+				</div>
 				<div class="subscribe-block">
 					<div class="greeting">
 						<p class="greeting__text"><?php the_content(); ?></p>
@@ -38,11 +41,6 @@ while(have_posts()) :
 	</section>
 	<section class="clips-photos">
 		<div class="container--nopadding">
-
-
-
-	
-
 			<div class="tabs">
 				<div class="tab-slider--nav">
 					<ul class="tab-slider--tabs">

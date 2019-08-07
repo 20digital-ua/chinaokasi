@@ -1227,7 +1227,7 @@ footer {
   content: 'Bio';
   text-transform: uppercase;
   font-family: Permanent Marker;
-  font: 100px "PermanentMarker";
+  font: 65px "PermanentMarker";
   line-height: 146px;
   color: rgba(93, 92, 195, 0.04);
   position: absolute;
@@ -1404,7 +1404,6 @@ footer {
 /* TV PAGE */
 
 .tv-head-main {
-  overflow: hidden;
   padding-bottom: 48px;
 }
 
@@ -1423,8 +1422,12 @@ footer {
   left: -10px;
 }
 
-.primary-form--tv .label {
-  display: none;
+.tv-head-main .title-img {
+  grid-row: 2/3;
+  grid-column: 1/3;
+  max-width: 352px;
+  max-height: 432px;
+  margin: 26px auto;
 }
 
 .clips-photos {
@@ -2575,7 +2578,7 @@ footer {
   }
 
   .title-subscribe__name:before {
-    font-size: 180px;
+    font-size: 140px;
     top: 0;
     left: 0;
   }
@@ -2628,31 +2631,6 @@ footer {
 
   .courses-head-main .head-img {
     width: auto;
-  }
-
-  .primary-form--tv {
-    display: flex;
-    align-items: center;
-  }
-
-  .primary-form--tv .form-row-two-col {
-    display: flex;
-  }
-
-  .primary-form--tv .submit-btn {
-    margin-top: 8px;
-  }
-
-  .primary-form--tv .mc-field-group {
-    margin-right: 16px;
-  }
-
-  .primary-form--tv .input {
-    background-color: transparent;
-  }
-
-  .primary-form--tv .label {
-    display: inline;
   }
 
   .clips-photos {
@@ -3034,8 +3012,11 @@ footer {
     grid-row: 2;
   }
 
-  .primary-form--tv {
-    grid-column: 1/3;
+  .tv-head-main .title-img {
+    grid-row: 2/3;
+    grid-column: 2;
+    position: absolute;
+    transform: translate(20%, 10%);
   }
 
   .photos-grid__img:nth-child(1),
