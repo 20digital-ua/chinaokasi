@@ -9,6 +9,8 @@ openVideoPopup.on('click',function(){
   VideoPopup.addClass('video-popup--open');
   Video.src(jQuery(this).data('video'))
   Video.poster(jQuery(this).data('poster'))
+  console.log('asdasd');
+  
   
 })
 VideoPopup.on('click',function(e){

@@ -66,7 +66,7 @@ while(have_posts()) :
 									?>
 									<div class="clip <?php if ($videoSrc!="") echo 'video-clip'?>" data-video="<?=$videoSrc?>" data-poster="<?=get_field('tv_clip')['image']?>">
 										<div class="clip-img">
-											<img class="clip__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/clips/china-okasi-megyn-kelly.png" alt="">
+											<img class="clip__img" src="<?php the_post_thumbnail_url()?>" alt="">
 										</div>
 										<div class="clip-content">
 											<h3 class="clip-content__title"><?php the_title() ?></h3>
@@ -125,7 +125,7 @@ while(have_posts()) :
 	<div class="video-popup-overlay"></div> 
 
 	<video id='my-video' class='video-js control-vs' controls preload='auto' width='700' height='440'  data-setup='{}'>
-		<source src='<?php echo get_template_directory_uri(); ?>/assets/source/1.mp4'>
+		<source src='<?php echo get_template_directory_uri(); ?>/assets/source/video-js/1.mp4'>
 		<p class='vjs-no-js'>
 			To view this video please enable JavaScript, and consider upgrading to a web browser that
 			<a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
