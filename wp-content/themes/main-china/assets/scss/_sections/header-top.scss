@@ -127,7 +127,10 @@ body:not(.front-page) .burger-btn{
     background-color: #3A3B3F;
   }
 }
-
+.pages-menu,
+.courses-menu{
+  list-style: none; 
+}
 // DESKTOP MENU
 @include screen-lp{
 
@@ -151,6 +154,7 @@ body:not(.front-page) .burger-btn{
     opacity: 1;
   }
 }
+
 .pages-menu{
   display: flex;
   align-items: center;

@@ -111,7 +111,7 @@
     margin-top: 86px;
     justify-content: space-between; 
     flex-direction: row;
-
+    align-items: unset;
   }
   @include screen-lg{
     margin-top: 150px;
@@ -175,6 +175,5 @@
 
 .follow-additional{
   margin-top: 14px;
-  font-size: 12px;
   line-height: 22px;
 }
