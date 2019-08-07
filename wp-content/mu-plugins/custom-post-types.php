@@ -57,7 +57,8 @@ function costom_post_types(){
         'has_archive'=> false,
         'supports'=>array(
           'title',
-          'editor'
+          'editor',
+          'thumbnail'
         ),
         'rewrite'=>array(
           'slug'=>'videos'

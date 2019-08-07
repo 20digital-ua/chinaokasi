@@ -19,8 +19,9 @@ function head_files(){
       wp_enqueue_script('player-js',get_theme_file_uri('/assets/js/player.js'),null,'1.1',true);
     }
     if(is_page() && get_the_ID()==13){
-      
-      wp_enqueue_style('player-video',get_theme_file_uri('/assets/source/video-js/video-js.css'));
+      wp_enqueue_script('video-popup-js' ,get_theme_file_uri('/assets/js/video-popup.js'),null,'1.1',true);
+      wp_enqueue_script('video-player-js',get_theme_file_uri('/assets/source/video-js/video.js'),null,'1.1',true);      
+      wp_enqueue_style('player-video'    ,get_theme_file_uri('/assets/source/video-js/video-js.css'));
     }
     if(is_post_type_archive('podcast') ){
       wp_enqueue_script('ajax-podcast',get_theme_file_uri('/assets/js/ajax-podcast.js'),null,'1.1',true);
