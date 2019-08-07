@@ -19,7 +19,7 @@ while(have_posts()) :
 						<span><?=$header['title']?></span>	
 					</div>
 					<div class="title-img">
-						<img src="<?=$header['image']?>" class="title-img__img" alt="">
+						<img src="<?php the_post_thumbnail_url()?>" class="title-img__img" alt="">
 					</div>
 					<div class="subscribe-block container">
 						<div class="greeting">

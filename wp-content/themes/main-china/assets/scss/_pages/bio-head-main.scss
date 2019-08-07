@@ -53,14 +53,14 @@
       content: 'Bio';
       text-transform: uppercase;
       font-family: Permanent Marker;
-      @include font(100px, $PermanentMarker);
+      @include font(65px, $PermanentMarker);
       line-height: 146px;
       color: rgba(93, 92, 195, 0.04);
       position: absolute;
       left: 20px;
       top: -30px;
       @include screen-tb{
-        font-size: 180px;
+        font-size: 140px;
         top: 0;
         left: 0;
       }
