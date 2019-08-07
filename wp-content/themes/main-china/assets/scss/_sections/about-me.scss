@@ -102,13 +102,24 @@
 
 .china-bio{
   padding: $mobSidePadding; 
+  ul{
+    list-style-position: inside;
+  }
+  li{
+    margin-bottom: 16px;
+  }
   @include screen-md{
     margin-left: 100px;
   }
   .link-btn{
+    margin: 0 auto;
     margin-top: 25px;
+    display: block;
+    max-width: 320px;
+
     @include screen-md{
       margin-top: 50px;
+      display: inline-block;
     }
   }
 }
