@@ -7,6 +7,8 @@ while(have_posts()){
 	if(!in_array($category[0]->slug,array('chinafriends','news'))){
 		$backLinkData=array(getPageLink($category[0]->slug),$category[0]->cat_name);
 	}
+	$thumbnail_id = get_post_thumbnail_id( $post->ID );
+	$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
 ?>
 	<main>
 		<section class="main-single-post">
@@ -17,23 +19,29 @@ while(have_posts()){
 						<?php the_title();?>
 					</div>
 					<div class="author grid-padding">
-						<img class="author__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/follow-me/Avatar3.png" alt="">
+						<img class="author__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/follow-me/Avatar3.png" alt="Written by China Okasi">
 						<div class="author__post-det">
 							<div class="author__name">Written by China Okasi</div>
-							<div class="post-date"><?php the_date(); ?></div>
+							<div class="post-share">
+								<div class="share-post">
+									<a href="http://www.twitter.com/share?url=<?php the_permalink()?>" target="_blank"><img class="share-post__icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/twitter-blue.svg" alt=""></a>
+									<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink()?>" target="_blank"><img class="share-post__icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/facebook-blue.svg" alt=""></a>
+								</div>		
+							</div>
 						</div>
 					</div>	
 				
 					<div class="single-post-content">
 					
 						<?php 
-							$img='https://cdn-ds.com/noimage/w_640/h_480/noimage.jpg';
+							$src='https://cdn-ds.com/noimage/w_640/h_480/noimage.jpg';
+							$altText="no image";
 							if(get_the_post_thumbnail()!=''){
-								the_post_thumbnail( 'full',['class' => 'single-post-content__img']);
-							}else{
-								echo '<img src="https://cdn-ds.com/noimage/w_640/h_480/noimage.jpg" class="single-post-content__img" alt="">';
+								$src=get_the_post_thumbnail_url();
+								$altText=$alt;
 							}
 						 ?>
+						<img src="<?=$src?>" class="single-post-content__img" alt="<?=$altText?>">
 						<div class="single-post-content__text grid-padding">
 							
 							<?php if(get_field('podcast-src')) :?>
@@ -51,10 +59,10 @@ while(have_posts()){
 							<?php endif;?>
 
 							<?php the_content(); ?>	
-							<div class="single-post-content__social">
-								<a href="http://www.twitter.com/share?url=<?php the_permalink()?>" target="_blank"><img class="single-post-content__icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/twitter-blue.svg" alt=""></a>
-								<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink()?>" target="_blank"><img class="single-post-content__icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/facebook-blue.svg" alt=""></a>
-							</div>		
+							<div class="share-post share-post--margin">
+								<a href="http://www.twitter.com/share?url=<?php the_permalink()?>" target="_blank"><img class="share-post__icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/twitter-blue.svg" alt=""></a>
+								<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink()?>" target="_blank"><img class="share-post__icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/facebook-blue.svg" alt=""></a>
+							</div>	
 						</div>
 						
 					</div>

@@ -5,6 +5,7 @@ while(have_posts()) : the_post();
 $section1 = get_field('section-1');
 $section2 = get_field('section-2');
 $section3 = get_field('section-3');
+
 ?>
 	<main>
 		<section class="head-main home-head-main section section-first">
@@ -37,7 +38,7 @@ $section3 = get_field('section-3');
 						<div class="course-top-container">
 							<div class="course__title course__title--live"><?=$section1['boxes']['box_1']['title']?></div>
 							<div class="course__img">
-								<img src="<?=$section1['boxes']['box_1']['image']?>" alt="">
+								<img src="<?=$section1['boxes']['box_1']['image']['url']?>" alt="<?=$section1['boxes']['box_1']['image']['alt']?>">
 							</div>
 						</div>
 						<p class="text"><?=strip_tags($section1['boxes']['box_1']['text'],'<strong>')?></p>
@@ -48,7 +49,7 @@ $section3 = get_field('section-3');
 						<div class="course-top-container">
 							<div class="course__title course__title--work"><?=$section1['boxes']['box_2']['title']?></div>
 							<div class="course__img">
-								<img src="<?=$section1['boxes']['box_2']['image']?>" alt="">
+								<img src="<?=$section1['boxes']['box_2']['image']['url']?>" alt="<?=$section1['boxes']['box_2']['image']['alt']?>">
 							</div>
 						</div>
 						<p class="text"><?=strip_tags($section1['boxes']['box_2']['text'],'<strong>')?></p>
@@ -59,7 +60,7 @@ $section3 = get_field('section-3');
 						<div class="course-top-container">
 							<div class="course__title  course__title--love"><?=$section1['boxes']['box_3']['title']?></div>
 							<div class="course__img">
-								<img src="<?=$section1['boxes']['box_3']['image']?>" alt="">
+								<img src="<?=$section1['boxes']['box_3']['image']['url']?>" alt="<?=$section1['boxes']['box_3']['image']['alt']?>">
 							</div>
 						</div>
 						<p class="text"><?=strip_tags($section1['boxes']['box_3']['text'],'<strong>')?></p>
@@ -76,7 +77,7 @@ $section3 = get_field('section-3');
 			<div class="container container--nopadding">
 				<div class="about-china">
 						<div class="china-photo">
-							<img src="<?=$section2['image']?>"  class="china-photo__img" alt="">
+							<img src="<?=$section2['image']['url']?>"  class="china-photo__img" alt="<?=$section2['image']['alt']?>">
 							<div class="quote-block">
 								<p class="quote-block__text"><?=$section2['quote']?></p>
 							</div>
@@ -103,7 +104,7 @@ $section3 = get_field('section-3');
 						<h2 class="podcast-introduce__title"><?=$section3['podcast_promo']['text']['title']?></h2>
 						<p class="podcast-introduce__subtext"><?=$section3['podcast_promo']['text']['subtitle']?></p>
 					</div>
-					<img src="<?=$section3['podcast_promo']['image']?>"  class="podcast-introduce__img" alt="">
+					<img src="<?=$section3['podcast_promo']['image']['url']?>"  class="podcast-introduce__img" alt="<?=$section3['podcast_promo']['image']['alt']?>">
 				</div>
 			</div>
 			<div class="container container--podcast-player">
