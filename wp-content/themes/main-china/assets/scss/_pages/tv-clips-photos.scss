@@ -145,9 +145,11 @@
   @include screen-tb{
     grid-template-columns: repeat(auto-fit, minmax(100px, 25%));
   }
-  &__img{
-    max-width: 50%;
-    // height: 60%;
+  img{
+    height: auto !important;
+    width: auto !important;
+    max-height: 90px;
+    margin: 20px;
   }
 }
 //////////////////////////////////////////////////////////////

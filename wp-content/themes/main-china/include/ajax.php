@@ -37,11 +37,15 @@ function getposts() {
     $img='https://cdn-ds.com/noimage/w_640/h_480/noimage.jpg';
     if(get_the_post_thumbnail_url()!=''){
       $img=get_the_post_thumbnail_url();
+      $thumbnail_id = get_post_thumbnail_id(get_the_ID());
+	    $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
     }
+    
     array_push($postsArr['posts'],array(
       'title'=>get_the_title(),
       'link'=>get_the_permalink(),
       'img'=>$img,
+      'alt'=>$alt,
       'date'=>get_the_date(),
       'content'=>wp_trim_words(get_the_content(),15),
       'category'=>$category[0]->name

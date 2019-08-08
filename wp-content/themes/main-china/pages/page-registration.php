@@ -5,6 +5,8 @@
 <?php 
 get_header(); 
  while ( have_posts() ) : the_post();
+ 	$thumbnail_id = get_post_thumbnail_id( $post->ID );
+	$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
 	?>
 <main>
 		<section class="head-main single-cours-head-main section">
@@ -15,7 +17,7 @@ get_header();
 					<span class="head-content__subtitle"><span>my </span> Lifestyle — Guide Channel</span>
 				</div>
 				<div class="head-img-wrp">
-						<img class="head-img-wrp__img" src="<?php echo get_template_directory_uri(); ?>/img/pages/courses/China-work-course.png" alt="">
+						<img class="head-img-wrp__img" src="<?php the_post_thumbnail_url() ?>" alt="<?=$alt?>">
 				</div>
 				
 			</div>

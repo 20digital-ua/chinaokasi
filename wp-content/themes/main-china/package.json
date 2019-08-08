@@ -15,9 +15,21 @@
   "homepage": "https://bitbucket.org/MonTony/twnty-frontend#readme",
   "devDependencies": {
     "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-sass": "^4.0.2"
-  }
-
-
+  },
+  "browserslist": [
+    "> 1%",
+    "ie >= 8",
+    "edge >= 15",
+    "ie_mob >= 10",
+    "ff >= 45",
+    "chrome >= 45",
+    "safari >= 7",
+    "opera >= 23",
+    "ios >= 7",
+    "android >= 4",
+    "bb >= 10"
+  ]
 }

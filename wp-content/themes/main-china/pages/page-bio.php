@@ -9,6 +9,9 @@
 while(have_posts()) : 
 	the_post();
 	$header = get_field('header');
+	
+	$thumbnail_id = get_post_thumbnail_id( $post->ID );
+	$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
 ?>
 
 <main>
@@ -19,7 +22,7 @@ while(have_posts()) :
 						<span><?=$header['title']?></span>	
 					</div>
 					<div class="title-img">
-						<img src="<?php the_post_thumbnail_url()?>" class="title-img__img" alt="">
+						<img src="<?php the_post_thumbnail_url()?>" class="title-img__img" alt="<?=$alt?>">
 					</div>
 					<div class="subscribe-block container">
 						<div class="greeting">

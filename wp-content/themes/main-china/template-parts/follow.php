@@ -7,7 +7,7 @@ $follow = get_field('section-3', get_option( 'page_on_front' ))['follow_blocks']
 	<div class="follow-item">
 		<div class="follow-content">
 			<div class="follow-img">
-				<img src="<?=$follow['block_1']['image']?>" alt="">
+				<img src="<?=$follow['block_1']['image']['url']?>" alt="<?=$follow['block_1']['image']['alt']?>">
 			</div>	
 			<div class="follow-link">
 				<p class="follow-link__login"><?=$follow['block_1']['login']?></p>
@@ -24,7 +24,7 @@ $follow = get_field('section-3', get_option( 'page_on_front' ))['follow_blocks']
 	<div class="follow-item">
 			<div class="follow-content">
 				<div class="follow-img">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/follow-me/Avatar3.png" alt="">
+					<img src="<?=$follow['block_2']['image']['url']?>" alt="<?=$follow['block_2']['image']['alt']?>">
 				</div>	
 				<div class="follow-link">
 					<p class="follow-link__login "><?=$follow['block_2']['login']?></p>

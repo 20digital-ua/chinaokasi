@@ -16,8 +16,10 @@ wp_reset_postdata();
 while(have_posts()) : 
 	the_post();
 	$tv = get_field('tv-clips');
-	$photos = get_field('photos');
 
+	$photos = get_field('photos');
+	$thumbnail_id = get_post_thumbnail_id( $post->ID );
+	$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
 ?>
 
 <main>
@@ -28,7 +30,7 @@ while(have_posts()) :
 					<span><?php the_title(); ?></span>
 				</div>
 				<div class="title-img">
-					<img src="<?php the_post_thumbnail_url()?>" class="title-img__img" alt="">
+					<img src="<?php the_post_thumbnail_url()?>" class="title-img__img" alt="<?=$alt?>">
 				</div>
 				<div class="subscribe-block">
 					<div class="greeting">
@@ -63,10 +65,12 @@ while(have_posts()) :
 								<?php while($clips->have_posts()) : 
 									$clips->the_post();
 									$videoSrc=get_field('tv_clip')['video'];
+									$thumbnail_id = get_post_thumbnail_id( $post->ID );
+									$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
 									?>
 									<div class="clip <?php if ($videoSrc!="") echo 'video-clip'?>" data-video="<?=$videoSrc?>" data-poster="<?=get_field('tv_clip')['image']?>">
 										<div class="clip-img">
-											<img class="clip__img" src="<?php the_post_thumbnail_url()?>" alt="">
+											<img class="clip__img" src="<?php the_post_thumbnail_url()?>" alt="<?=$alt?>">
 										</div>
 										<div class="clip-content">
 											<h3 class="clip-content__title"><?php the_title() ?></h3>
@@ -82,14 +86,7 @@ while(have_posts()) :
 						</div>
 						<div class="container">
 							<div class="channel-logos">
-								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/logos/China on MSNBC_.png" alt="">
-								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/logos/china-okasi-pix11.png" alt="">
-								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/logos/cnn-logo.png" alt="">
-								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/logos/current-tv-logo.png" alt="">
-								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/logos/fox-business-logo.png" alt="">
-								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/logos/fox-news-logo.png" alt="">
-								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/logos/hln-logo.png" alt="">
-								<img class="channel-logos__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/tv-photos/logos/the-cw-network-logo.png" alt="">
+								<?=	strip_tags($tv['channel_logos'],'<img>')?>
 							</div>
 						</div>
 					</div>

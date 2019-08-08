@@ -50,7 +50,7 @@ function print_posts($obj){
     <div class="post">
       <a  class="post__link" href="${item.link}">
         <div class="post-img">
-            <img class="post__img" src="${item.img}" alt="" > 
+            <img class="post__img" src="${item.img}" alt="${item.alt}" > 
             <div class="post-img__status">${item.category}</div>
         </div>
         <div class="post-content">

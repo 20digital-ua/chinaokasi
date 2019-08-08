@@ -76,7 +76,7 @@
   &__name{
     margin-bottom: 8px;
   }
-  .post-date{
+  .post-share{
     color: rgba(58, 59, 63, 0.5);
   }
 }
@@ -98,20 +98,28 @@
       margin-bottom: 20px;
     }
   }
-  &__social{
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    a{
-      width: 33px;
-      height: 30px;
-      display: block;
-      margin-right: 20px;
-    }
+  &__icon{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.share-post{
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  a{
+    width: 33px;
+    height: 30px;
+    display: block;
+    margin-right: 20px;
   }
   &__icon{
     width: 100%;
     height: 100%;
+  }
+  &--margin{
+    margin-top:40px;
   }
 }
 .single-subscribe{

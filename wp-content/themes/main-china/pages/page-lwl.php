@@ -6,7 +6,11 @@
 $pageData=getPageData(get_the_ID());
 ?>
 
-<?php while(have_posts()):the_post()?>
+<?php while(have_posts()):
+	the_post();
+	$thumbnail_id = get_post_thumbnail_id( $post->ID );
+	$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+?>
 <main>
 	<section class="head-main single-cours-head-main section " data-page="<?=$pageData['slug']?>">
 		<div class="container <?=$pageData['slug']?>">
@@ -16,7 +20,7 @@ $pageData=getPageData(get_the_ID());
 				<span class="head-content__subtitle"><?php the_content();?></span>
 			</div>
 			<div class="head-img-wrp">
-					<img class="head-img-wrp__img" src="<?php the_post_thumbnail_url() ?>" alt="">
+					<img class="head-img-wrp__img" src="<?php the_post_thumbnail_url() ?>" alt="<?=$alt?>">
 			</div>
 		</div>
 	</section>
