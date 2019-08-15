@@ -38,20 +38,27 @@
     @include font(0.75em,$PoppinsMedium);
   }
   &__title{
-    @include font(2em,$PoppinsBold);
+    @include font(36px,$PoppinsBold);
     margin-bottom: 10px;
+    @include screen-md{
+      font-size: 40px;
+    }
+    @include screen-lg{
+      font-size: 48px;
+    }
   }
   .greeting{
     margin-top: 44px;
     display: none;
     max-width: 90%;
-    @include font(0.5em,$Poppins);
+    @include font(16px,$Poppins);
     &__text-md{
       font-family: $PoppinsBold;
     }
     @include screen-tb{
       display: block;
     }
+    
   }
   
 }
@@ -75,6 +82,13 @@
   @include screen-lp{
     display: none;
   }
+  .greeting{
+    &-sub{
+      @include screen-tb{
+        display: none;
+      }
+    }
+  }
 }
 
 .subscribe-block--header{
@@ -90,7 +104,7 @@
 
 .head-main-bg{
   position: absolute;
-  width: 40%;
+  width: 34%;
   height: 100%;
   right: 0;
   top: 0;
@@ -107,9 +121,15 @@
     bottom: 0;
     z-index: 1;
     height: calc(100% - 70px);
-    width: 45%;
+    width: 55%;
     min-width: 120px;
     transform: translateX(-50%); 
+    @include screen-lp{
+      width: 55%;
+    }
+    @include screen-md{
+      width: 45%;
+    }
   }
   .gradient-block{
     position: absolute;

@@ -16,7 +16,7 @@ body{
   padding: 36px 0;
     &-first{
     padding-top: 65px;
-    @include screen-tb{
+    @include screen-lp{
       padding-top: 125px;
     }
     @include screen-md{

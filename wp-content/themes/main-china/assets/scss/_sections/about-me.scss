@@ -8,7 +8,7 @@
   @include screen-lg{
     padding: 82px 0 160px 0;
   }
-  @include screen-md{  
+  @include screen-lp{  
     &:before{
       content: '#GURU';
       font-family: Permanent Marker;
@@ -36,7 +36,8 @@
 .about-china{
   display: flex;
   flex-direction: column;
-  @include screen-md{
+  justify-content: space-between;
+  @include screen-lp{
     flex-direction: row;
     font-size: 20px;
   }
@@ -52,7 +53,7 @@
   position: relative;
   @include screen-tb{
     max-width: 400px;
-    min-width: 400px;
+    min-width: 360px;
     max-height: 460px;
     min-height: 460px;
   }
@@ -70,11 +71,14 @@
     border-radius: 40px 0px;
     position: absolute;
     bottom: -100px;
-    right: -70px;
+    right: -25px;
     padding: 60px 60px 49px 73px;
     @include font(14px, $PoppinsMediumItalic);
-    @include screen-md{
+    @include screen-lp{
       display: block; 
+    }
+    @include screen-md{
+      right: -70px; 
     }
     &__text{
       position: relative;
@@ -108,8 +112,13 @@
   li{
     margin-bottom: 16px;
   }
+  @include screen-lp{
+    margin-left: 50px;
+    font-size: 15px;
+  }
   @include screen-md{
     margin-left: 100px;
+    font-size: 16px;
   }
   .link-btn{
     margin: 0 auto;
@@ -117,7 +126,7 @@
     display: block;
     max-width: 320px;
 
-    @include screen-md{
+    @include screen-lp{
       margin-top: 50px;
       display: inline-block;
     }
