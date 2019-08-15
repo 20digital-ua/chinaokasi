@@ -11,22 +11,26 @@
 Please check your inbox or Spam folder for my email & whitelist the email address, so that you'll receive important messages from me.</div>
       </div>
       <div id="mc_embed_signup" class="sign-popup__form-box">
-        <h2>Please subscribe</h2>
+        <h2>Enter your phone number to receive my mini motivational messages via WhatsApp!</h2>
         <form  action="https://gmail.us3.list-manage.com/subscribe/post?u=299144442459ae6cad07bdcff&amp;id=bbe289ae96" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate primary-form single-course-form" target="_blank" novalidate>
           <div id="mc_embed_signup_scroll">
             <div class="form-row form-row-two-col">
               <div class="mc-field-group col-1">
                 <label for="mce-FNAME" class="primary-form__label">Name</label>
-                <input type="text" value="" placeholder="Your Name" name="FNAME" class="required input primary-form__input" id="mce-FNAME">
+                <input type="text" placeholder="Your Name" name="FNAME" class="required input primary-form__input" id="mce-FNAME">
+              </div>
+              <div class="mc-field-group size1of2">
+                <label for="mce-PHONE">Phone Number </label>
+                <input type="text" name="PHONE" placeholder="Your Phone" class="required input primary-form__input id="mce-PHONE" >
               </div>
               <div class="mc-field-group col-2">
                 <label for="mce-EMAIL" class="primary-form__label">Email</label>
-                <input type="email" value="" placeholder="Your Email" name="EMAIL" class="required email input primary-form__input primary-form__input-last" id="mce-EMAIL">
+                <input type="email" placeholder="Your Email" name="EMAIL" class="required email input primary-form__input primary-form__input-last" id="mce-EMAIL">
               </div>
               <!-- <input type="submit" value="Be the first to hear!" name="subscribe" id="mc-embedded-subscribe" class="course__takelink takeBtn"> -->
               
             </div>
-            <button name="subscribe" id="mc-embedded-subscribe" class="course__take-btn takeBtn"><span class="link-inner">Subscribe</button>
+            <button name="subscribe" id="mc-embedded-subscribe" class="course__take-btn takeBtn"><span class="link-inner">Add Me to Whatsapp</button>
             <div class="mc-field-group input-group" style="display:none;">
               <strong>Subs</strong>
               <ul class="groupe-list">

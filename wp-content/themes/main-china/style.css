@@ -404,7 +404,7 @@ body:not(.front-page) .burger-btn span {
 }
 
 .head-main__title {
-  font: 2em "Poppins-Bold";
+  font: 36px "Poppins-Bold";
   margin-bottom: 10px;
 }
 
@@ -412,7 +412,7 @@ body:not(.front-page) .burger-btn span {
   margin-top: 44px;
   display: none;
   max-width: 90%;
-  font: 0.5em "Poppins-Regular";
+  font: 16px "Poppins-Regular";
 }
 
 .head-main .greeting__text-md {
@@ -453,7 +453,7 @@ body:not(.front-page) .burger-btn span {
 
 .head-main-bg {
   position: absolute;
-  width: 40%;
+  width: 34%;
   height: 100%;
   right: 0;
   top: 0;
@@ -472,7 +472,7 @@ body:not(.front-page) .burger-btn span {
   bottom: 0;
   z-index: 1;
   height: calc(100% - 70px);
-  width: 45%;
+  width: 55%;
   min-width: 120px;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -713,6 +713,10 @@ body:not(.front-page) .burger-btn span {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .china-photo {
@@ -742,7 +746,7 @@ body:not(.front-page) .burger-btn span {
   border-radius: 40px 0px;
   position: absolute;
   bottom: -100px;
-  right: -70px;
+  right: -25px;
   padding: 60px 60px 49px 73px;
   font: 14px "Poppins-MediumItalic";
 }
@@ -2927,10 +2931,6 @@ footer {
 }
 
 @media only screen and (min-width: 720px) {
-  .section-first {
-    padding-top: 125px;
-  }
-
   .container-inner {
     padding: 0 10%;
   }
@@ -2968,6 +2968,10 @@ footer {
     display: block;
   }
 
+  .subscribe-section .greeting-sub {
+    display: none;
+  }
+
   .courses-section {
     padding: 100px 0 120px 0;
   }
@@ -2982,7 +2986,7 @@ footer {
 
   .china-photo {
     max-width: 400px;
-    min-width: 400px;
+    min-width: 360px;
     max-height: 460px;
     min-height: 460px;
   }
@@ -3317,6 +3321,10 @@ footer {
 }
 
 @media only screen and (min-width: 1024px) {
+  .section-first {
+    padding-top: 125px;
+  }
+
   .header {
     height: 125px;
   }
@@ -3454,6 +3462,10 @@ footer {
     display: block;
   }
 
+  .head-main-bg .china {
+    width: 55%;
+  }
+
   .courses {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -3504,6 +3516,49 @@ footer {
 
   .course__img:after {
     height: 226px;
+  }
+
+  .about-me-section:before {
+    content: '#GURU';
+    font-family: Permanent Marker;
+    font: 300px "PermanentMarker";
+    line-height: 437px;
+    color: rgba(93, 92, 195, 0.04);
+    position: absolute;
+    right: 10%;
+    top: 150px;
+  }
+
+  .about-me-section .title--about-me {
+    display: none;
+  }
+
+  .about-me-section .title--china-bio {
+    margin-top: 16px;
+    display: block;
+  }
+
+  .about-china {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    font-size: 20px;
+  }
+
+  .china-photo .quote-block {
+    display: block;
+  }
+
+  .china-bio {
+    margin-left: 50px;
+    font-size: 15px;
+  }
+
+  .china-bio .link-btn {
+    margin-top: 50px;
+    display: inline-block;
   }
 
   .blog-posts {
@@ -3746,6 +3801,14 @@ footer {
     height: 35px;
   }
 
+  .head-main__title {
+    font-size: 40px;
+  }
+
+  .head-main-bg .china {
+    width: 45%;
+  }
+
   .head-main-bg .shapes {
     opacity: 1;
   }
@@ -3765,46 +3828,13 @@ footer {
     transform: rotate(-20deg);
   }
 
-  .about-me-section:before {
-    content: '#GURU';
-    font-family: Permanent Marker;
-    font: 300px "PermanentMarker";
-    line-height: 437px;
-    color: rgba(93, 92, 195, 0.04);
-    position: absolute;
-    right: 10%;
-    top: 150px;
-  }
-
-  .about-me-section .title--about-me {
-    display: none;
-  }
-
-  .about-me-section .title--china-bio {
-    margin-top: 16px;
-    display: block;
-  }
-
-  .about-china {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    font-size: 20px;
-  }
-
   .china-photo .quote-block {
-    display: block;
+    right: -70px;
   }
 
   .china-bio {
     margin-left: 100px;
-  }
-
-  .china-bio .link-btn {
-    margin-top: 50px;
-    display: inline-block;
+    font-size: 16px;
   }
 
   .about-content p {
@@ -3963,6 +3993,10 @@ footer {
   .head-main.home-head-main .container {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+
+  .head-main__title {
+    font-size: 48px;
   }
 
   .courses-section {

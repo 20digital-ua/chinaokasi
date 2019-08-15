@@ -2,6 +2,7 @@
 <?php get_header(); 
 
 while(have_posts()) : the_post();
+$welcome_text = get_field('welcome_text');
 $section1 = get_field('section-1');
 $section2 = get_field('section-2');
 $section3 = get_field('section-3');
@@ -12,6 +13,9 @@ $section3 = get_field('section-3');
 			<div class="container">
 				<div class="head-text">
 					<?php the_content() ?>
+					<div class="greeting">
+						<?=$welcome_text?>
+					</div>
 				</div>
 				<div class="subscribe-block subscribe-block--header">
 					<button class="button submit-btn popub-btn-open" data-groupe="all">Join my movement</button>
@@ -27,6 +31,9 @@ $section3 = get_field('section-3');
 
 		<section class="subscribe-section section">
 			<div class="container container-content-center">
+				<div class="greeting-sub">
+					<?=$welcome_text?>
+				</div>
 				<button class="button submit-btn popub-btn-open" data-groupe="all">Join my movement</button>
 			</div>
 		</section>
