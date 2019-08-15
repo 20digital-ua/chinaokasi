@@ -1,3 +1,8 @@
+<?php 
+  $popup = get_field('popup', get_option( 'page_on_front' ));
+
+?>
+
 <div id="sign-popup" class="sign-popup wrapper">
   <div class="sign-popup__container">
     <div class="sign-popup__box">
@@ -6,9 +11,8 @@
         <span class="close-btn__line close-btn__line-second"></span>
       </button>
       <div class="success-msg" id="success-msg">
-        <div class="success-msg__title">Thank you!</div>
-        <div class="success-msg__body">Thanks for signing up, pal! 
-Please check your inbox or Spam folder for my email & whitelist the email address, so that you'll receive important messages from me.</div>
+        <div class="success-msg__title"><?=$popup['success_message']['title']?></div>
+        <div class="success-msg__body"><?=$popup['success_message']['body']?></div>
       </div>
       <div id="mc_embed_signup" class="sign-popup__form-box">
         <h2>Enter your phone number to receive my mini motivational messages via WhatsApp!</h2>
