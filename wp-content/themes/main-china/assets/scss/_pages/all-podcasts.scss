@@ -11,7 +11,7 @@
   #podcasts-wrapper{
     opacity: 0;
     @include transition();
-    &.show{
+    &.show{ 
       opacity: 1;
     }
   }

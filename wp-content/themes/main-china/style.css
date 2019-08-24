@@ -154,6 +154,10 @@ a {
   text-decoration: none;
 }
 
+.loading-bar {
+  display: none !important;
+}
+
 /* MEDIA QUERIES */
 
 /* VARIABLES */
@@ -453,7 +457,7 @@ body:not(.front-page) .burger-btn span {
 
 .head-main-bg {
   position: absolute;
-  width: 34%;
+  width: 40%;
   height: 100%;
   right: 0;
   top: 0;
@@ -1469,6 +1473,7 @@ footer {
   text-align: center;
   padding: 0 20px;
   display: block;
+  margin: 20px 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1481,12 +1486,11 @@ footer {
   content: 'Bio';
   text-transform: uppercase;
   font-family: Permanent Marker;
-  font: 65px "PermanentMarker";
-  line-height: 146px;
+  font: 70px "PermanentMarker";
+  line-height: 106px;
   color: rgba(93, 92, 195, 0.04);
   position: absolute;
   left: 20px;
-  top: -30px;
 }
 
 .subscribe-block {
@@ -1895,6 +1899,7 @@ footer {
 .channel-logos img {
   height: auto !important;
   width: auto !important;
+  max-width: 100%;
   max-height: 90px;
   margin: 20px;
 }
@@ -2301,6 +2306,52 @@ footer {
 .single-post-content__icon {
   width: 100%;
   height: 100%;
+}
+
+.post-share-squared .share-post {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.post-share-squared .share-post__box {
+  margin-right: 0;
+  width: auto;
+  height: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+  padding: 0 8px;
+}
+
+.post-share-squared .share-post__box:first-child {
+  margin-right: 10px;
+}
+
+.post-share-squared .share-post__box .share-post__icon {
+  height: 16px;
+  width: auto;
+  margin-left: 9px;
+}
+
+.post-share-squared .share-post__box-t {
+  background-color: #419cd6;
+}
+
+.post-share-squared .share-post__box-f {
+  background-color: #3a589e;
 }
 
 .share-post {
@@ -2793,6 +2844,12 @@ footer {
   height: 64px;
 }
 
+#wpmem_login .buttons {
+  max-width: 100px;
+  width: 100%;
+  height: 40px;
+}
+
 /* PLAYER */
 
 .podcast-player {
@@ -3109,12 +3166,12 @@ footer {
     text-align: left;
     padding: 0;
     top: 0;
-    margin: 50px 0;
+    margin: 40px 0;
   }
 
   .title-subscribe__name:before {
-    font-size: 140px;
-    top: 0;
+    font-size: 120px;
+    top: 10%;
     left: 0;
   }
 
@@ -3582,13 +3639,13 @@ footer {
   }
 
   .title-subscribe__name span {
-    font-size: 46px;
-    margin: 80px 0;
+    font-size: 40px;
+    margin: 70px 0;
   }
 
   .title-subscribe__name:before {
-    top: 15%;
-    font-size: 200px;
+    top: 20%;
+    font-size: 110px;
   }
 
   .subscribe-block {
@@ -3814,7 +3871,7 @@ footer {
   }
 
   .head-main-bg .china {
-    width: 45%;
+    width: 42%;
   }
 
   .head-main-bg .shapes {
@@ -3914,13 +3971,12 @@ footer {
   }
 
   .title-subscribe__name span {
-    font-size: 56px;
-    margin: 150px 0;
+    font-size: 50px;
   }
 
   .title-subscribe__name:before {
-    top: 25%;
-    font-size: 250px;
+    top: 20%;
+    font-size: 160px;
   }
 
   .courses-head-main .head-main__title .head-main__sm {
@@ -4083,13 +4139,11 @@ footer {
   }
 
   .title-subscribe__name span {
-    font-size: 66px;
-    margin: 150px 0;
+    font-size: 60px;
   }
 
   .title-subscribe__name:before {
-    font-size: 300px;
-    top: 30%;
+    font-size: 180px;
     left: -20px;
   }
 

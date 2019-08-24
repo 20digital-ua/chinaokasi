@@ -103,7 +103,36 @@
     height: 100%;
   }
 }
-
+.post-share-squared{
+  .share-post{
+    justify-content: space-between;
+    &__box{
+      margin-right: 0;
+      width: auto;
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color:#fff;
+      font-size: 14px;
+      padding: 0 8px;
+      &:first-child{
+        margin-right: 10px;
+      }
+      .share-post__icon{
+        height: 16px;
+        width: auto;
+        margin-left: 9px;
+      }
+      &-t{
+        background-color: #419cd6
+      }
+      &-f{
+        background-color: #3a589e
+      }
+    }
+  }
+}
 .share-post{
   margin-top: 8px;
   display: flex;

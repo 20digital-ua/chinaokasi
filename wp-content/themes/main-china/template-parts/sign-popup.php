@@ -15,7 +15,7 @@
         <div class="success-msg__body"><?=$popup['success_message']['body']?></div>
       </div>
       <div id="mc_embed_signup" class="sign-popup__form-box">
-        <h2>Enter your phone number to receive my mini motivational messages via WhatsApp!</h2>
+        <h2>Enter your phone number to receive my mini motivational messages via WhatsApp!<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/whatsapp.svg" height="18px" style="position:relative; top: 3px; left: 6px"></h2>
         <form  action="https://gmail.us3.list-manage.com/subscribe/post?u=299144442459ae6cad07bdcff&amp;id=bbe289ae96" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate primary-form single-course-form" target="_blank" novalidate>
           <div id="mc_embed_signup_scroll">
             <div class="form-row form-row-two-col">
