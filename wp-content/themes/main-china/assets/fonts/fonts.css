@@ -1,0 +1,38 @@
+/* FONTS */
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url("Poppins/Poppins-Regular.ttf") format("opentype");
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url("Poppins/Poppins-Medium.ttf") format("opentype");
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url("Poppins/Poppins-Bold.ttf") format("opentype");
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url("Poppins/Poppins-SemiBold.ttf") format("opentype");
+    font-display: block;
+}
+@font-face {
+    font-family: 'Poppins-MediumItalic';
+    src: url("Poppins/Poppins-MediumItalic.ttf") format("opentype");
+    font-display: block;
+}
+
+
+@font-face {
+    font-family: 'PermanentMarker';
+    src: url("PermanentMarker/PermanentMarker-Regular.ttf") format("opentype");
+    font-display: block;
+}
+

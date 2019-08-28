@@ -1,0 +1,287 @@
+.header{
+  height: 65px;
+  top: 0;
+  width: 100%;  
+  z-index: 999;
+  @include screen-lp{
+    height: 125px;
+  }
+  @include screen-md{
+    height: 176px;
+  }
+  .container{
+    height: 100%;
+    padding-top: 0;
+    //outline: 1px solid green;
+  }
+
+}
+body.front-page .header{
+  position: absolute; 
+}
+body.logged-in .header{ 
+  top: 32px;
+}
+body:not(.front-page){
+  background-color: #fff; 
+  .main-menu a{
+    @include screen-lp{
+      color: #000;
+    }
+  } 
+}
+
+.header-top{
+  //position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main-logo{
+  position: relative;
+  background-size: 30px 26px;
+  z-index: 9999;
+  display: block;
+  margin-top: 14px;
+  line-height: 10px;
+  @include screen-tb{
+    background-size: 37px 30px;
+  }
+  @include screen-lp{
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+  @include screen-md{
+    margin-top: 34px;
+    font-size: 2em;
+  }
+
+
+  
+
+  &__logo{
+    width: 30px;
+    height: 26px;
+    display: block; 
+    .logosvg{
+      width: 100%;
+      height: 100%;
+    }
+    
+    @include screen-tb{
+      width: 37px;
+      height: 30px;
+    }
+    @include screen-md{
+      width: 45px;
+      height: 35px;
+    }
+  }
+  &__name{
+    margin: 0 0 0 7px;
+    display: inline-block;
+    color:$primaryTextColor;
+    @include font(0.75em,$PoppinsMedium);
+    @include transition();
+  }
+}
+
+.burger-btn{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  right: -12px;
+  top:10px;
+  z-index: 999;
+  &__lines{
+    width: 16px;
+    height: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction:  column;
+    span{
+      height: 1px;
+      width: 16px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      &.line2{
+        width: 14px;
+      }
+    }
+  }
+
+  @include screen-lp{
+    display: none;
+  }
+}
+body:not(.front-page) .burger-btn{
+  span{
+    background-color: #3A3B3F;
+  }
+}
+.pages-menu,
+.courses-menu{
+  list-style: none; 
+}
+// DESKTOP MENU
+@include screen-lp{
+
+.menu-container{
+  display: flex;
+  justify-content: flex-end;
+  width: 75%; 
+  @include screen-lp{
+    justify-content: space-between;
+  }
+  
+}
+.main-menu{
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  @include transition();
+  @include screen-lp{
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.pages-menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 30px;
+  li{
+    margin-right: 24px;
+    position: relative;
+  }
+  a,&__title{
+    font-size: 18px;
+    color: #3A3B3F;
+  }
+  &__title{
+    cursor: pointer;
+  }
+  &__sub{
+    visibility: hidden;
+    opacity: 0;
+    @include transition;
+    position: absolute;
+    top: 20px;
+    left:-20px;
+    background-color: rgba(255,255,255,1);
+    border-radius:0 0 25px 0;
+    padding: 20px;
+    li{
+      margin-bottom: 10px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__title:hover .pages-menu__sub{
+    visibility: visible;
+    opacity: 1;
+    z-index: 99;
+  }
+}
+.courses-menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  li{
+    margin-left: 24px;
+  }
+  a{
+    @include font(18px, $PoppinsSemiBold);
+    color:#fff;
+  }
+}
+
+}
+
+// MOB MENU
+@include screen-lp-max{
+.menu-container{
+  display: flex;
+  justify-content: flex-end;
+  width: 70%; 
+  @include screen-lp{
+    justify-content: space-between;
+  }
+  
+}
+.menu-container .main-menu{
+  opacity: 0;
+  visibility: hidden;
+  @include transition();
+  position: absolute;
+  height: 0;
+  top: 0;
+  right: 0;
+  display: none;
+  padding: 80px $mainPadding 0 $mainPadding;
+  padding-top: 120px;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, $redColor 0%, $violetColor 100%);
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  .courses-menu{
+    width: 100%;
+    display: flex;
+    border-bottom:1px solid rgba(255, 255, 255, 0.2); 
+    padding-bottom: 10px;
+    li{
+      margin-right: 56px;
+    }
+    a{
+      @include font(18px, $PoppinsSemiBold);
+      color:#fff;
+    }
+  }
+  .pages-menu{
+    li{
+      margin: 20px 0;
+    }
+    a{
+      @include font(18px, $Poppins);
+      color:#fff;
+    }
+    &__title span{
+      display: none;
+    }
+  }
+}
+  .header-top.open .main-menu{
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+    display: flex;
+  }
+  .header-top.open .main-logo__name{
+    color: #fff;
+  }
+  .header-top.open .main-logo__logo{
+    .logosvg{
+      path{
+        fill:white;
+      }
+    }
+  }
+  .header-top.open .burger-btn span{
+    background-color: #fff;
+  }
+
+}

@@ -1,0 +1,91 @@
+*{
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+}  
+body{ 
+  font-size: 16px;
+  font-family: 'Poppins-Regular',sans-serif;
+  color: $primaryTextColor; 
+  line-height: normal;
+  background-color: $BodyBGColor;
+  &.no-scroll{
+    overflow: hidden;
+  }
+}
+ .section{
+  padding: 36px 0;
+    &-first{
+    padding-top: 65px;
+    @include screen-lp{
+      padding-top: 125px;
+    }
+    @include screen-md{
+      padding-top: 176px;
+    }
+  }
+}
+.container{
+  padding: $mobSidePadding;
+  position: relative;
+  max-width: 1056px;
+  box-sizing: content-box;
+  margin: 0 auto;
+  &--nopadding{
+    padding:0;
+  }
+  &-content-center{
+    text-align: center;
+  }
+  @include screen-sm{
+    padding: $mainSidePadding;
+  }
+}
+.container-inner{
+  position: relative;
+  max-width: 1056px;
+  box-sizing: content-box;
+  margin: 0 auto;
+  @include screen-tb{
+    padding: $mainSidePadding;
+  }
+}
+.title{
+  @include font(24px,$PoppinsSemiBold);
+  text-align: center;
+  margin-bottom: 24px;
+  text-transform: capitalize;
+  &--left{
+    text-align: left;
+  }
+  &--red{
+    color:$redColor;
+    text-transform: uppercase;
+  }
+  @include screen-tb{
+    font-size: 32px;
+  }
+  @include screen-lg{
+    font-size: 40px;
+  }
+} 
+
+.sub-title{ 
+  text-align: center;
+  &--red{
+    font-family: $PoppinsMedium;
+    color: $redColor;
+  }
+  @include screen-tb{
+    font-size: 18px;
+  }
+  @include screen-lg{
+    font-size: 20px;
+  }
+}
+//FIXME
+.text{
+  line-height: normal;
+  &-center{
+    text-align: center;
+  }
+}

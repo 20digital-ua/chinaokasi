@@ -1,0 +1,90 @@
+footer{
+  padding: 68px 0 0 0;
+  @include screen-tb{
+    padding: 116px 0 0 0;
+  }
+  @include screen-lg{
+    padding: 175px 0 0 0;
+  }
+} 
+.footer-container{
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+  @include screen-tb{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; 
+    text-align: left;
+    font-size: 14px;
+    div{
+      margin-right: 30px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.copyright{
+  max-width: 150px;
+}
+.social{
+  margin: 0 auto;
+  margin-top: 39px;
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  &__twitter .icon{
+    width: 23px;
+    height: 24px;
+  }
+  &__instagram .icon{
+    width: 21px;
+    height: 24px;
+  }
+  @include screen-tb{
+    margin: unset;
+    margin-top: 39px;
+  }
+}
+.contact-info{
+  max-width: 210px;
+  margin-bottom: 36px;
+  &__title{
+    @include font(16px, $PoppinsSemiBold);
+    text-transform: uppercase;
+  }
+  &__subtitle{
+    margin-top: 12px;
+    @include font(1em, $PoppinsMedium);
+  }
+  &__phone{
+    margin-top: 22px;
+  }
+}
+.address{
+  margin-bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-item-1{
+    max-width: 245px;
+  }
+  &-item-2{
+    max-width: 175px;
+  }
+  &__city{
+    @include font(1em, $PoppinsSemiBold);
+  }
+  &__detailed{
+    margin-top: 12px;
+  }
+  @include screen-tb{
+    align-items: flex-start;
+  }
+}

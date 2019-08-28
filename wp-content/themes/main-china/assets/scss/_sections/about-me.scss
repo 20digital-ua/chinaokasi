@@ -1,0 +1,143 @@
+.about-me-section{
+  background-color: $lightGreyBG;
+  padding: 48px 0 64px 0;
+  position: relative;
+  @include screen-tb{
+    padding: 64px 0 120px 0;
+  }
+  @include screen-lg{
+    padding: 82px 0 160px 0;
+  }
+  @include screen-lp{  
+    &:before{
+      content: '#GURU';
+      font-family: Permanent Marker;
+      @include font(300px, $PermanentMarker);
+      line-height: 437px;
+      color: rgba(93, 92, 195, 0.04);
+      position: absolute;
+      right: 10%;
+      top: 150px;
+    }    
+
+    .title--about-me{
+      display: none;
+    }
+    .title--china-bio{
+      margin-top: 16px;
+      display: block;
+    }
+  }
+  .title--china-bio{
+    display: none;
+  }
+}
+
+.about-china{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include screen-lp{
+    flex-direction: row;
+    font-size: 20px;
+  }
+}
+.china-photo{
+  max-width: 375px;
+  width: 100%;
+  height: 352px;
+  background-color: #5D5CC3;
+  border-radius: 25px 0;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  position: relative;
+  @include screen-tb{
+    max-width: 400px;
+    min-width: 360px;
+    max-height: 460px;
+    min-height: 460px;
+  }
+  &__img{
+    border-radius: 0 0 25px 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .quote-block{
+    display: none;
+    max-width: 336px;
+    min-height: 160px;
+    background: #FFFFFF;
+    border-radius: 40px 0px;
+    position: absolute;
+    bottom: -100px;
+    right: -25px;
+    padding: 60px 60px 49px 73px;
+    @include font(14px, $PoppinsMediumItalic);
+    @include screen-lp{
+      display: block; 
+    }
+    @include screen-md{
+      right: -70px; 
+    }
+    &__text{
+      position: relative;
+      &:before, 
+      &:after{
+        content:'';
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: url(#{$image_dir}icons/quotes.svg) center no-repeat;
+      }
+      &:before{
+        left: -35px;
+        top: -25px;
+      }
+      &:after{
+        right: -25px;
+        bottom: -25px;
+      }
+    }
+
+  }
+}
+
+.china-bio{
+  padding: $mobSidePadding; 
+  ul{
+    list-style-position: inside;
+  }
+  li{
+    margin-bottom: 16px;
+  }
+  @include screen-lp{
+    margin-left: 50px;
+    font-size: 15px;
+  }
+  @include screen-md{
+    margin-left: 100px;
+    font-size: 16px;
+  }
+  .link-btn{
+    margin: 0 auto;
+    margin-top: 25px;
+    display: block;
+    max-width: 320px;
+
+    @include screen-lp{
+      margin-top: 50px;
+      display: inline-block;
+    }
+  }
+}
+.about-content p{
+  margin-bottom: 16px;
+  @include screen-md{
+    margin-bottom: 32px;
+  }
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
