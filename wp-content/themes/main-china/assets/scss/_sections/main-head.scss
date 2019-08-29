@@ -151,8 +151,8 @@
     @include transition;
     @include screen-tb{
       opacity: 1;
-      background: url("#{$image_dir}header/BG/shape-1.svg") 97% 248% no-repeat,
-                  url("#{$image_dir}header/BG/shape-2.svg") 90% 0px no-repeat;
+      background: url("#{$image_dir}header/BG/shape-china.svg") bottom right no-repeat;
+                  
       &:before{
         content: '#Guru';
         text-transform: uppercase;
@@ -161,30 +161,12 @@
         /* line-height: 437px; */
         color: rgba(255, 255, 255, 0.07);
         position: absolute;
-        left: 50px;
-        bottom: 190px;
+        left: 17%;
+        bottom: 15%;
         transform: rotate(-20deg);
       }
     }
-    @include screen-lp{
-      background: url("#{$image_dir}header/BG/shape-1.svg") 97% 128% no-repeat,
-                  url("#{$image_dir}header/BG/shape-2.svg") 60% 400px no-repeat;
-      &:before{
-        font: 80px "PermanentMarker";
-        left: 120px;
-        bottom: 240px;
-      }
-    }
-    @include screen-md{
-      &:before{
-        bottom: 170px;
-      }
-    }
-    @include screen-lg{
-      &:before{
-        bottom: 110px;
-      }
-    }
+    
   }
 }
 

@@ -3039,7 +3039,7 @@ footer {
 
   .head-main-bg .shapes {
     opacity: 1;
-    background: url("assets/img/header/BG/shape-1.svg") 97% 248% no-repeat, url("assets/img/header/BG/shape-2.svg") 90% 0px no-repeat;
+    background: url("assets/img/header/BG/shape-china.svg") bottom right no-repeat;
   }
 
   .head-main-bg .shapes:before {
@@ -3050,8 +3050,8 @@ footer {
     /* line-height: 437px; */
     color: rgba(255, 255, 255, 0.07);
     position: absolute;
-    left: 50px;
-    bottom: 190px;
+    left: 17%;
+    bottom: 15%;
     -webkit-transform: rotate(-20deg);
     -ms-transform: rotate(-20deg);
     transform: rotate(-20deg);
@@ -3551,16 +3551,6 @@ footer {
     width: 55%;
   }
 
-  .head-main-bg .shapes {
-    background: url("assets/img/header/BG/shape-1.svg") 97% 128% no-repeat, url("assets/img/header/BG/shape-2.svg") 60% 400px no-repeat;
-  }
-
-  .head-main-bg .shapes:before {
-    font: 80px "PermanentMarker";
-    left: 120px;
-    bottom: 240px;
-  }
-
   .courses {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -3904,10 +3894,6 @@ footer {
     width: 42%;
   }
 
-  .head-main-bg .shapes:before {
-    bottom: 170px;
-  }
-
   .china-photo .quote-block {
     right: -70px;
   }
@@ -4076,10 +4062,6 @@ footer {
 
   .head-main__title {
     font-size: 48px;
-  }
-
-  .head-main-bg .shapes:before {
-    bottom: 110px;
   }
 
   .courses-section {
