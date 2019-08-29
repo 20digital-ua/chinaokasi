@@ -495,11 +495,12 @@ body:not(.front-page) .burger-btn span {
 }
 
 .head-main-bg .shapes {
+  overflow: hidden;
   opacity: 0;
-  background: url("assets/img/header/BG/shape-1.svg") 97% 128% no-repeat, url("assets/img/header/BG/shape-2.svg") 60% 400px no-repeat;
   width: 100%;
   height: 100%;
   position: relative;
+  background-position: bottom right;
   -webkit-transition: all .25s linear;
   transition: all .25s linear;
 }
@@ -3037,6 +3038,26 @@ footer {
     display: none;
   }
 
+  .head-main-bg .shapes {
+    opacity: 1;
+    background: url("assets/img/header/BG/shape-china.svg") bottom right no-repeat;
+  }
+
+  .head-main-bg .shapes:before {
+    content: '#Guru';
+    text-transform: uppercase;
+    font-family: Permanent Marker;
+    font: 70px "PermanentMarker";
+    /* line-height: 437px; */
+    color: rgba(255, 255, 255, 0.07);
+    position: absolute;
+    left: 17%;
+    bottom: 15%;
+    -webkit-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+
   .courses-section {
     padding: 100px 0 120px 0;
   }
@@ -3872,25 +3893,6 @@ footer {
 
   .head-main-bg .china {
     width: 42%;
-  }
-
-  .head-main-bg .shapes {
-    opacity: 1;
-  }
-
-  .head-main-bg .shapes:before {
-    content: '#Guru';
-    text-transform: uppercase;
-    font-family: Permanent Marker;
-    font: 80px "PermanentMarker";
-    /* line-height: 437px; */
-    color: rgba(255, 255, 255, 0.07);
-    position: absolute;
-    left: 120px;
-    bottom: 110px;
-    -webkit-transform: rotate(-20deg);
-    -ms-transform: rotate(-20deg);
-    transform: rotate(-20deg);
   }
 
   .china-photo .quote-block {
