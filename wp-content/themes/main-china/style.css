@@ -257,6 +257,7 @@ body.no-scroll {
 .header .container {
   height: 100%;
   padding-top: 0;
+  position: unset;
 }
 
 body.front-page .header {
@@ -3429,6 +3430,7 @@ footer {
   }
 
   .menu-container {
+    height: 65px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3437,7 +3439,9 @@ footer {
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    width: 75%;
+    position: absolute;
+    left: 0;
+    width: 100%;
   }
 
   .main-menu {
@@ -3455,6 +3459,7 @@ footer {
   }
 
   .pages-menu {
+    width: 60%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3463,10 +3468,10 @@ footer {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     padding-right: 30px;
   }
 
@@ -3477,7 +3482,7 @@ footer {
 
   .pages-menu a,
   .pages-menu__title {
-    font-size: 18px;
+    font-size: 16px;
     color: #3A3B3F;
   }
 
@@ -3513,6 +3518,8 @@ footer {
   }
 
   .courses-menu {
+    width: 40%;
+    padding-left: 140px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3521,10 +3528,10 @@ footer {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 
   .courses-menu li {
@@ -3532,7 +3539,7 @@ footer {
   }
 
   .courses-menu a {
-    font: 18px "Poppins-SemiBold";
+    font: 16px "Poppins-SemiBold";
     color: #fff;
   }
 
@@ -3856,6 +3863,7 @@ footer {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    height: 125px;
   }
 
   .main-menu {
@@ -3865,6 +3873,21 @@ footer {
     display: flex;
     visibility: visible;
     opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (min-width: 1400px) {
+  .menu-container {
+    height: 176px;
+  }
+
+  .pages-menu a,
+  .pages-menu__title {
+    font-size: 18px;
+  }
+
+  .courses-menu a {
+    font-size: 18px;
   }
 }
 

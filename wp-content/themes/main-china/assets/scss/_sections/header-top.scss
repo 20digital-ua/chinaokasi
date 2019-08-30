@@ -12,6 +12,7 @@
   .container{
     height: 100%;
     padding-top: 0;
+    position: unset;
     //outline: 1px solid green;
   }
 
@@ -135,11 +136,18 @@ body:not(.front-page) .burger-btn{
 @include screen-lp{
 
 .menu-container{
+  height: 65px;
   display: flex;
   justify-content: flex-end;
-  width: 75%; 
+  position: absolute;
+  left: 0;
+  width: 100%;
   @include screen-lp{
     justify-content: space-between;
+    height: 125px;
+  }
+  @include screen-md{
+    height: 176px;
   }
   
 }
@@ -156,17 +164,21 @@ body:not(.front-page) .burger-btn{
 }
 
 .pages-menu{
+  width: 60%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding-right: 30px;
   li{
     margin-right: 24px;
     position: relative;
   }
   a,&__title{
-    font-size: 18px;
+    font-size: 16px;
     color: #3A3B3F;
+    @include screen-md{
+      font-size: 18px;
+    }
   }
   &__title{
     cursor: pointer;
@@ -195,15 +207,20 @@ body:not(.front-page) .burger-btn{
   }
 }
 .courses-menu{
+  width: 40%;
+  padding-left: 140px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   li{
     margin-left: 24px;
   }
   a{
-    @include font(18px, $PoppinsSemiBold);
+    @include font(16px, $PoppinsSemiBold);
     color:#fff;
+    @include screen-md{
+      font-size: 18px;
+    }
   }
 }
 
