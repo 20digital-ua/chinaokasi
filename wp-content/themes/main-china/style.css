@@ -1014,7 +1014,6 @@ body:not(.front-page) .burger-btn span {
 .follow-link__icon {
   fill: #5D5CC3;
   width: 19px;
-  height: 20px;
 }
 
 .follow-link__icon-red {
@@ -1384,7 +1383,6 @@ footer {
 
 .social__twitter .icon {
   width: 23px;
-  height: 24px;
 }
 
 .social__instagram .icon {
@@ -2369,7 +2367,7 @@ footer {
 }
 
 .share-post a {
-  width: 33px;
+  width: 40px;
   height: 30px;
   display: block;
   margin-right: 20px;
