@@ -212,18 +212,21 @@ body.no-scroll {
   margin: 0 auto;
 }
 
-.title {
+.title,
+.single-post-content h2 {
   font: 24px "Poppins-SemiBold";
   text-align: center;
   margin-bottom: 24px;
   text-transform: capitalize;
 }
 
-.title--left {
+.title--left,
+.single-post-content h2--left {
   text-align: left;
 }
 
-.title--red {
+.title--red,
+.single-post-content h2--red {
   color: #FF3E5C;
   text-transform: uppercase;
 }
@@ -1014,7 +1017,6 @@ body:not(.front-page) .burger-btn span {
 .follow-link__icon {
   fill: #5D5CC3;
   width: 19px;
-  height: 20px;
 }
 
 .follow-link__icon-red {
@@ -1384,7 +1386,6 @@ footer {
 
 .social__twitter .icon {
   width: 23px;
-  height: 24px;
 }
 
 .social__instagram .icon {
@@ -2255,7 +2256,7 @@ footer {
 
 .post__title {
   margin-top: 50px;
-  font: 24px "Poppins-SemiBold";
+  font: 36px "Poppins-Bold";
 }
 
 .author {
@@ -2308,6 +2309,10 @@ footer {
 .single-post-content__icon {
   width: 100%;
   height: 100%;
+}
+
+.single-post-content h2 {
+  text-align: left;
 }
 
 .post-share-squared .share-post {
@@ -2369,14 +2374,14 @@ footer {
 }
 
 .share-post a {
-  width: 33px;
+  width: 40px;
   height: 30px;
   display: block;
   margin-right: 20px;
+  text-align: center;
 }
 
 .share-post__icon {
-  width: 100%;
   height: 100%;
 }
 
@@ -3002,7 +3007,8 @@ footer {
     padding: 0 10%;
   }
 
-  .title {
+  .title,
+  .single-post-content h2 {
     font-size: 32px;
   }
 
@@ -4061,13 +4067,18 @@ footer {
     padding-bottom: 140px;
   }
 
+  .post__title {
+    font-size: 40px;
+  }
+
   .podcast.single-post {
     margin-top: 0;
   }
 }
 
 @media only screen and (min-width: 1600px) {
-  .title {
+  .title,
+  .single-post-content h2 {
     font-size: 40px;
   }
 
@@ -4234,6 +4245,10 @@ footer {
 
   .main-single-post {
     padding-bottom: 180px;
+  }
+
+  .post__title {
+    font-size: 48px;
   }
 
   .all-podcasts-section {

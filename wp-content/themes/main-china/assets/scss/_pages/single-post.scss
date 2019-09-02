@@ -58,7 +58,13 @@
 .post{
   &__title{
     margin-top: 50px;
-    @include font(24px, $PoppinsSemiBold);
+    @include font(36px,$PoppinsBold);
+    @include screen-md{
+      font-size: 40px;
+    }
+    @include screen-lg{
+      font-size: 48px;
+    }
   }
 
 }
@@ -102,6 +108,9 @@
     width: 100%;
     height: 100%;
   }
+  h2{
+    text-align: left;
+  }
 }
 .post-share-squared{
   .share-post{
@@ -138,13 +147,13 @@
   display: flex;
   align-items: center;
   a{
-    width: 33px;
+    width: 40px;
     height: 30px;
     display: block;
     margin-right: 20px;
+    text-align: center;
   }
   &__icon{
-    width: 100%;
     height: 100%;
   }
   &--margin{
