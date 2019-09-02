@@ -2378,10 +2378,10 @@ footer {
   height: 30px;
   display: block;
   margin-right: 20px;
+  text-align: center;
 }
 
 .share-post__icon {
-  width: 100%;
   height: 100%;
 }
 
