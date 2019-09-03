@@ -1,6 +1,11 @@
 
 <?php
-  $pageData=getPageData(get_option( 'page_for_posts' ));
+  if(is_home()){
+    $pageData=getPageData(get_option( 'page_for_posts' ));
+  }else{
+    $pageData=getPageData(get_the_ID());
+  }
+  
 ?>
 <section class="blog-section blog-section-ajax section" data-category="<?=$pageData['slug']?>">
   <div class="container">
