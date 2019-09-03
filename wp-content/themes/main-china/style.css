@@ -1164,6 +1164,7 @@ body:not(.front-page) .burger-btn span {
 
 .post-content__title {
   font: 16px "Poppins-Medium";
+  font-weight: 900;
   margin-bottom: 1em;
 }
 
@@ -2311,8 +2312,19 @@ footer {
   height: 100%;
 }
 
+.single-post-content strong {
+  font-weight: 900;
+}
+
 .single-post-content h2 {
   text-align: left;
+}
+
+.single-post-content h3 {
+  line-height: 36px;
+  font: 20px "Poppins-Medium";
+  font-weight: 500;
+  display: inline-block;
 }
 
 .post-share-squared .share-post {

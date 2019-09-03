@@ -143,6 +143,7 @@
   padding: 0 31px; 
   &__title{
     @include font(16px, $PoppinsMedium);
+    font-weight: 900;
     margin-bottom: 1em;
   }
 }
