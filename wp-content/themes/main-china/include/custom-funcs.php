@@ -33,7 +33,6 @@ function getPageData($id){
         'slug'=>'life',
         'blog-title'=>get_post_field('blogposts_title', get_the_ID()),
         'cf-title'=>get_post_field('cf-title', get_the_ID())
-        
       );
       break;
     case '17':   // WORK ---------
@@ -51,16 +50,11 @@ function getPageData($id){
       );
       break;
     
-    case '155':   // NEWS ---------
+    case '112':   // NEWS ---------
       $data=array(
         'slug'=>'news,china&friends',
         'blog-title'=>get_post_field('blogposts_title', get_option('page_for_posts')),
         'cf-title'=>get_post_field('cf-title', get_option('page_for_posts'))
-      );
-      break;
-    case '155':   // CLIPS ---------
-      $data=array(
-        'slug'=>'hi'
       );
       break;
   }

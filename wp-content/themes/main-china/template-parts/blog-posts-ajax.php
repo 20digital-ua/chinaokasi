@@ -1,6 +1,6 @@
 
 <?php
-    $pageData=getPageData(get_the_ID());
+  $pageData=getPageData(get_option( 'page_for_posts' ));
 ?>
 <section class="blog-section blog-section-ajax section" data-category="<?=$pageData['slug']?>">
   <div class="container">
