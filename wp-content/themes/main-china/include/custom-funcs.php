@@ -1,21 +1,31 @@
 <?php
+$lifePageID=15;
+$workPageID=17;
+$lovePageID=20;
+$bioPageID=5;
+$tvPageID=13;
+
 
 function getPageLink($page){
+  global $lifePageID,$workPageID,$lovePageID,$bioPageID,$tvPageID;
   switch($page){
     case 'life':
-      $slug = 'life-lessons-blog';
+      $url = get_permalink($lifePageID);
       break;
     case 'work':
-      $slug = 'motivation-work-blog-posts-for-women-in-their-30s';
+      $url = get_permalink($workPageID);
       break;
     case 'love':
-      $slug = 'relationship-advice-free';
+      $url = get_permalink($lovePageID);
       break;
     case 'bio':
-      $slug = 'top-motivational-speakers';
+      $url = get_permalink($bioPageID);
+      break;
+    case 'tv':
+      $url = get_permalink($tvPageID);
       break;
   }
-  return site_url('/'.$slug);
+  return $url;
 }
 
 //////////////////////////////////////////////
